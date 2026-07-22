@@ -1238,10 +1238,7 @@ FOUNDRY_TARGET: SWADE 5.2.6 / Foundry VTT 13.351 / Actor type character
 E-mail informado pelo jogador para retorno: ${playerEmail}
 Jogador: ${playerName}
 `;
-      const mailto = `mailto:popota@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      navigator.clipboard?.writeText(output.value).catch(() => {});
-      window.location.href = mailto;
-      setStatus("Abrindo e-mail para o Mestre. O dossie tambem foi copiado, se o navegador permitir.");
+      setStatus("Envio automatico depende do endpoint configurado. Use o botao principal apos carregar gerador-personagem-validacao.js.");
     }
 
     document.getElementById("save-draft").addEventListener("click", saveDraft);
@@ -1255,5 +1252,7 @@ Jogador: ${playerName}
       setStatus("Formulario limpo.");
     });
   </script>
+  <script src="heroe-forge-email-config.js"></script>
+  <script src="gerador-personagem-validacao.js"></script>
 </body>
 </html>
