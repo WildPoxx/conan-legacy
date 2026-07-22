@@ -32,7 +32,7 @@
     const old=formEl.elements.extraSkillPoints; if(old?.closest("label")){old.value="0"; old.closest("label").classList.add("is-hidden");}
     const send=document.getElementById("send-master"); if(send)send.textContent="Enviar para o Mestre";
     const legal=document.querySelector(".legal"); if(legal&&!document.getElementById("send-diagnostics"))legal.insertAdjacentHTML("afterend",`<div class="send-diagnostics" id="send-diagnostics"><h3>Diagnostico de envio</h3><div class="send-log" id="send-log">Nenhum envio registrado nesta sessao.</div></div>`);
-    renderEnhancedAdvances(); renderSendLog();
+    renderBackgroundMechanics(dataObj()); renderHindranceOptions(dataObj()); renderEnhancedAdvances(); renderSendLog();
   }
   function renderEnhancedAdvances(){const c=document.getElementById("advance-fields"); if(!c||c.dataset.enhanced==="true")return; c.dataset.enhanced="true"; c.innerHTML=[1,2].map(i=>`<div class="advance-row" data-advance-row="${i}"><label>Avanco ${i}<select name="advanceType_${i}" data-advance-type="${i}">${advanceTypes.map(([v,l])=>`<option value="${v}">${l}</option>`).join("")}</select></label><label data-advance-primary-label="${i}">Escolha<select name="advancePrimary_${i}" data-advance-primary="${i}"></select></label><label data-advance-secondary-label="${i}" class="is-hidden">Pericia 2<select name="advanceSecondary_${i}" data-advance-secondary="${i}"></select></label><label data-advance-note-label="${i}">Detalhe<textarea name="advanceNote_${i}" placeholder="Observacao opcional para o Mestre."></textarea></label></div>`).join("");}
   function dataObj(){return Object.fromEntries(new FormData(formEl).entries());}
@@ -42,6 +42,39 @@
   function filled(v){const t=String(v??"").trim(); return t||"-";}
   function selectedBackground(data){return BACKGROUNDS.find(b=>b.name===data.culturalBackground);}
   function selectedHindranceNames(data){const out=[]; for(let i=1;i<=4;i++){if(data[`hindrance_${i}`])out.push(data[`hindrance_${i}`]);} return out;}
+  function randomData(){return window.CONAN_RANDOM_DATA||{};}
+  function backgroundRule(data){return randomData().backgrounds?.[data.culturalBackground]||null;}
+  function selectedBackgroundBenefit(data){const rule=backgroundRule(data); return rule?.benefits?.find(benefit=>benefit.id===data.culturalBenefit)||rule?.benefits?.[0]||null;}
+  function automaticBackgroundLimitations(data){return (backgroundRule(data)?.automaticHindrances||[]).map(item=>item.label);}
+  function renderBackgroundMechanics(data){
+    const rule=backgroundRule(data); const summary=document.getElementById("background-summary"); let holder=document.getElementById("background-mechanics");
+    if(!holder){holder=document.createElement("div"); holder.id="background-mechanics"; holder.className="grid two"; document.getElementById("background-fields")?.insertAdjacentElement("afterend",holder);}
+    const fingerprint=rule?`${data.culturalBackground}:${rule.benefits.map(item=>item.id).join("|")}`:"";
+    if(holder.dataset.fingerprint!==fingerprint){
+      holder.dataset.fingerprint=fingerprint;
+      if(rule?.benefits?.length){holder.innerHTML=`<label>Beneficio mecanico<select name="culturalBenefit">${options(rule.benefits.map(item=>item.id),"Escolha o beneficio")}</select></label>`; const select=holder.querySelector("select"); rule.benefits.forEach(item=>{const option=[...select.options].find(entry=>entry.value===item.id); if(option)option.textContent=item.label;}); select.value=rule.benefits.some(item=>item.id===data.culturalBenefit)?data.culturalBenefit:rule.benefits[0].id;}
+      else holder.innerHTML="";
+    }
+    if(summary){
+      if(!rule){summary.textContent="Escolha um Background para ver o resumo mecanico.";}
+      else {const benefit=selectedBackgroundBenefit({...data,culturalBenefit:holder.querySelector("select")?.value||data.culturalBenefit}); const limits=automaticBackgroundLimitations(data); summary.textContent=`Beneficio selecionado: ${benefit?.label||"narrativo"}. Limitacoes automaticas: ${limits.join(" ")||"nenhuma que conceda pontos."}${rule.fundsNote?` Recursos: ${rule.fundsNote}`:""}`;}
+    }
+  }
+  function renderHindranceOptions(data){
+    const catalog=randomData().hindrances||HINDRANCE_OPTIONS.map(label=>({id:label.toLowerCase(),label})); const blocked=new Set((backgroundRule(data)?.automaticHindrances||[]).flatMap(item=>item.blockedIds||[item.id])); const labels=catalog.filter(item=>!blocked.has(item.id)).map(item=>item.label);
+    for(let i=1;i<=4;i++){const field=formEl.elements[`hindrance_${i}`],grade=formEl.elements[`hindranceType_${i}`]; if(!field)continue; const current=field.value,previousGrade=grade?.value||"0"; field.innerHTML=options(labels,"Nao escolhida"); field.value=labels.includes(current)?current:""; const entry=catalog.find(item=>item.label===field.value); if(grade){const grades=entry?.grades||[1,2]; grade.innerHTML=`<option value="0">Nao usada</option>${grades.map(value=>`<option value="${value}">${value===1?"Menor (+1)":"Maior (+2)"}</option>`).join("")}`; grade.value=grades.includes(Number(previousGrade))?previousGrade:"0";}}
+  }
+  function backgroundAttributeCredit(data,attrs){const benefit=selectedBackgroundBenefit(data); if(!benefit?.attribute)return 0; return Math.max(0,Math.min(attrs[benefit.attribute]||0,dstep(benefit.die)));}
+  function backgroundSkillCredit(data,attrs){const benefit=selectedBackgroundBenefit(data); if(!benefit?.skill)return 0; const skill=SKILLS.find(([key])=>key===benefit.skill); if(!skill)return 0; const [key,,attribute,core]=skill; const target=dstep(data[`skill_${key}`]||(core?"d4":"-")); const granted=dstep(benefit.die); return target>=granted?skillCostFromTo(baseSkillStep(core),granted,attrs[attribute]??0):0;}
+  function syncBackgroundEdge(data){
+    const benefit=selectedBackgroundBenefit(data); const slots=[];
+    for(let i=1;i<=4;i++){const edge=formEl.elements[`edge_${i}`],source=formEl.elements[`edgeSource_${i}`],approval=formEl.elements[`edgeApproval_${i}`]; if(edge&&source)slots.push({edge,source,approval});}
+    for(const slot of slots){if(slot.source.value==="Background Cultural"&&!benefit?.edge){slot.edge.value=""; slot.source.value=""; if(slot.approval)slot.approval.value="Pendente";}}
+    if(!benefit?.edge)return;
+    let target=slots.find(slot=>slot.source.value==="Background Cultural")||slots.find(slot=>!slot.edge.value); if(!target)return;
+    if(![...target.source.options].some(option=>option.value==="Background Cultural")){const option=document.createElement("option"); option.value="Background Cultural"; option.textContent="Background Cultural"; target.source.appendChild(option);}
+    target.edge.value=benefit.edge; target.source.value="Background Cultural"; if(target.approval)target.approval.value="Pendente";
+  }
   function updateAdvanceControls(data){
     for(let i=1;i<=2;i++){
       const type=data[`advanceType_${i}`]||""; const pri=formEl.elements[`advancePrimary_${i}`]; const sec=formEl.elements[`advanceSecondary_${i}`];
@@ -86,29 +119,34 @@
     return {advances,attributeAdvances,edgeAdvances,skillCredits};
   }
   function collectCalc(){
-    let data=dataObj(); updateAdvanceControls(data); data=dataObj(); const errors=[],warnings=[]; const attrs=attrSteps(data); const attrSpent=ATTRIBUTES.reduce((sum,[k])=>sum+(attrs[k]||0),0);
-    let hindrancePoints=0; const hindrances=[]; const seen=new Set(), dup=new Set();
+    let data=dataObj(); renderBackgroundMechanics(data); data=dataObj(); syncBackgroundEdge(data); renderHindranceOptions(data); updateAdvanceControls(data); data=dataObj();
+    const errors=[],warnings=[],attrs=attrSteps(data),background=selectedBackground(data),backgroundBenefit=selectedBackgroundBenefit(data);
+    const attrRaw=ATTRIBUTES.reduce((sum,[key])=>sum+(attrs[key]||0),0); const attrBackgroundBonus=backgroundAttributeCredit(data,attrs); const attrSpent=Math.max(0,attrRaw-attrBackgroundBonus);
+    let hindrancePoints=0; const hindrances=[]; const seen=new Set(),dup=new Set();
     for(let i=1;i<=4;i++){
-      const name=data[`hindrance_${i}`]||""; const pts=num(data[`hindranceType_${i}`]); const inp=formEl.elements[`hindrancePoints_${i}`]; if(inp)inp.value=String(name?pts:0); if(!name)continue;
+      const name=data[`hindrance_${i}`]||""; const pts=num(data[`hindranceType_${i}`]); const input=formEl.elements[`hindrancePoints_${i}`]; if(input)input.value=String(name?pts:0); if(!name)continue;
       hindrancePoints+=pts; if(seen.has(name))dup.add(name); seen.add(name); hindrances.push(`${name} (${pts===2?"Maior":"Menor"}, ${pts} ponto${pts===1?"":"s"})`);
     }
     if(hindrancePoints>HINDRANCE_BENEFIT_LIMIT)errors.push(`Desvantagens acima do limite mecanico: ${hindrancePoints}/${HINDRANCE_BENEFIT_LIMIT}.`);
     for(const name of dup)warnings.push(`Desvantagem repetida (${name}): verificar com o Mestre.`);
-    const spendEdge=num(data.spendEdge), spendAttribute=num(data.spendAttribute), spendSkill=num(data.spendSkill), spendFunds=num(data.spendFunds);
-    const hindranceSpend=spendEdge+spendAttribute+spendSkill+spendFunds; const hindranceAvailable=Math.min(hindrancePoints,HINDRANCE_BENEFIT_LIMIT);
+    const spendEdge=num(data.spendEdge),spendAttribute=num(data.spendAttribute),spendSkill=num(data.spendSkill),spendFunds=num(data.spendFunds);
+    const hindranceSpend=spendEdge+spendAttribute+spendSkill+spendFunds,hindranceAvailable=Math.min(hindrancePoints,HINDRANCE_BENEFIT_LIMIT);
     if(hindranceSpend>hindranceAvailable)errors.push(`Gasto de Hindrance acima dos pontos disponiveis: ${hindranceSpend}/${hindranceAvailable}.`);
     if(spendEdge%2!==0)errors.push("Gasto de Hindrance em Vantagem precisa ser multiplo de 2.");
     if(spendAttribute%2!==0)errors.push("Gasto de Hindrance em Atributo precisa ser multiplo de 2.");
     const adv=collectAdvances(data,attrs,errors,warnings);
     const attrBudget=BASE_ATTRIBUTE_BUDGET+Math.floor(spendAttribute/2)+adv.attributeAdvances; if(attrSpent>attrBudget)errors.push(`Atributos acima do orcamento: ${attrSpent}/${attrBudget}.`);
-    let skillSpent=0; const skillCosts={}, selectedSkills=[];
-    for(const [key,label,attr,core] of SKILLS){const target=dstep(data[`skill_${key}`]||(core?"d4":"-")); const base=baseSkillStep(core); const cost=skillCostFromTo(base,target,attrs[attr]??0); skillCosts[key]=cost; skillSpent+=cost; if(target>=0)selectedSkills.push([label,dieFromStep(target),cost,attr]);}
+    let skillSpent=0; const skillCosts={},selectedSkills=[]; const skillBackgroundBonus=backgroundSkillCredit(data,attrs);
+    for(const [key,label,attribute,core] of SKILLS){
+      const target=dstep(data[`skill_${key}`]||(core?"d4":"-")); const rawCost=skillCostFromTo(baseSkillStep(core),target,attrs[attribute]??0); const freeCost=backgroundBenefit?.skill===key&&target>=dstep(backgroundBenefit.die)?skillBackgroundBonus:0; const cost=Math.max(0,rawCost-freeCost);
+      skillCosts[key]=cost; skillSpent+=cost; if(target>=0)selectedSkills.push([label,dieFromStep(target),cost,attribute]);
+    }
     const skillBudget=BASE_SKILL_BUDGET+spendSkill+adv.skillCredits; if(skillSpent>skillBudget)errors.push(`Pericias acima do orcamento: ${skillSpent}/${skillBudget}.`);
-    let edgeSpent=0, edgeBackgroundBonus=0; const edges=[];
+    let edgeSpent=0,edgeBackgroundBonus=0; const edges=[];
     for(let i=1;i<=4;i++){const name=data[`edge_${i}`]||""; if(!name)continue; const source=data[`edgeSource_${i}`]||"Criacao"; const approval=data[`edgeApproval_${i}`]||"Pendente"; edgeSpent++; if(source==="Background Cultural")edgeBackgroundBonus++; edges.push(`${name} - origem: ${source}; status: ${approval}`);}
     const edgeBudget=BASE_EDGE_BUDGET+Math.floor(spendEdge/2)+adv.edgeAdvances+edgeBackgroundBonus; if(edgeSpent>edgeBudget)errors.push(`Vantagens acima do orcamento: ${edgeSpent}/${edgeBudget}.`);
     const answeredBonds=typeof BONDS==="undefined"?0:BONDS.filter((_,i)=>(data[`bond_${i+1}`]||"").trim().length>0).length; if(answeredBonds<5)warnings.push(`Responder pelo menos 5 vinculos. Respondidos: ${answeredBonds}/5.`);
-    return {data,errors,warnings,canOfficiallyExport:errors.length===0,attrSpent,attrBudget,attrBase:BASE_ATTRIBUTE_BUDGET,attrHindranceBonus:Math.floor(spendAttribute/2),attrAdvanceBonus:adv.attributeAdvances,hindrancePoints,hindranceBudget:HINDRANCE_BENEFIT_LIMIT,hindranceSpend,hindranceAvailable,spendEdge,spendAttribute,spendSkill,spendFunds,skillSpent,skillBudget,skillBase:BASE_SKILL_BUDGET,skillHindranceBonus:spendSkill,skillAdvanceBonus:adv.skillCredits,skillCosts,selectedSkills,edgeSpent,edgeBudget,edgeBase:BASE_EDGE_BUDGET,edgeHindranceBonus:Math.floor(spendEdge/2),edgeAdvanceBonus:adv.edgeAdvances,edgeBackgroundBonus,hindrances,edges,advances:adv.advances,extraFunds:spendFunds*STARTING_FUNDS*2,attrSteps:attrs,answeredBonds,background:selectedBackground(data)};
+    return {data,errors,warnings,canOfficiallyExport:errors.length===0,attrSpent,attrBudget,attrBase:BASE_ATTRIBUTE_BUDGET,attrHindranceBonus:Math.floor(spendAttribute/2),attrBackgroundBonus,attrAdvanceBonus:adv.attributeAdvances,hindrancePoints,hindranceBudget:HINDRANCE_BENEFIT_LIMIT,hindranceSpend,hindranceAvailable,spendEdge,spendAttribute,spendSkill,spendFunds,skillSpent,skillBudget,skillBase:BASE_SKILL_BUDGET,skillHindranceBonus:spendSkill,skillBackgroundBonus,skillAdvanceBonus:adv.skillCredits,skillCosts,selectedSkills,edgeSpent,edgeBudget,edgeBase:BASE_EDGE_BUDGET,edgeHindranceBonus:Math.floor(spendEdge/2),edgeAdvanceBonus:adv.edgeAdvances,edgeBackgroundBonus,hindrances,automaticLimitations:automaticBackgroundLimitations(data),edges,advances:adv.advances,extraFunds:spendFunds*STARTING_FUNDS*2,attrSteps:attrs,answeredBonds,background,backgroundBenefit,backgroundRule:backgroundRule(data)};
   }
   function updateStatuses(calc){
     setBlockStatus("attributes-status",calc.attrSpent,calc.attrBudget,calc.attrSpent>calc.attrBudget?[{type:"error",text:"Excesso de pontos de atributo."}]:[]);
@@ -133,6 +171,7 @@
     return `# Dossie de PC - Conan Legacy
 
 Gerado em: ${generatedAt}
+- Geracao aleatoria: ${data.randomSeed?"sim":"nao"}${data.randomSeed?`; semente ${data.randomSeed}`:""}
 
 ## Dados do jogador
 - Jogador: ${filled(data.playerName)}
@@ -148,9 +187,9 @@ Gerado em: ${generatedAt}
 ${filled(data.history)}
 
 ## Orcamento de Criacao
-- Atributos: base ${calc.attrBase}; bonus por Hindrance ${calc.attrHindranceBonus}; bonus por Avanco ${calc.attrAdvanceBonus}; usado ${calc.attrSpent}/${calc.attrBudget}.
+- Atributos: base ${calc.attrBase}; bonus por Hindrance ${calc.attrHindranceBonus}; bonus por Background ${calc.attrBackgroundBonus}; bonus por Avanco ${calc.attrAdvanceBonus}; usado ${calc.attrSpent}/${calc.attrBudget}.
 - Vantagens: base humana ${calc.edgeBase}; bonus por Hindrance ${calc.edgeHindranceBonus}; bonus por Background ${calc.edgeBackgroundBonus}; bonus por Avanco ${calc.edgeAdvanceBonus}; usado ${calc.edgeSpent}/${calc.edgeBudget}.
-- Pericias: base ${calc.skillBase}; bonus por Hindrance ${calc.skillHindranceBonus}; bonus por Avanco ${calc.skillAdvanceBonus}; usado ${calc.skillSpent}/${calc.skillBudget}.
+- Pericias: base ${calc.skillBase}; bonus por Hindrance ${calc.skillHindranceBonus}; bonus por Background ${calc.skillBackgroundBonus}; bonus por Avanco ${calc.skillAdvanceBonus}; usado ${calc.skillSpent}/${calc.skillBudget}.
 - Desvantagens: beneficio mecanico ${calc.hindrancePoints}/${calc.hindranceBudget}; gasto declarado ${calc.hindranceSpend}/${calc.hindranceAvailable}.
 - Recursos extras por Hindrance: ${calc.extraFunds} (${calc.spendFunds} ponto(s) x 2 x ${STARTING_FUNDS}).
 
@@ -159,6 +198,9 @@ ${attributes}
 
 ## Background Cultural
 ${bg}
+Beneficio mecanico selecionado: ${calc.backgroundBenefit?.label||"-"}
+Limitacoes automaticas (nao concedem pontos): ${listLines(calc.automaticLimitations)}
+Recursos do Background: ${calc.backgroundRule?.fundsNote||"-"}
 Observacoes: ${filled(data.culturalBackgroundNotes)}
 
 ## Desvantagens
@@ -172,6 +214,7 @@ ${skills}
 
 ## Armas e Equipamentos
 ${filled(data.equipmentWishlist)}
+Pacote aleatorio: ${filled(data.randomEquipmentPackage)}
 
 ## Avancos iniciais
 ${listLines(calc.advances)}
@@ -197,6 +240,10 @@ PLAYER: ${filled(data.playerName)}
 PLAYER_EMAIL: ${filled(data.playerEmail)}
 ORIGIN: ${filled(data.origin)}
 BACKGROUND: ${filled(data.culturalBackground)}
+BACKGROUND_BENEFIT: ${calc.backgroundBenefit?.id||"-"}
+BACKGROUND_LIMITATIONS: ${calc.automaticLimitations.join("; ")||"-"}
+RANDOM_SEED: ${filled(data.randomSeed)}
+RANDOM_PACKAGE: ${filled(data.randomEquipmentPackage)}
 ATTRIBUTES: ${techAttrs}
 SKILLS: ${techSkills}
 HINDRANCES: ${calc.hindrances.join("; ") || "-"}
@@ -232,5 +279,6 @@ WARNINGS: ${calc.warnings.join(" | ") || "-"}
     catch(error){statusText(`Falha no envio pelo endpoint: ${error.message}`); writeLog({time:new Date().toLocaleString("pt-BR"),mode:"endpoint",status:"falha",size,error:error.message});}
   }
   function bindEnhancedEvents(){formEl.addEventListener("input",()=>setTimeout(enhancedUpdate,0)); formEl.addEventListener("change",()=>setTimeout(enhancedUpdate,0)); document.getElementById("download-output")?.addEventListener("click",downloadEnhanced,true); document.getElementById("copy-output")?.addEventListener("click",copyEnhanced,true); document.getElementById("send-master")?.addEventListener("click",sendDossier,true); document.getElementById("load-draft")?.addEventListener("click",()=>setTimeout(enhancedUpdate,30)); document.getElementById("clear-form")?.addEventListener("click",()=>setTimeout(()=>{enhanceStaticUi(); enhancedUpdate();},30));}
+  window.HeroeForgeValidation={update:enhancedUpdate,collect:collectCalc,enhance:enhanceStaticUi,status:statusText};
   enhanceStaticUi(); bindEnhancedEvents(); enhancedUpdate();
 })();

@@ -393,6 +393,17 @@
       grid-column: 1 / -1;
     }
 
+    .identity-random {
+      display: flex;
+      align-items: end;
+    }
+
+    .identity-random .button {
+      width: 100%;
+      border-color: rgba(201, 154, 74, 0.82);
+      color: #ffcc66;
+      background: #3a2500;
+    }
     .output {
       min-height: 360px;
       white-space: pre-wrap;
@@ -462,10 +473,10 @@
 
           <div class="grid two">
             <label>Jogador
-              <input name="playerName" autocomplete="name" placeholder="Nome do jogador">
+              <input name="playerName" autocomplete="name" placeholder="Nome do jogador" required>
             </label>
             <label>E-mail do jogador
-              <input name="playerEmail" type="email" autocomplete="email" placeholder="email@exemplo.com">
+              <input name="playerEmail" type="email" autocomplete="email" placeholder="email@exemplo.com" required>
             </label>
             <label>Nome do PC
               <input name="pcName" placeholder="Nome do personagem">
@@ -500,6 +511,9 @@
                 <option>Outro conceito aprovado pelo Mestre</option>
               </select>
             </label>
+            <div class="identity-random">
+              <button class="button" type="button" id="generate-random">Gerar personagem aleatorio</button>
+            </div>
           </div>
 
           <div class="grid">
@@ -1253,6 +1267,8 @@ Jogador: ${playerName}
     });
   </script>
   <script src="heroe-forge-email-config.js"></script>
+  <script src="heroe-forge-random-data.js"></script>
   <script src="gerador-personagem-validacao.js"></script>
+  <script src="gerador-personagem-aleatorio.js"></script>
 </body>
 </html>
