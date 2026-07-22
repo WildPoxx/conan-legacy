@@ -13,6 +13,7 @@ Este repositorio contem apenas a superficie segura para jogadores: wiki curada, 
 - [Portal dos jogadores](docs/index.html)
 - [Wiki: inicio](wiki/Home.md)
 - [Criacao de personagem](wiki/Criacao-de-Personagem.md)
+- [Gerador de personagem](docs/gerador-personagem.html)
 - [Regras da mesa](wiki/Regras-da-Mesa.md)
 - [Handouts](wiki/Handouts.md)
 
@@ -26,4 +27,7 @@ Este repositorio contem apenas a superficie segura para jogadores: wiki curada, 
 ## Aviso de direitos
 
 Este e um material de fa feito para uso privado de mesa. Conan e a Era Hiboriana pertencem aos seus titulares. Savage Worlds e SWADE pertencem aos seus titulares. Este repositorio nao distribui livros, PDFs comerciais ou regras integrais de sistemas.
+
+
+
 

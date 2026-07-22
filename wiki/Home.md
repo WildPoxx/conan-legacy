@@ -10,6 +10,7 @@ Esta wiki e a porta de entrada dos jogadores. Ela contem apenas material seguro 
 
 - [Comece Aqui](Comece-Aqui.md)
 - [Criacao de Personagem](Criacao-de-Personagem.md)
+- [Gerador de Personagem](Gerador-de-Personagem.md)
 - [Regras da Mesa](Regras-da-Mesa.md)
 - [Mundo e Lore Revelado](Mundo-e-Lore-Revelado.md)
 - [Personagens](Personagens.md)
@@ -19,3 +20,4 @@ Esta wiki e a porta de entrada dos jogadores. Ela contem apenas material seguro 
 ## Premissa publica
 
 Conn esta morto. Nao ha sucessor aceito por todos. Venarium prospera sob Thal-Remmon. Karavazyan, a cidade sobre rodas, cruza as rotas das Marchas como mercado, fortaleza e segredo ambulante. E a Torre de Khar-Volun, antiga demais para ser ignorada, parece ter ficado sem guardiao.
+

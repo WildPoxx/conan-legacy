@@ -61,3 +61,12 @@ Responda pelo menos 5:
 8. Que oferta faria voce entrar na Torre mesmo sabendo que e uma ma ideia?
 9. Qual sonho recente voce nao contou a ninguem?
 10. Quem voce deve evitar na Quinta Roda?
+
+## Coletor de dados
+
+Depois de ler este guia, use o formulario publico para montar o dossie inicial do PC:
+
+- [Gerador de Personagem](https://wildpoxx.github.io/conan-legacy/gerador-personagem.html)
+
+O gerador exporta um arquivo `.txt`/Markdown com a descricao do personagem, escolhas mecanicas, pendencias de aprovacao e um bloco tecnico para futura conversao em Actor do Foundry VTT.
+
