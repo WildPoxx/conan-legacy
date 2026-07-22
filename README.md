@@ -4,6 +4,10 @@ Repositorio publico de apoio para jogadores da campanha **Conan Legacy**, uma me
 
 Este repositorio contem apenas a superficie segura para jogadores: wiki curada, portal publico e handouts selecionados. O acervo completo da campanha permanece localmente com o Mestre e pode conter notas privadas, materiais comerciais de referencia e documentos de trabalho.
 
+## Site publicado
+
+- https://wildpoxx.github.io/conan-legacy/
+
 ## Acesso rapido
 
 - [Portal dos jogadores](docs/index.html)
@@ -22,3 +26,4 @@ Este repositorio contem apenas a superficie segura para jogadores: wiki curada, 
 ## Aviso de direitos
 
 Este e um material de fa feito para uso privado de mesa. Conan e a Era Hiboriana pertencem aos seus titulares. Savage Worlds e SWADE pertencem aos seus titulares. Este repositorio nao distribui livros, PDFs comerciais ou regras integrais de sistemas.
+
