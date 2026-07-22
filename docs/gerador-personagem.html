@@ -464,6 +464,9 @@
             <label>Jogador
               <input name="playerName" autocomplete="name" placeholder="Nome do jogador">
             </label>
+            <label>E-mail do jogador
+              <input name="playerEmail" type="email" autocomplete="email" placeholder="email@exemplo.com">
+            </label>
             <label>Nome do PC
               <input name="pcName" placeholder="Nome do personagem">
             </label>
@@ -632,11 +635,24 @@
           <div id="bond-fields" class="grid"></div>
         </section>
 
+        <section aria-labelledby="comentarios-mestre">
+          <div class="section-head">
+            <div>
+              <h2 id="comentarios-mestre">Comentarios para o Mestre</h2>
+              <p class="hint">Utilize este espaco para fazer comentarios adicionais, pedidos, duvidas, preferencias ou solicitacoes para o Mestre do jogo.</p>
+            </div>
+            <span class="badge">10</span>
+          </div>
+          <label>Comentarios adicionais
+            <textarea name="gmComments" placeholder="Ex.: gostaria de discutir uma divida antiga, pedir permissao para uma Vantagem especifica, combinar um contato ou explicar uma escolha incomum."></textarea>
+          </label>
+        </section>
+
         <section aria-labelledby="saida">
           <div class="section-head">
             <div>
               <h2 id="saida">Dossie Exportavel</h2>
-              <p class="hint">Copie ou baixe este texto e envie ao Mestre. Ele e legivel por humano e facil de converter em script depois.</p>
+              <p class="hint">Copie, baixe ou envie este texto ao Mestre. Ele e legivel por humano e facil de converter em script depois.</p>
             </div>
             <span class="badge">TXT</span>
           </div>
@@ -673,6 +689,7 @@
           <button class="button" type="button" id="download-output">Baixar TXT</button>
           <button class="button" type="button" id="save-draft">Salvar rascunho</button>
           <button class="button" type="button" id="load-draft">Carregar</button>
+          <button class="button primary full" type="button" id="send-master">Enviar para o Mestre</button>
           <button class="button full" type="button" id="clear-form">Limpar formulario</button>
         </div>
         <p class="status" id="status" aria-live="polite"></p>
@@ -1034,6 +1051,7 @@ Gerado em: ${generatedAt}
 
 ## Dados do jogador
 - Jogador: ${filled(data.playerName)}
+- E-mail do jogador: ${filled(data.playerEmail)}
 - Personagem: ${pcName}
 - Origem ou cultura: ${filled(data.origin)}
 - Conceito de mesa: ${filled(data.concept)}
@@ -1069,6 +1087,9 @@ ${listLines(advances)}
 ## Vinculos de campanha
 ${bonds}
 
+## Comentarios para o Mestre
+${filled(data.gmComments)}
+
 ## Resumo mecanico
 - Rank inicial: Novice com 2 Avancos
 - Wild Card: sim
@@ -1089,6 +1110,7 @@ ${listLines(pending)}
 ## BLOCO TECNICO PARA CODEX
 PC_NAME: ${pcName}
 PLAYER: ${filled(data.playerName)}
+PLAYER_EMAIL: ${filled(data.playerEmail)}
 ORIGIN: ${filled(data.origin)}
 CONCEPT: ${filled(data.concept)}
 PITCH: ${filled(data.pitch)}
@@ -1097,6 +1119,7 @@ BACKGROUND_NOTES: ${filled(data.culturalBackgroundNotes)}
 ATTRIBUTES: ${techAttrs}
 SKILLS: ${techSkills || "-"}
 EQUIPMENT: ${filled(data.equipmentWishlist)}
+GM_COMMENTS: ${filled(data.gmComments)}
 HINDRANCES: ${techHindrances}
 EDGES: ${techEdges}
 ADVANCES: ${techAdvances}
@@ -1201,8 +1224,29 @@ FOUNDRY_TARGET: SWADE 5.2.6 / Foundry VTT 13.351 / Actor type character
       setStatus(`Arquivo preparado: ${filename}`);
     });
 
+
+    function sendToMaster() {
+      update();
+      const calc = collectCalculations();
+      const pcName = filled(calc.data.pcName);
+      const playerName = filled(calc.data.playerName);
+      const playerEmail = filled(calc.data.playerEmail);
+      const subject = `Conan Legacy - Dossie de PC - ${pcName}`;
+      const body = `${output.value}
+
+---
+E-mail informado pelo jogador para retorno: ${playerEmail}
+Jogador: ${playerName}
+`;
+      const mailto = `mailto:popota@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      navigator.clipboard?.writeText(output.value).catch(() => {});
+      window.location.href = mailto;
+      setStatus("Abrindo e-mail para o Mestre. O dossie tambem foi copiado, se o navegador permitir.");
+    }
+
     document.getElementById("save-draft").addEventListener("click", saveDraft);
     document.getElementById("load-draft").addEventListener("click", loadDraft);
+    document.getElementById("send-master").addEventListener("click", sendToMaster);
     document.getElementById("clear-form").addEventListener("click", () => {
       form.reset();
       for (const [key] of ATTRIBUTES) form.elements[`attr_${key}`].value = "d4";
@@ -1213,9 +1257,3 @@ FOUNDRY_TARGET: SWADE 5.2.6 / Foundry VTT 13.351 / Actor type character
   </script>
 </body>
 </html>
-
-
-
-
-
-
