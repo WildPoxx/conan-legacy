@@ -79,13 +79,13 @@
     for(let i=1;i<=2;i++){
       const type=data[`advanceType_${i}`]||""; const pri=formEl.elements[`advancePrimary_${i}`]; const sec=formEl.elements[`advanceSecondary_${i}`];
       const pl=document.querySelector(`[data-advance-primary-label="${i}"]`); const sl=document.querySelector(`[data-advance-secondary-label="${i}"]`); const nl=document.querySelector(`[data-advance-note-label="${i}"]`);
-      if(!pri||!sec||!pl||!sl||!nl)continue; const pv=pri.value, sv=sec.value; const skillNames=SKILLS.map(([,l])=>l); const attrNames=ATTRIBUTES.map(([,l])=>l); const hNames=selectedHindranceNames(data);
+      if(!pri||!sec||!pl||!sl||!nl)continue; const pv=pri.value, sv=sec.value; const skillNames=SKILLS.map(([,l])=>l); const attrNames=ATTRIBUTES.map(([,l])=>l); const hNames=selectedHindranceNames(data); const allHNames=(randomData().hindrances||HINDRANCE_OPTIONS.map(label=>({label}))).map(item=>item.label);
       pl.classList.remove("is-hidden"); sl.classList.add("is-hidden"); nl.classList.remove("is-hidden");
       if(type==="edge"){pl.firstChild.textContent="Vantagem "; pri.innerHTML=options(EDGE_OPTIONS,"Escolha a Vantagem");}
       else if(type==="attribute"){pl.firstChild.textContent="Atributo "; pri.innerHTML=options(attrNames,"Escolha o atributo");}
       else if(type==="oneSkill"){pl.firstChild.textContent="Pericia "; pri.innerHTML=options(skillNames,"Escolha a pericia");}
       else if(type==="twoSkills"){pl.firstChild.textContent="Pericia 1 "; pri.innerHTML=options(skillNames,"Escolha a primeira pericia"); sec.innerHTML=options(skillNames,"Escolha a segunda pericia"); sl.classList.remove("is-hidden");}
-      else if(type==="reduceHindrance"){pl.firstChild.textContent="Hindrance "; pri.innerHTML=options(hNames.length?hNames:HINDRANCE_OPTIONS,"Escolha a Hindrance");}
+      else if(type==="reduceHindrance"){pl.firstChild.textContent="Hindrance "; pri.innerHTML=options(hNames.length?hNames:allHNames,"Escolha a Hindrance");}
       else {pri.innerHTML=`<option value="">Nao se aplica</option>`; pl.classList.add("is-hidden");}
       if([...pri.options].some(o=>o.value===pv))pri.value=pv; if([...sec.options].some(o=>o.value===sv))sec.value=sv;
     }

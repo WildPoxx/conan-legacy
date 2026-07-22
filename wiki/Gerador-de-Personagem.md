@@ -7,10 +7,10 @@ Use o coletor publico para montar o dossie inicial do PC:
 ## O que ele faz
 
 - Coleta nome do jogador, nome do PC, origem, conceito e historia curta.
-- Organiza atributos, pericias, Desvantagens, Vantagens e 2 Avancos iniciais.
+- Organiza atributos, pericias, lista ampliada de Desvantagens, Vantagens e 2 Avancos iniciais.
 - Mostra contadores basicos de pontos para evitar erros comuns.
 - Calcula Pace, Parry, Toughness, Wounds e Bennies como resumo inicial.
-- Gera um texto exportavel em formato `.txt`/Markdown para envio ao Mestre.
+- Gera um texto exportavel em formato `.txt`/Markdown e permite enviar o dossie ao Mestre.
 
 ## Como enviar ao Mestre
 
