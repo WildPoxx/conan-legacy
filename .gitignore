@@ -1,0 +1,44 @@
+﻿# Local vault and private campaign archive
+/.obsidian/
+/00_index/
+/01_Characters/
+/02_Quests/
+/03_World/
+/04_Factions/
+/05_Lore&Mythos/
+/06_System (Rules)/
+/07_Handouts/
+/08_Logs/
+/09_Media/
+/10_Livro-Jogo/
+/11_SWADE_Ponte/
+/output/
+/tmp/
+/PDFs para Jogo/
+
+# Google Drive placeholders and local shortcuts
+*.gdoc
+*.gsheet
+*.gslides
+*.lnk
+
+# Commercial, heavy, or working assets
+*.pdf
+*.psd
+*.ai
+*.mp4
+*.mov
+*.tmp
+*.gcs
+*.gca4
+
+# Keep public deliverables tracked
+!/README.md
+!/CONTENT_POLICY.md
+!/MIGRATION.md
+!/.gitattributes
+!/.gitignore
+!/wiki/
+!/wiki/**
+!/docs/
+!/docs/**

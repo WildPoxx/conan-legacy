@@ -1,0 +1,272 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conan Legacy - Portal dos Jogadores</title>
+  <meta name="description" content="Portal publico dos jogadores de Conan Legacy, campanha SWADE de espada e feiticaria na Era Hiboriana.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --iron: #25221d;
+      --blood: #8e2f2a;
+      --gold: #c99a4a;
+      --moss: #5d6f55;
+      --line: rgba(243, 237, 226, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--coal);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(20, 17, 13, 0.94), rgba(20, 17, 13, 0.58) 52%, rgba(20, 17, 13, 0.82)),
+        linear-gradient(0deg, rgba(20, 17, 13, 1), rgba(20, 17, 13, 0.12) 42%),
+        url("assets/cover.png") center / cover no-repeat;
+    }
+
+    .hero-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 88px 0 72px;
+    }
+
+    .kicker {
+      margin: 0 0 16px;
+      color: var(--gold);
+      font: 700 0.84rem/1.2 Arial, sans-serif;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(3.4rem, 11vw, 8.5rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.4vw, 1.42rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+      font-family: Arial, sans-serif;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      text-decoration: none;
+      background: rgba(20, 17, 13, 0.72);
+    }
+
+    .button.primary {
+      border-color: rgba(201, 154, 74, 0.75);
+      background: var(--blood);
+    }
+
+    main {
+      background:
+        linear-gradient(180deg, var(--coal), #1c1a16 42%, #11100d);
+    }
+
+    .section {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .panel {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .panel p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+      font-family: Arial, sans-serif;
+    }
+
+    .link-card {
+      min-height: 138px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.035);
+      text-decoration: none;
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .link-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .media-band {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .media-band img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      display: block;
+    }
+
+    .notice {
+      margin-top: 28px;
+      color: var(--muted);
+      font: 0.95rem/1.5 Arial, sans-serif;
+      border-left: 4px solid var(--moss);
+      padding-left: 16px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 16px;
+      color: var(--muted);
+      text-align: center;
+      font: 0.92rem/1.5 Arial, sans-serif;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        min-height: 88vh;
+        background-position: 58% center;
+      }
+
+      .intro-grid,
+      .link-grid,
+      .media-band {
+        grid-template-columns: 1fr;
+      }
+
+      .link-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Era Hiboriana - SWADE - Portal dos Jogadores</p>
+      <h1>Conan Legacy</h1>
+      <p class="lead">A Aquilonia perdeu o centro. Karavazyan se move. A Torre de Khar-Volun silenciou. Este e o ponto de partida seguro para jogadores entrarem na campanha sem spoilers.</p>
+      <nav class="actions" aria-label="Acesso rapido">
+        <a class="button primary" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Home.md">Abrir wiki</a>
+        <a class="button" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Criacao-de-Personagem.md">Criar personagem</a>
+        <a class="button" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Handouts.md">Ver handouts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro-grid" aria-labelledby="premissa">
+      <div>
+        <h2 id="premissa">Um reino sem sucessor</h2>
+        <div class="panel">
+          <p>Conn, filho de Conan, morreu sem sucessor proclamado. Venarium prospera sob Thal-Remmon. Nas Marchas, a ordem depende de homens armados, cidades inquietas e pactos que ninguem admite em voz alta.</p>
+          <p>Os personagens entram na historia antes que ela se torne guerra aberta: capazes o bastante para serem notados, vulneraveis o bastante para temer o preco de cada escolha.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <p><strong>Sistema:</strong> SWADE.</p>
+        <p><strong>Inicio:</strong> Novice com 2 Avancos.</p>
+        <p><strong>Tom:</strong> espada e feiticaria, fronteira brutal, politica em ruina e magia ruim de tocar.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="atalhos">
+      <h2 id="atalhos">Mesa em movimento</h2>
+      <div class="link-grid">
+        <a class="link-card" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Comece-Aqui.md"><strong>Comece aqui</strong><span>Premissa, tom e leitura minima antes da sessao.</span></a>
+        <a class="link-card" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Criacao-de-Personagem.md"><strong>PCs</strong><span>Baseline, conceitos recomendados e perguntas de vinculo.</span></a>
+        <a class="link-card" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Mundo-e-Lore-Revelado.md"><strong>Mundo</strong><span>Aquilonia, Venarium, Karavazyan e a Torre.</span></a>
+        <a class="link-card" href="https://github.com/WildPoxx/conan-legacy/blob/main/wiki/Regras-da-Mesa.md"><strong>Regras</strong><span>Resumo publico das regras de campanha em SWADE.</span></a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="handouts">
+      <h2 id="handouts">Handouts liberados</h2>
+      <div class="media-band">
+        <img src="assets/ponte-da-passagem.png" alt="Ponte da Passagem">
+        <img src="assets/torre-khar-volun.png" alt="Torre de Khar-Volun">
+        <img src="assets/texto-de-abertura.png" alt="Texto de abertura da campanha">
+      </div>
+      <p class="notice">Esta pagina publica nao distribui PDFs comerciais nem notas privadas do Mestre. A wiki mostra apenas o que pode ser consultado pelos jogadores.</p>
+    </section>
+  </main>
+
+  <footer>
+    Material de fa para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.
+  </footer>
+</body>
+</html>
+
