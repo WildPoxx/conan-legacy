@@ -1,0 +1,304 @@
+{
+  "version": "0.1.0",
+  "kind": "hindrances",
+  "baseline": {
+    "foundry": "13.351",
+    "swade": "5.2.6"
+  },
+  "source_refs": [
+    "docs/heroe-forge-random-data.js"
+  ],
+  "records": [
+    {
+      "id": "hindrance-sangue-chamado",
+      "name": "Sangue Chamado",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "sobrenatural",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Sua origem tem uma porta que nem sempre fica fechada. Nomes antigos, relíquias de família, sangue derramado ou cânticos esquecidos podem puxar algo em você para fora, revelando o que deveria permanecer oculto.\n\nAo comprar esta Desvantagem, defina sua origem e quais focos ancestrais estão ligados a ela. Quando estiver perto o bastante para ver, ouvir, tocar ou ser diretamente afetado por um desses focos, role Spirit. O foco pode ser nome verdadeiro, relíquia familiar, altar, canto antigo ou sangue derramado.\n\n**Menor:** Em uma falha, você fica **Distracted** até gastar uma ação tocando, protegendo, rejeitando ou se afastando claramente do foco.\n\n**Maior:** Role Spirit com `-2`. Em uma falha, você também fica **Vulnerable** até o fim do seu próximo turno, pois sua reação revela que o foco tem poder sobre você.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text. Substitui o registro placeholder draft anterior.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "requires_master_conversation": true,
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-outra-aprovada",
+      "name": "Outra aprovada pelo Mestre",
+      "category": "table-exception",
+      "editorial_status": "canon",
+      "source_refs": [
+        "docs/heroe-forge-random-data.js"
+      ],
+      "player_safe_text": "Entrada de excecao para Desvantagem aprovada pelo Mestre.",
+      "gm_notes": "Nao deve virar Item Foundry especifico; usar como placeholder de export.",
+      "foundry_ready": false,
+      "severity": [
+        "minor",
+        "major"
+      ],
+      "mechanical_effect": "Placeholder para decisao de mesa.",
+      "approval_state": "gm-only",
+      "type": "hindrances"
+    },
+    {
+      "id": "hindrance-fome-de-lotus",
+      "name": "Fome de Lótus",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-piloto",
+      "severity": "minor_or_major",
+      "mechanical_effect": "Rola Spirit ao ficar sem a dose habitual ou diante de lótus acessível em cena perigosa. Menor: falha causa Distracted até gastar ação se recompondo. Maior: Spirit -2; falha causa Distracted e escolha entre consumir (1 Fatigue após a cena) ou resistir (Distracted até se afastar).",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Seu herói foi consumido pela fome da flor de Lótus, ou ainda carrega no sangue o chamado de seus perfumes, resinas e sonhos febris. Comedores de Lótus variam: alguns ficam mansos e trêmulos, outros se tornam ansiosos, irritadiços ou perigosamente distraídos quando a flor está perto.\n\nRole Spirit quando você ficar sem sua dose habitual em um dia em que normalmente teria acesso a lótus, ou quando lótus estiver visível, oferecido ou fácil de pegar durante uma cena perigosa.\n\nMenor: Em uma falha, você fica Distracted até gastar uma ação se recompondo.\n\nMaior: Role Spirit com -2. Em uma falha, você fica Distracted e escolhe: consumir o lótus e sofrer 1 nível de Fatigue após a cena, ou resistir e continuar Distracted até se afastar da tentação ou descartá-la.",
+      "gm_notes": "Lote piloto v0.1 para validar o schema SWADE no Foundry (decisão Mario 2026-07-23). Texto transcrito fielmente da fonte; sem alteração criativa. Mario/Codex podem trocar as entradas do piloto.",
+      "foundry_ready": true
+    },
+    {
+      "id": "hindrance-divida-de-nome",
+      "name": "Dívida de Nome",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-piloto",
+      "severity": "minor_or_major",
+      "mechanical_effect": "Quando o credor invoca a dívida em cena: aceitar a obrigação evita penalidade social naquela cena. Menor: recusar obrigação moderada causa -1 social contra credor/agentes/aliados cientes até reparar. Maior: obrigação pode envolver risco sério; recusa pública causa -2 social enquanto não reparada.",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Alguém tem direito sobre sua reputação: uma promessa antiga, um favor impago, uma vida poupada ou uma vergonha que ainda circula em voz baixa. Quando esse nome é chamado, recusá-lo custa mais que moedas.\n\nQuando o credor ou seus agentes invocarem sua dívida em cena, você deve aceitar uma obrigação concreta ou recusá-la publicamente. Se aceitar, não sofre penalidade social por esta Desvantagem naquela cena.\n\nMenor: Se recusar uma obrigação moderada, você sofre -1 em rolagens sociais contra o credor, seus agentes e aliados que conheçam a dívida até pagar, negociar ou reparar seu nome.\n\nMaior: A obrigação pode envolver risco sério, viagem, perda material ou conflito moral. Se recusar publicamente, você sofre -2 em rolagens sociais contra o credor, seus agentes e aliados enquanto a recusa continuar sem reparação.",
+      "gm_notes": "Lote piloto v0.1 para validar o schema SWADE no Foundry (decisão Mario 2026-07-23). Texto transcrito fielmente da fonte; sem alteração criativa. Mario/Codex podem trocar as entradas do piloto.",
+      "foundry_ready": true
+    },
+    {
+      "id": "hindrance-herdeiro-da-ruina-atlante",
+      "name": "Herdeiro da Ruína Atlante",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "A ruína atlante não é apenas pedra velha para você. Cada lâmina oxidada, cada selo partido e cada máquina impossível parecem chamar por memória, posse ou reparo, como se o passado exigisse uma testemunha.\n\nUma vez por cena, quando surgir um achado visível, identificável como atlante e materialmente útil ou perigoso para a situação, você precisa lidar com ele. Isso não concede conhecimento automático; role a perícia apropriada normalmente.\n\n**Menor:** Escolha: gastar sua próxima ação examinando, protegendo, registrando ou isolando o achado; ou ficar **Distracted** até o fim da próxima rodada.\n\n**Maior:** Se ignorar o achado, faça Spirit com `-2`. Em uma falha, você fica **Distracted** até gastar uma ação lidando diretamente com ele ou até a cena terminar.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "requires_master_conversation": true,
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-marcado-pela-escravidao",
+      "name": "Marcado pela Escravidão",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Correntes já fecharam sobre seu corpo, seu nome ou sua vontade. Mesmo livre, certas imagens ainda mordem: o estalo do chicote, a coleira exibida como lei, a voz de quem acredita possuir outro ser humano.\n\nQuando correntes, coleiras, leilões, chicotes de feitor ou ordens de posse aparecerem diretamente na cena, role Spirit. Lembrança vaga, piada distante ou boato não ativam esta Desvantagem.\n\n**Menor:** Em uma falha, você fica **Distracted**. Você encerra esse estado ao gastar uma ação resistindo ao gatilho: quebrar uma corrente, encarar o feitor, proteger outro cativo, rasgar um símbolo de posse ou declarar que não obedece. Se não houver como resistir diretamente ao gatilho, você encerra **Distracted** ao se afastar dele ou ao fim da cena.\n\n**Maior:** Role Spirit com `-2`. Em uma falha, você fica **Shaken**; depois de se recuperar de Shaken, ainda fica **Distracted** até realizar uma ação clara de resistência contra o gatilho. Se não houver como resistir diretamente ao gatilho, você encerra **Distracted** ao se afastar dele ou ao fim da cena.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-obcecado-pelo-enigma-do-aco",
+      "name": "Obcecado pelo Enigma do Aço",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Para você, armas e técnicas não são ferramentas comuns: são perguntas abertas sobre força, domínio e destino. Uma lâmina estranha ou um estilo desconhecido pode prender sua atenção mesmo quando o sangue já está correndo.\n\nUma vez por cena, quando surgir uma arma incomum, armadura notável, forja rara ou estilo marcial desconhecido, você deve rolar Smarts ou Battle. Esse é o foco da sua obsessão na cena. Em caso de sucesso, nada acontece.\n\n**Menor:** Em uma falha, você fica **Distracted** até gastar uma ação estudando, testando, recuando taticamente ou descrevendo uma leitura marcial clara do foco.\n\n**Maior:** Role com `-2`. Em uma falha, você sofre `-1` em Fighting, Shooting e Battle até gastar uma ação estudando, testando, recuando taticamente ou lendo o foco em combate.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "requires_master_conversation": true,
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-paciente-de-asclipas",
+      "name": "Paciente de Asclipas",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "A ciência de Asclipas salvou você, reconstruiu você ou manteve algo terrível afastado por enquanto. O preço é simples: seu corpo não pode ser tratado como o de qualquer aventureiro rude.\n\nUma vez por dia de aventura, você precisa de manutenção: kit de cura, drogas de manutenção ou assistência médica básica. Se não tiver isso, role Vigor.\n\n**Menor:** Em uma falha, você sofre **1 nível de Fatigue** até receber tratamento com Healing ou completar um repouso com suprimentos adequados.\n\n**Maior:** A falta de manutenção causa **1 nível de Fatigue automaticamente**; não role Vigor para evitar esse Fatigue. Além disso, até ser tratado, você sofre `-1` em rolagens de Vigor contra veneno, doença, frio, fome, sede e exaustão. O Fatigue desta Desvantagem não acumula consigo mesmo mais de uma vez por dia.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-cicatriz-mal-curada",
+      "name": "Cicatriz Mal Curada",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "combate",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Seu corpo guarda uma lembrança que nunca fechou direito. Em dias bons, ela é apenas dor antiga; em combate, esforço ou queda, torna-se uma fraqueza que inimigos atentos podem explorar.\n\nEscolha uma região ao comprar esta Desvantagem: perna, braço, costelas, olho ou mão. Uma vez por cena, role Vigor quando sofrer uma Wound que atinja ou pressione claramente essa região, ou quando ela for exigida diretamente: perna em corrida, salto, perseguição ou queda; braço em escalada, bloqueio, carga ou esforço de puxar; costelas em corrida, natação, carga ou impacto contra o tronco; olho em poeira, clarão, escuridão súbita ou golpe contra a visão; mão em escalada, desarme, agarrão ou manuseio sob pressão.\n\n**Menor:** Em uma falha, você fica **Distracted** até o fim da próxima rodada ou até gastar uma ação recuperando postura.\n\n**Maior:** Role Vigor com `-2`. Em uma falha, escolha **Distracted** ou **Vulnerable**; o estado dura até o fim da cena. Esta Desvantagem representa uma cicatriz episódica, não uma deficiência permanente.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "requires_master_conversation": true,
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-juramento-de-tripulacao",
+      "name": "Juramento de Tripulação",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "combate",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você não luta só por si. Seja por navio, bando, irmãos de saque ou companheiros de convés, há nomes que pesam mais que prudência quando o perigo chega.\n\nUma vez por cena, quando um aliado jurado, tripulação, navio ou bando estiver em perigo imediato e houver uma ação razoável de ajuda que não seja suicida, escolha ajudar ou quebrar o juramento.\n\n**Menor:** Se não agir para resgatar, proteger, pagar o custo, dar Support ou assumir risco pelo juramento, você sofre `-1` em Trait rolls até o fim da próxima rodada.\n\n**Maior:** Se recusar ajuda possível, você fica **Vulnerable** até o fim do seu próximo turno e sofre `-2` em Persuasion e Networking com quem reconheça o juramento até reparar a quebra com resgate, pagamento, pedido público de perdão, missão de compensação ou risco assumido pelo juramento.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-sangue-quente-do-cla",
+      "name": "Sangue Quente do Clã",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "combate",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Seu sangue responde antes da sua cautela quando o nome do clã, dos mortos ou dos juramentos é cuspido diante de outros. Em terras hiborianas, honra pode ser armadura, mas também pode ser isca.\n\nQuando alguém insultar diretamente seu clã, sangue, mortos ou juramentos diante de testemunhas, role Spirit.\n\n**Menor:** Em uma falha, você fica **Distracted** até responder com desafio, ameaça, exigência de retratação, retirada assumida ou um Test de Taunt ou Intimidation.\n\n**Maior:** Role Spirit com `-2`. Em uma falha, escolha: responder imediatamente com desafio, ameaça, Test ou ataque; ou conter-se e ficar **Distracted** até o fim da cena. Se responder com ataque, desafio físico ou ameaça imediata sem fazer um Test, você fica **Vulnerable** até o fim do seu próximo turno.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-sangue-de-nobreza-caida",
+      "name": "Sangue de Nobreza Caída",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você nasceu acima da lama, ou aprendeu a agir como se tivesse nascido. A queda pode ter levado terras, títulos e criados, mas não apagou gestos, orgulho e velhas expectativas.\n\nQuando o Mestre pedir uma rolagem apropriada para se misturar a pessoas comuns, aceitar humilhação pública, ocultar modos aristocráticos ou negociar em posição subalterna, aplique a penalidade desta Desvantagem à rolagem: Common Knowledge, Persuasion ou Performance.\n\n**Menor:** A penalidade é `-1`. Além disso, quando sua linhagem for insultada ou exposta em uma negociação importante, role Spirit; em uma falha, você fica **Distracted** até ceder formalmente, responder ao insulto ou abandonar a conversa.\n\n**Maior:** A penalidade é `-2`, e a rolagem de Spirit contra insulto ou exposição também sofre `-2`.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-voz-que-consola-demais",
+      "name": "Voz que Consola Demais",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você sabe aliviar dor, acalmar medo e fazer os outros aceitarem o inevitável. O problema é que, quando a lâmina precisa ser erguida agora, sua voz pode soar como permissão para hesitar.\n\nVocê sofre penalidade em rolagens de urgência: Battle, Intimidation, Persuasion ou Taunt feitas para convencer alguém a agir imediatamente sob risco. Esta Desvantagem não se aplica a Support feito para consolar, acalmar ou cuidar.\n\n**Menor:** Rolagens de urgência sofrem `-1`.\n\n**Maior:** Rolagens de urgência sofrem `-2`. Uma vez por cena estruturada, como combate, Chase, Dramatic Task ou Social Conflict, uma falha em rolagem de urgência também impõe `-1` à próxima rolagem aliada diretamente dependente daquela ordem ou urgência, antes do fim da rodada atual ou da próxima rodada relevante.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-eco-de-acheron",
+      "name": "Eco de Acheron",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "sobrenatural",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Algo em você responde ao esplendor podre de Acheron. Ruínas, inscrições e relíquias daquele império morto não parecem apenas antigas: parecem reconhecer sua presença.\n\nNa primeira exposição direta de cada cena a magia, ruína, inscrição, relíquia ou ritual claramente ligado a Acheron, role Spirit. Esta Desvantagem não substitui Fear; role Fear apenas se a cena também tiver um gatilho de medo sobrenatural.\n\n**Menor:** Em uma falha, você fica **Distracted** até o fim da próxima rodada ou até gastar uma ação se afastando, quebrando contato visual ou firmando a mente.\n\n**Maior:** Role Spirit com `-2`. Em uma falha, você fica **Shaken**; depois de se recuperar, ainda sofre `-1` em Notice e Spirit rolls contra efeitos acheronianos até o fim da cena.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "requires_master_conversation": true,
+      "severity": "minor_or_major"
+    },
+    {
+      "id": "hindrance-umbral-de-kuth",
+      "name": "Umbral de Kuth",
+      "type": "hindrances",
+      "category": "scenario",
+      "subcategory": "sobrenatural",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você viu, sonhou ou sentiu algo que não pertence ao mundo dos homens. Kuth não precisa tocar sua carne para deixar uma sombra: às vezes, basta sobreviver ao contato e tentar dormir depois.\n\nDepois da exposição real mais recente a Kuth, entidade antiga, sonho impossível imposto pela ficção da aventura ou horror Mythos, resolva esta Desvantagem uma vez após o próximo descanso. Sonhos comuns não ativam esta Desvantagem. Ela não gera Corrupção por si só.\n\n**Menor:** Role Spirit após o descanso. Em uma falha, você começa a primeira cena relevante do dia **Distracted**.\n\n**Maior:** Role Spirit com `-2` após o descanso. Em uma falha, você acorda com **1 nível de Fatigue** que só pode ser removido após uma cena segura de repouso, purificação, vigília assistida ou tratamento espiritual apropriado.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "requires_master_conversation": true,
+      "severity": "minor_or_major"
+    }
+  ]
+}

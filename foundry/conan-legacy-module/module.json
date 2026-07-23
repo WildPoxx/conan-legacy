@@ -1,0 +1,100 @@
+{
+  "id": "conan-legacy",
+  "title": "Conan Legacy",
+  "description": "Camada oficial de transposicao de Conan Legacy para Foundry VTT com SWADE.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Mario Bastos"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "swade",
+        "type": "system",
+        "compatibility": {
+          "verified": "5.2.6"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/conan-legacy.js"
+  ],
+  "styles": [
+    "styles/conan-legacy.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "conan-equipment",
+      "label": "Conan Legacy — Equipamentos",
+      "path": "packs/conan-equipment",
+      "type": "Item",
+      "system": "swade",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "conan-edges",
+      "label": "Conan Legacy — Vantagens",
+      "path": "packs/conan-edges",
+      "type": "Item",
+      "system": "swade",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "conan-hindrances",
+      "label": "Conan Legacy — Desvantagens",
+      "path": "packs/conan-hindrances",
+      "type": "Item",
+      "system": "swade",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "conan-journals",
+      "label": "Conan Legacy — Guias e Referências",
+      "path": "packs/conan-journals",
+      "type": "JournalEntry",
+      "system": "swade",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "conan-gm-journals",
+      "label": "Conan Legacy — GM",
+      "path": "packs/conan-gm-journals",
+      "type": "JournalEntry",
+      "system": "swade",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "url": "https://github.com/wildpoxx/conan-legacy",
+  "manifest": "",
+  "download": "",
+  "license": "UNLICENSED"
+}

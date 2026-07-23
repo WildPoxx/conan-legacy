@@ -1,0 +1,4 @@
+{
+  "_readme": "Overlay de decisoes NAO-derivaveis, chaveado por id do item. Campos suportados: culture_id, atlantean_tier, swade_baseline_ref, poison_family, bulk_note, family_id, quality_id, swade_trait, mechanical_notes, fictional_permissions, source_inspiration, personal_story_exception_note, editorial_status, visibility, base_cost, unarmored_hero_interaction. O build funciona com este arquivo vazio; campos ausentes ficam null.",
+  "items": {}
+}

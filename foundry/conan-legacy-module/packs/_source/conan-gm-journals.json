@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "GTwe65vB0LNancCf",
+    "name": "GM — Relatório de build dos compêndios",
+    "pages": [
+      {
+        "_id": "O6byByuth5f69DAU",
+        "name": "Relatório de build",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p>Relatório gerado pelo pipeline canônico → packs. GM-only.</p><h2>conan-equipment</h2><p>Exportados: 149. Fora do export: 15.</p><ul><li><strong>ARM-05</strong> (Armadura de placas parcial): draft</li><li><strong>PER-15</strong> (Carta selada): draft</li><li><strong>PER-16</strong> (Dívida registrada): draft</li><li><strong>FLV-14</strong> (Fragmento de pedra com inscrição): draft</li><li><strong>FLV-15</strong> (Marca de escravo removida): draft</li><li><strong>FLV-19</strong> (Chave sem fechadura conhecida): draft</li><li><strong>TAL-10</strong> (Selo arcano autêntico): gm_only</li><li><strong>TRN-05</strong> (Navio): gm_only</li><li><strong>NAR-01</strong> (Mapa incompleto): draft</li><li><strong>NAR-02</strong> (Carta de cobrança): draft</li><li><strong>NAR-03</strong> (Carta de recomendação): draft</li><li><strong>NAR-04</strong> (Chave antiga): draft</li><li><strong>NAR-05</strong> (Relicário de família): draft</li><li><strong>NAR-06</strong> (Contrato de dívida): draft</li><li><strong>NAR-08</strong> (Presságio escrito): draft</li></ul><h2>conan-edges</h2><p>Exportados: 20. Fora do export: 4.</p><ul><li><strong>edge-connections</strong> (Connections): swade_origin=swade-core-ref — P2: só conteúdo Conan Legacy vira Item</li><li><strong>edge-luck</strong> (Luck): swade_origin=swade-core-ref — P2: só conteúdo Conan Legacy vira Item</li><li><strong>edge-cacador-de-feras-antigas</strong> (Cacador de Feras Antigas): revision_required</li><li><strong>edge-juramento-do-aco</strong> (Juramento do Aco): revision_required</li></ul><h2>conan-hindrances</h2><p>Exportados: 14. Fora do export: 1.</p><ul><li><strong>hindrance-outra-aprovada</strong> (Outra aprovada pelo Mestre): swade_origin=(ausente) — P2: só conteúdo Conan Legacy vira Item</li></ul>"
+        },
+        "sort": 100,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {}
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "folder": null,
+    "sort": 0,
+    "flags": {
+      "conan-legacy": {
+        "generated": true,
+        "source": "conan-legacy.journal.relatorio-de-build"
+      }
+    }
+  }
+]

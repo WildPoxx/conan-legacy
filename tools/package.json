@@ -1,0 +1,11 @@
+{
+  "name": "conan-legacy-tools",
+  "private": true,
+  "description": "Dependencias dos scripts do pipeline Foundry de Conan Legacy. Rode 'npm install' dentro de tools/ uma vez.",
+  "type": "module",
+  "dependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.0",
+    "adm-zip": "^0.5.16",
+    "marked": "^16.0.0"
+  }
+}

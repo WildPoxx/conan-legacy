@@ -1,0 +1,442 @@
+[
+  {
+    "_id": "H9nb8VOVqzbkl4qw",
+    "name": "Lutador de Taverna",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você luta como quem aprendeu entre bancos quebrados, copos voando e apostas ruins. Onde outros veem bagunça, você vê alavanca, impacto e espaço para derrubar o orgulho de alguém.</p><p>Com objeto móvel ao alcance, faça como ação um Test de Fighting resistido por Agility contra alvo adjacente de até Size +1. Em vez de Distracted ou Vulnerable, empurre 1\" para espaço estável; com Raise, até 2\" e Shaken. O movimento não provoca queda, dano ambiental ou ataque gratuito. Não é ataque e não interage com Frenzy, Wild Attack ou Arma Marcante. Uma vez por turno.</p>\n<p><strong>Requisitos:</strong> Novice; Fighting d6+</p>\n<p><strong>Efeito:</strong> Test de Fighting resistido por Agility contra alvo adjacente de até Size +1 usando objeto móvel; em vez de Distracted ou Vulnerable, empurra 1\" para espaço estável (Raise: até 2\" e Shaken). Uma vez por turno.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-lutador-de-taverna</em></p>",
+      "requirements": {
+        "value": "Novice; Fighting d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-lutador-de-taverna",
+        "rank": "novice",
+        "subcategory": "combate",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "KySwGaZcnaTIRSaf",
+    "name": "Veterano da Fronteira",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você conhece a crueldade das bordas do mapa: frio, sol, fome, sede e noite sem abrigo. Onde outros entram em pânico, você economiza movimento, escolhe sombra e continua respirando.</p><p>Uma vez por cena ou etapa de viagem, rerrole gratuitamente uma falha não crítica em Vigor contra Hazard natural de calor, frio, altitude, fome, sede, exposição ou clima severo. Conserve o melhor resultado. A etapa deve ser declarada antes das rolagens. Não funciona contra ataques, veneno, doença, Fear, Corrupção, poderes, sufocamento, afogamento, queda, armadilhas ou perigos urbanos e navais.</p>\n<p><strong>Requisitos:</strong> Novice; Vigor d6+ ou Survival d6+</p>\n<p><strong>Efeito:</strong> Uma vez por cena ou etapa de viagem, rerrola gratuitamente uma falha não crítica em Vigor contra Hazard natural (calor, frio, altitude, fome, sede, exposição, clima severo), conservando o melhor resultado.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-veterano-da-fronteira</em></p>",
+      "requirements": {
+        "value": "Novice; Vigor d6+ ou Survival d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-veterano-da-fronteira",
+        "rank": "novice",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "tmqCf4uQQad3GZLh",
+    "name": "Conhecedor de Ruínas",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você lê ruínas como outros leem estradas. Pedras gastas, vãos tortos e máquinas mortas contam onde pisar, onde apoiar peso e quando uma construção antiga ainda guarda uma intenção perigosa.</p><p>Como ação, escolha um aliado e um elemento construído observável que ele pretende atravessar ou manipular; faça Repair. Com sucesso, escolha: tratar 2\" de terreno estrutural difícil como normal; ou ignorar até dois pontos de penalidades circunstanciais causadas pela estrutura em uma rolagem de Athletics, Thievery ou Repair. Raise afeta dois aliados ou 4\" de terreno. Dura até o fim da rodada seguinte, uma tentativa por elemento e cena. Nunca cria bônus positivo, Task Token ou imunidade a Hazard.</p>\n<p><strong>Requisitos:</strong> Novice; Repair d6+ ou Notice d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-conhecedor-de-ruinas</em></p>",
+      "requirements": {
+        "value": "Novice; Repair d6+ ou Notice d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-conhecedor-de-ruinas",
+        "rank": "novice",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "hgraii1Hakuay5PA",
+    "name": "Discípulo de Asclipas",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você aprendeu o tipo de medicina que cheira a óleo, lâmina limpa e segredo caro. A escola de Asclipas não promete milagres, mas sabe quando uma mão firme pode impedir que veneno, febre ou sangue perdido levem alguém.</p><p>Uma vez por paciente por dia, rerrole gratuitamente uma falha não crítica em Healing para estabilizar Bleeding Out ou tratar veneno/doença quando Healing for permitido. Conserve o melhor resultado. Não cria segundo tratamento, não remove Corrupção, Fear, Wounds ou Fatigue por analogia e não acumula com outra rerrolagem gratuita.</p>\n<p><strong>Requisitos:</strong> Novice; Healing d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-discipulo-de-asclipas</em></p>",
+      "requirements": {
+        "value": "Novice; Healing d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-discipulo-de-asclipas",
+        "rank": "novice",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "fzidzEZ6fiWkRw4q",
+    "name": "Ferreiro do Enigma",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você não vê metal antigo como sucata. Vê liga, intenção, temperatura, mão de artesão e erro escondido. Diante de uma peça estranha, sua curiosidade é prática: descobrir como ela sobreviveu e como não destruí-la.</p><p>Após dez minutos, ferramentas e acesso físico a item antigo ou exótico, faça Repair. Com sucesso, escolha: descobrir composição, função, dano, componente ausente ou manuseio seguro; ou preparar uma rerrolagem gratuita para uma única rolagem de Trait diretamente necessária para operar, estabilizar ou conservar o item fora de combate antes do fim da sessão. Raise concede ambos. Apenas um item preparado por vez. Não vale para armas, armaduras, ataques, ativações ofensivas ou fabricação.</p>\n<p><strong>Requisitos:</strong> Novice; Repair d8+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-ferreiro-do-enigma</em></p>",
+      "requirements": {
+        "value": "Novice; Repair d8+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-ferreiro-do-enigma",
+        "rank": "novice",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "fcvC5PDHxDVPUJpr",
+    "name": "Filho da Caravana",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você cresceu entre rotas, poeira, pechinchas e idiomas quebrados. Sabe que uma cidade começa antes dos muros, nas histórias dos mercadores, nos preços da água e no medo dos guias.</p><p>Uma vez por assentamento ou etapa de viagem, depois de sucesso em Networking sobre rotas, comércio ou transporte, escolha um benefício; com Raise, escolha dois: descobrir uma complicação atual da rota; identificar onde guia, passagem ou transporte pode ser negociado pelos custos normais; ou reduzir pela metade, mínimo 30 minutos, o tempo da próxima tentativa de Networking logístico no local. Não fornece mercadorias, crédito, transporte, escolta, favores ou cooperação automática.</p>\n<p><strong>Requisitos:</strong> Novice; Common Knowledge d6+ ou Persuasion d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-filho-da-caravana</em></p>",
+      "requirements": {
+        "value": "Novice; Common Knowledge d6+ ou Persuasion d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-filho-da-caravana",
+        "rank": "novice",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "y43MJ4fck1mmuanE",
+    "name": "Memória do Aço",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Alguma coisa em você reconhece a linguagem de ligas antigas, encaixes impossíveis e técnicas que sobreviveram ao fim de povos inteiros. Não é revelação mística segura; é memória prática diante de matéria real.</p><p>Rerrole gratuitamente uma rolagem não crítica para identificar, conservar, reparar ou estudar a reprodução de material ou técnica atlante fisicamente presente e verificável. Conserve o melhor resultado. Não vale para fabricação, planos, produção, improviso de arma, ataque, dano ou ativação em combate e não acumula com outra rerrolagem gratuita.</p>\n<p><strong>Requisitos:</strong> Novice; Academics d6+; Occult d6+ ou Repair d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-memoria-do-aco</em></p>",
+      "requirements": {
+        "value": "Novice; Academics d6+; Occult d6+ ou Repair d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-memoria-do-aco",
+        "rank": "novice",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "So69EwJ7bINKARBV",
+    "name": "Mestre da Têmpera Atlante",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você ultrapassou a curiosidade e começou a tratar o aço atlante como rito, técnica e perigo. Suas mãos sabem conduzir uma têmpera que não pertence mais ao mundo comum.</p><p>Pode liderar rituais **Atlantes** usando Repair e aprende **Têmpera do Enigma do Aço**. Uma vez por ritual atlante liderado, após falha não crítica em Repair, consuma outro exemplar do componente raro principal para rerrolar, conservando o novo resultado. Não gera Task Token e não acumula com outra rerrolagem gratuita.</p>\n<p><strong>Requisitos:</strong> Seasoned; Ferreiro do Enigma; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-mestre-da-tempera-atlante</em></p>",
+      "requirements": {
+        "value": "Seasoned; Ferreiro do Enigma; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-mestre-da-tempera-atlante",
+        "rank": "seasoned",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "oxqlhlIAxAzvSNMy",
+    "name": "Mestre de Asclipas",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você conhece tratamentos que assustariam curandeiros comuns e interessariam demais a nobres doentes. A arte de Asclipas, em suas mãos, estabiliza corpos no limite sem fingir que a morte foi abolida.</p><p>Após dez minutos, uma dose e Healing, escolha um paciente: conceda uma rerrolagem gratuita no próximo Vigor contra veneno ou doença daquela sessão; ou remova um Fatigue dessas fontes. Raise concede ambos. Falha consome a dose; Falha Crítica também causa Fatigue ao paciente. Uma utilização por paciente por sessão. Não trata Feridas, Corrupção ou Backlash.</p>\n<p><strong>Requisitos:</strong> Seasoned; Discípulo de Asclipas e Healing d8+; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-mestre-de-asclipas</em></p>",
+      "requirements": {
+        "value": "Seasoned; Discípulo de Asclipas e Healing d8+; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-mestre-de-asclipas",
+        "rank": "seasoned",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "W0KFDrhhlyecy123",
+    "name": "Sangue que Recorda",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Sua relação com Atlântida deixou de ser estudo e virou herança perigosa. Sob tensão, seu sangue parece lembrar um procedimento, um símbolo ou uma proporção que sua mente nunca aprendeu inteira.</p><p>Escolha Academics, Occult ou Repair ao adquirir a Vantagem. Uma vez por sessão, antes de uma rolagem dessa perícia diretamente ligada à história, artefatos ou rituais atlantes, aceite um Fatigue. Se seu dado for menor, use d8 naquela rolagem. Não concede idiomas, informação impossível ou requisitos. Falha Crítica também deixa Distracted até o fim do próximo turno.</p>\n<p><strong>Requisitos:</strong> Veteran; Memória do Aço; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-sangue-que-recorda</em></p>",
+      "requirements": {
+        "value": "Veteran; Memória do Aço; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-sangue-que-recorda",
+        "rank": "veteran",
+        "subcategory": "background",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "h4FGM1uqvRBI5E9a",
+    "name": "Guardião do Aço Vivo",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você aprendeu a confiar em metal preparado como outros confiam em escudos. Quando a lâmina certa encontra a têmpera certa, o aço parece lembrar por um instante que nasceu para resistir.</p><p>Uma vez por encontro, ao ser atingido por arma ou projétil metálico enquanto porta item sob **Têmpera do Enigma do Aço**, gaste um Benny antes do dano. A localização recebe `+2 Armor` contra esse dano. AP reduz normalmente. Acumula com armadura mundana, mas não com protection ou defesa sobrenatural equivalente. Não é Soak, não remove estados ou Feridas e não interage com Queixo de Ferro.</p>\n<p><strong>Requisitos:</strong> Veteran; Mestre da Têmpera Atlante; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-guardiao-do-aco-vivo</em></p>",
+      "requirements": {
+        "value": "Veteran; Mestre da Têmpera Atlante; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-guardiao-do-aco-vivo",
+        "rank": "veteran",
+        "subcategory": "combate",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "PtYrpftBpQGD8Tmh",
+    "name": "Agente da Teia",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você pertence a uma rede de recados, favores, chantagens e portas discretas. Em sua Teia, informação raramente chega limpa, mas quase sempre chega por algum caminho.</p><p>Registre comunidade, organização ou assentamento como sua **Teia**. Uma vez por sessão, após sucesso em Networking dentro dela, receba um **Fio**, máximo um. Gaste-o para rerrolar gratuitamente falha não crítica em Networking na Teia, conservando o melhor resultado, ou enviar em 30 minutos mensagem mundana de até 25 palavras a alguém comprovadamente alcançável. Custos normais se aplicam; não garante resposta, favor ou cooperação. Mudar de Teia exige cinco dias e Networking `-2`.</p>\n<p><strong>Requisitos:</strong> Novice; Persuasion d6+ ou Thievery d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-agente-da-teia</em></p>",
+      "requirements": {
+        "value": "Novice; Persuasion d6+ ou Thievery d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-agente-da-teia",
+        "rank": "novice",
+        "subcategory": "sociais",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "Cx08pv9Qgy5t3o6e",
+    "name": "Fama de Sangue",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Seu nome já chegou antes de você em tavernas, arenas, becos e acampamentos. Essa fama assusta, mas também cobra: se a ameaça falha, todos veem que o mito pode sangrar.</p><p>Uma vez por cena, antes de Test de Intimidation contra alvo que reconheça o personagem ou identificação crível diante de testemunhas, declare a Vantagem. Se o resultado inicial for falha não crítica, rerrole gratuitamente. Se o resultado final ainda falhar, sofra `-2` em novos Tests de Intimidation contra as testemunhas até o fim da cena. O Test produz seus estados normais.</p>\n<p><strong>Requisitos:</strong> Novice; Intimidation d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-fama-de-sangue</em></p>",
+      "requirements": {
+        "value": "Novice; Intimidation d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-fama-de-sangue",
+        "rank": "novice",
+        "subcategory": "sociais",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "VZTGGD6KxahzMuUf",
+    "name": "Voz de Culto",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você conhece a cadência que faz dívida soar como devoção e medo soar como verdade. Diante de quem reconhece o símbolo certo, uma frase pode travar a vontade por um instante precioso.</p><p>Uma vez por alvo por cena, cite preceito que ele reconheça por vínculo, dívida ou dependência e faça Test de Persuasion resistido por Spirit. Escolha o Test normal ou, com sucesso, impedir que o alvo inicie Tests ou Support com Persuasion, Intimidation, Taunt ou Performance até o fim do próximo turno. Raise também causa Shaken. Não altera crença, lealdade, fala ou outras ações.</p>\n<p><strong>Requisitos:</strong> Novice; Persuasion d6+ ou Occult d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-voz-de-culto</em></p>",
+      "requirements": {
+        "value": "Novice; Persuasion d6+ ou Occult d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-voz-de-culto",
+        "rank": "novice",
+        "subcategory": "sociais",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "rPPH4B7g5gFlaRT7",
+    "name": "Voz do Convés",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>No convés, uma ordem clara vale mais que discurso bonito. Você sabe gritar no ritmo das ondas, dividir perigo em tarefas e fazer gente assustada agarrar corda, remo ou lâmina no momento certo.</p><p>Durante perigo ativo a bordo, use uma ação, nomeie até três aliados que o ouçam e faça Persuasion. Sucesso dá `+1` à próxima Boating ou Athletics náutica deles antes do fim da rodada seguinte; Raise também remove Distracted de um. Cada aliado recebe o benefício uma vez por cena; o comandante não pode escolher a si. Não acumula com Support. Em Dramatic Task ou Chase, só uma rolagem relevante recebe o bônus por rodada. Falha Crítica impõe `-2` à próxima rolagem elegível dos nomeados.</p>\n<p><strong>Requisitos:</strong> Novice; Boating d6+ ou Persuasion d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-voz-do-conves</em></p>",
+      "requirements": {
+        "value": "Novice; Boating d6+ ou Persuasion d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-voz-do-conves",
+        "rank": "novice",
+        "subcategory": "sociais",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "9LUhFe3IndhjtEZp",
+    "name": "Pregador da Última Margem",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você aprendeu a transformar pavor em liturgia. Suas palavras não negam o abismo; elas ensinam os ouvintes a respirar por mais um momento diante dele.</p><p>Uma vez por sessão, após um minuto de pregação, escolha até três voluntários e faça Persuasion. Sucesso concede `+1` no próximo Fear da cena; com Raise, um escolhido recebe `+2` em vez de `+1`. Falha Crítica impõe `-2` ao próximo Fear dos escolhidos. Não acumula com Support nem afeta Social Conflict ou Task Tokens.</p>\n<p><strong>Requisitos:</strong> Seasoned; Voz de Culto e Persuasion d8+; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-pregador-da-ultima-margem</em></p>",
+      "requirements": {
+        "value": "Seasoned; Voz de Culto e Persuasion d8+; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-pregador-da-ultima-margem",
+        "rank": "seasoned",
+        "subcategory": "sociais",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "wgsZCLpQauah2goJ",
+    "name": "Teia sem Rosto",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você sabe viver atrás de um nome que pode ser queimado sem queimar você inteiro. Na Teia, máscaras valem como moeda, abrigo e ameaça.</p><p>Registre um pseudônimo. Uma vez por sessão, queime-o antes de Networking ou rolagem de Social Conflict sobre acesso clandestino, chantagem ou contrabando dentro da Teia para receber `+2`. Ele fica indisponível até cinco dias de downtime para reconstrução. Falha Crítica revela a ligação com o personagem. Não concede favores, recursos, autoridade ou tokens automáticos.</p>\n<p><strong>Requisitos:</strong> Seasoned; Agente da Teia; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-teia-sem-rosto</em></p>",
+      "requirements": {
+        "value": "Seasoned; Agente da Teia; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-teia-sem-rosto",
+        "rank": "seasoned",
+        "subcategory": "sociais",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "1pFjX59QpJrWdb39",
+    "name": "Olhos do Abismo",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você encara o horror tempo suficiente para notar sua direção. Isso não torna o abismo menor, nem mais seguro, mas às vezes permite distinguir intenção, rastro e vínculo antes que todos sejam engolidos pelo medo.</p><p>Após resolver Fear sobrenatural e ainda perceber a fonte ou vestígio direto, use uma ação no turno seguinte e faça Occult resistido por Spirit da fonte, ou TN 4 para fenômeno sem Spirit. Uma vez por fonte e cena, pergunte localização/direção, intenção já em execução, se manifestação é projeção ou qual pessoa/objeto visível mantém vínculo. Sucesso responde uma; Raise, duas. Não revela cosmologia, fraqueza secreta ou decisão futura.</p>\n<p><strong>Requisitos:</strong> Novice; Spirit d6+ ou Occult d6+</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-olhos-do-abismo</em></p>",
+      "requirements": {
+        "value": "Novice; Spirit d6+ ou Occult d6+"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-olhos-do-abismo",
+        "rank": "novice",
+        "subcategory": "sobrenatural",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "tboRaacsrGY5Q7s8",
+    "name": "Olhar Atrás do Mundo",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você aprendeu a perceber quando a realidade foi costurada por mãos erradas. Ver por trás do mundo ajuda, mas cada verdade dessas olha de volta.</p><p>Recebe `+1 Notice` apenas para manifestações sobrenaturais. Uma vez por sessão, faça pergunta fechada sobre presença sobrenatural oculta, aparência sobrenaturalmente falsa, alvo sobrenatural nomeado presente ou perigo sobrenatural já em curso. O Mestre responde sim/não e indica direção, pessoa, objeto ou área. Depois faça Fear `-2`. Falha também causa `+1 Corrupção`; Falha Crítica causa `+2` em vez disso e Kuth aprende uma verdade pessoal. Não funciona em Corrupção 6.</p>\n<p><strong>Requisitos:</strong> Seasoned; Spirit d8+; Notice d8+ ou Occult d8+; contato direto com Kuth e aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-olhar-atras-do-mundo</em></p>",
+      "requirements": {
+        "value": "Seasoned; Spirit d8+; Notice d8+ ou Occult d8+; contato direto com Kuth e aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-olhar-atras-do-mundo",
+        "rank": "seasoned",
+        "subcategory": "sobrenatural",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "zUs7htycVmOuKhBM",
+    "name": "Ritualista de Sangue Frio",
+    "type": "edge",
+    "img": "icons/svg/upgrade.svg",
+    "system": {
+      "description": "<p>Você não domina o horror: apenas aprendeu a não tremer quando ele exige preço. Em rituais perigosos, sua frieza compra segundos antes que o desastre feche a mão.</p><p>Pode liderar rituais **Perigosos**. Uma vez por ritual liderado, ao receber Club, aceite um Fatigue antes da rolagem. O `-2` permanece, mas falha comum reduz um Task Token, mínimo zero, em vez de encerrar o ritual. Falha Crítica reduz um token e encerra a tarefa. Não pode usar se o Fatigue incapacitar e não recebe Arcane Background, Poderes ou PP.</p>\n<p><strong>Requisitos:</strong> Seasoned; Occult d8+; instrução ritual ou aprendizagem perigosa concluída; requer aprovação do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: edge-ritualista-de-sangue-frio</em></p>",
+      "requirements": {
+        "value": "Seasoned; Occult d8+; instrução ritual ou aprendizagem perigosa concluída; requer aprovação do Mestre"
+      }
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "edge-ritualista-de-sangue-frio",
+        "rank": "seasoned",
+        "subcategory": "sobrenatural",
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  }
+]

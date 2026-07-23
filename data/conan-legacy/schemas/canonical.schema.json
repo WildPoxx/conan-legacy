@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://conan-legacy.local/schemas/canonical.schema.json",
+  "title": "Conan Legacy Canonical Data",
+  "type": "object",
+  "required": [
+    "version",
+    "kind",
+    "records"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "equipment",
+        "edges",
+        "hindrances",
+        "backgrounds",
+        "powers_or_rituals",
+        "artifacts",
+        "services_and_mounts",
+        "journals_and_handouts"
+      ]
+    },
+    "baseline": {
+      "type": "object",
+      "properties": {
+        "foundry": {
+          "type": "string"
+        },
+        "swade": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "type",
+        "category",
+        "editorial_status",
+        "source_refs",
+        "player_safe_text",
+        "gm_notes",
+        "foundry_ready"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "equipment",
+            "edges",
+            "hindrances",
+            "backgrounds",
+            "powers_or_rituals",
+            "artifacts",
+            "services_and_mounts",
+            "journals_and_handouts"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "editorial_status": {
+          "enum": [
+            "canon",
+            "draft",
+            "approved",
+            "approved_for_playtest",
+            "revision_required",
+            "vetoed",
+            "gm_only"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "player_safe_text": {
+          "type": "string"
+        },
+        "gm_notes": {
+          "type": "string"
+        },
+        "foundry_ready": {
+          "type": "boolean"
+        },
+        "swade_origin": {
+          "enum": [
+            "conan-legacy",
+            "swade-core-ref"
+          ]
+        },
+        "subcategory": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "minor",
+            "major",
+            "minor_or_major",
+            ""
+          ]
+        },
+        "requires_master_conversation": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,4 @@
+allowBuilds:
+  classic-level: true
+onlyBuiltDependencies:
+  - classic-level

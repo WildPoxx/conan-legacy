@@ -1,5 +1,8 @@
-﻿# Local vault and private campaign archive
+# Local vault and private campaign archive
 /.obsidian/
+/.obsidian.zip
+/.tmp.drivedownload/
+/.tmp.driveupload/
 /00_index/
 /01_Characters/
 /02_Quests/
@@ -11,12 +14,38 @@
 /08_Logs/
 /09_Media/
 /10_Livro-Jogo/
+/11_IA e Outros/
 /11_SWADE_Ponte/
+/12_IA/
+/copilot/
+/data/
+/foundry/
 /output/
 /tmp/
 /PDFs para Jogo/
 
+# Local assistant configuration and private coordination
+/CLAUDE.md
+/.claude/
+
+# Root-level migration residue from Git/Drive copies
+/HEAD
+/config
+/description
+/index
+/COMMIT_EDITMSG
+/Comece-Aqui.md
+/Criacao-de-Personagem.md
+/Faccoes-Conhecidas.md
+/Gerador-de-Personagem.md
+/Handouts.md
+/Home.md
+/Mundo-e-Lore-Revelado.md
+/Personagens.md
+/Regras-da-Mesa.md
+
 # Google Drive placeholders and local shortcuts
+desktop.ini
 *.gdoc
 *.gsheet
 *.gslides
@@ -42,3 +71,33 @@
 !/wiki/**
 !/docs/
 !/docs/**
+
+# Keep technical source layers tracked
+!/data/
+!/data/conan-legacy/
+!/data/conan-legacy/**
+!/data/canonical/
+!/data/canonical/**
+!/foundry/
+!/foundry/conan-legacy-module/
+!/foundry/conan-legacy-module/**
+/foundry/conan-legacy-module/packs/*
+!/foundry/conan-legacy-module/packs/.gitkeep
+!/foundry/conan-legacy-module/packs/_source/
+!/foundry/conan-legacy-module/packs/_source/**
+
+# Local package installs
+/tools/node_modules/
+/tools/.pnpm-store/
+# Final safety override: public folders must not re-include restricted assets.
+*.pdf
+*.psd
+*.ai
+*.mp4
+*.mov
+*.tmp
+*.gcs
+*.gca4
+
+# Windows local folder metadata
+**/desktop.ini

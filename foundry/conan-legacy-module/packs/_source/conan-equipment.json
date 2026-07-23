@@ -1,0 +1,3943 @@
+[
+  {
+    "_id": "0vn83aalS02GwYIp",
+    "name": "Adaga / faca longa",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d4. AP 0. Arma curta, fácil de ocultar.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Lâmina curta</p>\n<p>Arma curta, fácil de ocultar.</p>\n<p><em>ID Conan Legacy: WPN-01</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 1,
+      "damage": "For+d4",
+      "minStr": "d4",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "DJoKwQIQE1612ITC",
+    "name": "Espada curta comum hiboriana",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d6-1. AP 0. Aplicar primeiro o limite do dado da arma pela Força; depois aplicar -1.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Espada curta</p>\n<p>Aplicar primeiro o limite do dado da arma pela Força; depois aplicar -1.</p>\n<p><em>ID Conan Legacy: WPN-02</em></p>",
+      "quantity": 1,
+      "price": 75,
+      "weight": 2,
+      "damage": "For+d6-1",
+      "minStr": "d6",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "FfNqAaifNMnVf6t4",
+    "name": "Espada curta de metalurgia padrão",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d6. AP 0. Aço comum/metalurgia padrão restaura o baseline SWADE, sem bônus extra.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Espada curta</p>\n<p>Aço comum/metalurgia padrão restaura o baseline SWADE, sem bônus extra.</p>\n<p><em>ID Conan Legacy: WPN-03</em></p>",
+      "quantity": 1,
+      "price": 175,
+      "weight": 2,
+      "damage": "For+d6",
+      "minStr": "d6",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-03",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "6whlacLe4X7OboZc",
+    "name": "Espada longa",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d8. AP 0. Perfil SWADE conservado; não recebe -1 da espada curta comum.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Espada</p>\n<p>Perfil SWADE conservado; não recebe -1 da espada curta comum.</p>\n<p><em>ID Conan Legacy: WPN-04</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 4,
+      "damage": "For+d8",
+      "minStr": "d6",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-04",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "63AiJUGUsaqDNkHa",
+    "name": "Espada grande",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d10. AP 0. Arma militar pesada; compra inicial exige justificativa.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Espada pesada</p>\n<p>Arma militar pesada; compra inicial exige justificativa.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: WPN-05</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 8,
+      "damage": "For+d10",
+      "minStr": "d8",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-05",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "sofWUoTCgm7zCPjZ",
+    "name": "Machado pequeno",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d6. AP 0. Perfil SWADE conservado.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Machado</p>\n<p>Perfil SWADE conservado.</p>\n<p><em>ID Conan Legacy: WPN-06</em></p>",
+      "quantity": 1,
+      "price": 75,
+      "weight": 2,
+      "damage": "For+d6",
+      "minStr": "d6",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-06",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "huPQXvz1wH1hlRH3",
+    "name": "Machado grande",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d10. AP 0. Uso militar ou tribal pesado; exige justificativa.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Machado pesado</p>\n<p>Uso militar ou tribal pesado; exige justificativa.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: WPN-07</em></p>",
+      "quantity": 1,
+      "price": 200,
+      "weight": 10,
+      "damage": "For+d10",
+      "minStr": "d8",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-07",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "KQpj3IaBH1eUzgdI",
+    "name": "Clava / tacape",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d6. AP 0. Arma comum e rústica.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Impacto</p>\n<p>Arma comum e rústica.</p>\n<p><em>ID Conan Legacy: WPN-08</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 3,
+      "damage": "For+d6",
+      "minStr": "d4",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-08",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "TILmiN1A1fPEnNC6",
+    "name": "Maça militar",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d6. AP 1. Boa contra armadura.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Impacto</p>\n<p>Boa contra armadura.</p>\n<p><em>ID Conan Legacy: WPN-09</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 5,
+      "damage": "For+d6",
+      "minStr": "d6",
+      "ap": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-09",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "vFj7F6IAxyBwa7Vw",
+    "name": "Martelo de guerra",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d8. AP 1. Arma pesada de guerra; exige justificativa.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Impacto pesado</p>\n<p>Arma pesada de guerra; exige justificativa.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: WPN-10</em></p>",
+      "quantity": 1,
+      "price": 250,
+      "weight": 8,
+      "damage": "For+d8",
+      "minStr": "d8",
+      "ap": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-10",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "L5ya2wLnv1y2sa9c",
+    "name": "Lança curta",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d6. AP 0. Alcance 1; também pode ser arremessada conforme aprovação do Mestre.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Haste</p>\n<p>Alcance 1; também pode ser arremessada conforme aprovação do Mestre.</p>\n<p><em>ID Conan Legacy: WPN-11</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 5,
+      "damage": "For+d6",
+      "minStr": "d6",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-11",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "QMiCZnjM09e2hvui",
+    "name": "Lança longa",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d8. AP 0. Alcance 1; uso militar ou de caça pesada.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Armas corpo a corpo / Haste</p>\n<p>Alcance 1; uso militar ou de caça pesada.</p>\n<p><em>ID Conan Legacy: WPN-12</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 8,
+      "damage": "For+d8",
+      "minStr": "d6",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-12",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "7Av1jeXZwfaDc3iT",
+    "name": "Arco curto",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano 2d6. Alcance 12/24/48. AP 0. Arco comum de caça e fronteira.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas de distância / Arco</p>\n<p>Arco comum de caça e fronteira.</p>\n<p><em>ID Conan Legacy: WPN-13</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 3,
+      "damage": "2d6",
+      "minStr": "d6",
+      "ap": 0,
+      "range": "12/24/48"
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-13",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "xnTZHnsUl3t7daZL",
+    "name": "Arco longo",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano 2d6. Alcance 15/30/60. AP 0. Mais exigente e menos comum.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Armas de distância / Arco</p>\n<p>Mais exigente e menos comum.</p>\n<p><em>ID Conan Legacy: WPN-14</em></p>",
+      "quantity": 1,
+      "price": 250,
+      "weight": 5,
+      "damage": "2d6",
+      "minStr": "d8",
+      "ap": 0,
+      "range": "15/30/60"
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-14",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "jkhfMWuAootpN7q4",
+    "name": "Arco hyrkaniano",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano 2d6+1. Alcance 15/30/60. AP 0. Restrito fora da tradição hyrkaniana; exige justificativa.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armas de distância / Arco composto</p>\n<p>Restrito fora da tradição hyrkaniana; exige justificativa.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: WPN-15</em></p>",
+      "quantity": 1,
+      "price": 400,
+      "weight": 4,
+      "damage": "2d6+1",
+      "minStr": "d8",
+      "ap": 0,
+      "range": "15/30/60"
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-15",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "PMSI7Ra1t5mZocLb",
+    "name": "Funda",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Dano For+d4. Alcance 4/8/16. AP 0. Arma simples de pastores, crianças e batedores.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas de distância / Arremesso</p>\n<p>Arma simples de pastores, crianças e batedores.</p>\n<p><em>ID Conan Legacy: WPN-16</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 1,
+      "damage": "For+d4",
+      "minStr": "d4",
+      "ap": 0,
+      "range": "4/8/16"
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-16",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "y742tDBTxPqyLKyg",
+    "name": "Aljava com 20 flechas",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Munição para arcos.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas de distância / Munição</p>\n<p>Munição para arcos.</p>\n<p><em>ID Conan Legacy: WPN-17</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 2,
+      "damage": "",
+      "minStr": "",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-17",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "M8lpDeLmtE9niwTZ",
+    "name": "Pedras de funda",
+    "type": "weapon",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Munição simples; custo simbólico.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armas de distância / Munição</p>\n<p>Munição simples; custo simbólico.</p>\n<p><em>ID Conan Legacy: WPN-18</em></p>",
+      "quantity": 1,
+      "price": 1,
+      "weight": 1,
+      "damage": "",
+      "minStr": "",
+      "ap": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "WPN-18",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Lt0PjaDH2tElZvfR",
+    "name": "Escudo pequeno",
+    "type": "shield",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Parry +1. +1 Parry. Não desativa Unarmored Hero.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Escudos / Escudo</p>\n<p>+1 Parry. Não desativa Unarmored Hero.</p>\n<p><em>ID Conan Legacy: SHD-01</em></p>",
+      "quantity": 1,
+      "price": 40,
+      "weight": 8,
+      "parry": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SHD-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "nGZdEOGpNzJjaLVo",
+    "name": "Escudo médio",
+    "type": "shield",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Parry +2. +2 Parry. Não desativa Unarmored Hero.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Escudos / Escudo</p>\n<p>+2 Parry. Não desativa Unarmored Hero.</p>\n<p><em>ID Conan Legacy: SHD-02</em></p>",
+      "quantity": 1,
+      "price": 75,
+      "weight": 12,
+      "parry": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SHD-02",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "vscdwVCzgKAIgB66",
+    "name": "Reforço metálico para escudo",
+    "type": "shield",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Modificação aplicada a um escudo base; revisar disponibilidade.</p>\n<p><strong>Acesso:</strong> Incomum — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Escudos / Escudo</p>\n<p>Modificação aplicada a um escudo base; revisar disponibilidade.</p>\n<p><em>ID Conan Legacy: SHD-03</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 1,
+      "parry": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SHD-03",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "XfGLS9gXcFkO2p4q",
+    "name": "Capacete simples",
+    "type": "armor",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Proteção situacional; não soma Armor constante nem Toughness.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armaduras / Capacete</p>\n<p>Proteção situacional; não soma Armor constante nem Toughness.</p>\n<p><em>ID Conan Legacy: HELM-01</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 2,
+      "armor": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "HELM-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "nHF1eEtK3ohJxCb2",
+    "name": "Elmo militar fechado",
+    "type": "armor",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Proteção situacional mais robusta; não soma Toughness constante.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armaduras / Capacete</p>\n<p>Proteção situacional mais robusta; não soma Toughness constante.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: HELM-02</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 4,
+      "armor": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "HELM-02",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "jwEFqWewu71cW5B2",
+    "name": "Gambesão / couro leve",
+    "type": "armor",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Armor +1. +1 Armor; desativa Unarmored Hero enquanto usado.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><strong>Categoria:</strong> Armaduras / Armadura corporal</p>\n<p>+1 Armor; desativa Unarmored Hero enquanto usado.</p>\n<p><em>ID Conan Legacy: ARM-01</em></p>",
+      "quantity": 1,
+      "price": 60,
+      "weight": 8,
+      "armor": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ARM-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "z0qX7MOH4EbYEday",
+    "name": "Couro reforçado / lamelar leve",
+    "type": "armor",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Armor +1. +1 Armor; mais confiável que proteção improvisada.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><strong>Categoria:</strong> Armaduras / Armadura corporal</p>\n<p>+1 Armor; mais confiável que proteção improvisada.</p>\n<p><em>ID Conan Legacy: ARM-02</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 15,
+      "armor": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ARM-02",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "knpOM35SXktfglga",
+    "name": "Cota de anéis ou escamas parcial",
+    "type": "armor",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Armor +2. +2 Armor; exige acesso militar ou nobre.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armaduras / Armadura corporal</p>\n<p>+2 Armor; exige acesso militar ou nobre.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: ARM-03</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 20,
+      "armor": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ARM-03",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "u7t48aBFWCUdmXba",
+    "name": "Cota de malha militar",
+    "type": "armor",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Armor +2. +2 Armor; compra inicial pesada e revisável.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><strong>Categoria:</strong> Armaduras / Armadura corporal</p>\n<p>+2 Armor; compra inicial pesada e revisável.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: ARM-04</em></p>",
+      "quantity": 1,
+      "price": 600,
+      "weight": 25,
+      "armor": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ARM-04",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "XBsawdbToSfgB7sA",
+    "name": "Mochila simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Carrega pertences de viagem.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p>Carrega pertences de viagem.</p>\n<p><em>ID Conan Legacy: ADV-01</em></p>",
+      "quantity": 1,
+      "price": 12,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "HF2ppjLgJmXUDQzR",
+    "name": "Saco de couro",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-02</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ajdCe7jfe1ESkVZJ",
+    "name": "Pederneira e isca",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-03</em></p>",
+      "quantity": 1,
+      "price": 3,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-03",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "cFiZRbnYhXazf5EL",
+    "name": "Rações secas, 7 dias",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-04</em></p>",
+      "quantity": 1,
+      "price": 14,
+      "weight": 7
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-04",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "0f8gDkK6qGgYIaba",
+    "name": "Odre de água",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-05</em></p>",
+      "quantity": 1,
+      "price": 2,
+      "weight": 4
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-05",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "JIw02yYA6joUB6cu",
+    "name": "Corda de cânhamo, 10m",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-06</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 5
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-06",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "myOVaY8QHJLnjfvi",
+    "name": "Capa pesada de viagem",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-07</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 4
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-07",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "TcPIQCEwZrg2p2wC",
+    "name": "Cobertor de lã",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-08</em></p>",
+      "quantity": 1,
+      "price": 8,
+      "weight": 3
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-08",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "5dCWVDV2OsZ6BVXe",
+    "name": "Tenda pequena",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-09</em></p>",
+      "quantity": 1,
+      "price": 40,
+      "weight": 12
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-09",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Ln87ddPLVYmKLatM",
+    "name": "Lanterna de óleo",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-10</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-10",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Lpx7sYlS4RUHrzyK",
+    "name": "Óleo para lanterna",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-11</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-11",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "oq84f97KZCWQN77a",
+    "name": "Tochas, pacote com 5",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-12</em></p>",
+      "quantity": 1,
+      "price": 2,
+      "weight": 5
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-12",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ntv97ei3RSnatCYK",
+    "name": "Gancho de escalada",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-13</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 4
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-13",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "EVp0KML4WaS73gTo",
+    "name": "Pregos de ferro",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-14</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-14",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "fkaBepRaaCuy91Lf",
+    "name": "Pé de cabra",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-15</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 5
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-15",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "SQRzGlKRA04rYLlw",
+    "name": "Ferramentas de cozinha de campanha",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-16</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 5
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-16",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "jK5BetTv4hZ3DNPh",
+    "name": "Bolsa de ervas comuns",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-17</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-17",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "GHymhrxSY0ft8iQK",
+    "name": "Kit de pesca simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-18</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-18",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "14qE1VUfxnCjpaom",
+    "name": "Armadilha pequena",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-19</em></p>",
+      "quantity": 1,
+      "price": 30,
+      "weight": 5
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-19",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "udTvk4YvovEUhiIf",
+    "name": "Corrente leve",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-20</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 10
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-20",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "JaS8pPGB11o2t6ym",
+    "name": "Algemas simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: ADV-21</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-21",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "avJSt8r8x4SWCGc9",
+    "name": "Espelho pequeno de metal polido",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-22</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-22",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "nBB1ala6UmkfgaN8",
+    "name": "Giz, carvão e marcas de trilha",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-23</em></p>",
+      "quantity": 1,
+      "price": 2,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-23",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "4stkkAIc7a2YtGJZ",
+    "name": "Vela de sebo, pacote",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: ADV-24</em></p>",
+      "quantity": 1,
+      "price": 2,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-24",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Yh19ZEpB2aa5AINo",
+    "name": "Estojo impermeável",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-25</em></p>",
+      "quantity": 1,
+      "price": 30,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-25",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "nD1o3ZT0tHJpVaRT",
+    "name": "Mapa comercial comum",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-26</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-26",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "caviY0cRhNzH7NCZ",
+    "name": "Mapa militar ou secreto",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: ADV-27</em></p>",
+      "quantity": 1,
+      "price": 250,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-27",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "JHuf2jiN3RbSBgpO",
+    "name": "Ampulheta pequena",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-28</em></p>",
+      "quantity": 1,
+      "price": 60,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-28",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "36WPVB0dQwwhK5CQ",
+    "name": "Tinta e pena",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-29</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-29",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ipbxC4OJFTyJzaYk",
+    "name": "Pergaminho ou papiro",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: ADV-30</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-30",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "U9OS3w78O0tlasbK",
+    "name": "Kit de viagem básico",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Pacote abstrato para viagem: utensílios menores, reparos e miudezas comuns.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p>Pacote abstrato para viagem: utensílios menores, reparos e miudezas comuns.</p>\n<p><em>ID Conan Legacy: ADV-31</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "ADV-31",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "YipRqjSRCtprZmYW",
+    "name": "Kit de curandeiro",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: KIT-01</em></p>",
+      "quantity": 1,
+      "price": 40,
+      "weight": 5
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-01",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "r2eKOPFNTNPLyn3m",
+    "name": "Kit de ferreiro portátil",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-02</em></p>",
+      "quantity": 1,
+      "price": 120,
+      "weight": 20
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-02",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "xLRCctpp645qqa8p",
+    "name": "Kit de armeiro de bancada",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-03</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 50
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-03",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "zaCzIwYam6fQr9Kl",
+    "name": "Ferramentas de ladrão simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-04</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-04",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "yCfI0etyPokRtptu",
+    "name": "Disfarces básicos",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: KIT-05</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 4
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-05",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "5BYyLdHQaaYMFngT",
+    "name": "Instrumento musical simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: KIT-06</em></p>",
+      "quantity": 1,
+      "price": 30,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-06",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "m2DMRQssiifdjaCz",
+    "name": "Instrumento refinado",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: KIT-07</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-07",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "p0TmPZGJwp89jNK2",
+    "name": "Estojo de escriba",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: KIT-08</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-08",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "cLnlzdHLt9fnZKtV",
+    "name": "Ferramentas de cartógrafo",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: KIT-09</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 3
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-09",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "5SwN4b1isPtNCqpo",
+    "name": "Kit de alquimia comum",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-10</em></p>",
+      "quantity": 1,
+      "price": 250,
+      "weight": 10
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-10",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "UfRD6vpiza3CtVst",
+    "name": "Kit de venenos",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-11</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 3
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-11",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "MVo2rnaSFdnhxbEp",
+    "name": "Kit de tortura portátil",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-12</em></p>",
+      "quantity": 1,
+      "price": 200,
+      "weight": 15
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-12",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "xzlPx5HE7GSQIZ6L",
+    "name": "Reagentes de ritual simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Componentes menores sem efeito automático; revisão obrigatória do Mestre.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p>Componentes menores sem efeito automático; revisão obrigatória do Mestre.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: KIT-13</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "KIT-13",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "fNF8XSyK4cZVeo6g",
+    "name": "Roupas comuns",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: PER-01</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 2
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "fOzF8sszpIcfijVm",
+    "name": "Roupas boas",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: PER-02</em></p>",
+      "quantity": 1,
+      "price": 60,
+      "weight": 3
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "aEMLFhYCUbwd5mBL",
+    "name": "Roupas nobres",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: PER-03</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 4
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-03",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "1fytxznyNHbL56qH",
+    "name": "Joias simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: PER-04</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-04",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "CAfKiahwufGW7MUj",
+    "name": "Joias valiosas",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: PER-05</em></p>",
+      "quantity": 1,
+      "price": 500,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-05",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "2cOWAyoAkox6aLwc",
+    "name": "Selo ou sinete familiar",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: PER-06</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-06",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "xfJtRiALbiCz4Tff",
+    "name": "Documento de passagem",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: PER-07</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-07",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "sewQ7WsTNAKAn87q",
+    "name": "Documento falso simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: PER-08</em></p>",
+      "quantity": 1,
+      "price": 200,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-08",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "t1rtbl9QyaxDJqCm",
+    "name": "Perfume barato",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: PER-09</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-09",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "0zLSLOhUa1roSRRN",
+    "name": "Perfume ophireano",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Raro — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: PER-10</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-10",
+        "access": "Raro",
+        "availabilityTags": [
+          "Raro"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "IBdoJ5qB705CMJcI",
+    "name": "Máscara cerimonial",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: PER-11</em></p>",
+      "quantity": 1,
+      "price": 80,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-11",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "OtCIs0YAyYmFoXhf",
+    "name": "Baralho marcado",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: PER-12</em></p>",
+      "quantity": 1,
+      "price": 40,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-12",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "ZKhN7BaMsHaf07hL",
+    "name": "Dados viciados",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: PER-13</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-13",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "hwTr1F9rRXaDo9wW",
+    "name": "Amuleto familiar sem poder",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: PER-14</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "PER-14",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "hXNQtSNka6Sdi00K",
+    "name": "Pintura corporal picta",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-01</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "QNaLacsLDel5PXmi",
+    "name": "Trancas cimérias com anéis de bronze",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-02</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "irITNmKMogO8GFob",
+    "name": "Lenço shemita de caravana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-03</em></p>",
+      "quantity": 1,
+      "price": 8,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-03",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ioxCb91BEKhAr8ao",
+    "name": "Pingente de osso kushita",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-04</em></p>",
+      "quantity": 1,
+      "price": 12,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-04",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "oFaaagyMKWourFPD",
+    "name": "Anel barato zamorano",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-05</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-05",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "IftkRD4kVm0RR5ak",
+    "name": "Faixa de duelo zingária",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-06</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-06",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "VOvdWPF8ZZFmn5XY",
+    "name": "Broche legionário aquilônio simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: FLV-07</em></p>",
+      "quantity": 1,
+      "price": 30,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-07",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "I69pDoKTTZRwsSEa",
+    "name": "Moeda antiga nemédia",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: FLV-08</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-08",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "aLJGPaH6ggWCUq5z",
+    "name": "Ponta de flecha bossoniana como lembrança",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-09</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-09",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "KKAc9fzoJa1Qama7",
+    "name": "Fita de sela hyrkaniana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-10</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-10",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "vaCaza48isGFHqjg",
+    "name": "Incenso stígio comum",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: FLV-11</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-11",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "0tkxGSFi6QGORn3c",
+    "name": "Taça de bronze kothiana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-12</em></p>",
+      "quantity": 1,
+      "price": 35,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-12",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "FaWx8ZZ0kJZ70pXN",
+    "name": "Pequeno ídolo sem poder",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-13</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-13",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "3waeQcJYeu0aWcKG",
+    "name": "Troféu de fera pequena",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: FLV-16</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-16",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "HdL68WhxvaHtgmFa",
+    "name": "Poeira de tumba em frasco",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: FLV-17</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-17",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "0v6IyvKFaaU6d4Df",
+    "name": "Medalhão de culto falso",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: FLV-18</em></p>",
+      "quantity": 1,
+      "price": 30,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-18",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "IRg4a7C8y6KKHaTT",
+    "name": "Escama de serpente gigante",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Raro — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: FLV-20</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-20",
+        "access": "Raro",
+        "availabilityTags": [
+          "Raro"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "rE6TKWg2l9nIOZa4",
+    "name": "Tecido de seda ophireana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Raro — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: FLV-21</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "FLV-21",
+        "access": "Raro",
+        "availabilityTags": [
+          "Raro"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "Mx4vH73N6r4a8rM5",
+    "name": "Amuleto contra mau-olhado",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Sem efeito mecânico automático.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p>Sem efeito mecânico automático.</p>\n<p><em>ID Conan Legacy: TAL-01</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "dYWcDg4WOrEVSFBw",
+    "name": "Talismã tribal de proteção",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Sem efeito mecânico automático.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p>Sem efeito mecânico automático.</p>\n<p><em>ID Conan Legacy: TAL-02</em></p>",
+      "quantity": 1,
+      "price": 30,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ArVdMa9OGU5AGwSl",
+    "name": "Sigilo de bronze stigio",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: TAL-03</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-03",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "sVJujYctwu4aEqih",
+    "name": "Osso gravado por xama",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: TAL-04</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-04",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "nuj6g1J47B9F0awI",
+    "name": "Fetiche de guerra picto",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: TAL-05</em></p>",
+      "quantity": 1,
+      "price": 60,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-05",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "K8sRCwwbGOl0L2Ns",
+    "name": "Medalhão de templo shemita",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: TAL-06</em></p>",
+      "quantity": 1,
+      "price": 80,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-06",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "KyJ2IFs5JmYtj3Lx",
+    "name": "Talismã de marinheiro zingário",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: TAL-07</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-07",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "PU2tujeIBqF1LyKc",
+    "name": "Talismã funerário nemédio",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: TAL-08</em></p>",
+      "quantity": 1,
+      "price": 75,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-08",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "RIHFINlm6ZWTLzWK",
+    "name": "Amuleto que promete sorte",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Promessa supersticiosa; sem efeito mecânico automático.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p>Promessa supersticiosa; sem efeito mecânico automático.</p>\n<p><em>ID Conan Legacy: TAL-09</em></p>",
+      "quantity": 1,
+      "price": 40,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TAL-09",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "97AQtPQVay0Da4Ht",
+    "name": "Unguento comum",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Uso narrativo/primeiros cuidados, sem cura automática.</p>\n<p><strong>Acesso:</strong> Publico</p>\n<p>Uso narrativo/primeiros cuidados, sem cura automática.</p>\n<p><em>ID Conan Legacy: SUB-01</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "8aWe9n92RQyJQgAS",
+    "name": "Ervas contra febre",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SUB-02</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "bRc7yzYearjssdpc",
+    "name": "Ervas contra veneno comum",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Não é antídoto universal.</p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p>Não é antídoto universal.</p>\n<p><em>ID Conan Legacy: SUB-03</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-03",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ByPUhdS6aL6YXbiF",
+    "name": "Óleo entorpecente",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-04</em></p>",
+      "quantity": 1,
+      "price": 75,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-04",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "Lg6rmDqaumDbjona",
+    "name": "Veneno fraco",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Efeito provisório até playtest; não remove chefe/PC/cena com compra barata.</p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p>Efeito provisório até playtest; não remove chefe/PC/cena com compra barata.</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-05</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-05",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "7AalNg7EpXLffb0p",
+    "name": "Veneno forte",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-06</em></p>",
+      "quantity": 1,
+      "price": 400,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-06",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "q6hLHgPwJ1vkrAKZ",
+    "name": "Pó de lótus negro",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Raro — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-08</em></p>",
+      "quantity": 1,
+      "price": 500,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-08",
+        "access": "Raro",
+        "availabilityTags": [
+          "Raro"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "0XzICa4VQpk2XCi1",
+    "name": "Pó de lótus amarelo",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Raro — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-09</em></p>",
+      "quantity": 1,
+      "price": 350,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-09",
+        "access": "Raro",
+        "availabilityTags": [
+          "Raro"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "lHTvpfi8zGLlE3as",
+    "name": "Pó de lótus roxo",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Raro — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-10</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-10",
+        "access": "Raro",
+        "availabilityTags": [
+          "Raro"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "3oYNpqC7pFMAVAiv",
+    "name": "Elixir de vigor duvidoso",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-11</em></p>",
+      "quantity": 1,
+      "price": 200,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-11",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "B6MA1sy4JI4SvWyi",
+    "name": "Preparado de transe ritual",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SUB-13</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-13",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "TMHBLzuxaXfUwFa4",
+    "name": "Fumo narcótico",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: SUB-14</em></p>",
+      "quantity": 1,
+      "price": 60,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-14",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "1exNmNZVH7W2QhFa",
+    "name": "Bebida forte de campanha",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SUB-15</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 1
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SUB-15",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "hOaExlSQJxbii4oy",
+    "name": "Estalagem pobre, 1 noite",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-01</em></p>",
+      "quantity": 1,
+      "price": 2,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "FmhIy1260sl2cj3i",
+    "name": "Estalagem comum, 1 noite",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-02</em></p>",
+      "quantity": 1,
+      "price": 5,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Tvd6C8Ahvj8bh8cD",
+    "name": "Estalagem boa, 1 noite",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-03</em></p>",
+      "quantity": 1,
+      "price": 15,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-03",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "ah0vaxYhbnUTGWVE",
+    "name": "Banquete simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-04</em></p>",
+      "quantity": 1,
+      "price": 10,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-04",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "YB73pDm97hB0HMBC",
+    "name": "Banquete nobre",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: SRV-05</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-05",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "fZuP9UrCHPurHQhR",
+    "name": "Suborno pequeno",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-06</em></p>",
+      "quantity": 1,
+      "price": 25,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-06",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "mlgIEEoqopHtgqU8",
+    "name": "Suborno médio",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SRV-07</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-07",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "1UHJmbUQWAwkasFM",
+    "name": "Passagem em caravana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-08</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-08",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "01F7hZI5AcF4UwfW",
+    "name": "Passagem em navio costeiro",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: SRV-09</em></p>",
+      "quantity": 1,
+      "price": 100,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-09",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "LvvaCkqM9R3tp123",
+    "name": "Guia local, 1 semana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-10</em></p>",
+      "quantity": 1,
+      "price": 75,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-10",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Cyu9wPB0aP3R1wjZ",
+    "name": "Mercenário comum, 1 semana",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: SRV-11</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-11",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "95Ae7XTPXINzdjoE",
+    "name": "Curandeiro, atendimento",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: SRV-12</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "SRV-12",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "CXk68vZDW7MXMoQQ",
+    "name": "Mula",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: MNT-01</em></p>",
+      "quantity": 1,
+      "price": 150,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "9hf2jKUuwZoVnar3",
+    "name": "Cavalo comum",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: MNT-02</em></p>",
+      "quantity": 1,
+      "price": 250,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-02",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "N5Tg2UL94eKqGEFn",
+    "name": "Cavalo de guerra",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: MNT-03</em></p>",
+      "quantity": 1,
+      "price": 600,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-03",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  },
+  {
+    "_id": "y6Wk9HHiP7KD0Prb",
+    "name": "Pônei de montanha",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: MNT-04</em></p>",
+      "quantity": 1,
+      "price": 200,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-04",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "afVqJNohZEtaFZev",
+    "name": "Sela e arreios",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: MNT-05</em></p>",
+      "quantity": 1,
+      "price": 50,
+      "weight": 10
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-05",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "Y7jm2DPFrvtzbDLV",
+    "name": "Alforjes",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: MNT-06</em></p>",
+      "quantity": 1,
+      "price": 20,
+      "weight": 3
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-06",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "hfpbpPFEI1JWflRz",
+    "name": "Camelo",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: MNT-07</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "MNT-07",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "K2Gx3w4ySEx9cFaU",
+    "name": "Carroca simples",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Publico</p>\n<p><em>ID Conan Legacy: TRN-01</em></p>",
+      "quantity": 1,
+      "price": 200,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TRN-01",
+        "access": "Publico",
+        "availabilityTags": [
+          "Publico"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "VJmDC7AzVrFOezQP",
+    "name": "Carro de duas rodas",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: TRN-02</em></p>",
+      "quantity": 1,
+      "price": 300,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TRN-02",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "sCNw0VjVIaUyFesK",
+    "name": "Barco pequeno",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: TRN-03</em></p>",
+      "quantity": 1,
+      "price": 500,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TRN-03",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "iSQddzzJCxGHS15p",
+    "name": "Bote fluvial",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Incomum</p>\n<p><em>ID Conan Legacy: TRN-04</em></p>",
+      "quantity": 1,
+      "price": 350,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "TRN-04",
+        "access": "Incomum",
+        "availabilityTags": [
+          "Incomum"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": false,
+        "editorialStatus": "canon"
+      }
+    }
+  },
+  {
+    "_id": "cOtzxmmfC5u7aWst",
+    "name": "Sinal de guilda",
+    "type": "gear",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p></p>\n<p><strong>Acesso:</strong> Restrito — requer excecao do Mestre</p>\n<p><em>[Playtest] Regra aprovada para teste de mesa; pode mudar.</em></p>\n<p><em>ID Conan Legacy: NAR-07</em></p>",
+      "quantity": 1,
+      "price": 0,
+      "weight": 0
+    },
+    "effects": [],
+    "folder": null,
+    "flags": {
+      "conan-legacy": {
+        "canonicalId": "NAR-07",
+        "access": "Restrito",
+        "availabilityTags": [
+          "Restrito"
+        ],
+        "startingEligible": true,
+        "requiresMasterException": true,
+        "editorialStatus": "approved_for_playtest"
+      }
+    }
+  }
+]

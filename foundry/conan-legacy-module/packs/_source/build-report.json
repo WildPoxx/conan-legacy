@@ -1,0 +1,123 @@
+{
+  "generatedFor": "conan-legacy v0.1.0",
+  "report": [
+    {
+      "pack": "conan-equipment",
+      "exported": 149,
+      "skipped": [
+        {
+          "id": "ARM-05",
+          "name": "Armadura de placas parcial",
+          "reason": "draft"
+        },
+        {
+          "id": "PER-15",
+          "name": "Carta selada",
+          "reason": "draft"
+        },
+        {
+          "id": "PER-16",
+          "name": "Dívida registrada",
+          "reason": "draft"
+        },
+        {
+          "id": "FLV-14",
+          "name": "Fragmento de pedra com inscrição",
+          "reason": "draft"
+        },
+        {
+          "id": "FLV-15",
+          "name": "Marca de escravo removida",
+          "reason": "draft"
+        },
+        {
+          "id": "FLV-19",
+          "name": "Chave sem fechadura conhecida",
+          "reason": "draft"
+        },
+        {
+          "id": "TAL-10",
+          "name": "Selo arcano autêntico",
+          "reason": "gm_only"
+        },
+        {
+          "id": "TRN-05",
+          "name": "Navio",
+          "reason": "gm_only"
+        },
+        {
+          "id": "NAR-01",
+          "name": "Mapa incompleto",
+          "reason": "draft"
+        },
+        {
+          "id": "NAR-02",
+          "name": "Carta de cobrança",
+          "reason": "draft"
+        },
+        {
+          "id": "NAR-03",
+          "name": "Carta de recomendação",
+          "reason": "draft"
+        },
+        {
+          "id": "NAR-04",
+          "name": "Chave antiga",
+          "reason": "draft"
+        },
+        {
+          "id": "NAR-05",
+          "name": "Relicário de família",
+          "reason": "draft"
+        },
+        {
+          "id": "NAR-06",
+          "name": "Contrato de dívida",
+          "reason": "draft"
+        },
+        {
+          "id": "NAR-08",
+          "name": "Presságio escrito",
+          "reason": "draft"
+        }
+      ]
+    },
+    {
+      "pack": "conan-edges",
+      "exported": 20,
+      "skipped": [
+        {
+          "id": "edge-connections",
+          "name": "Connections",
+          "reason": "swade_origin=swade-core-ref — P2: só conteúdo Conan Legacy vira Item"
+        },
+        {
+          "id": "edge-luck",
+          "name": "Luck",
+          "reason": "swade_origin=swade-core-ref — P2: só conteúdo Conan Legacy vira Item"
+        },
+        {
+          "id": "edge-cacador-de-feras-antigas",
+          "name": "Cacador de Feras Antigas",
+          "reason": "revision_required"
+        },
+        {
+          "id": "edge-juramento-do-aco",
+          "name": "Juramento do Aco",
+          "reason": "revision_required"
+        }
+      ]
+    },
+    {
+      "pack": "conan-hindrances",
+      "exported": 14,
+      "skipped": [
+        {
+          "id": "hindrance-outra-aprovada",
+          "name": "Outra aprovada pelo Mestre",
+          "reason": "swade_origin=(ausente) — P2: só conteúdo Conan Legacy vira Item"
+        }
+      ]
+    }
+  ]
+}

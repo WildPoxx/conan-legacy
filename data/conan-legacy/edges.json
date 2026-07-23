@@ -1,0 +1,554 @@
+{
+  "version": "0.1.0",
+  "kind": "edges",
+  "baseline": {
+    "foundry": "13.351",
+    "swade": "5.2.6"
+  },
+  "source_refs": [
+    "docs/heroe-forge-random-data.js",
+    "06_System (Rules)/Bancada - Proposta Criativa - Vantagens Novice de Cenario.md"
+  ],
+  "records": [
+    {
+      "id": "edge-connections",
+      "name": "Connections",
+      "category": "swade-core",
+      "editorial_status": "canon",
+      "source_refs": [
+        "docs/heroe-forge-random-data.js"
+      ],
+      "player_safe_text": "Vantagem SWADE exposta pelo gerador de personagem.",
+      "gm_notes": "Manter como referencia externa; nao duplicar texto protegido do livro.",
+      "foundry_ready": false,
+      "rank": "Novice",
+      "requirements": [],
+      "mechanical_effect": "Usar implementacao/descricao do sistema SWADE.",
+      "approval_state": "available",
+      "type": "edges",
+      "swade_origin": "swade-core-ref"
+    },
+    {
+      "id": "edge-luck",
+      "name": "Luck",
+      "category": "swade-core",
+      "editorial_status": "canon",
+      "source_refs": [
+        "docs/heroe-forge-random-data.js"
+      ],
+      "player_safe_text": "Vantagem SWADE exposta pelo gerador de personagem.",
+      "gm_notes": "Manter como referencia externa; nao duplicar texto protegido do livro.",
+      "foundry_ready": false,
+      "rank": "Novice",
+      "requirements": [],
+      "mechanical_effect": "Usar implementacao/descricao do sistema SWADE.",
+      "approval_state": "available",
+      "type": "edges",
+      "swade_origin": "swade-core-ref"
+    },
+    {
+      "id": "edge-cacador-de-feras-antigas",
+      "name": "Cacador de Feras Antigas",
+      "category": "background",
+      "editorial_status": "revision_required",
+      "source_refs": [
+        "06_System (Rules)/Bancada - Proposta Criativa - Vantagens Novice de Cenario.md"
+      ],
+      "player_safe_text": "Leitura de comportamento bestial para criar reposicionamento limitado de aliados.",
+      "gm_notes": "Material de bancada, nao homologado. Benchmark: Support/Test. Revisar mobilidade fora do turno.",
+      "foundry_ready": false,
+      "rank": "Novice",
+      "requirements": [
+        "Survival d6",
+        "Notice d6"
+      ],
+      "mechanical_effect": "Acao de Survival resistido por Smarts contra criatura bestial observavel; em sucesso cria leitura consumivel para mover aliado ate 2 polegadas em condicoes restritas.",
+      "approval_state": "revision_required",
+      "type": "edges",
+      "swade_origin": "conan-legacy"
+    },
+    {
+      "id": "edge-juramento-do-aco",
+      "name": "Juramento do Aco",
+      "category": "background",
+      "editorial_status": "revision_required",
+      "source_refs": [
+        "06_System (Rules)/Bancada - Proposta Criativa - Vantagens Novice de Cenario.md"
+      ],
+      "player_safe_text": "Um juramento especifico pode gerar Benny quando custa algo concreto em cena.",
+      "gm_notes": "Material de bancada, nao homologado. Benchmark: Luck. Requer criterio firme para consequencia significativa.",
+      "foundry_ready": false,
+      "rank": "Novice",
+      "requirements": [
+        "Spirit d6",
+        "Juramento registrado em uma frase"
+      ],
+      "mechanical_effect": "Uma vez por sessao, cumprir juramento diante de alternativa real e consequencia imediata concede 1 Benny.",
+      "approval_state": "revision_required",
+      "type": "edges",
+      "swade_origin": "conan-legacy"
+    },
+    {
+      "id": "edge-lutador-de-taverna",
+      "name": "Lutador de Taverna",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "combate",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-piloto",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Fighting d6+"
+      ],
+      "mechanical_effect": "Test de Fighting resistido por Agility contra alvo adjacente de até Size +1 usando objeto móvel; em vez de Distracted ou Vulnerable, empurra 1\" para espaço estável (Raise: até 2\" e Shaken). Uma vez por turno.",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você luta como quem aprendeu entre bancos quebrados, copos voando e apostas ruins. Onde outros veem bagunça, você vê alavanca, impacto e espaço para derrubar o orgulho de alguém.\n\nCom objeto móvel ao alcance, faça como ação um Test de Fighting resistido por Agility contra alvo adjacente de até Size +1. Em vez de Distracted ou Vulnerable, empurre 1\" para espaço estável; com Raise, até 2\" e Shaken. O movimento não provoca queda, dano ambiental ou ataque gratuito. Não é ataque e não interage com Frenzy, Wild Attack ou Arma Marcante. Uma vez por turno.",
+      "gm_notes": "Lote piloto v0.1 para validar o schema SWADE no Foundry (decisão Mario 2026-07-23). Texto transcrito fielmente da fonte; sem alteração criativa. Mario/Codex podem trocar as entradas do piloto.",
+      "foundry_ready": true
+    },
+    {
+      "id": "edge-veterano-da-fronteira",
+      "name": "Veterano da Fronteira",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-piloto",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Vigor d6+ ou Survival d6+"
+      ],
+      "mechanical_effect": "Uma vez por cena ou etapa de viagem, rerrola gratuitamente uma falha não crítica em Vigor contra Hazard natural (calor, frio, altitude, fome, sede, exposição, clima severo), conservando o melhor resultado.",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você conhece a crueldade das bordas do mapa: frio, sol, fome, sede e noite sem abrigo. Onde outros entram em pânico, você economiza movimento, escolhe sombra e continua respirando.\n\nUma vez por cena ou etapa de viagem, rerrole gratuitamente uma falha não crítica em Vigor contra Hazard natural de calor, frio, altitude, fome, sede, exposição ou clima severo. Conserve o melhor resultado. A etapa deve ser declarada antes das rolagens. Não funciona contra ataques, veneno, doença, Fear, Corrupção, poderes, sufocamento, afogamento, queda, armadilhas ou perigos urbanos e navais.",
+      "gm_notes": "Lote piloto v0.1 para validar o schema SWADE no Foundry (decisão Mario 2026-07-23). Texto transcrito fielmente da fonte; sem alteração criativa. Mario/Codex podem trocar as entradas do piloto.",
+      "foundry_ready": true
+    },
+    {
+      "id": "edge-conhecedor-de-ruinas",
+      "name": "Conhecedor de Ruínas",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você lê ruínas como outros leem estradas. Pedras gastas, vãos tortos e máquinas mortas contam onde pisar, onde apoiar peso e quando uma construção antiga ainda guarda uma intenção perigosa.\n\nComo ação, escolha um aliado e um elemento construído observável que ele pretende atravessar ou manipular; faça Repair. Com sucesso, escolha: tratar 2\" de terreno estrutural difícil como normal; ou ignorar até dois pontos de penalidades circunstanciais causadas pela estrutura em uma rolagem de Athletics, Thievery ou Repair. Raise afeta dois aliados ou 4\" de terreno. Dura até o fim da rodada seguinte, uma tentativa por elemento e cena. Nunca cria bônus positivo, Task Token ou imunidade a Hazard.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Repair d6+ ou Notice d6+"
+      ]
+    },
+    {
+      "id": "edge-discipulo-de-asclipas",
+      "name": "Discípulo de Asclipas",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você aprendeu o tipo de medicina que cheira a óleo, lâmina limpa e segredo caro. A escola de Asclipas não promete milagres, mas sabe quando uma mão firme pode impedir que veneno, febre ou sangue perdido levem alguém.\n\nUma vez por paciente por dia, rerrole gratuitamente uma falha não crítica em Healing para estabilizar Bleeding Out ou tratar veneno/doença quando Healing for permitido. Conserve o melhor resultado. Não cria segundo tratamento, não remove Corrupção, Fear, Wounds ou Fatigue por analogia e não acumula com outra rerrolagem gratuita.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Healing d6+"
+      ]
+    },
+    {
+      "id": "edge-ferreiro-do-enigma",
+      "name": "Ferreiro do Enigma",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você não vê metal antigo como sucata. Vê liga, intenção, temperatura, mão de artesão e erro escondido. Diante de uma peça estranha, sua curiosidade é prática: descobrir como ela sobreviveu e como não destruí-la.\n\nApós dez minutos, ferramentas e acesso físico a item antigo ou exótico, faça Repair. Com sucesso, escolha: descobrir composição, função, dano, componente ausente ou manuseio seguro; ou preparar uma rerrolagem gratuita para uma única rolagem de Trait diretamente necessária para operar, estabilizar ou conservar o item fora de combate antes do fim da sessão. Raise concede ambos. Apenas um item preparado por vez. Não vale para armas, armaduras, ataques, ativações ofensivas ou fabricação.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Repair d8+"
+      ]
+    },
+    {
+      "id": "edge-filho-da-caravana",
+      "name": "Filho da Caravana",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você cresceu entre rotas, poeira, pechinchas e idiomas quebrados. Sabe que uma cidade começa antes dos muros, nas histórias dos mercadores, nos preços da água e no medo dos guias.\n\nUma vez por assentamento ou etapa de viagem, depois de sucesso em Networking sobre rotas, comércio ou transporte, escolha um benefício; com Raise, escolha dois: descobrir uma complicação atual da rota; identificar onde guia, passagem ou transporte pode ser negociado pelos custos normais; ou reduzir pela metade, mínimo 30 minutos, o tempo da próxima tentativa de Networking logístico no local. Não fornece mercadorias, crédito, transporte, escolta, favores ou cooperação automática.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Common Knowledge d6+ ou Persuasion d6+"
+      ]
+    },
+    {
+      "id": "edge-memoria-do-aco",
+      "name": "Memória do Aço",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Alguma coisa em você reconhece a linguagem de ligas antigas, encaixes impossíveis e técnicas que sobreviveram ao fim de povos inteiros. Não é revelação mística segura; é memória prática diante de matéria real.\n\nRerrole gratuitamente uma rolagem não crítica para identificar, conservar, reparar ou estudar a reprodução de material ou técnica atlante fisicamente presente e verificável. Conserve o melhor resultado. Não vale para fabricação, planos, produção, improviso de arma, ataque, dano ou ativação em combate e não acumula com outra rerrolagem gratuita.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Academics d6+",
+        "Occult d6+ ou Repair d6+"
+      ]
+    },
+    {
+      "id": "edge-mestre-da-tempera-atlante",
+      "name": "Mestre da Têmpera Atlante",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você ultrapassou a curiosidade e começou a tratar o aço atlante como rito, técnica e perigo. Suas mãos sabem conduzir uma têmpera que não pertence mais ao mundo comum.\n\nPode liderar rituais **Atlantes** usando Repair e aprende **Têmpera do Enigma do Aço**. Uma vez por ritual atlante liderado, após falha não crítica em Repair, consuma outro exemplar do componente raro principal para rerrolar, conservando o novo resultado. Não gera Task Token e não acumula com outra rerrolagem gratuita.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "seasoned",
+      "requirements": [
+        "Seasoned",
+        "Ferreiro do Enigma; requer aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-mestre-de-asclipas",
+      "name": "Mestre de Asclipas",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você conhece tratamentos que assustariam curandeiros comuns e interessariam demais a nobres doentes. A arte de Asclipas, em suas mãos, estabiliza corpos no limite sem fingir que a morte foi abolida.\n\nApós dez minutos, uma dose e Healing, escolha um paciente: conceda uma rerrolagem gratuita no próximo Vigor contra veneno ou doença daquela sessão; ou remova um Fatigue dessas fontes. Raise concede ambos. Falha consome a dose; Falha Crítica também causa Fatigue ao paciente. Uma utilização por paciente por sessão. Não trata Feridas, Corrupção ou Backlash.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "seasoned",
+      "requirements": [
+        "Seasoned",
+        "Discípulo de Asclipas e Healing d8+; requer aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-sangue-que-recorda",
+      "name": "Sangue que Recorda",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "background",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Sua relação com Atlântida deixou de ser estudo e virou herança perigosa. Sob tensão, seu sangue parece lembrar um procedimento, um símbolo ou uma proporção que sua mente nunca aprendeu inteira.\n\nEscolha Academics, Occult ou Repair ao adquirir a Vantagem. Uma vez por sessão, antes de uma rolagem dessa perícia diretamente ligada à história, artefatos ou rituais atlantes, aceite um Fatigue. Se seu dado for menor, use d8 naquela rolagem. Não concede idiomas, informação impossível ou requisitos. Falha Crítica também deixa Distracted até o fim do próximo turno.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "veteran",
+      "requirements": [
+        "Veteran",
+        "Memória do Aço; requer aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-guardiao-do-aco-vivo",
+      "name": "Guardião do Aço Vivo",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "combate",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você aprendeu a confiar em metal preparado como outros confiam em escudos. Quando a lâmina certa encontra a têmpera certa, o aço parece lembrar por um instante que nasceu para resistir.\n\nUma vez por encontro, ao ser atingido por arma ou projétil metálico enquanto porta item sob **Têmpera do Enigma do Aço**, gaste um Benny antes do dano. A localização recebe `+2 Armor` contra esse dano. AP reduz normalmente. Acumula com armadura mundana, mas não com protection ou defesa sobrenatural equivalente. Não é Soak, não remove estados ou Feridas e não interage com Queixo de Ferro.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "veteran",
+      "requirements": [
+        "Veteran",
+        "Mestre da Têmpera Atlante; requer aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-agente-da-teia",
+      "name": "Agente da Teia",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você pertence a uma rede de recados, favores, chantagens e portas discretas. Em sua Teia, informação raramente chega limpa, mas quase sempre chega por algum caminho.\n\nRegistre comunidade, organização ou assentamento como sua **Teia**. Uma vez por sessão, após sucesso em Networking dentro dela, receba um **Fio**, máximo um. Gaste-o para rerrolar gratuitamente falha não crítica em Networking na Teia, conservando o melhor resultado, ou enviar em 30 minutos mensagem mundana de até 25 palavras a alguém comprovadamente alcançável. Custos normais se aplicam; não garante resposta, favor ou cooperação. Mudar de Teia exige cinco dias e Networking `-2`.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Persuasion d6+ ou Thievery d6+"
+      ]
+    },
+    {
+      "id": "edge-fama-de-sangue",
+      "name": "Fama de Sangue",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Seu nome já chegou antes de você em tavernas, arenas, becos e acampamentos. Essa fama assusta, mas também cobra: se a ameaça falha, todos veem que o mito pode sangrar.\n\nUma vez por cena, antes de Test de Intimidation contra alvo que reconheça o personagem ou identificação crível diante de testemunhas, declare a Vantagem. Se o resultado inicial for falha não crítica, rerrole gratuitamente. Se o resultado final ainda falhar, sofra `-2` em novos Tests de Intimidation contra as testemunhas até o fim da cena. O Test produz seus estados normais.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Intimidation d6+"
+      ]
+    },
+    {
+      "id": "edge-voz-de-culto",
+      "name": "Voz de Culto",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você conhece a cadência que faz dívida soar como devoção e medo soar como verdade. Diante de quem reconhece o símbolo certo, uma frase pode travar a vontade por um instante precioso.\n\nUma vez por alvo por cena, cite preceito que ele reconheça por vínculo, dívida ou dependência e faça Test de Persuasion resistido por Spirit. Escolha o Test normal ou, com sucesso, impedir que o alvo inicie Tests ou Support com Persuasion, Intimidation, Taunt ou Performance até o fim do próximo turno. Raise também causa Shaken. Não altera crença, lealdade, fala ou outras ações.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Persuasion d6+ ou Occult d6+"
+      ]
+    },
+    {
+      "id": "edge-voz-do-conves",
+      "name": "Voz do Convés",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "No convés, uma ordem clara vale mais que discurso bonito. Você sabe gritar no ritmo das ondas, dividir perigo em tarefas e fazer gente assustada agarrar corda, remo ou lâmina no momento certo.\n\nDurante perigo ativo a bordo, use uma ação, nomeie até três aliados que o ouçam e faça Persuasion. Sucesso dá `+1` à próxima Boating ou Athletics náutica deles antes do fim da rodada seguinte; Raise também remove Distracted de um. Cada aliado recebe o benefício uma vez por cena; o comandante não pode escolher a si. Não acumula com Support. Em Dramatic Task ou Chase, só uma rolagem relevante recebe o bônus por rodada. Falha Crítica impõe `-2` à próxima rolagem elegível dos nomeados.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Boating d6+ ou Persuasion d6+"
+      ]
+    },
+    {
+      "id": "edge-pregador-da-ultima-margem",
+      "name": "Pregador da Última Margem",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você aprendeu a transformar pavor em liturgia. Suas palavras não negam o abismo; elas ensinam os ouvintes a respirar por mais um momento diante dele.\n\nUma vez por sessão, após um minuto de pregação, escolha até três voluntários e faça Persuasion. Sucesso concede `+1` no próximo Fear da cena; com Raise, um escolhido recebe `+2` em vez de `+1`. Falha Crítica impõe `-2` ao próximo Fear dos escolhidos. Não acumula com Support nem afeta Social Conflict ou Task Tokens.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "seasoned",
+      "requirements": [
+        "Seasoned",
+        "Voz de Culto e Persuasion d8+; requer aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-teia-sem-rosto",
+      "name": "Teia sem Rosto",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sociais",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você sabe viver atrás de um nome que pode ser queimado sem queimar você inteiro. Na Teia, máscaras valem como moeda, abrigo e ameaça.\n\nRegistre um pseudônimo. Uma vez por sessão, queime-o antes de Networking ou rolagem de Social Conflict sobre acesso clandestino, chantagem ou contrabando dentro da Teia para receber `+2`. Ele fica indisponível até cinco dias de downtime para reconstrução. Falha Crítica revela a ligação com o personagem. Não concede favores, recursos, autoridade ou tokens automáticos.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "seasoned",
+      "requirements": [
+        "Seasoned",
+        "Agente da Teia; requer aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-olhos-do-abismo",
+      "name": "Olhos do Abismo",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sobrenatural",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você encara o horror tempo suficiente para notar sua direção. Isso não torna o abismo menor, nem mais seguro, mas às vezes permite distinguir intenção, rastro e vínculo antes que todos sejam engolidos pelo medo.\n\nApós resolver Fear sobrenatural e ainda perceber a fonte ou vestígio direto, use uma ação no turno seguinte e faça Occult resistido por Spirit da fonte, ou TN 4 para fenômeno sem Spirit. Uma vez por fonte e cena, pergunte localização/direção, intenção já em execução, se manifestação é projeção ou qual pessoa/objeto visível mantém vínculo. Sucesso responde uma; Raise, duas. Não revela cosmologia, fraqueza secreta ou decisão futura.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "novice",
+      "requirements": [
+        "Novice",
+        "Spirit d6+ ou Occult d6+"
+      ]
+    },
+    {
+      "id": "edge-olhar-atras-do-mundo",
+      "name": "Olhar Atrás do Mundo",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sobrenatural",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você aprendeu a perceber quando a realidade foi costurada por mãos erradas. Ver por trás do mundo ajuda, mas cada verdade dessas olha de volta.\n\nRecebe `+1 Notice` apenas para manifestações sobrenaturais. Uma vez por sessão, faça pergunta fechada sobre presença sobrenatural oculta, aparência sobrenaturalmente falsa, alvo sobrenatural nomeado presente ou perigo sobrenatural já em curso. O Mestre responde sim/não e indica direção, pessoa, objeto ou área. Depois faça Fear `-2`. Falha também causa `+1 Corrupção`; Falha Crítica causa `+2` em vez disso e Kuth aprende uma verdade pessoal. Não funciona em Corrupção 6.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "seasoned",
+      "requirements": [
+        "Seasoned",
+        "Spirit d8+",
+        "Notice d8+ ou Occult d8+; contato direto com Kuth e aprovação do Mestre"
+      ]
+    },
+    {
+      "id": "edge-ritualista-de-sangue-frio",
+      "name": "Ritualista de Sangue Frio",
+      "type": "edges",
+      "category": "scenario",
+      "subcategory": "sobrenatural",
+      "swade_origin": "conan-legacy",
+      "editorial_status": "approved_for_playtest",
+      "approval_state": "playtest-lote-completo",
+      "source_refs": [
+        "01_Characters/PCs/Novas Vantagens e Desvantagens de Cenário - Conan Legacy SWADE.md",
+        "01_Characters/PCs/Desvantagens e Vantagens Novice para Criacao de PCs Conan SWADE.md"
+      ],
+      "player_safe_text": "Você não domina o horror: apenas aprendeu a não tremer quando ele exige preço. Em rituais perigosos, sua frieza compra segundos antes que o desastre feche a mão.\n\nPode liderar rituais **Perigosos**. Uma vez por ritual liderado, ao receber Club, aceite um Fatigue antes da rolagem. O `-2` permanece, mas falha comum reduz um Task Token, mínimo zero, em vez de encerrar o ritual. Falha Crítica reduz um token e encerra a tarefa. Não pode usar se o Fatigue incapacitar e não recebe Arcane Background, Poderes ou PP.",
+      "gm_notes": "Canonizado em lote 2026-07-23 (decisão Mario: lote completo pós-aprovação do piloto no Foundry). Transcrição fiel do doc de cenário, sem alteração criativa. mechanical_effect vazio de propósito: a mecânica integral está em player_safe_text.",
+      "foundry_ready": true,
+      "mechanical_effect": "",
+      "rank": "seasoned",
+      "requirements": [
+        "Seasoned",
+        "Occult d8+; instrução ritual ou aprendizagem perigosa concluída; requer aprovação do Mestre"
+      ]
+    }
+  ]
+}

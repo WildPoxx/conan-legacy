@@ -1,0 +1,106 @@
+{
+    "version":  "0.1.0",
+    "kind":  "backgrounds",
+    "baseline":  {
+                     "foundry":  "13.351",
+                     "swade":  "5.2.6"
+                 },
+    "source_refs":  [
+                        "docs/heroe-forge-random-data.js",
+                        "docs/gerador-personagem-validacao.js"
+                    ],
+    "records":  [
+                    {
+                        "id":  "background-aquilonio",
+                        "name":  "Aquilonio",
+                        "category":  "cultural-background",
+                        "editorial_status":  "draft",
+                        "source_refs":  [
+                                            "docs/heroe-forge-random-data.js"
+                                        ],
+                        "player_safe_text":  "Cultura ligada a autoridade, guerra, cortes e faccoes dos reinos hiborianos.",
+                        "gm_notes":  "Normalizado a partir do gerador. Precisa texto de mesa definitivo antes de Foundry.",
+                        "foundry_ready":  false,
+                        "automatic_benefits":  [
+                                                   {
+                                                       "id":  "persuasion",
+                                                       "label":  "Persuasion d6",
+                                                       "skill":  "persuasion",
+                                                       "die":  "d6"
+                                                   },
+                                                   {
+                                                       "id":  "battle",
+                                                       "label":  "Battle d4",
+                                                       "skill":  "battle",
+                                                       "die":  "d4"
+                                                   }
+                                               ],
+                        "automatic_hindrances":  [
+                                                     {
+                                                         "id":  "obligation",
+                                                         "label":  "Obligation (Minor) com casa, patrono, legiao, templo ou autoridade."
+                                                     }
+                                                 ],
+                        "blocked_options":  [
+
+                                            ],
+                        "funding_adjustments":  [
+
+                                                ],
+                        "equipment_access_exceptions":  [
+
+                                                        ],
+                        "actor_export_notes":  "Aplicar beneficio escolhido como credito de criacao; limitacao automatica nao concede pontos.",
+                        "type":  "backgrounds"
+                    },
+                    {
+                        "id":  "background-stigio",
+                        "name":  "Stigio",
+                        "category":  "cultural-background",
+                        "editorial_status":  "draft",
+                        "source_refs":  [
+                                            "docs/heroe-forge-random-data.js"
+                                        ],
+                        "player_safe_text":  "Cultura ligada a ocultismo, templos, sangue antigo e suspeita social.",
+                        "gm_notes":  "Normalizado a partir do gerador. Arcane Background exige aprovacao e alinhamento com rituais.",
+                        "foundry_ready":  false,
+                        "automatic_benefits":  [
+                                                   {
+                                                       "id":  "occult",
+                                                       "label":  "Occult d6",
+                                                       "skill":  "occult",
+                                                       "die":  "d6"
+                                                   },
+                                                   {
+                                                       "id":  "magic",
+                                                       "label":  "Arcane Background (Magic)",
+                                                       "edge":  "Arcane Background (Magic)",
+                                                       "randomEligible":  false
+                                                   },
+                                                   {
+                                                       "id":  "channeling",
+                                                       "label":  "Arcane Background (Channeling)",
+                                                       "edge":  "Arcane Background (Channeling)",
+                                                       "randomEligible":  false
+                                                   }
+                                               ],
+                        "automatic_hindrances":  [
+                                                     {
+                                                         "id":  "sangue-chamado",
+                                                         "label":  "Sangue Chamado (Minor)."
+                                                     }
+                                                 ],
+                        "blocked_options":  [
+
+                                            ],
+                        "funding_adjustments":  [
+
+                                                ],
+                        "equipment_access_exceptions":  [
+
+                                                        ],
+                        "actor_export_notes":  "Exportar escolha de beneficio; beneficios arcanos devem ficar pendentes para o Mestre.",
+                        "type":  "backgrounds"
+                    }
+                ]
+}
