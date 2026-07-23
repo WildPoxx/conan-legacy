@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gerador de PC - Conan Legacy</title>
-  <meta name="description" content="Coletor publico de dados para personagens de Conan Legacy em SWADE.">
+  <meta name="description" content="Coletor público de dados para personagens de Conan Legacy em SWADE.">
   <style>
     :root {
       color-scheme: dark;
@@ -20,6 +20,9 @@
       --bad: #d56d62;
       --good: #95b66e;
       --focus: rgba(201, 154, 74, 0.38);
+      --hf-creation-bg: url("assets/background-pag-pcs-creation.png");
+      --hf-equipment-bg: url("assets/background-pag-pcs-equipment.png");
+      --hf-links-bg: url("assets/background-pag-pcs-links.png");
     }
 
     * {
@@ -453,11 +456,11 @@
     <header>
       <div class="topline">
         <a class="back-link" href="index.html">Voltar ao portal</a>
-        <span>Conan Legacy - SWADE - Novice com 2 Avancos</span>
+        <span>Conan Legacy - SWADE - Novice com 2 Avanços</span>
       </div>
       <p class="kicker">Coletor de dados para PCs</p>
       <h1>Gerador de Personagem</h1>
-      <p class="lead">Preencha o dossie do personagem, acompanhe os contadores basicos de criacao e gere um texto pronto para enviar ao Mestre. O arquivo final tambem serve como base para criar o Actor no Foundry depois.</p>
+      <p class="lead">Preencha o dossiê do personagem, açompanhe os contadores básicos de criação e gere um texto pronto para enviar ao Mestre. O arquivo final também serve como base para criar o Actor no Foundry depois.</p>
     </header>
 
     <main class="layout">
@@ -499,29 +502,29 @@
               <select name="concept">
                 <option value="">Escolha...</option>
                 <option>Combatente de fronteira</option>
-                <option>Mercenario</option>
+                <option>Mercenário</option>
                 <option>Ladrao ou espiao</option>
-                <option>Batedor ou cacador</option>
+                <option>Batedor ou caçador</option>
                 <option>Nobre caido ou bastardo</option>
                 <option>Curandeiro ou alquimista</option>
                 <option>Estudioso ocultista</option>
                 <option>Ex-escravo ou desertor</option>
                 <option>Sacerdote ambiguo</option>
-                <option>Agente de faccao</option>
+                <option>Agente de facção</option>
                 <option>Outro conceito aprovado pelo Mestre</option>
               </select>
             </label>
             <div class="identity-random">
-              <button class="button" type="button" id="generate-random">Gerar personagem aleatorio</button>
+              <button class="button" type="button" id="generate-random">Gerar personagem aleatório</button>
             </div>
           </div>
 
           <div class="grid">
             <label>Conceito em uma frase
-              <input name="pitch" placeholder="Ex.: Um ex-batedor bossoniano que vende informacao para sobreviver.">
+              <input name="pitch" placeholder="Ex.: Um ex-batedor bossoniano que vende informação para sobreviver.">
             </label>
-            <label>Historia curta
-              <textarea name="history" placeholder="Conte de onde veio, o que perdeu, quem teme e por que aceitaria entrar na historia agora."></textarea>
+            <label>História curta
+              <textarea name="history" placeholder="Conte de onde veio, o que perdeu, quem teme e por que aceitaria entrar na história agora."></textarea>
             </label>
           </div>
         </section>
@@ -530,8 +533,8 @@
           <div class="section-head">
             <div>
               <h2 id="atributos">Atributos</h2>
-              <p class="hint">Todos os atributos comecam em d4. O personagem tem 5 pontos para aumentar atributos durante a criacao; cada passo acima de d4 custa 1 ponto.</p>
-              <p class="hint">Atributos altos tambem tornam pericias vinculadas mais baratas, entao esta escolha orienta o resto da ficha.</p>
+              <p class="hint">Todos os atributos começam em d4. O personagem tem 5 pontos para aumentar atributos durante a criação; cada passo acima de d4 custa 1 ponto.</p>
+              <p class="hint">Atributos altos também tornam perícias vinculadas mais baratas, então esta escolha orienta o resto da ficha.</p>
             </div>
             <span class="badge">2</span>
           </div>
@@ -542,21 +545,21 @@
           <div class="section-head">
             <div>
               <h2 id="background-cultural">Background Cultural</h2>
-              <p class="hint">Todo PC de Conan Legacy deve escolher 1 Background Cultural. Ele substitui a etapa de raca fantastica: todos sao humanos, mas cada origem traz costumes, reputacao, treinamento e limitacoes proprias.</p>
-              <p class="hint">Beneficios de Background nao custam pontos de atributo, pericia ou Vantagem, salvo quando o texto disser o contrario. Limitacoes automaticas tambem nao concedem pontos extras de Desvantagem.</p>
+              <p class="hint">Todo PC de Conan Legacy deve escolher 1 Background Cultural. Ele substitui a etapa de raca fantastica: todos são humanos, mas cada origem traz costumes, reputacao, treinamento e limitações proprias.</p>
+              <p class="hint">Benefícios de Background não custam pontos de atributo, perícia ou Vantagem, salvo quando o texto disser o contrário. Limitações automáticas também não concedem pontos extras de Desvantagem.</p>
             </div>
             <span class="badge">3</span>
           </div>
           <div id="background-fields" class="grid two"></div>
-          <p class="notice" id="background-summary">Escolha um Background para ver o resumo mecanico.</p>
+          <p class="notice" id="background-summary">Escolha um Background para ver o resumo mecânico.</p>
         </section>
 
         <section aria-labelledby="desvantagens">
           <div class="section-head">
             <div>
               <h2 id="desvantagens">Desvantagens</h2>
-              <p class="hint">Desvantagens dao ate 4 pontos extras para gastar na criacao. Desvantagem Menor vale 1 ponto; Desvantagem Maior vale 2 pontos.</p>
-              <p class="hint">Esses pontos podem comprar Vantagens, aumentar atributo, comprar pontos de pericia ou melhorar recursos, conforme aprovacao do Mestre.</p>
+              <p class="hint">Desvantagens dao até 4 pontos extras para gastar na criação. Desvantagem Menor vale 1 ponto; Desvantagem Maior vale 2 pontos.</p>
+              <p class="hint">Esses pontos podem comprar Vantagens, aumentar atributo, comprar pontos de perícia ou melhorar recursos, conforme aprovação do Mestre.</p>
             </div>
             <span class="badge">4</span>
           </div>
@@ -570,7 +573,7 @@
             <label>Gasto: Atributo
               <input name="spendAttribute" type="number" min="0" max="4" step="1" value="0">
             </label>
-            <label>Gasto: Pericia
+            <label>Gasto: Perícia
               <input name="spendSkill" type="number" min="0" max="4" step="1" value="0">
             </label>
             <label>Gasto: Recursos
@@ -583,7 +586,7 @@
           <div class="section-head">
             <div>
               <h2 id="vantagens">Vantagens</h2>
-              <p class="hint">Humanos recebem uma Vantagem inicial. Pontos de Desvantagens e Avancos tambem podem comprar Vantagens, desde que os requisitos sejam atendidos.</p>
+              <p class="hint">Humanos recebem uma Vantagem inicial. Pontos de Desvantagens e Avanços também podem comprar Vantagens, desde que os requisitos sejam atendidos.</p>
               <p class="hint">O menu traz sugestoes boas para Conan Legacy; outras Vantagens podem existir, mas devem ser combinadas com o Mestre.</p>
             </div>
             <span class="badge">5</span>
@@ -595,54 +598,55 @@
         <section aria-labelledby="pericias">
           <div class="section-head">
             <div>
-              <h2 id="pericias">Pericias</h2>
-              <p class="hint">Herois tem 12 pontos para comprar habilidades durante a criacao de personagem. Uma habilidade abaixo do atributo vinculado, indicado ao lado do nome, e mais barata de aumentar do que uma que esteja igual ou acima dele (Skills, p. 29).</p>
-              <p class="hint">Athletics, Notice, Stealth, Persuasion e Common Knowledge sao Core Skills: todos comecam com d4 em cada uma delas, sem custo adicional.</p>
-              <p class="hint">Com excecao dessas Skills basicas, pericias nas quais o PC nao gaste pontos ficam sem treino; o valor default para jogadas e d4-2 (Unskilled Attempts, p. 89).</p>
+              <h2 id="pericias">Perícias</h2>
+              <p class="hint">Heróis têm 12 pontos para comprar habilidades durante a criação de personagem. Uma habilidade abaixo do atributo vinculado, indicado ao lado do nome, e mais barata de aumentar do que uma que esteja igual ou acima dele (Skills, p. 29).</p>
+              <p class="hint">Athletics, Notice, Stealth, Persuasion e Common Knowledge são Core Skills: todos começam com d4 em cada uma delas, sem custo adicional.</p>
+              <p class="hint">Com exceção dessas Skills basicas, perícias nas quais o PC não gaste pontos ficam sem treino; o valor default para jogadas e d4-2 (Unskilled Attempts, p. 89).</p>
             </div>
             <span class="badge">6</span>
           </div>
           <div id="skill-fields"></div>
           <div class="grid two">
-            <label>Pontos extras por Avancos ou ajustes aprovados
+            <label>Pontos extras por Avanços ou ajustes aprovados
               <input name="extraSkillPoints" type="number" min="0" max="12" step="1" value="0">
             </label>
-            <label>Bonus de armadura para Toughness
+            <label>Bônus de armadura para Toughness
               <input name="armorBonus" type="number" min="0" max="12" step="1" value="0">
             </label>
           </div>
+        </section>
+
+        <section aria-labelledby="avancos">
+          <div class="section-head">
+            <div>
+              <h2 id="avancos">Avanços Iniciais</h2>
+              <p class="hint">A campanha começa em Novice com 2 Avanços. Descreva como eles foram gastos.</p>
+            </div>
+            <span class="badge">7</span>
+          </div>
+          <div id="advance-fields"></div>
         </section>
 
         <section aria-labelledby="equipamentos">
           <div class="section-head">
             <div>
               <h2 id="equipamentos">Armas e Equipamentos</h2>
-              <p class="hint">Esta versao ainda nao aplica uma lista fechada de equipamentos hiborianos. Use este campo para propor armas, armadura, ferramentas, itens pessoais, dividas, cartas, mapas ou rumores.</p>
-              <p class="hint">Cada PC comeca com 650 para comprar equipamento, mas a lista final sera discutida depois com o Mestre.</p>
-            </div>
-            <span class="badge">7</span>
-          </div>
-          <label>Pedido inicial de armas e equipamentos
-            <textarea name="equipmentWishlist" placeholder="Ex.: espada herdada, arco bossoniano, faca escondida, cota leve, mapa incompleto, carta selada, divida com um mercador de Karavazyan."></textarea>
-          </label>
-        </section>
-
-        <section aria-labelledby="avancos">
-          <div class="section-head">
-            <div>
-              <h2 id="avancos">Avancos Iniciais</h2>
-              <p class="hint">A campanha comeca em Novice com 2 Avancos. Descreva como eles foram gastos.</p>
+              <p class="hint">Escolha um pacote inicial ou monte a lista item a item. O orçamento oficial e 650 moedas, mais recursos extras comprados com pontos de Desvantagem.</p>
+              <p class="hint">Itens incomuns, raros, restritos ou singulares entram no custo quando tiverem preço, mas ficam marcados para revisão do Mestre. O campo livre continua disponível para pedidos narrativos e exceções.</p>
             </div>
             <span class="badge">8</span>
           </div>
-          <div id="advance-fields"></div>
+          <div id="equipment-builder"></div>
+          <label>Pedidos, exceções e itens narrativos para o Mestre
+            <textarea name="equipmentWishlist" placeholder="Ex.: gostaria de negociar um mapa raro, justificar um veneno como heranca, propor divida com mercador, ou pedir exceção de acesso por história pessoal."></textarea>
+          </label>
         </section>
 
         <section aria-labelledby="vinculos">
           <div class="section-head">
             <div>
-              <h2 id="vinculos">Vinculos de Campanha</h2>
-              <p class="hint">Responda pelo menos 5 perguntas. Quanto mais concreto, mais facil ligar o PC ao Foundry e aos ganchos da mesa.</p>
+              <h2 id="vinculos">Vínculos de Campanha</h2>
+              <p class="hint">Responda pelo menos 5 perguntas. Quanto mais concreto, mais fácil ligar o PC ao Foundry e aos ganchos da mesa.</p>
             </div>
             <span class="badge">9</span>
           </div>
@@ -652,12 +656,12 @@
         <section aria-labelledby="comentarios-mestre">
           <div class="section-head">
             <div>
-              <h2 id="comentarios-mestre">Comentarios para o Mestre</h2>
-              <p class="hint">Utilize este espaco para fazer comentarios adicionais, pedidos, duvidas, preferencias ou solicitacoes para o Mestre do jogo.</p>
+              <h2 id="comentarios-mestre">Comentários para o Mestre</h2>
+              <p class="hint">Utilize este espaço para fazer comentários adicionais, pedidos, dúvidas, preferências ou solicitações para o Mestre do jogo.</p>
             </div>
             <span class="badge">10</span>
           </div>
-          <label>Comentarios adicionais
+          <label>Comentários adicionais
             <textarea name="gmComments" placeholder="Ex.: gostaria de discutir uma divida antiga, pedir permissao para uma Vantagem especifica, combinar um contato ou explicar uma escolha incomum."></textarea>
           </label>
         </section>
@@ -665,8 +669,8 @@
         <section aria-labelledby="saida">
           <div class="section-head">
             <div>
-              <h2 id="saida">Dossie Exportavel</h2>
-              <p class="hint">Copie, baixe ou envie este texto ao Mestre. Ele e legivel por humano e facil de converter em script depois.</p>
+              <h2 id="saida">Dossiê Exportavel</h2>
+              <p class="hint">Copie, baixe ou envie este texto ao Mestre. Ele e legivel por humano e fácil de converter em script depois.</p>
             </div>
             <span class="badge">TXT</span>
           </div>
@@ -690,7 +694,7 @@
             <div class="bar" id="hindrance-spend-bar"><span></span></div>
           </div>
           <div class="meter">
-            <div class="meter-line"><span>Pericias</span><strong id="skill-count">0 / 12</strong></div>
+            <div class="meter-line"><span>Perícias</span><strong id="skill-count">0 / 12</strong></div>
             <div class="bar" id="skill-bar"><span></span></div>
           </div>
         </div>
@@ -704,10 +708,10 @@
           <button class="button" type="button" id="save-draft">Salvar rascunho</button>
           <button class="button" type="button" id="load-draft">Carregar</button>
           <button class="button primary full" type="button" id="send-master">Enviar para o Mestre</button>
-          <button class="button full" type="button" id="clear-form">Limpar formulario</button>
+          <button class="button full" type="button" id="clear-form">Limpar formulário</button>
         </div>
         <p class="status" id="status" aria-live="polite"></p>
-        <p class="legal">Este coletor nao substitui o livro nem a aprovacao do Mestre. Ele apenas organiza escolhas de jogador para Conan Legacy.</p>
+        <p class="legal">Este coletor não substitui o livro nem a aprovação do Mestre. Ele apenas organiza escolhas de jogador para Conan Legacy.</p>
       </aside>
     </main>
   </div>
@@ -744,33 +748,33 @@
       ["thievery", "Thievery", "agility", false]
     ];
     const BACKGROUNDS = [
-      {name: "Aquilonio", identity: "Herdeiro de leis, exercitos, cidades e ambicao imperial.", benefit: "Persuasion d6 ou Battle d4 sem gastar pontos de pericia.", limit: "Obligation (Minor) com casa, patrono, legiao, templo ou autoridade."},
-      {name: "Bossoniano", identity: "Sentinela de fronteira, arqueiro disciplinado entre reino e ermo.", benefit: "Shooting d6 ou Notice d6 sem gastar pontos de pericia.", limit: "Sem arma de disparo pronta, sofre -1 em rolagens de Fear."},
-      {name: "Cimerio", identity: "Filho das colinas frias, feroz, resistente e desconfiado da civilizacao.", benefit: "Strength d6 ou Vigor d6 em vez de d4, sem pagar custo de atributo.", limit: "Outsider (Minor) automaticamente."},
-      {name: "Hyrkanio", identity: "Cavaleiro das estepes, criado entre sela, arco, vento e distancia.", benefit: "Riding d6; ao escolher Vantagem Novice ligada a montaria, pode ignorar um requisito de Riding.", limit: "A pe e sem espaco para manobrar, sofre -1 em Athletics para perseguir, fugir ou ganhar posicao."},
-      {name: "Kothiano", identity: "Mercenario de terras disputadas, habituado a guerra, pagamento e juramentos frageis.", benefit: "Uma vez por sessao, declare contrato, soldo ou promessa para receber +1 em Fighting, Shooting ou Battle.", limit: "Se romper o contrato declarado, perde o uso do beneficio ate a proxima sessao."},
+      {name: "Aquilonio", identity: "Herdeiro de leis, exercitos, cidades e ambição imperial.", benefit: "Persuasion d6 ou Battle d4 sem gastar pontos de perícia.", limit: "Obligation (Minor) com casa, patrono, legião, templo ou autoridade."},
+      {name: "Bossoniano", identity: "Sentinela de fronteira, arqueiro disciplinado entre reino e ermo.", benefit: "Shooting d6 ou Notice d6 sem gastar pontos de perícia.", limit: "Sem arma de disparo pronta, sofre -1 em rolagens de Fear."},
+      {name: "Cimerio", identity: "Filho das colinas frias, feroz, resistente e desconfiado da civilizacao.", benefit: "Strength d6 ou Vigor d6 em vez de d4, sem pagar custo de atributo.", limit: "Outsider (Minor) automáticamente."},
+      {name: "Hyrkanio", identity: "Cavaleiro das estepes, criado entre sela, arco, vento e distancia.", benefit: "Riding d6; ao escolher Vantagem Novice ligada a montaria, pode ignorar um requisito de Riding.", limit: "A pe e sem espaço para manobrar, sofre -1 em Athletics para perseguir, fugir ou ganhar posicao."},
+      {name: "Kothiano", identity: "Mercenário de terras disputadas, habituado a guerra, pagamento e juramentos frageis.", benefit: "Uma vez por sessão, declare contrato, soldo ou promessa para receber +1 em Fighting, Shooting ou Battle.", limit: "Se romper o contrato declarado, perde o uso do benefício até a proxima sessão."},
       {name: "Kushita", identity: "Sobrevivente do calor, das selvas, savanas e reinos antigos do sul.", benefit: "Survival d6; +1 em Vigor ou Survival contra calor, sede, veneno natural ou doenca comum.", limit: "Em cortes, cidades decadentes e luxo hostil, -1 em Persuasion na primeira interacao social da cena."},
-      {name: "Nemedio", identity: "Erudito, cronista, legalista ou aventureiro educado entre arquivos e intrigas.", benefit: "Academics d6 ou Common Knowledge d6; uma pergunta objetiva por sessao sobre historia, lei, linhagem ou precedente conhecido.", limit: "Curious (Minor) ou Cautious (Minor); a pergunta nao revela segredo oculto ou conspiracao ativa."},
-      {name: "Ophireano", identity: "Cortesao de cidades ricas, negociador, conspirador ou herdeiro de luxo instavel.", benefit: "Persuasion d6 ou Thievery d6; +1 em Networking quando presentes, luxo ou dinheiro abrirem portas.", limit: "Metade do dinheiro inicial fica presa em roupas, joias, dividas ou favores."},
+      {name: "Nemedio", identity: "Erudito, cronista, legalista ou aventureiro educado entre arquivos e intrigas.", benefit: "Academics d6 ou Common Knowledge d6; uma pergunta objetiva por sessão sobre história, lei, linhagem ou precedente conhecido.", limit: "Curious (Minor) ou Cautious (Minor); a pergunta não revela segredo oculto ou conspiração ativa."},
+      {name: "Ophireano", identity: "Cortesao de cidades ricas, negociador, conspirador ou herdeiro de luxo instavel.", benefit: "Persuasion d6 ou Thievery d6; +1 em Networking quando presentes, luxo ou dinheiro abrirem portas.", limit: "Metade do dinheiro inicial fica presa em roupas, joias, dívidas ou favores."},
       {name: "Picto", identity: "Cacador tribal, guerreiro pintado, espirito de emboscada e territorio selvagem.", benefit: "Stealth d6 ou Survival d6; em terreno selvagem, +1 em Stealth para emboscar ou evitar patrulhas.", limit: "Outsider (Minor) em cidades civilizadas e cortes estrangeiras."},
-      {name: "Shemita", identity: "Mercador, arqueiro, pastor, nomade ou devoto de cidades e desertos.", benefit: "Persuasion d6 ou Shooting d6; +1 em Persuasion ao negociar preco, passagem, resgate ou informacao.", limit: "Obligation (Minor) com cla, caravana, templo, credor ou familia extensa."},
-      {name: "Stigio", identity: "Herdeiro de templos antigos, sangue pesado, segredos e medo reverente.", benefit: "Pode comecar com Arcane Background (Magic ou Channeling) ignorando apenas requisitos culturais; se nao escolher magia, Occult d6.", limit: "Sangue Chamado (Minor); magia stigia segue Backlash, corrupcao e limites sobrenaturais."},
-      {name: "Zamorano", identity: "Ladrao de becos, escalador de torres, espiao urbano e sobrevivente das sombras.", benefit: "Thievery d6 ou Stealth d6; uma vez por sessao, ignore ate 2 pontos de penalidade ao arrombar, esconder-se em multidao ou escapar de prisao comum.", limit: "Wanted (Minor) em uma cidade, guilda, culto ou rede criminosa."},
-      {name: "Zingario", identity: "Duelista, marinheiro, contrabandista ou aventureiro de orgulho inflamavel.", benefit: "Boating d6 ou Fighting d6; em duelos formais ou brigas um contra um, +1 no primeiro Test contra o oponente.", limit: "Bonus nao se aplica a ataque, dano ou defesa; Code of Honor (Minor) ou Overconfident (Minor)."}
+      {name: "Shemita", identity: "Mercador, arqueiro, pastor, nômade ou devoto de cidades e desertos.", benefit: "Persuasion d6 ou Shooting d6; +1 em Persuasion ao negociar preço, passagem, resgate ou informação.", limit: "Obligation (Minor) com clã, caravana, templo, credor ou família extensa."},
+      {name: "Stigio", identity: "Herdeiro de templos antigos, sangue pesado, segredos e medo reverente.", benefit: "Pode começar com Arcane Background (Magic ou Channeling) ignorando apenas requisitos culturais; se não escolher magia, Occult d6.", limit: "Sangue Chamado (Minor); magia stigia segue Backlash, corrupção e limites sobrenaturais."},
+      {name: "Zamorano", identity: "Ladrao de becos, escalador de torres, espiao urbano e sobrevivente das sombras.", benefit: "Thievery d6 ou Stealth d6; uma vez por sessão, ignore até 2 pontos de penalidade ao arrombar, esconder-se em multidao ou escapar de prisao comum.", limit: "Wanted (Minor) em uma cidade, guilda, culto ou rede criminosa."},
+      {name: "Zingario", identity: "Duelista, marinheiro, contrabandista ou aventureiro de orgulho inflamável.", benefit: "Boating d6 ou Fighting d6; em duelos formais ou brigas um contra um, +1 no primeiro Test contra o oponente.", limit: "Bônus não se aplica a ataque, dano ou defesa; Code of Honor (Minor) ou Overconfident (Minor)."}
     ];
     const HINDRANCE_OPTIONS = ["All Thumbs", "Anemic", "Arrogant", "Bad Eyes", "Bad Luck", "Big Mouth", "Blind", "Bloodthirsty", "Can't Swim", "Cautious", "Clueless", "Code of Honor", "Curious", "Death Wish", "Delusional", "Doubting Thomas", "Driven", "Elderly", "Enemy", "Greedy", "Habit", "Hard of Hearing", "Heroic", "Hesitant", "Illiterate", "Impulsive", "Jealous", "Loyal", "Mean", "Mild Mannered", "Mute", "Obligation", "One Arm", "One Eye", "Outsider", "Overconfident", "Pacifist", "Phobia", "Poverty", "Quirk", "Ruthless", "Secret", "Slow", "Small", "Stubborn", "Suspicious", "Thin Skinned", "Tongue-Tied", "Ugly", "Vengeful", "Vow", "Wanted", "Yellow", "Young", "Sangue Chamado", "Outra aprovada pelo Mestre"];
     const EDGE_OPTIONS = ["Alertness", "Arcane Background (Channeling)", "Arcane Background (Magic)", "Attractive", "Block", "Brave", "Combat Reflexes", "Connections", "Danger Sense", "Fleet-Footed", "Frenzy", "Hard to Kill", "Investigator", "Luck", "Marksman", "Scholar", "Steady Hands", "Strong Willed", "Sweep", "Thief", "Woodsman", "Outra aprovada pelo Mestre"];
     const BONDS = [
-      "Quem em Karavazyan pode reconhecer voce?",
-      "Qual faccao teria motivo para contratar voce?",
-      "Qual faccao teria motivo para desconfiar de voce?",
-      "O que voce ouviu sobre Khar-Volun?",
-      "O que voce perderia se a Aquilonia entrasse em guerra civil?",
+      "Quem em Karavazyan pode reconhecer você?",
+      "Qual facção teria motivo para contratar você?",
+      "Qual facção teria motivo para desconfiar de você?",
+      "O que você ouviu sobre Khar-Volun?",
+      "O que você perderia se a Aquilonia entrasse em guerra civil?",
       "Qual foi sua pior experiencia com autoridade?",
-      "Que tipo de pessoa voce se recusa a abandonar?",
-      "Que oferta faria voce entrar na Torre mesmo sabendo que e uma ma ideia?",
-      "Qual sonho recente voce nao contou a ninguem?",
-      "Quem voce deve evitar na Quinta Roda?"
+      "Que tipo de pessoa você se recusa a abandonar?",
+      "Que oferta faria você entrar na Torre mesmo sabendo que e uma ma ideia?",
+      "Qual sonho recente você não contou a ninguém?",
+      "Quem você deve evitar na Quinta Roda?"
     ];
 
     const form = document.getElementById("pc-form");
@@ -800,7 +804,7 @@
           <select name="culturalBackground">${optionList(BACKGROUNDS.map((background) => background.name))}</select>
         </label>
         <label>Observacoes do Background
-          <textarea name="culturalBackgroundNotes" placeholder="Anote escolha interna, obrigacao, casa, cla, inimigo, cidade, divida ou ajuste combinado com o Mestre."></textarea>
+          <textarea name="culturalBackgroundNotes" placeholder="Anote escolha interna, obrigacao, casa, clã, inimigo, cidade, divida ou ajuste combinado com o Mestre."></textarea>
         </label>
       `;
 
@@ -819,11 +823,11 @@
       document.getElementById("hindrance-fields").innerHTML = [1, 2, 3, 4].map((index) => `
         <div class="inline-row">
           <label>Desvantagem ${index}
-            <select name="hindrance_${index}">${optionList(HINDRANCE_OPTIONS, "Nao escolhida")}</select>
+            <select name="hindrance_${index}">${optionList(HINDRANCE_OPTIONS, "Não escolhida")}</select>
           </label>
           <label>Grau
             <select name="hindranceType_${index}">
-              <option value="0">Nao usada</option>
+              <option value="0">Não usada</option>
               <option value="1">Menor (+1)</option>
               <option value="2">Maior (+2)</option>
             </select>
@@ -837,14 +841,14 @@
       document.getElementById("edge-fields").innerHTML = [1, 2, 3, 4].map((index) => `
         <div class="inline-row">
           <label>Vantagem ${index}
-            <select name="edge_${index}">${optionList(EDGE_OPTIONS, "Nao escolhida")}</select>
+            <select name="edge_${index}">${optionList(EDGE_OPTIONS, "Não escolhida")}</select>
           </label>
           <label>Origem
             <select name="edgeSource_${index}">
               <option value="">Escolha...</option>
               <option>Humano</option>
               <option>Desvantagem</option>
-              <option>Avanco</option>
+              <option>Avanço</option>
               <option>Aprovacao do Mestre</option>
             </select>
           </label>
@@ -860,13 +864,13 @@
 
       document.getElementById("advance-fields").innerHTML = [1, 2].map((index) => `
         <div class="inline-row">
-          <label>Avanco ${index}
+          <label>Avanço ${index}
             <select name="advanceType_${index}">
               <option value="">Escolha...</option>
               <option>Nova Vantagem</option>
               <option>Aumentar atributo</option>
-              <option>Aumentar uma pericia</option>
-              <option>Aumentar duas pericias</option>
+              <option>Aumentar uma perícia</option>
+              <option>Aumentar duas perícias</option>
               <option>Outro ajuste aprovado</option>
             </select>
           </label>
@@ -911,10 +915,10 @@
       const background = selectedBackground(data);
       if (!summary) return;
       if (!background) {
-        summary.textContent = "Escolha um Background para ver o resumo mecanico.";
+        summary.textContent = "Escolha um Background para ver o resumo mecânico.";
         return;
       }
-      summary.textContent = `${background.name}: ${background.identity} Beneficio: ${background.benefit} Limitacao: ${background.limit}`;
+      summary.textContent = `${background.name}: ${background.identity} Benefício: ${background.benefit} Limitação: ${background.limit}`;
     }
 
     function formData() {
@@ -1016,19 +1020,19 @@
       return lines.length ? lines.join("\n") : "-";
     }
 
-    function buildDossier(calc) {
+    function buildDossiêr(calc) {
       const {data} = calc;
       const pcName = filled(data.pcName);
       const generatedAt = new Date().toLocaleString("pt-BR");
       const attributes = ATTRIBUTES.map(([key, label]) => `- ${label}: ${data[`attr_${key}`] || "d4"}`).join("\n");
       const background = selectedBackground(data);
-      const backgroundSummary = background ? `${background.name} - ${background.identity} Beneficio: ${background.benefit} Limitacao: ${background.limit}` : "-";
+      const backgroundSummary = background ? `${background.name} - ${background.identity} Benefício: ${background.benefit} Limitação: ${background.limit}` : "-";
       const skills = selectedSkills(data).map(([label, die]) => `- ${label}: ${die}`).join("\n") || "-";
       const hindrances = [];
       for (let index = 1; index <= 4; index += 1) {
         const name = filled(data[`hindrance_${index}`]);
         const type = data[`hindranceType_${index}`] === "2" ? "Maior" : data[`hindranceType_${index}`] === "1" ? "Menor" : "";
-        if (name !== "-" || type) hindrances.push(`${name} (${type || "grau nao informado"})`);
+        if (name !== "-" || type) hindrances.push(`${name} (${type || "grau não informado"})`);
       }
       const edges = [];
       for (let index = 1; index <= 4; index += 1) {
@@ -1039,7 +1043,7 @@
       for (let index = 1; index <= 2; index += 1) {
         const type = filled(data[`advanceType_${index}`]);
         const detail = filled(data[`advanceDetail_${index}`]);
-        if (type !== "-" || detail !== "-") advances.push(`Avanco ${index}: ${type}; detalhe: ${detail}; status: ${filled(data[`advanceApproval_${index}`])}`);
+        if (type !== "-" || detail !== "-") advances.push(`Avanço ${index}: ${type}; detalhe: ${detail}; status: ${filled(data[`advanceApproval_${index}`])}`);
       }
       const bonds = BONDS.map((question, index) => {
         const answer = filled(data[`bond_${index + 1}`]);
@@ -1047,11 +1051,11 @@
       }).join("\n");
       const pending = [];
       if (calc.attrSpent !== calc.attrBudget) pending.push(`Atributos em ${calc.attrSpent}/${calc.attrBudget}.`);
-      if (calc.skillSpent > calc.skillBudget) pending.push(`Pericias acima do orcamento: ${calc.skillSpent}/${calc.skillBudget}.`);
+      if (calc.skillSpent > calc.skillBudget) pending.push(`Perícias acima do orçamento: ${calc.skillSpent}/${calc.skillBudget}.`);
       if (calc.hindrancePoints > calc.hindranceBudget) pending.push(`Desvantagens acima do limite: ${calc.hindrancePoints}/${calc.hindranceBudget}.`);
       if (calc.hindranceSpend > calc.hindranceAvailable) pending.push(`Gasto de pontos de Desvantagem maior que pontos disponiveis: ${calc.hindranceSpend}/${calc.hindranceAvailable}.`);
       const answeredBonds = BONDS.filter((_, index) => filled(data[`bond_${index + 1}`]) !== "-").length;
-      if (answeredBonds < 5) pending.push(`Responder pelo menos 5 vinculos. Respondidos: ${answeredBonds}/5.`);
+      if (answeredBonds < 5) pending.push(`Responder pelo menos 5 vínculos. Respondidos: ${answeredBonds}/5.`);
 
       const techSkills = selectedSkills(data).map(([label, die]) => `${label}=${die}`).join("; ");
       const techAttrs = ATTRIBUTES.map(([key, label]) => `${label}=${data[`attr_${key}`] || "d4"}`).join("; ");
@@ -1059,7 +1063,7 @@
       const techEdges = edges.join("; ") || "-";
       const techAdvances = advances.join("; ") || "-";
 
-      return `# Dossie de PC - Conan Legacy
+      return `# Dossiê de PC - Conan Legacy
 
 Gerado em: ${generatedAt}
 
@@ -1071,7 +1075,7 @@ Gerado em: ${generatedAt}
 - Conceito de mesa: ${filled(data.concept)}
 - Conceito em uma frase: ${filled(data.pitch)}
 
-## Historia curta
+## História curta
 ${filled(data.history)}
 
 ## Atributos
@@ -1089,27 +1093,27 @@ ${listLines(hindrances)}
 ## Vantagens
 ${listLines(edges)}
 
-## Pericias
+## Perícias
 ${skills}
 
 ## Armas e Equipamentos
 ${filled(data.equipmentWishlist)}
 
-## Avancos iniciais
+## Avanços iniciais
 ${listLines(advances)}
 
-## Vinculos de campanha
+## Vínculos de campanha
 ${bonds}
 
-## Comentarios para o Mestre
+## Comentários para o Mestre
 ${filled(data.gmComments)}
 
-## Resumo mecanico
-- Rank inicial: Novice com 2 Avancos
+## Resumo mecânico
+- Rank inicial: Novice com 2 Avanços
 - Wild Card: sim
 - Raca/base: humano
 - Atributos usados: ${calc.attrSpent}/${calc.attrBudget}
-- Pericias usadas: ${calc.skillSpent}/${calc.skillBudget}
+- Perícias usadas: ${calc.skillSpent}/${calc.skillBudget}
 - Pontos de Desvantagens: ${calc.hindrancePoints}/${calc.hindranceBudget}
 - Gasto de Desvantagens: ${calc.hindranceSpend}/${calc.hindranceAvailable}
 - Pace: ${calc.pace}
@@ -1163,7 +1167,7 @@ FOUNDRY_TARGET: SWADE 5.2.6 / Foundry VTT 13.351 / Actor type character
         <div><span>Toughness</span><strong>${calc.toughness}</strong></div>
         <div><span>Bennies</span><strong>${calc.bennies}</strong></div>
       `;
-      output.value = buildDossier(calc);
+      output.value = buildDossiêr(calc);
     }
 
     function paintBar(id, used, budget, isBad) {
@@ -1219,7 +1223,7 @@ FOUNDRY_TARGET: SWADE 5.2.6 / Foundry VTT 13.351 / Actor type character
     document.getElementById("copy-output").addEventListener("click", async () => {
       update();
       await navigator.clipboard.writeText(output.value);
-      setStatus("Dossie copiado.");
+      setStatus("Dossiê copiado.");
     });
 
     document.getElementById("download-output").addEventListener("click", () => {
@@ -1245,14 +1249,14 @@ FOUNDRY_TARGET: SWADE 5.2.6 / Foundry VTT 13.351 / Actor type character
       const pcName = filled(calc.data.pcName);
       const playerName = filled(calc.data.playerName);
       const playerEmail = filled(calc.data.playerEmail);
-      const subject = `Conan Legacy - Dossie de PC - ${pcName}`;
+      const subject = `Conan Legacy - Dossiê de PC - ${pcName}`;
       const body = `${output.value}
 
 ---
 E-mail informado pelo jogador para retorno: ${playerEmail}
 Jogador: ${playerName}
 `;
-      setStatus("Envio automatico depende do endpoint configurado. Use o botao principal apos carregar gerador-personagem-validacao.js.");
+      setStatus("Envio automático depende do endpoint configurado. Use o botão principal após carregar gerador-personagem-validacao.js.");
     }
 
     document.getElementById("save-draft").addEventListener("click", saveDraft);
@@ -1263,12 +1267,14 @@ Jogador: ${playerName}
       for (const [key] of ATTRIBUTES) form.elements[`attr_${key}`].value = "d4";
       for (const [key, , , core] of SKILLS) form.elements[`skill_${key}`].value = core ? "d4" : "-";
       update();
-      setStatus("Formulario limpo.");
+      setStatus("Formulário limpo.");
     });
   </script>
   <script src="heroe-forge-email-config.js"></script>
   <script src="heroe-forge-random-data.js"></script>
+  <script src="gerador-equipamentos-data.js"></script>
+  <script src="gerador-personagem-equipamentos.js"></script>
   <script src="gerador-personagem-validacao.js"></script>
-  <script src="gerador-personagem-aleatorio.js"></script>
+  <script src="gerador-personagem-aleatório.js"></script>
 </body>
 </html>

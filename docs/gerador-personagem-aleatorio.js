@@ -63,15 +63,15 @@
     const playerName = valueOf("playerName");
     const playerEmail = valueOf("playerEmail");
     if (!playerName || !playerEmail) {
-      window.alert("O preenchimento de Jogador e E-mail do jogador e obrigatorio para gerar personagens aleatorios.");
-      validation.status("Preencha Jogador e E-mail do jogador antes de gerar personagem aleatorio.");
+      window.alert("O preenchimento de Jogador e E-mail do jogador e obrigatorio para gerar personagens aleatórios.");
+      validation.status("Preencha Jogador e E-mail do jogador antes de gerar personagem aleatório.");
       if (!playerName) form.elements.playerName?.focus();
       else form.elements.playerEmail?.focus();
       return false;
     }
     if (form.elements.playerEmail && !form.elements.playerEmail.checkValidity()) {
-      window.alert("Informe um e-mail valido do jogador antes de gerar personagem aleatorio.");
-      validation.status("Informe um e-mail valido do jogador antes de gerar personagem aleatorio.");
+      window.alert("Informe um e-mail válido do jogador antes de gerar personagem aleatório.");
+      validation.status("Informe um e-mail válido do jogador antes de gerar personagem aleatório.");
       form.elements.playerEmail.focus();
       return false;
     }
@@ -85,9 +85,9 @@
     if (!valueOf("concept")) missing.push("conceito de mesa");
     if (!missing.length) return true;
     return !window.confirm(
-      "Voce gostaria de escolher nome do PC, origem ou cultura, ou conceito de mesa antes de gerar o personagem aleatorio?\n\n" +
-      "Com origem/cultura e conceito de mesa escolhidos, o sorteio consegue orientar melhor Background, nome, historia, vinculos e pacote provisorio.\n\n" +
-      "OK: voltar ao formulario para preencher.\nCancelar: gerar mesmo assim."
+      "Você gostaria de escolher nome do PC, origem ou cultura, ou conceito de mesa antes de gerar o personagem aleatório?\n\n" +
+      "Com origem/cultura e conceito de mesa escolhidos, o sorteio consegue orientar melhor Background, nome, história, vínculos e pacote provisório.\n\n" +
+      "OK: voltar ao formulário para preencher.\nCancelar: gerar mesmo assim."
     );
   }
 
@@ -211,7 +211,7 @@
   function generate() {
     if (!validateRequiredIdentity()) return;
     if (!confirmOptionalIdentity()) return;
-    if (hasCharacterChoices() && !window.confirm("Substituir as escolhas narrativas atuais por uma ficha aleatoria? Jogador, e-mail, nome do PC, origem/cultura e conceito de mesa serao preservados quando preenchidos.")) return;
+    if (hasCharacterChoices() && !window.confirm("Substituir as escolhas narrativas atuais por uma ficha aleatória? Jogador, e-mail, nome do PC, origem/cultura e conceito de mesa serao preservados quando preenchidos.")) return;
 
     const playerName = valueOf("playerName");
     const playerEmail = valueOf("playerEmail");
@@ -228,7 +228,7 @@
     const contact = pick(catalog.contacts, random);
     const threat = pick(catalog.threats, random);
     const loss = pick(catalog.losses, random);
-    const packageChoice = pick(catalog.equipmentPackages, random);
+    const legacyPackageChoice = catalog.equipmentPackages?.length ? pick(catalog.equipmentPackages, random) : null;
     const values = { name, origin: preferredOrigin || backgroundName, role: archetype.toLowerCase(), contact, threat, loss };
 
     resetCharacterFields();
@@ -250,18 +250,20 @@
     set("spendSkill", "2");
     chooseEdges();
     spendRemainingSkillBudget(random);
-    set("equipmentWishlist", `Pacote provisorio sugerido: ${packageChoice.name} (${packageChoice.value}/650). Conteudo: ${packageChoice.text}. Restante sujeito a escolha e aprovacao do Mestre.`);
-    set("culturalBackgroundNotes", `Ficha gerada automaticamente. Rever o beneficio ${benefit.label} e as limitacoes do Background com o Mestre.`);
+    const packageChoice = window.HeroeForgeEquipment?.applyRandomPackage ? window.HeroeForgeEquipment.applyRandomPackage(random) : legacyPackageChoice;
+    if (packageChoice?.package_id) set("equipmentWishlist", "Pacote estruturado escolhido automáticamente. Ajustes, trocas e exceções continuam sujeitos a aprovação do Mestre.");
+    else if (packageChoice) set("equipmentWishlist", `Pacote provisório sugerido: ${packageChoice.name} (${packageChoice.value}/650). Conteudo: ${packageChoice.text}. Restante sujeito a escolha e aprovação do Mestre.`);
+    set("culturalBackgroundNotes", `Ficha gerada automáticamente. Rever o benefício ${benefit.label} e as limitações do Background com o Mestre.`);
     for (let index = 0; index < catalog.bondTemplates.length; index += 1) set(`bond_${index + 1}`, replaceTokens(catalog.bondTemplates[index], values));
     ensureHidden("randomSeed").value = seed;
-    ensureHidden("randomEquipmentPackage").value = `${packageChoice.name} (${packageChoice.value}/650; provisorio)`;
+    ensureHidden("randomEquipmentPackage").value = packageChoice?.package_id ? `${packageChoice.name} (${packageChoice.package_id}; estruturado)` : (packageChoice ? `${packageChoice.name} (${packageChoice.value}/650; provisório)` : "-");
     validation.update();
     const calc = validation.collect();
     if (calc.errors.length) {
-      validation.status(`A ficha aleatoria precisa de revisao interna: ${calc.errors[0]}`);
+      validation.status(`A ficha aleatória precisa de revisão interna: ${calc.errors[0]}`);
       return;
     }
-    validation.status(`Ficha aleatoria gerada: ${name}. Revise os detalhes narrativos antes de enviar ao Mestre.`);
+    validation.status(`Ficha aleatória gerada: ${name}. Revise os detalhes narrativos antes de enviar ao Mestre.`);
   }
 
   button.addEventListener("click", generate);
