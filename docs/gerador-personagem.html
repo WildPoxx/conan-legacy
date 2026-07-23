@@ -503,13 +503,13 @@
                 <option value="">Escolha...</option>
                 <option>Combatente de fronteira</option>
                 <option>Mercenário</option>
-                <option>Ladrao ou espiao</option>
+                <option>Ladrão ou espião</option>
                 <option>Batedor ou caçador</option>
-                <option>Nobre caido ou bastardo</option>
+                <option>Nobre caído ou bastardo</option>
                 <option>Curandeiro ou alquimista</option>
                 <option>Estudioso ocultista</option>
                 <option>Ex-escravo ou desertor</option>
-                <option>Sacerdote ambiguo</option>
+                <option>Sacerdote ambíguo</option>
                 <option>Agente de facção</option>
                 <option>Outro conceito aprovado pelo Mestre</option>
               </select>
@@ -638,7 +638,7 @@
           </div>
           <div id="equipment-builder"></div>
           <label>Pedidos, exceções e itens narrativos para o Mestre
-            <textarea name="equipmentWishlist" placeholder="Ex.: gostaria de negociar um mapa raro, justificar um veneno como heranca, propor divida com mercador, ou pedir exceção de acesso por história pessoal."></textarea>
+            <textarea name="equipmentWishlist" placeholder="Ex.: gostaria de negociar um mapa raro, justificar um veneno como herança, propor dívida com mercador, ou pedir exceção de acesso por história pessoal."></textarea>
           </label>
         </section>
 
@@ -662,15 +662,15 @@
             <span class="badge">10</span>
           </div>
           <label>Comentários adicionais
-            <textarea name="gmComments" placeholder="Ex.: gostaria de discutir uma divida antiga, pedir permissao para uma Vantagem especifica, combinar um contato ou explicar uma escolha incomum."></textarea>
+            <textarea name="gmComments" placeholder="Ex.: gostaria de discutir uma dívida antiga, pedir permissão para uma Vantagem específica, combinar um contato ou explicar uma escolha incomum."></textarea>
           </label>
         </section>
 
-        <section aria-labelledby="saida">
+        <section aria-labelledby="saída">
           <div class="section-head">
             <div>
-              <h2 id="saida">Dossiê Exportavel</h2>
-              <p class="hint">Copie, baixe ou envie este texto ao Mestre. Ele e legivel por humano e fácil de converter em script depois.</p>
+              <h2 id="saída">Dossiê Exportável</h2>
+              <p class="hint">Copie, baixe ou envie este texto ao Mestre. Ele é legível por humano e fácil de converter em script depois.</p>
             </div>
             <span class="badge">TXT</span>
           </div>
@@ -748,18 +748,18 @@
       ["thievery", "Thievery", "agility", false]
     ];
     const BACKGROUNDS = [
-      {name: "Aquilonio", identity: "Herdeiro de leis, exercitos, cidades e ambição imperial.", benefit: "Persuasion d6 ou Battle d4 sem gastar pontos de perícia.", limit: "Obligation (Minor) com casa, patrono, legião, templo ou autoridade."},
+      {name: "Aquilonio", identity: "Herdeiro de leis, exércitos, cidades e ambição imperial.", benefit: "Persuasion d6 ou Battle d4 sem gastar pontos de perícia.", limit: "Obligation (Minor) com casa, patrono, legião, templo ou autoridade."},
       {name: "Bossoniano", identity: "Sentinela de fronteira, arqueiro disciplinado entre reino e ermo.", benefit: "Shooting d6 ou Notice d6 sem gastar pontos de perícia.", limit: "Sem arma de disparo pronta, sofre -1 em rolagens de Fear."},
-      {name: "Cimerio", identity: "Filho das colinas frias, feroz, resistente e desconfiado da civilizacao.", benefit: "Strength d6 ou Vigor d6 em vez de d4, sem pagar custo de atributo.", limit: "Outsider (Minor) automáticamente."},
-      {name: "Hyrkanio", identity: "Cavaleiro das estepes, criado entre sela, arco, vento e distancia.", benefit: "Riding d6; ao escolher Vantagem Novice ligada a montaria, pode ignorar um requisito de Riding.", limit: "A pe e sem espaço para manobrar, sofre -1 em Athletics para perseguir, fugir ou ganhar posicao."},
-      {name: "Kothiano", identity: "Mercenário de terras disputadas, habituado a guerra, pagamento e juramentos frageis.", benefit: "Uma vez por sessão, declare contrato, soldo ou promessa para receber +1 em Fighting, Shooting ou Battle.", limit: "Se romper o contrato declarado, perde o uso do benefício até a proxima sessão."},
-      {name: "Kushita", identity: "Sobrevivente do calor, das selvas, savanas e reinos antigos do sul.", benefit: "Survival d6; +1 em Vigor ou Survival contra calor, sede, veneno natural ou doenca comum.", limit: "Em cortes, cidades decadentes e luxo hostil, -1 em Persuasion na primeira interacao social da cena."},
+      {name: "Cimerio", identity: "Filho das colinas frias, feroz, resistente e desconfiado da civilização.", benefit: "Strength d6 ou Vigor d6 em vez de d4, sem pagar custo de atributo.", limit: "Outsider (Minor) automaticamente."},
+      {name: "Hyrkanio", identity: "Cavaleiro das estepes, criado entre sela, arco, vento e distância.", benefit: "Riding d6; ao escolher Vantagem Novice ligada a montaria, pode ignorar um requisito de Riding.", limit: "A pé e sem espaço para manobrar, sofre -1 em Athletics para perseguir, fugir ou ganhar posição."},
+      {name: "Kothiano", identity: "Mercenário de terras disputadas, habituado a guerra, pagamento e juramentos frágeis.", benefit: "Uma vez por sessão, declare contrato, soldo ou promessa para receber +1 em Fighting, Shooting ou Battle.", limit: "Se romper o contrato declarado, perde o uso do benefício até a próxima sessão."},
+      {name: "Kushita", identity: "Sobrevivente do calor, das selvas, savanas e reinos antigos do sul.", benefit: "Survival d6; +1 em Vigor ou Survival contra calor, sede, veneno natural ou doença comum.", limit: "Em cortes, cidades decadentes e luxo hostil, -1 em Persuasion na primeira interação social da cena."},
       {name: "Nemedio", identity: "Erudito, cronista, legalista ou aventureiro educado entre arquivos e intrigas.", benefit: "Academics d6 ou Common Knowledge d6; uma pergunta objetiva por sessão sobre história, lei, linhagem ou precedente conhecido.", limit: "Curious (Minor) ou Cautious (Minor); a pergunta não revela segredo oculto ou conspiração ativa."},
       {name: "Ophireano", identity: "Cortesao de cidades ricas, negociador, conspirador ou herdeiro de luxo instavel.", benefit: "Persuasion d6 ou Thievery d6; +1 em Networking quando presentes, luxo ou dinheiro abrirem portas.", limit: "Metade do dinheiro inicial fica presa em roupas, joias, dívidas ou favores."},
-      {name: "Picto", identity: "Cacador tribal, guerreiro pintado, espirito de emboscada e territorio selvagem.", benefit: "Stealth d6 ou Survival d6; em terreno selvagem, +1 em Stealth para emboscar ou evitar patrulhas.", limit: "Outsider (Minor) em cidades civilizadas e cortes estrangeiras."},
+      {name: "Picto", identity: "Caçador tribal, guerreiro pintado, espírito de emboscada e território selvagem.", benefit: "Stealth d6 ou Survival d6; em terreno selvagem, +1 em Stealth para emboscar ou evitar patrulhas.", limit: "Outsider (Minor) em cidades civilizadas e cortes estrangeiras."},
       {name: "Shemita", identity: "Mercador, arqueiro, pastor, nômade ou devoto de cidades e desertos.", benefit: "Persuasion d6 ou Shooting d6; +1 em Persuasion ao negociar preço, passagem, resgate ou informação.", limit: "Obligation (Minor) com clã, caravana, templo, credor ou família extensa."},
       {name: "Stigio", identity: "Herdeiro de templos antigos, sangue pesado, segredos e medo reverente.", benefit: "Pode começar com Arcane Background (Magic ou Channeling) ignorando apenas requisitos culturais; se não escolher magia, Occult d6.", limit: "Sangue Chamado (Minor); magia stigia segue Backlash, corrupção e limites sobrenaturais."},
-      {name: "Zamorano", identity: "Ladrao de becos, escalador de torres, espiao urbano e sobrevivente das sombras.", benefit: "Thievery d6 ou Stealth d6; uma vez por sessão, ignore até 2 pontos de penalidade ao arrombar, esconder-se em multidao ou escapar de prisao comum.", limit: "Wanted (Minor) em uma cidade, guilda, culto ou rede criminosa."},
+      {name: "Zamorano", identity: "Ladrão de becos, escalador de torres, espião urbano e sobrevivente das sombras.", benefit: "Thievery d6 ou Stealth d6; uma vez por sessão, ignore até 2 pontos de penalidade ao arrombar, esconder-se em multidão ou escapar de prisão comum.", limit: "Wanted (Minor) em uma cidade, guilda, culto ou rede criminosa."},
       {name: "Zingario", identity: "Duelista, marinheiro, contrabandista ou aventureiro de orgulho inflamável.", benefit: "Boating d6 ou Fighting d6; em duelos formais ou brigas um contra um, +1 no primeiro Test contra o oponente.", limit: "Bônus não se aplica a ataque, dano ou defesa; Code of Honor (Minor) ou Overconfident (Minor)."}
     ];
     const HINDRANCE_OPTIONS = ["All Thumbs", "Anemic", "Arrogant", "Bad Eyes", "Bad Luck", "Big Mouth", "Blind", "Bloodthirsty", "Can't Swim", "Cautious", "Clueless", "Code of Honor", "Curious", "Death Wish", "Delusional", "Doubting Thomas", "Driven", "Elderly", "Enemy", "Greedy", "Habit", "Hard of Hearing", "Heroic", "Hesitant", "Illiterate", "Impulsive", "Jealous", "Loyal", "Mean", "Mild Mannered", "Mute", "Obligation", "One Arm", "One Eye", "Outsider", "Overconfident", "Pacifist", "Phobia", "Poverty", "Quirk", "Ruthless", "Secret", "Slow", "Small", "Stubborn", "Suspicious", "Thin Skinned", "Tongue-Tied", "Ugly", "Vengeful", "Vow", "Wanted", "Yellow", "Young", "Sangue Chamado", "Outra aprovada pelo Mestre"];
@@ -770,9 +770,9 @@
       "Qual facção teria motivo para desconfiar de você?",
       "O que você ouviu sobre Khar-Volun?",
       "O que você perderia se a Aquilonia entrasse em guerra civil?",
-      "Qual foi sua pior experiencia com autoridade?",
+      "Qual foi sua pior experiência com autoridade?",
       "Que tipo de pessoa você se recusa a abandonar?",
-      "Que oferta faria você entrar na Torre mesmo sabendo que e uma ma ideia?",
+      "Que oferta faria você entrar na Torre mesmo sabendo que e uma má ideia?",
       "Qual sonho recente você não contou a ninguém?",
       "Quem você deve evitar na Quinta Roda?"
     ];
@@ -803,8 +803,8 @@
         <label>Background Cultural
           <select name="culturalBackground">${optionList(BACKGROUNDS.map((background) => background.name))}</select>
         </label>
-        <label>Observacoes do Background
-          <textarea name="culturalBackgroundNotes" placeholder="Anote escolha interna, obrigacao, casa, clã, inimigo, cidade, divida ou ajuste combinado com o Mestre."></textarea>
+        <label>Observações do Background
+          <textarea name="culturalBackgroundNotes" placeholder="Anote escolha interna, obrigação, casa, clã, inimigo, cidade, dívida ou ajuste combinado com o Mestre."></textarea>
         </label>
       `;
 
@@ -1084,7 +1084,7 @@ ${attributes}
 ## Background Cultural
 ${backgroundSummary}
 
-### Observacoes do Background
+### Observações do Background
 ${filled(data.culturalBackgroundNotes)}
 
 ## Desvantagens
@@ -1122,7 +1122,7 @@ ${filled(data.gmComments)}
 - Wounds: ${calc.wounds}
 - Bennies: ${calc.bennies}
 
-## Pendencias para o Mestre
+## Pendências para o Mestre
 ${listLines(pending)}
 
 ## BLOCO TECNICO PARA CODEX

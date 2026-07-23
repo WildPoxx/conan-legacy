@@ -251,9 +251,9 @@
     chooseEdges();
     spendRemainingSkillBudget(random);
     const packageChoice = window.HeroeForgeEquipment?.applyRandomPackage ? window.HeroeForgeEquipment.applyRandomPackage(random) : legacyPackageChoice;
-    if (packageChoice?.package_id) set("equipmentWishlist", "Pacote estruturado escolhido automáticamente. Ajustes, trocas e exceções continuam sujeitos a aprovação do Mestre.");
+    if (packageChoice?.package_id) set("equipmentWishlist", "Pacote estruturado escolhido automaticamente. Ajustes, trocas e exceções continuam sujeitos a aprovação do Mestre.");
     else if (packageChoice) set("equipmentWishlist", `Pacote provisório sugerido: ${packageChoice.name} (${packageChoice.value}/650). Conteudo: ${packageChoice.text}. Restante sujeito a escolha e aprovação do Mestre.`);
-    set("culturalBackgroundNotes", `Ficha gerada automáticamente. Rever o benefício ${benefit.label} e as limitações do Background com o Mestre.`);
+    set("culturalBackgroundNotes", `Ficha gerada automaticamente. Rever o benefício ${benefit.label} e as limitações do Background com o Mestre.`);
     for (let index = 0; index < catalog.bondTemplates.length; index += 1) set(`bond_${index + 1}`, replaceTokens(catalog.bondTemplates[index], values));
     ensureHidden("randomSeed").value = seed;
     ensureHidden("randomEquipmentPackage").value = packageChoice?.package_id ? `${packageChoice.name} (${packageChoice.package_id}; estruturado)` : (packageChoice ? `${packageChoice.name} (${packageChoice.value}/650; provisório)` : "-");

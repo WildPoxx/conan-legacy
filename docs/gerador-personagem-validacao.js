@@ -194,7 +194,7 @@ ${rows.length?rows.join("\n"):"-"}
 Pedidos, exceções e itens narrativos:
 ${filled(calc.data.equipmentWishlist)}
 
-Pendencias de equipamento:
+Pendências de equipamento:
 ${listLines([...eq.errors,...eq.warnings])}`;
   }
   function equipmentTechnicalBlock(calc){
@@ -248,7 +248,7 @@ ${bg}
 Benefício mecânico selecionado: ${calc.backgroundBenefit?.label||"-"}
 Limitações automáticas (não concedem pontos): ${listLines(calc.automaticLimitations)}
 Recursos do Background: ${calc.backgroundRule?.fundsNote||"-"}
-Observacoes: ${filled(data.culturalBackgroundNotes)}
+Observações: ${filled(data.culturalBackgroundNotes)}
 
 ## Desvantagens
 ${listLines(calc.hindrances)}
@@ -276,7 +276,7 @@ ${filled(data.gmComments)}
 - Toughness: ${derivedToughness(calc)}
 - Bennies: 3
 
-## Pendencias para o Mestre
+## Pendências para o Mestre
 ${listLines(pending)}
 
 ## BLOCO TECNICO PARA CODEX
