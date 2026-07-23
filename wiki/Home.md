@@ -1,4 +1,4 @@
-﻿# Conan Legacy - Wiki dos Jogadores
+# Conan Legacy - Wiki dos Jogadores
 
 Bem-vindos a Conan Legacy.
 
@@ -15,7 +15,7 @@ Esta wiki e a porta de entrada dos jogadores. Ela contem apenas material seguro 
 - [Mundo e Lore Revelado](Mundo-e-Lore-Revelado.md)
 - [Personagens](Personagens.md)
 - [Faccoes Conhecidas](Faccoes-Conhecidas.md)
-- [Handouts](Handouts.md)
+- [Materiais de Criação](Materiais-de-Criacao.md)
 
 ## Premissa publica
 
