@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Império da Aquilônia - Conan Legacy</title>
+  <meta name="description" content="Página pública sobre o Império da Aquilônia em Conan Legacy.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --iron: #25221d;
+      --ash: #312d26;
+      --blood: #8e2f2a;
+      --gold: #c99a4a;
+      --moss: #5d6f55;
+      --line: rgba(243, 237, 226, 0.18);
+      --panel: rgba(20, 17, 13, 0.84);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(20, 17, 13, 0.62), rgba(20, 17, 13, 0.96) 540px, #100f0c),
+        url("assets/background-pag-pcs-creation.png") center top / min(100%, 1100px) auto repeat-y,
+        var(--coal);
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 58px; }
+    header { display: grid; gap: 18px; padding: 28px 0 30px; }
+    .topline { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 0.92rem; }
+    .topline a { text-decoration: none; border-bottom: 1px solid var(--line); }
+    .kicker { margin: 0; color: var(--gold); font-size: 0.82rem; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+    h1 { max-width: 940px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3rem, 9vw, 7rem); line-height: 0.92; letter-spacing: 0; text-transform: uppercase; text-wrap: balance; }
+    .lead { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.22rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; font-family: Arial, sans-serif; }
+    .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); padding: 12px 16px; text-decoration: none; background: rgba(20, 17, 13, 0.72); text-align: center; line-height: 1.08; }
+    .button.primary { border-color: rgba(201, 154, 74, 0.75); background: var(--blood); }
+    main { display: grid; gap: 18px; }
+    section { border: 1px solid var(--line); background: var(--panel); padding: clamp(16px, 2.4vw, 28px); }
+    h2, h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; line-height: 1.08; letter-spacing: 0; }
+    h2 { color: var(--gold); font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; }
+    h3 { font-size: 1.35rem; }
+    p { margin: 12px 0 0; color: var(--muted); }
+    strong { color: var(--ink); }
+    .map-frame { margin-top: 18px; border: 1px solid rgba(201, 154, 74, 0.45); background: rgba(255, 255, 255, 0.035); padding: 10px; }
+    .map-frame img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+    .caption { margin-top: 10px; color: var(--muted); font-size: 0.9rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 18px; }
+    .card { min-height: 156px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.035); padding: 14px; }
+    .card h3 { color: var(--ink); font-size: 1.15rem; }
+    .card p { font-size: 0.94rem; }
+    .note { border-left: 4px solid var(--moss); padding-left: 16px; }
+    footer { padding: 28px 16px; color: var(--muted); text-align: center; font: 0.92rem/1.5 Arial, sans-serif; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 20px, 1180px); }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="topline">
+        <a href="index.html">Portal dos Jogadores</a>
+        <a href="locais.html">Locais do Império</a>
+      </div>
+      <p class="kicker">Conan Legacy - Centro Político da Campanha</p>
+      <h1>Império da Aquilônia</h1>
+      <p class="lead">O Império da Aquilônia é a tentativa de transformar conquista, linhagem, lei e guerra em uma ordem comum. Ele sobrevive porque ainda possui estradas, legiões, senadores, templos e riqueza; ele ameaça ruir porque Conn morreu sem sucessor aceito por todos.</p>
+      <nav class="actions" aria-label="Acesso rápido">
+        <a class="button primary" href="locais.html">Locais do Império</a>
+        <a class="button" href="gerador-personagem.html">Gerador de PC</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="mapa">
+        <h2 id="mapa">Mapa do Império</h2>
+        <p>O mapa mostra o núcleo aquiloniano e suas regiões periféricas em 100 anos D.C. Aquilônia ocupa o centro simbólico e político, mas o Império se estende por uma rede de alianças, submissões, pressões militares e disputas culturais que alcançam Nemédia, Corinthia, Brythunia, Hyperborea e fronteiras instáveis.</p>
+        <div class="map-frame">
+          <img src="assets/mapa-imperio-aquilonia.jpg" alt="Mapa cartográfico do Império da Aquilônia e regiões periféricas em 100 anos D.C.">
+          <p class="caption">Mapa público de referência para navegação de campanha. As fronteiras representam influência imperial, não controle absoluto.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="centro">
+        <h2 id="centro">O centro fraturado</h2>
+        <p>Aquilônia ainda é o coração do Ocidente hiboriano. Tarantia conserva o peso do trono, dos arquivos e do Senado. As legiões ainda obedecem a ordens formais. Os templos de Mitra ainda dão linguagem moral ao poder. Mas a morte de Conn abriu uma pergunta que ninguém consegue responder sem ameaçar todos os demais: quem fala pelo Império quando a Coroa está vazia?</p>
+        <p>Esse é o ponto de partida da campanha. O Império não caiu. Ele continua forte o bastante para cobrar, convocar, julgar e punir. Justamente por isso, sua crise é perigosa: cada facção tenta salvar a ordem de um modo que pode quebrá-la.</p>
+      </section>
+
+      <section aria-labelledby="nacoes">
+        <h2 id="nacoes">Cinco nações</h2>
+        <div class="grid">
+          <article class="card"><h3>Aquilônia</h3><p>Centro imperial, fonte da Coroa, das legiões, das estradas e da legitimidade pública. Seu drama é confundir estabilidade com direito natural de comando.</p></article>
+          <article class="card"><h3>Nemédia</h3><p>Segundo pilar do Império e rival tradicional de Aquilônia. Sua nobreza aceita o pacto imperial, mas resiste a ser tratada como província vencida.</p></article>
+          <article class="card"><h3>Corinthia</h3><p>Centro científico, cultural e intelectual. Onde Aquilônia vê lei e Nemédia vê pacto, Corinthia vê método, saber e oportunidade.</p></article>
+          <article class="card"><h3>Brythunia</h3><p>Região de integração complexa, dependente das rotas e da proteção imperial, mas inquieta diante de decisões tomadas longe.</p></article>
+          <article class="card"><h3>Hyperborea</h3><p>O sul hyperbóreo integra o Império de modo recente e precário. Sua obediência é mais cálculo do que devoção.</p></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="conflitos">
+        <h2 id="conflitos">Eixos de tensão</h2>
+        <div class="grid">
+          <article class="card"><h3>Senado e sucessão</h3><p>A morte de Conn deixou instituições vivas, mas nenhum centro incontestável. Cada voto pode parecer administrativo e ser, na prática, uma batalha sucessória.</p></article>
+          <article class="card"><h3>Aquilônia e Nemédia</h3><p>As duas castas nobres sustentam o Império e disputam sua alma. A tensão entre elas define a política do Senado.</p></article>
+          <article class="card"><h3>Fronteiras e Warbarons</h3><p>Nas bordas, poder real pertence a quem mantém muralhas, patrulhas e abastecimento. A autoridade local pode salvar o Império ou substituí-lo.</p></article>
+          <article class="card"><h3>Karavazyan</h3><p>A cidade sobre rodas cresce onde a autoridade formal é lenta. Mercado, rota, fortaleza e rumor: Karavazyan é sintoma de um Império que precisa se mover para continuar vivo.</p></article>
+        </div>
+      </section>
+
+      <section class="note" aria-labelledby="proximo">
+        <h2 id="proximo">Por onde seguir</h2>
+        <p>Depois de entender o quadro geral, consulte os <a href="locais.html"><strong>Locais do Império</strong></a>: Aquilônia, Tarantia, Tanasul, Galparan, Shamar, Poitain, Gunderland, Bossonian Marches, Venarium, Velitrium e Karavazyan.</p>
+      </section>
+    </main>
+
+    <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+  </div>
+</body>
+</html>
+

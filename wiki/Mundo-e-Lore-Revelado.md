@@ -23,9 +23,10 @@ Os Voidwatchers sao conhecidos por observar sonhos, pressagios e sinais de mudan
 
 ## Locais do Imperio
 
-A pagina de [Locais](Locais.md) reune os primeiros verbetes publicos sobre Aquilonia, suas cidades, provincias e fronteiras.
+A página do [Império da Aquilônia](Imperio-da-Aquilonia.md) apresenta o quadro geral, o mapa de referência e a crise política central. A partir dela, a página de [Locais do Império](Locais.md) reúne os primeiros verbetes públicos sobre cidades, províncias e fronteiras.
 
 ## O que os jogadores sabem
 
 Homens e mulheres de poder estao se movendo. Alguns veem oportunidade politica. Outros buscam riqueza. Alguns poucos acreditam que a Torre guarda algo que nunca deveria ser despertado.
+
 
