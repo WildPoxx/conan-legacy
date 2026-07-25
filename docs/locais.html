@@ -1,0 +1,717 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locais - Conan Legacy</title>
+  <meta name="description" content="Verbetes publicos de locais, cidades e fronteiras de Conan Legacy.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --iron: #25221d;
+      --ash: #312d26;
+      --blood: #8e2f2a;
+      --gold: #c99a4a;
+      --moss: #5d6f55;
+      --line: rgba(243, 237, 226, 0.18);
+      --paper: rgba(20, 17, 13, 0.83);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(20, 17, 13, 0.58), rgba(20, 17, 13, 0.94) 520px, rgba(20, 17, 13, 1)),
+        url("assets/background-pag-pcs-creation.png") center top / min(100%, 1100px) auto repeat-y,
+        var(--coal);
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 58px; }
+    header { display: grid; gap: 18px; padding: 26px 0 28px; }
+    .topline { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 0.92rem; }
+    .topline a { text-decoration: none; border-bottom: 1px solid var(--line); }
+    .kicker { margin: 0; color: var(--gold); font-size: 0.82rem; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+    h1 { max-width: 920px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3rem, 9vw, 7rem); line-height: 0.92; letter-spacing: 0; text-transform: uppercase; text-wrap: balance; }
+    .lead { max-width: 820px; margin: 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.22rem); }
+    .layout { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 18px; align-items: start; }
+    aside { position: sticky; top: 12px; display: grid; gap: 10px; border: 1px solid var(--line); background: rgba(20, 17, 13, 0.88); padding: 14px; }
+    aside h2 { margin: 0 0 4px; font: 700 0.78rem/1.2 Arial, sans-serif; color: var(--gold); text-transform: uppercase; letter-spacing: 0; }
+    .place-link { display: grid; gap: 5px; min-height: 72px; padding: 10px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.035); text-decoration: none; }
+    .place-link strong { font-family: Georgia, "Times New Roman", serif; font-size: 1rem; line-height: 1.1; }
+    .place-link span { color: var(--muted); font-size: 0.82rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    main { display: grid; gap: 18px; }
+    .place { border: 1px solid var(--line); background: var(--paper); padding: clamp(16px, 2.4vw, 28px); scroll-margin-top: 18px; }
+    .place h2, .place h3, .place h4 { margin: 0; font-family: Georgia, "Times New Roman", serif; line-height: 1.08; letter-spacing: 0; }
+    .place h2 { color: var(--gold); font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; }
+    .place h3 { margin-top: 26px; font-size: clamp(1.35rem, 2.8vw, 2rem); }
+    .place h4 { margin-top: 18px; color: var(--gold); font-size: 1.08rem; }
+    .place p { margin: 10px 0 0; color: var(--muted); }
+    .place ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+    .place li { margin: 7px 0; }
+    .place strong { color: var(--ink); }
+    .footer-note { margin-top: 18px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+    @media (max-width: 920px) {
+      body { background-size: 1000px auto; }
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+      aside h2 { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="topline">
+        <a href="index.html">Portal dos Jogadores</a>
+        <a href="gerador-personagem.html">Gerador de PC</a>
+      </div>
+      <p class="kicker">Conan Legacy - Wiki Visual dos Jogadores</p>
+      <h1>Locais do Imperio</h1>
+      <p class="lead">Verbetes publicos sobre Aquilonia, suas cidades, provincias e fronteiras. Esta pagina evita informacoes de mestre e serve como consulta rapida para jogadores durante a campanha.</p>
+    </header>
+    <div class="layout">
+      <aside aria-label="Indice de locais">
+        <h2>Indice</h2>
+        <a class="place-link" href="#aquilonia"><strong>Aquilonia</strong><span>Aquilonia e o centro do Imperio Aquilonio e a mais poderosa das nacoes do Oeste hiboriano. Seu nome ainda carrega o peso de Conan, que tomou o trono pela espada, e de Conn, que tentou transformar conquista em ordem duradoura. Suas planicies ferteis, seus rios, suas estradas e sua capital, Tarantia, fazem dela o coracao politico e economico do Imperio.</span></a>
+        <a class="place-link" href="#tarantia"><strong>Tarantia</strong><span>Tarantia e a capital de Aquilonia e, no periodo atual da campanha, o lugar onde o Imperio Aquiloniano tenta convencer a si mesmo de que ainda e eterno. A cidade concentra o palacio, o Senado, as grandes casas nobres, templos de Mitra, cartorios, tribunais, academias militares, mercados de longa distancia e embaixadas das nacoes submetidas ou associadas ao Imperio.</span></a>
+        <a class="place-link" href="#tanasul"><strong>Tanasul</strong><span>Tanasul e uma cidade de passagem, registro e pressao. Localizada no centro-norte aquiloniano, funciona como ponto de conexao entre Tarantia, Galparan, Gunderland, Bossonian Marches e as rotas que seguem para a fronteira. Quem controla Tanasul nao controla a gloria do Imperio; controla seu movimento.</span></a>
+        <a class="place-link" href="#galparan"><strong>Galparan</strong><span>Galparan e uma cidade de interior aquiloniano, importante menos pelo brilho e mais pela estabilidade. Campos, armazens, postos de recrutamento, pequenas casas nobres e administradores imperiais fazem dela um amortecedor entre Tarantia, Tanasul, Gunderland e as regioes de fronteira.</span></a>
+        <a class="place-link" href="#shamar"><strong>Shamar</strong><span>Shamar e uma cidade antiga do sul de Aquilonia, associada ao rio Tybor e as rotas que encostam em Ophir, Koth e nas disputas meridionais do Imperio. Em Tarantia, ela costuma ser descrita como uma cidade provincial. Em Shamar, essa palavra e recebida como insulto.</span></a>
+        <a class="place-link" href="#poitain"><strong>Poitain</strong><span>Poitain e a provincia meridional mais rica e celebrada de Aquilonia: uma terra de campos abertos, jardins, pomares, vinhos, castelos brancos, senhores orgulhosos e cavaleiros que se veem como a flor marcial do reino. Se Tarantia e a cabeca politica de Aquilonia, Poitain e sua imagem idealizada de nobreza: honra, linhagem, cavalos, musica, violencia elegante e obediencia seletiva.</span></a>
+        <a class="place-link" href="#gunderland"><strong>Gunderland</strong><span>Gunderland e a provincia setentrional de Aquilonia: uma terra de colinas, bosques ralos, vilas duras, homens altos, lan&#231;as compridas e orgulho seco. Os Gundermen sao famosos como infantaria pesada, guardas e mercenarios. Eles se consideram Aquilonios por pacto e conveniencia historica, mas nao necessariamente por submissao espiritual.</span></a>
+        <a class="place-link" href="#bossonian-marches"><strong>Bossonian Marches</strong><span>As Bossonian Marches sao a grande fronteira ocidental de Aquilonia, entre os rios Black e Thunder e a Pictish Wilderness. Sao terras de aldeias muradas, campos trabalhados sob ameaca, arqueiros famosos, patrulhas tensas e memoria de sangue. Para a capital, elas sao o escudo do reino. Para quem vive ali, sao casa, tumulo e disputa permanente.</span></a>
+        <a class="place-link" href="#venarium"><strong>Venarium</strong><span>Venarium e uma fortaleza de fronteira no imaginario aquiloniano, erguida como afirmacao de dominio sobre terras duras demais para aceitar facilmente qualquer bandeira. Para muitos Aquilonios, ela e simbolo de coragem colonizadora. Para muitos Cim&#233;rios, e memoria de invasao. Para Conan Legacy, Venarium e uma ferida que nunca cicatrizou direito.</span></a>
+        <a class="place-link" href="#velitrium"><strong>Velitrium</strong><span>Velitrium e uma cidade-fortaleza na borda ocidental do mundo aquiloniano, voltada para a Pictish Wilderness e para as tensoes das Bossonian Marches. E menos brilhante que Tarantia, menos nobre que Poitain e menos antiga em orgulho que Gunderland, mas talvez seja mais honesta que todas elas: Velitrium existe porque a fronteira mata quem dorme.</span></a>
+        <a class="place-link" href="#karavazyan"><strong>Karavazyan</strong><span>Karavazyan e a cidade sobre rodas: mercado, caravana, fortaleza movel e ponto de encontro entre rotas aquilonianas, fronteiras bossonianas e interesses que preferem nao deixar residencia fixa. A cidade existe porque a autoridade imperial chega tarde demais a certos lugares, e porque comercio, informacao e sobrevivencia precisam continuar se movendo.</span></a>
+      </aside>
+      <main>
+        <article class="place" id="aquilonia">
+<h2>Aquilonia</h2>
+<h3>Resumo</h3>
+<p>Aquilonia e o centro do Imperio Aquilonio e a mais poderosa das nacoes do Oeste hiboriano. Seu nome ainda carrega o peso de Conan, que tomou o trono pela espada, e de Conn, que tentou transformar conquista em ordem duradoura. Suas planicies ferteis, seus rios, suas estradas e sua capital, Tarantia, fazem dela o coracao politico e economico do Imperio.</p>
+<p>Mas o coracao perdeu o ritmo.</p>
+<p>Conn morreu sem sucessor proclamado. O Senado debate, o Conselho dos Ancioes aconselha, as casas nobres calculam e as legioes aguardam ordens que talvez nao venham. De fora, Aquilonia ainda parece imensa. De dentro, todos sabem que a grandeza imperial repousa sobre equilibrio fraturado.</p>
+<p>Nas fronteiras, os bossonianos mantem a linha contra os Pictos. Em Venarium, Thal-Remmon governa de fato sem ter recebido direito formal. Em Tarantia, cada decisao parece exigir mais tempo do que o mundo esta disposto a conceder.</p>
+<h3>Essencia</h3>
+<p>Aquilonia e lei, trono, estrada e espada. E tambem atraso, orgulho, memoria e medo.</p>
+<p>Nenhuma outra nacao do Imperio concentra tanta legitimidade simbolica. Quando um emissario fala &quot;em nome da Aquilonia&quot;, nao fala apenas por uma terra: fala pela pretensao de que o Oeste hiboriano pode ser organizado, tributado, defendido e julgado por uma ordem comum.</p>
+<p>Essa pretensao foi primeiro imposta por Conan e depois institucionalizada por Conn. Conan tornou Aquilonia inevitavel; Conn tentou torna-la administravel.</p>
+<p>O problema e que a Aquilonia aprendeu a depender de ambos. Primeiro do conquistador, depois do estadista. Agora, sem um e sem o outro, restam as instituicoes que Conn ergueu: Senado, Conselho dos Ancioes, legioes imperiais, Marcas e Warbarons. Elas ainda funcionam. Mas nenhuma delas, isoladamente, e capaz de substituir a Coroa.</p>
+<p>Aquilonia nao esta em ruina. Isso a torna mais perigosa. Ela ainda tem alimento, soldados, ouro, escribas, estradas, templos e autoridade. O que falta e centro incontestavel.</p>
+<h3>Identidade Historica</h3>
+<p>A tradicao aquilonia se enxerga como culminacao civilizada do Oeste. Seus nobres falam de direito, sangue, terras antigas, juramentos e honra de linhagem. Seus oficiais falam de legioes, fronteiras, disciplina e manutencao da ordem. Seus camponeses falam de colheita, tributo, protecao e medo de que as guerras dos grandes cheguem aos campos.</p>
+<p>Conan permanece como paradoxo fundador. Foi estrangeiro, barbaro, usurpador e rei. Sua memoria permite que Aquilonia justifique tanto a ordem quanto a violencia. Para os tradicionalistas, Conan foi excecao gloriosa, nao precedente. Para os Warbarons, foi prova de que a legitimidade pode nascer da espada quando a espada salva o reino. Para o povo, ele e lenda: o homem que podia resolver com presenca aquilo que hoje exige tres votacoes e nenhum resultado.</p>
+<p>Conn herdou esse problema e tentou resolve-lo por instituicao. Seu reinado transformou a dominacao aquilonia em projeto imperial: assentos, pactos, garantias, direito, tributo previsivel, integracao militar e administracao das fronteiras por Marcas. A grande obra de Conn foi fazer com que o Imperio parecesse mais do que a sombra de seu pai.</p>
+<p>Sua morte revelou que a obra ainda nao estava completa.</p>
+<h3>Posicao no Imperio</h3>
+<p>Aquilonia e o primeiro pilar do Imperio. Nemedia e o segundo. A tensao entre ambas define grande parte da politica senatorial.</p>
+<p>Aquilonia oferece centro, coroa, legitimidade historica, capacidade agricola, rotas internas e a maioria dos simbolos imperiais. Nemedia oferece memoria rival, tradicao aristocratica propria, disciplina administrativa, erudicao politica e uma nobreza que nunca esqueceu ter enfrentado Aquilonia como igual.</p>
+<p>No Senado, essa dualidade cria equilibrio e veneno. Os aquilonios tendem a tratar o Imperio como extensao natural da Coroa. Os nemedios tendem a trata-lo como pacto entre potencias antigas. Essa diferenca parece academica ate que se discuta tributo, sucessao, legioes ou direito de nomear Warbarons.</p>
+<p>Corinthia, Brythunia e Hyperborea orbitam essa disputa de modos diferentes. Corinthia lucra com a estabilidade e vende saber, ciencia e intermediacao. Brythunia depende do Imperio para protecao e rotas, mas teme ser engolida por decisoes tomadas longe. Hyperborea integra-se de forma incompleta, observando se a fraqueza aquilonia torna a separacao pensavel.</p>
+<h3>Geografia e Fronteiras</h3>
+<p>No mapa imperial, Aquilonia ocupa o centro-oeste do nucleo. Tarantia fica em posicao de convergencia, com estradas e rios funcionando como veias politicas e economicas. Para o oeste e noroeste, as Bossonian Marches formam a fronteira viva contra a Pictish Wilderness. Para o norte, Gunderland e Venarium olham para a Cimmeria e para memorias antigas de guerra. Para o sul, Poitain, Argos e Zingara delimitam areas de alianca, comercio e atrito. Para o leste, Nemedia e Ophir marcam a transicao para o resto do nucleo imperial e para as ameacas do sul.</p>
+<p>Rios importantes como o Shirki, o Khorotas, o Tybor, o Thunder e o Black River nao sao apenas acidentes geograficos. Sao linhas de abastecimento, fronteiras praticas, rotas de patrulha e argumentos em disputas de jurisdicao.</p>
+<p>As regioes aquilonias nao sao homogeneas. Este verbete funciona como matriz do reino; os locais principais aparecem em entradas proprias para facilitar consulta e navegacao.</p>
+<h4>Cidades e regioes centrais</h4>
+<ul>
+<li><strong><a href="#tarantia">Tarantia</a>:</strong> capital, centro politico, sede do Senado, da memoria imperial e da paralisia atual.</li>
+<li><strong><a href="#tanasul">Tanasul</a>:</strong> cidade de rota e conexao, importante para circulacao entre o centro e as regioes de marcha.</li>
+<li><strong><a href="#galparan">Galparan</a>:</strong> ponto interior ligado a rotas entre Gunderland, Tanasul e o coracao aquilonio.</li>
+<li><strong><a href="#shamar">Shamar</a>:</strong> marco meridional, proximo a rotas que conectam Aquilonia, Ophir e regioes do sul.</li>
+</ul>
+<h4>Provincias e fronteiras</h4>
+<ul>
+<li><strong><a href="#poitain">Poitain</a>:</strong> provincia sulista de forte tradicao militar e nobreza orgulhosa.</li>
+<li><strong><a href="#gunderland">Gunderland</a>:</strong> zona nortista dura, exposta a memoria de Venarium e pressao cimeria.</li>
+<li><strong><a href="#bossonian-marches">Bossonian Marches</a>:</strong> fronteira cultural e militar, mais modo de vida do que simples provincia.</li>
+<li><strong><a href="#venarium">Venarium</a>:</strong> fortaleza retomada por Thal-Remmon; hoje simbolo da periferia que age quando o centro hesita.</li>
+<li><strong><a href="#velitrium">Velitrium</a>:</strong> bastiao bossoniano e guardiao pratico da fronteira ocidental.</li>
+<li><strong><a href="#karavazyan">Karavazyan</a>:</strong> cidade-caravana de fronteira entre Venarium, Tanasul e as Marchas; oficialmente ambigua, economicamente indispensavel e estrategicamente ligada ao avanco silencioso de Thal-Remmon.</li>
+</ul>
+<h3>Governo e Estrutura de Poder</h3>
+<p>Formalmente, Aquilonia e monarquia imperial. Na pratica, durante o Ano da Coroa Quebrada, e um sistema de ausencia.</p>
+<p>A Coroa existe como instituicao, mas nao como pessoa. O Senado existe como arena de legitimacao, mas esta dividido. O Conselho dos Ancioes existe como fonte de autoridade moral e juridica, mas nao comanda legioes. As legioes imperiais existem, mas apenas cinco respondem diretamente a Coroa. A maior parte da forca militar do Imperio esta nas Marcas, sob Warbarons.</p>
+<p>Essa arquitetura foi criada para funcionar com um Imperador forte acima dela. Sem esse centro, cada peca interpreta sua funcao de modo conveniente.</p>
+<h4>Senado Imperial</h4>
+<p>O Senado reune nobres das casas tradicionais e delegacoes proporcionais dos territorios do nucleo imperial. Ali se discutem tributos, campanhas, leis, interpretacoes de pactos e, inevitavelmente, sucessao.</p>
+<p>O Senado nao e inutil. Ele e lento. Sua lentidao, que em tempos de paz pode significar prudencia, agora parece incapacidade. Blocos aquilonios e nemedios disputam primazia; casas menores vendem apoio; Corinthia calcula; regioes de fronteira exigem urgencia.</p>
+<h4>Conselho dos Ancioes</h4>
+<p>O Conselho dos Ancioes e consultivo, juridico e moral. Seus membros sao juristas, sacerdotes, estadistas, veteranos e figuras de prestigio. Nao possuem forca militar propria, mas sua palavra ainda importa porque oferece legitimidade quando a lei se torna ambigua.</p>
+<p>Em uma crise sucessoria, o Conselho pode nao decidir quem governa, mas pode decidir quem parece legitimo.</p>
+<h4>Warbarons e Marcas Imperiais</h4>
+<p>Os Warbarons foram a solucao de Conn para absorver senhores de guerra e transformar fronteiras instaveis em dominios militares reconhecidos. Cada Warbaron governa uma Marca Imperial, arrecada tributos, administra justica local, mantem fortificacoes e comanda legioes proprias em nome da Coroa.</p>
+<p>O titulo e hereditario, mas nao automatico. O sucessor deve ser designado e confirmado. Enquanto Conn vivia, essa regra mantinha equilibrio. Com Conn morto, surge a pergunta que ninguem quer responder: quem confirma o proximo Warbaron?</p>
+<p>O caso de Thal-Remmon torna a pergunta concreta. Ele governa Venarium de fato, comanda os Shadow Lions e foi tacitamente aceito por Conn, mas nunca recebeu investidura formal. Se exigir reconhecimento, o Senado tera de escolher entre reconhecer a forca que salvou a fronteira ou reafirmar uma lei que talvez ja nao consiga impor.</p>
+<h3>Castas, Classes e Sociedade</h3>
+<p>A sociedade aquilonia e hierarquica, mas nao simples.</p>
+<p>A nobreza tradicional controla terras antigas, casamentos, tribunais locais e redes senatoriais. Ela se ve como guardia da civilizacao. Despreza homens novos quando eles sobem pela espada, mas depende deles quando a fronteira arde.</p>
+<p>Os burocratas e juristas de Tarantia formam uma casta menos vistosa e mais resistente. Sao escribas, magistrados, coletores, interpretes de pacto, funcionarios de arquivo e homens capazes de atrasar uma guerra ao perder uma assinatura.</p>
+<p>Os militares se dividem entre legioes imperiais, guarnicoes de cidade, tropas provinciais, arqueiros bossonianos e companhias de Marca. Entre eles cresce a sensacao de que Tarantia debate enquanto outros sangram.</p>
+<p>Camponeses, artesoes e arrendatarios sustentam o peso real do Imperio. Para eles, a crise sucessoria importa quando muda o imposto, atrasa a escolta, recruta filhos ou permite que bandoleiros cruzem uma estrada antes segura.</p>
+<p>Os bossonianos ocupam posicao singular. Sao leais, mas nao submissos. Dependem de Aquilonia e a protegem todos os dias. Na fronteira, um arqueiro bossoniano pode respeitar a Coroa e ainda assim desprezar um senador que nunca dormiu ouvindo tambores pictos.</p>
+<h3>Cultura, Saber e Costumes</h3>
+<p>A cultura aquilonia valoriza direito, propriedade, linhagem, coragem militar, juramento publico e memoria de feitos. Sua arquitetura tende a solidez: muralhas, estradas, pontes, foros, torres de vigia, templos de Mitra e saloes de audiencia.</p>
+<p>Em Tarantia, a palavra escrita possui peso quase sagrado. Editos, genealogias, registros de tributo e sentencas moldam a realidade politica. Em fronteira, a palavra escrita continua importante, mas precisa ser acompanhada por homens armados.</p>
+<p>O aquilonio medio confia em ordem. Isso nao significa que ele viva bem. Significa que ele teme o que existe fora dela: floresta picta, feiti&#195;&#167;aria estigia, ambicao turania, anarquia de mercenarios, fome, estrada sem patrulha e nobre sem freio.</p>
+<p>Em comparacao com Corinthia, Aquilonia e menos curiosa e mais juridica. Em comparacao com Nemedia, e menos memorialista e mais imperial. Em comparacao com Bossonia, e mais civil e menos fronteirica. Essas diferencas devem aparecer em NPCs.</p>
+<h3>Religiao e Cultos</h3>
+<p>Mitra e o culto publico dominante e o principal idioma religioso da legitimidade aquilonia. Seus templos oferecem ordem moral, ritos de juramento, funerais, aconselhamento a nobres e justificativa espiritual para a autoridade civilizada.</p>
+<p>A religiao mitraica, contudo, nao e monolitica. Em Tarantia, pode ser institucional, cerimonial e proxima da lei. Nas Marchas, tende a ser mais austera, funeraria e ligada a dever. Entre soldados, Mitra e invocado menos como consolo e mais como testemunha: que veja quem manteve a linha e quem fugiu.</p>
+<p>Cultos estrangeiros existem, mas sao vigiados. Asuranos podem ser mal compreendidos. Devotos de Ishtar ou deuses shemitas podem aparecer em bairros mercantis. Qualquer sinal de Set gera medo, repressao ou manipulacao politica.</p>
+<p>Para o Mestre, a crise atual e terreno fertil para cultos ocultos. Quando o centro falha, homens buscam pressagios. Quando a lei demora, deuses menores oferecem respostas rapidas demais.</p>
+<h3>Economia e Recursos</h3>
+<p>Aquilonia vive de terra, rios, estrada e tributo.</p>
+<p>Suas planicies e vales produzem graos, vinho, gado, madeira, couro e excedente alimentar. Isso sustenta cidades, legioes e burocracia. O Imperio nao seria possivel sem essa base material. Tarantia pode falar em destino, mas destino tambem precisa de celeiros.</p>
+<p>As estradas aquilonias sao instrumento de poder. Elas movem mercadores, mensageiros, legioes, cobradores e rumores. Onde a estrada e segura, a Coroa parece presente. Onde a estrada falha, surgem Karavazyan, escoltas privadas, bandoleiros, cobrancas locais e dependencias novas.</p>
+<p>A crise sucessoria afeta a economia por incerteza. Nao e preciso guerra aberta para ferir o comercio: basta que comerciantes nao saibam quem garante um contrato, que Warbarons cobrem taxa dupla, que senadores travem verba de guarnicao ou que um comboio precise escolher entre passar por Velitrium ou contratar Shadow Lions.</p>
+<h3>Forcas Militares</h3>
+<p>Aquilonia ainda e militarmente poderosa. Esse e o perigo.</p>
+<p>A Coroa mantem cinco legioes imperiais diretamente subordinadas a autoridade central. Elas sao simbolo e reserva. Sua movimentacao, no entanto, tornou-se politicamente sensivel: quem ordena? Em nome de quem marcham? Contra quem podem ser usadas sem parecer golpe?</p>
+<p>As demais forcas estao espalhadas pelas Marcas Imperiais. Na pratica, isso significa que a defesa do Imperio depende de senhores de fronteira com interesses proprios. Em paz, isso e eficiencia regional. Em crise, e fragmentacao armada.</p>
+<p>Os bossonianos sao essenciais para a fronteira oeste. Seus arqueiros, trilheiros e guarnicoes conhecem a Wilderness melhor do que qualquer oficial de salao. Velitrium representa essa cultura em sua forma mais rigida: dever, disciplina, arco, vigilia.</p>
+<p>Venarium representa outra possibilidade: a fronteira reorganizada por um lider carismatico e por uma companhia que responde a ele antes de responder ao Senado.</p>
+<h3>Relacoes Externas</h3>
+<h4>Nemedia</h4>
+<p>Nemedia e parceira e rival. Integra o nucleo imperial, ocupa posicao central no Senado e conserva memoria de igualdade antiga. Aquilonia precisa dela para sustentar o Imperio, mas teme que a crise sucessoria permita a Nemedia redefinir o pacto em seus termos.</p>
+<h4>Corinthia</h4>
+<p>Corinthia funciona como centro cultural, cientifico e diplomatico. Aquilonia tende a valorizar sua utilidade e desconfiar de sua liberdade intelectual. Em tempos de crise, saber corinthio pode salvar o Imperio ou fornecer argumentos para seus inimigos.</p>
+<h4>Brythunia</h4>
+<p>Brythunia e zona de articulacao e dependencia. Para Aquilonia, e parte do corpo imperial; para muitos brythunios, isso pode significar protecao ou absorcao. A relacao deve ser escrita como negociacao continua, nao como posse pacifica.</p>
+<h4>Hyperborea</h4>
+<p>Hyperborea integra formalmente o Imperio de modo recente e incompleto. Aquilonia precisa demonstrar forca sem provocar ruptura. Se Tarantia parecer fraca, o silencio hyperboreo pode virar calculo separatista.</p>
+<h4>Ophir</h4>
+<p>Ophir e aliado crucial e anteparo contra Stygia. Sua riqueza e posicao estrategica fazem dele parceiro indispensavel. Se Ophir cair ou mudar de alinhamento, Aquilonia sente antes que o resto do Imperio compreenda.</p>
+<h4>Bossonian Marches</h4>
+<p>As Marches sao parte de Aquilonia, mas tambem um mundo proprio. A lealdade bossoniana nasce de utilidade, tradicao e dever, nao de docilidade. Se Tarantia abandonar a fronteira, os bossonianos farao o necessario para sobreviver.</p>
+<h3>Tensoes Atuais</h3>
+<h4>Coroa vacante</h4>
+<p>Conn morreu ha dois anos. O trono permanece vazio. A sucessao, evitada nos ultimos anos de sua vida, tornou-se agora o buraco no centro da lei.</p>
+<h4>Senado paralisado</h4>
+<p>O Senado vota, adia, interpreta e bloqueia. Cada faccao teme que uma decisao apressada entregue o Imperio a um rival. Essa prudencia ja se confunde com covardia.</p>
+<h4>Warbarons sem arbitro</h4>
+<p>Os Warbarons foram criados para defender fronteiras. Agora possuem forca militar suficiente para constranger o centro. Sem Imperador, o mecanismo de sucessao e confirmacao tornou-se vulneravel.</p>
+<h4>Thal-Remmon</h4>
+<p>Thal-Remmon e o problema que ganhou rosto. Bastardo, comandante, vencedor em Venarium, senhor de fato e nao de direito. Se for reconhecido, abre precedente. Se for rejeitado, pode tornar-se bandeira para todos que creem que a fronteira vale mais do que o Senado.</p>
+<h4>Velitrium</h4>
+<p>Velitrium permanece estavel enquanto Edran Verden vive. A sucessao entre Caelan e Maeryn, a rigidez tradicional da cidade e o plano de longo prazo de Thal-Remmon tornam a fortaleza uma chave estrategica.</p>
+<h4>Karavazyan</h4>
+<p>Karavazyan cresce como instrumento sem estandarte. Ela move comercio, rumor, escolta e influencia pelas rotas onde a autoridade formal e lenta. O Senado mal percebe; Venarium percebe; Velitrium observa.</p>
+<h4>Kuth</h4>
+<p>Kuth ainda nao e uma questao publica. Isso e parte do perigo. Enquanto a politica explica tudo como sonho, supersticao, histeria ou culto menor, algo mais antigo encontra espaco nas fissuras.</p>
+<h3>Personalidades Publicas do Centro Imperial</h3>
+<p>Aquilonia nao e governada por uma unica vontade. O Trono Vazio continua sendo o simbolo da soberania, mas o poder real se distribui entre Senado, Conselho dos Ancioes, casas nobres, comando das legioes, templos de Mitra, Warbarons e burocratas de Tarantia. Essas figuras representam as classes que sustentam ou corroem o centro imperial.</p>
+<ul>
+<li><strong>Dama Aemilia Valens:</strong> senadora aquiloniana e matriarca de uma casa antiga; defende precedencia nobre e continuidade da ordem pos-Conn.</li>
+<li><strong>Marcus Valerius Corda:</strong> chanceler-arquivista do Senado; conhece decretos, genealogias e lacunas legais capazes de elevar ou destruir pretendentes.</li>
+<li><strong>General Othmar de Tanasul:</strong> oficial de carreira ligado as rotas militares do centro-norte; visto como soldado institucional, nao como homem de faccao.</li>
+<li><strong>Bispo Caldus Meroven:</strong> voz mitraica de grande audiencia em Tarantia; traduz crise politica em linguagem de dever, culpa e expiacao publica.</li>
+<li><strong>Lysandra de Poitain:</strong> cavaleira-diplomata de uma casa meridional; representa a honra aristocratica que ainda quer salvar Aquilonia de sua propria burocracia.</li>
+</ul>
+<h3>NPCs e Faccoes Relevantes</h3>
+<h4>Instituicoes</h4>
+<ul>
+<li><strong>Senado Imperial:</strong> arena de disputa entre casas, nacoes do nucleo e interesses de sucessao.</li>
+<li><strong>Conselho dos Ancioes:</strong> fonte de legitimidade juridica e moral, especialmente perigosa se dividida.</li>
+<li><strong>Legioes Imperiais da Coroa:</strong> cinco legioes centrais cuja movimentacao pode definir a crise.</li>
+<li><strong>Warbarons:</strong> senhores de Marcas Imperiais, defensores necessarios e ameaca estrutural.</li>
+<li><strong>Templos de Mitra:</strong> autoridade religiosa, social e legal.</li>
+</ul>
+<h4>Figuras e eixos ja ativos</h4>
+<ul>
+<li><strong>Thal-Remmon:</strong> senhor de fato de Venarium, comandante dos Shadow Lions, possivel ponto de ruptura do sistema.</li>
+<li><strong>Edran Verden:</strong> Warbaron de Velitrium, tradicionalista e defensor pratico das Marchas.</li>
+<li><strong>Caelan Verden:</strong> herdeiro designado, honrado e rigido.</li>
+<li><strong>Maeryn Verden:</strong> estrategista excluida da sucessao formal por tradicao.</li>
+<li><strong>Shadow Lions:</strong> companhia que transforma reputacao militar em poder politico.</li>
+<li><strong>Karavazyan:</strong> cidade movel e ferramenta de influencia sem assumir forma de conquista.</li>
+<li><strong>Voidwatchers:</strong> seita ou rede de observadores de sonhos, relevantes onde Kuth toca a realidade.</li>
+</ul>
+</article>
+        <article class="place" id="tarantia">
+<h2>Tarantia</h2>
+<h3>Resumo</h3>
+<p>Tarantia e a capital de Aquilonia e, no periodo atual da campanha, o lugar onde o Imperio Aquiloniano tenta convencer a si mesmo de que ainda e eterno. A cidade concentra o palacio, o Senado, as grandes casas nobres, templos de Mitra, cartorios, tribunais, academias militares, mercados de longa distancia e embaixadas das nacoes submetidas ou associadas ao Imperio.</p>
+<p>Vista de longe, Tarantia e uma cidade de torres azuis e douradas, muralhas solidas e pontes sobre o rio Khorotas. Vista por dentro, e um organismo de pedra, protocolo, ambicao e medo: cada portao sabe quem entra, cada salao sabe quem deve esperar, cada rua sabe que uniforme deve obedecer.</p>
+<h3>Identidade</h3>
+<p>Tarantia e menos uma cidade do que uma afirmacao politica. Ela diz ao mundo que Aquilonia e a flor do Ocidente hiboriano: rica, militarmente organizada, juridicamente sofisticada e convencida de sua superioridade. Essa imagem, porem, depende de uma coreografia constante. O luxo dos palacios precisa esconder a exaustao fiscal das campanhas de fronteira; a retorica da unidade precisa esconder a rivalidade entre velhas familias; os templos precisam transformar conquista em missao civilizatoria.</p>
+<p>A cidade e feita de contrastes fortes:</p>
+<ul>
+<li>a monumentalidade do palacio contra os becos de servico;</li>
+<li>a solenidade mitraica contra cultos privados de nobres ansiosos;</li>
+<li>a disciplina da guarda contra a corrupcao dos inspetores de bairro;</li>
+<li>a grandeza imperial contra a memoria incomoda de Conan, o estrangeiro que um dia reinou ali.</li>
+</ul>
+<h3>Geografia Urbana</h3>
+<p>Tarantia se organiza em torno do Khorotas, das muralhas internas e das vias cerimoniais que conduzem ao palacio. A topografia politica e tao importante quanto a fisica: quanto mais alto, mais perto do poder; quanto mais perto das pontes e docas, mais misturado e perigoso se torna o fluxo social.</p>
+<h4>Distritos Principais</h4>
+<ul>
+<li><strong>Palacio e Altas Cortes:</strong> centro do poder formal; audiencias, arquivos dinasticos, conselhos militares e recepcoes senatoriais.</li>
+<li><strong>Bairro Senatorial:</strong> mansoes, casas de patronato, salas de reuniao privadas e corredores onde acordos reais sao fechados antes das votacoes.</li>
+<li><strong>Templos de Mitra:</strong> nucleo ritual da cidade, usado para coroacoes, penitencias publicas e legitimacao de campanhas militares.</li>
+<li><strong>Mercados do Khorotas:</strong> area de comerciantes, cambistas, caravaneiros, agentes estrangeiros e rumores vindos de toda a Era Hiboriana.</li>
+<li><strong>Quartel da Guarda Real:</strong> forca de ordem urbana e simbolo da continuidade aquiloniana apos a queda da velha monarquia conaniana.</li>
+<li><strong>Subterraneos e Catacumbas:</strong> ruinas, necropoles e passagens esquecidas sob a cidade oficial. Otimas para segredos, perseguicoes, cultos e provas de que Tarantia foi erguida sobre camadas anteriores de poder.</li>
+</ul>
+<h3>Governo e Poder</h3>
+<p>No cenario de Conan Legacy, Tarantia e a sede pratica do Trono Vazio. O rei morto ainda governa por memoria, estatua, lei e medo. Nenhuma faccao quer parecer traidora da ordem que herdou, mas todas tentam moldar essa ordem para seus interesses.</p>
+<p>Forcas centrais:</p>
+<ul>
+<li><strong>Senado Imperial:</strong> arena de disputa entre Aquilonios, Nemedios e casas associadas. Tarantia e seu teatro principal.</li>
+<li><strong>Nobreza Aquiloniana:</strong> defende precedencia historica, linhagem e direito de mando.</li>
+<li><strong>Delegacoes Nemedias:</strong> pressionam por racionalizacao administrativa, codificacao legal e maior participacao no eixo imperial.</li>
+<li><strong>Sacerdocio de Mitra:</strong> sustenta a linguagem moral do poder, mas nao e monolitico.</li>
+<li><strong>Warbarons e generais:</strong> homens que controlam soldados e estradas, muitas vezes mais decisivos que juristas.</li>
+<li><strong>Casa de Thal-Remmon:</strong> influencia crescente, baseada em disciplina militar, controle de informacao e legitimidade de fronteira.</li>
+</ul>
+<h3>Cultura e Vida Cotidiana</h3>
+<p>A vida cotidiana tarantina e formal, hierarquica e teatral. A posicao social aparece na roupa, na forma de falar, no direito de portar armas, no acesso a banhos, bibliotecas, jardins e tribunais. Mesmo comerciantes ricos precisam de patronos; mesmo nobres antigos precisam parecer uteis ao Imperio.</p>
+<p>Tarantia tambem e uma cidade de espetaculo: procissoes, julgamentos publicos, torneios, funerais de Estado, embaixadas estrangeiras, debates senatoriais e execucoes exemplares. O povo aprende politica como quem aprende clima: observando bandeiras, rumores, precos de grao e movimentacao de tropas.</p>
+<h3>Economia</h3>
+<p>A cidade vive de impostos, comercio fluvial, contratos militares, artesanato de luxo, escribas, oficinas de armas, servicos burocraticos e consumo aristocratico. Tarantia nao produz tudo que come; ela comanda redes que fazem comida, madeira, metal, cavalos, vinho, livros, pedra e homens armados chegarem ate ela.</p>
+<p>Isso cria vulnerabilidades dramaticas:</p>
+<ul>
+<li>bloqueios no Khorotas afetam precos e humor popular;</li>
+<li>sabotagem de arquivos pode paralisar decisoes imperiais;</li>
+<li>caravanas atacadas nas fronteiras viram crise politica no Senado;</li>
+<li>fome urbana transforma doutrina imperial em cinismo.</li>
+</ul>
+<h3>Forcas Militares</h3>
+<p>Tarantia concentra tropas cerimoniais, guarda palaciana, destacamentos senatoriais, companhias de elite e oficiais vindos de regioes subordinadas. A cidade e protegida por muralhas, vigilancia, patrulhas e uma cultura militar antiga.</p>
+<p>Para jogo, ela funciona como lugar onde violencia e possivel, mas nunca simples. Uma briga de rua pode virar caso de jurisdicao; um duelo pode ter consequencias senatoriais; uma prisao pode ser ritualizada como mensagem publica.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>A capital precisa parecer unida, mas a rivalidade Aquilonia-Nemedia se infiltra em cada instituicao.</li>
+<li>A memoria de Conan e disputada: rei barbaro, libertador, usurpador ou fundador involuntario da ordem atual?</li>
+<li>O Senado usa a fronteira como argumento, mas raramente paga o custo humano dela.</li>
+<li>Tarantia depende de lugares que despreza: Bossonian Marches, Gunderland, Velitrium e Karavazyan.</li>
+<li>O excesso de protocolo abre espaco para conspiradores que conhecem as brechas.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Tarantia e governada por sobreposicao de autoridades. O Senado e o grande palco publico, mas a cidade tambem responde ao palacio, a guarda, aos magistrados urbanos, aos templos de Mitra e as casas nobres que controlam bairros, clientelas e contratos. Nao ha um simples prefeito capaz de decidir tudo; ha um Prefeito das Chaves, responsavel por portoes, ordem urbana e circulacao, mas sua autoridade depende de quem assina a ordem e de quem esta disposto a executa-la.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Senador Publius Aranor:</strong> nobre aquiloniano de voz calma e memoria cruel; preside comissoes sobre sucessao, tributos e prerrogativas das casas antigas.</li>
+<li><strong>Dama Octavia Belcanto:</strong> patrona de saloes, poetas, espioes elegantes e casamentos politicos; conhece a reputacao de quase todos antes que eles entrem em seu salao.</li>
+<li><strong>Capitao Arvus Celer:</strong> oficial da Guarda Real, responsavel por portoes internos e pris&#245;es de alta visibilidade; respeitado por soldados e odiado por quem tenta comprar passagem.</li>
+<li><strong>Selene Vardossa:</strong> cambista e mediadora dos mercados do Khorotas; sua casa de letras de credito financia caravanas, resgates e campanhas discretas.</li>
+<li><strong>Frei Malthus de Mitra:</strong> pregador urbano austero, popular entre veteranos e pobres; sua palavra pode transformar crise politica em dever religioso.</li>
+</ul>
+</article>
+        <article class="place" id="tanasul">
+<h2>Tanasul</h2>
+<h3>Resumo</h3>
+<p>Tanasul e uma cidade de passagem, registro e pressao. Localizada no centro-norte aquiloniano, funciona como ponto de conexao entre Tarantia, Galparan, Gunderland, Bossonian Marches e as rotas que seguem para a fronteira. Quem controla Tanasul nao controla a gloria do Imperio; controla seu movimento.</p>
+<p>A cidade e feita de armazens, postos de ped&#225;gio, pontes, estalagens, patios de tropa, escribas cansados e oficiais que sabem que uma ordem atrasada pode matar uma guarnicao distante.</p>
+<h3>Identidade</h3>
+<p>Tanasul nao e cantada como Poitain, temida como Venarium ou admirada como Tarantia. Ainda assim, e essencial. Ela representa o Imperio como maquina: listas, selos, carrocas, cavalos de troca, mapas, cartas, suprimentos, convocacoes e soldados indo para lugares que os senadores raramente visitam.</p>
+<p>Sua cultura urbana valoriza eficiencia, memoria administrativa e pragmatismo. Os moradores aprenderam a ouvir sotaques e identificar problemas pelo tipo de poeira nas botas.</p>
+<h3>Geografia</h3>
+<p>No mapa do Imperio, Tanasul aparece como um no entre regioes centrais e setentrionais. Para campanha, deve ser tratada como cidade de estradas e travessias, proxima o bastante do coracao aquiloniano para receber burocracia, mas perto o bastante da fronteira para sentir sua ansiedade.</p>
+<p>Elementos de cena:</p>
+<ul>
+<li>portoes com filas de carrocas;</li>
+<li>patios de muda de cavalos;</li>
+<li>escrit&#243;rios de licenca e selagem;</li>
+<li>armazens imperiais;</li>
+<li>tavernas de tropeiros e oficiais;</li>
+<li>bairro de escribas, contadores e mensageiros;</li>
+<li>ponte ou passagem cujo controle tem valor militar.</li>
+</ul>
+<h3>Governo Local</h3>
+<p>Tanasul e governada por uma combinacao de magistrados, oficiais de logistica, nobres locais e representantes comerciais. A cidade e muito sensivel a jurisdicao: quem tem autoridade sobre uma carga militar? Quem julga um crime cometido por soldado em transito? Quem paga quando uma ponte cai?</p>
+<p>Essa ambiguidade cria aventura.</p>
+<h3>Economia</h3>
+<p>A riqueza de Tanasul vem de movimento. Hospedagem, ferraria, conserto de rodas, selaria, grao, contabilidade, letras de credito, troca de cavalos, guarda privada e armazenamento de carga sustentam a cidade.</p>
+<p>Em tempos de crise, Tanasul se torna alvo perfeito para sabotagem. Queimar um armazem ali pode ser mais eficaz do que vencer uma batalha na fronteira.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>Comerciantes querem livre circulacao; militares querem prioridade absoluta.</li>
+<li>Nobres locais lucram com ped&#225;gios e resistem a reformas senatoriais.</li>
+<li>Agentes nemedios podem tentar reorganizar a cidade segundo padroes legais mais rigidos.</li>
+<li>Thal-Remmon precisa de Tanasul para mover homens e suprimentos.</li>
+<li>A populacao se sente explorada por uma guerra que raramente chega as muralhas, mas sempre passa por seus impostos.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Tanasul e administrada por um governador-magistrado nomeado por Tarantia, mas a vida real da cidade passa por oficiais de estrada, mestres de armazem, guildas de carroceiros e familias que controlam pontes e hospedarias ha geracoes. O poder local e burocratico, militar e comercial ao mesmo tempo: quem controla registro, passagem e estoque controla a cidade.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Dorian Pell:</strong> governador-magistrado de Tanasul; um homem de selos, mapas e procedimentos, convencido de que a ordem imperial depende de papel bem escrito.</li>
+<li><strong>Capita Ysabet Maro:</strong> comandante da guarda de estrada; antiga escolta de comboios, respeitada pelos patrulheiros e pouco impressionada por nobres de passagem.</li>
+<li><strong>Hadrus Vell:</strong> mestre dos armazens imperiais; sabe onde esta cada saco de grao, cada caixa de flechas e cada mentira nos inventarios.</li>
+<li><strong>Oren Tal:</strong> correio-chefe da cidade; coordena cavaleiros, mensageiros e rotas de urgencia entre Tarantia, Galparan e Velitrium.</li>
+<li><strong>Mira das Sete Contas:</strong> cambista, contrabandista ocasional e solucionadora de problemas; todos negam conhece-la ate precisarem dela.</li>
+</ul>
+</article>
+        <article class="place" id="galparan">
+<h2>Galparan</h2>
+<h3>Resumo</h3>
+<p>Galparan e uma cidade de interior aquiloniano, importante menos pelo brilho e mais pela estabilidade. Campos, armazens, postos de recrutamento, pequenas casas nobres e administradores imperiais fazem dela um amortecedor entre Tarantia, Tanasul, Gunderland e as regioes de fronteira.</p>
+<p>Se Tanasul move o Imperio, Galparan o alimenta.</p>
+<h3>Identidade</h3>
+<p>Galparan representa a Aquilonia ordinaria que sustenta a grandeza imperial. Nao e capital, nao e lenda de fronteira, nao e corte cavaleiresca: e uma cidade de celeiros, impostos, milicia, pequenas ambicoes e medo de ser esquecida ate o momento em que todos precisam dela.</p>
+<p>Sua importancia aumenta em campanhas prolongadas. Quando o Imperio precisa manter guarnicoes no oeste e no norte, Galparan vira ponto de coleta, triagem, armazenamento e recrutamento. Isso gera riqueza, mas tambem ressentimento.</p>
+<h3>Geografia</h3>
+<p>Galparan fica em area de transicao do centro-norte aquiloniano. A regiao ao redor deve ser imaginada como mosaico de campos, pastagens, bosques, estradas secundarias, pequenas torres e vilas tributarias.</p>
+<p>Elementos de cena:</p>
+<ul>
+<li>celeiros comunitarios e armazens imperiais;</li>
+<li>pra&#231;a de mercado de graos e gado;</li>
+<li>quartel de milicia;</li>
+<li>casas de pequenos nobres;</li>
+<li>capela de Mitra com forte papel comunitario;</li>
+<li>escritorio de coleta fiscal;</li>
+<li>cemiterio de veteranos e mortos de fome antiga.</li>
+</ul>
+<h3>Governo Local</h3>
+<p>Galparan e governada por magistrados, familias proprietarias e representantes fiscais. Seu poder e menos teatral que o de Tarantia, mas muito mais proximo da vida comum. Um imposto novo, uma requisicao de cavalos ou um atraso no pagamento de soldados pode mudar o clima da cidade em poucos dias.</p>
+<p>Conflitos locais:</p>
+<ul>
+<li>proprietarios contra arrendatarios;</li>
+<li>coletores imperiais contra aldeias endividadas;</li>
+<li>veteranos contra oficiais que prometem compensacoes;</li>
+<li>comerciantes de grao contra requisicoes militares;</li>
+<li>jovens recrutados contra familias que precisam deles no campo.</li>
+</ul>
+<h3>Economia</h3>
+<p>Galparan vive de graos, gado, farinha, couro, carrocas, pequenas forjas, armazenamento e administracao rural. Em paz, e prospera de modo discreto. Em guerra, e espremida: quanto mais o Imperio exige, mais a cidade percebe que sua lealdade virou recurso.</p>
+<h3>Cultura</h3>
+<p>A cultura local valoriza previsibilidade, respeito familiar, reputacao de trabalho e protecao comunitaria. Pessoas de Galparan desconfiam de aventureiros brilhantes, mas respeitam quem resolve problemas concretos: recuperar gado, proteger colheita, impedir abuso fiscal, trazer alguem vivo de uma estrada perigosa.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>Galparan pode virar palco de revolta fiscal se Tarantia exagerar nas requisicoes.</li>
+<li>Thal-Remmon precisa do abastecimento local para sustentar operacoes no oeste.</li>
+<li>A cidade teme ataques indiretos: sabotagem, praga em celeiros, incendio, envenenamento de po&#231;os.</li>
+<li>Nobres menores sonham em usar a crise imperial para ascender.</li>
+<li>Agentes externos podem manipular fome e abastecimento para produzir caos politico.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Galparan e governada por uma alcaide local sob supervisao fiscal aquiloniana, mas os verdadeiros poderes sao os celeiros, as familias proprietarias, a capela de Mitra e a milicia rural. A cidade nao tem uma corte brilhante; tem conselhos de colheita, audiencias de imposto e reunioes em que uma carroca atrasada pesa mais que um discurso.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Corenna Mavul:</strong> alcaide de Galparan; pragmatica, cansada e popular porque costuma resolver problemas antes que virem decreto.</li>
+<li><strong>Barao Ercio Valdan:</strong> maior proprietario rural da regiao; cort&#234;s em publico, implacavel quando seus campos ou vassalos sao ameacados.</li>
+<li><strong>Bastian Grol:</strong> mestre-celeireiro dos armazens imperiais; conhece fome, fraude e precos melhor que qualquer senador.</li>
+<li><strong>Irma Halda de Mitra:</strong> sacerdotisa comunitaria, mediadora de disputas rurais e guardia de registros de nascimento, morte e juramento.</li>
+<li><strong>Saro Trigo-Negro:</strong> comprador de graos sem perguntas, meio comerciante, meio criminoso; aparece sempre que ha excedente escondido ou miseria demais.</li>
+</ul>
+</article>
+        <article class="place" id="shamar">
+<h2>Shamar</h2>
+<h3>Resumo</h3>
+<p>Shamar e uma cidade antiga do sul de Aquilonia, associada ao rio Tybor e as rotas que encostam em Ophir, Koth e nas disputas meridionais do Imperio. Em Tarantia, ela costuma ser descrita como uma cidade provincial. Em Shamar, essa palavra e recebida como insulto.</p>
+<p>A cidade guarda pedra velha, linhagens teimosas e uma cultura de resistencia. Quem domina Shamar controla uma porta para o sul; quem subestima Shamar costuma descobrir tarde demais que suas muralhas, suas familias e sua memoria foram feitas para sobreviver a invasores.</p>
+<h3>Identidade</h3>
+<p>Shamar e o sul aquiloniano em sua forma mais dura: aristocratica, armada, devota a tradicoes locais e desconfiada de qualquer decreto vindo da capital. Sua identidade combina orgulho urbano, memoria rural e uma especie de paciencia agressiva. Ela pode se dobrar diante de Tarantia, mas dificilmente se entrega a ela por inteiro.</p>
+<p>A cidade e lembrada em tradicoes externas como alvo de campanhas de Ophir e Koth. Para Conan Legacy, isso a torna um lugar marcado por tentativas de ocupacao, pactos defensivos, familias que lucraram com guerras e ruinas que ainda funcionam como monumentos politicos.</p>
+<h3>Geografia e Posicao</h3>
+<p>Shamar ocupa uma posicao estrategica na interface entre o interior aquiloniano e o corredor sul. O rio Tybor permite movimento, comercio e guerra. Estradas secundarias levam a propriedades nobres, fortes menores, vinhedos, campos de criacao e postos de cobranca.</p>
+<p>A paisagem ao redor e menos civilizada do que a propaganda tarantina sugere. Entre colinas, pontes antigas e vilas fortificadas, ha espaco para contrabandistas, desertores, agentes ophirianos, sacerdotes itinerantes e pequenas casas nobres que ainda se comportam como reinos privados.</p>
+<h3>Governo Local</h3>
+<p>Shamar tende a ser governada por uma aristocracia ducal ou senhorial forte, apoiada por capit&#227;es locais, escribas de linhagem e milicias urbanas. A capital exige impostos e lealdade; Shamar exige respeito e autonomia pratica.</p>
+<p>Conflitos internos comuns:</p>
+<ul>
+<li>casas antigas contra administradores imperiais;</li>
+<li>oficiais tarantinos contra comandantes locais;</li>
+<li>comerciantes do rio contra latifundiarios;</li>
+<li>linhagens que defendem guerra preventiva contra Ophir contra familias que enriquecem com comercio de fronteira.</li>
+</ul>
+<h3>Cultura</h3>
+<p>Shamar valoriza juramentos, funerais, genealogias, memoria de cerco e hospitalidade seletiva. A palavra dada por uma casa antiga pesa mais que documentos recentes do Senado. Banquetes locais misturam cortesia e ameaca: quem entende os brindes, entende a politica.</p>
+<p>As ruas preservam santuarios, marcos de guerra e casas com pedras reaproveitadas de estruturas anteriores. A cidade parece dizer que nada desaparece de verdade; muda de dono, muda de nome, mas continua ali.</p>
+<h3>Economia</h3>
+<p>A economia de Shamar combina agricultura, ped&#225;gios fluviais, cavalos, oficinas de reparo militar, vinho, couro, guarda de mercadorias e servicos para companhias em marcha. Em tempos de tensao com Ophir ou Koth, a cidade prospera e sofre ao mesmo tempo: o dinheiro militar entra, mas tambem chegam refugiados, requisicoes e espionagem.</p>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Shamar e uma cidade ducal: seu governo formal pertence a uma casa nobre antiga, cercada por capit&#227;es urbanos, magistrados de rio, familias mercantis e sacerdotes. O duque governa, mas so permanece forte enquanto consegue equilibrar honra local, defesa militar e comercio com vizinhos que a cidade deveria desconfiar.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Duque Sestus Valcor:</strong> senhor de Shamar; orgulhoso, cerimonial e obcecado por preservar a autonomia local diante de Tarantia.</li>
+<li><strong>Capita Leona Thyr:</strong> comandante da guarda dos portoes; veterana de campanhas meridionais, prefere muralhas bem guarnecidas a discursos nobres.</li>
+<li><strong>Varo Dumesnil:</strong> magistrado do rio Tybor; controla licencas, barca&#231;as, ped&#225;gios e disputas comerciais.</li>
+<li><strong>Dama Saphira el-Ophiri:</strong> mercadora de origem ophiriana aceita pela elite local, mas observada por todos em tempos de tensao.</li>
+<li><strong>Tullio dos Marcos Antigos:</strong> cronista, antiquario e guia de ruinas; sabe demais sobre pedras que precedem as casas atuais.</li>
+</ul>
+</article>
+        <article class="place" id="poitain">
+<h2>Poitain</h2>
+<h3>Resumo</h3>
+<p>Poitain e a provincia meridional mais rica e celebrada de Aquilonia: uma terra de campos abertos, jardins, pomares, vinhos, castelos brancos, senhores orgulhosos e cavaleiros que se veem como a flor marcial do reino. Se Tarantia e a cabeca politica de Aquilonia, Poitain e sua imagem idealizada de nobreza: honra, linhagem, cavalos, musica, violencia elegante e obediencia seletiva.</p>
+<h3>Identidade</h3>
+<p>Poitain vive de uma contradicao produtiva. Ela e profundamente aquiloniana, mas se considera especial dentro da Aquilonia. Seus nobres defendem o Imperio porque acreditam que sem eles o Imperio seria menos belo, menos nobre e menos digno de obediencia.</p>
+<p>Na tradicao hiboriana, Poitain e associada a riqueza rural, jardins, planicies onduladas e uma cultura cavaleiresca vigorosa. Em Conan Legacy, essa imagem e preservada, mas tensionada: a provincia precisa decidir se sua honra serve ao Trono Vazio, ao Senado, a Tarantia, a propria Poitain ou a uma ideia romantica de Aquilonia que talvez ja nao exista.</p>
+<h3>Geografia</h3>
+<p>Poitain e uma terra de clima mais ameno e luminoso, com prados, bosques cuidados, vinhedos, pomares, pequenas cidades muradas e propriedades senhoriais. As estradas sao melhores que em muitas regioes do norte, mas isso tambem significa que exercitos e cobradores chegam mais rapido.</p>
+<p>A paisagem e bonita demais para ser inocente. Cada ponte tem dono, cada vinhedo tem historia, cada castelo guarda aliados, refens, capelas e armas.</p>
+<h3>Sociedade e Governo</h3>
+<p>A provincia e marcada por casas nobres fortes, relacoes de vassalagem, cultura de torneio e um ideal de cavalaria que serve tanto para inspirar quanto para encobrir brutalidade. A honra poitaniana pode proteger camponeses contra abusos externos; tambem pode justificar vingancas privadas que atravessam geracoes.</p>
+<p>Forcas sociais:</p>
+<ul>
+<li><strong>grandes casas cavaleirescas</strong>, zelosas de seus brasoes;</li>
+<li><strong>capelas mitraicas rurais</strong>, ligadas a patronos locais;</li>
+<li><strong>ordens de cavalaria</strong>, algumas sinceras, outras politicas;</li>
+<li><strong>vilas produtoras</strong>, que sustentam o luxo nobre;</li>
+<li><strong>bardos e genealogistas</strong>, responsaveis por transformar violencia em tradicao.</li>
+</ul>
+<h3>Economia</h3>
+<p>Poitain exporta graos, vinho, cavalos, frutas, couro, madeira trabalhada, tecidos finos e homens treinados para guerra montada. A riqueza vem do campo, mas a reputacao vem da cavalaria.</p>
+<p>O Senado depende de Poitain para prestigio e forca militar. Poitain depende do Senado para acesso a cargos, rotas e reconhecimento imperial. Essa dependencia reciproca e cheia de ressentimento.</p>
+<h3>Forcas Militares</h3>
+<p>Poitain e ideal para representar a cavalaria pesada e aristocratica de Aquilonia. Seus cavaleiros sao disciplinados, orgulhosos e perigosos em campo aberto. Tambem podem ser pessimos em guerras de floresta, pantano ou emboscada, o que cria contraste com Bossonianos, Gundermen e fronteiricos.</p>
+<p>Em mesa, um cavaleiro de Poitain deve carregar tanto esplendor quanto problema: juramentos, patronos, duelos, manutencao cara, reputacao e inimigos hereditarios.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>Poitain quer preservar a nobreza aquiloniana contra a tecnocracia cultural de Corinthia e o legalismo nemedio.</li>
+<li>Seus cavaleiros podem ver Thal-Remmon como homem necessario ou como militar sem graca cortes&#227;.</li>
+<li>Casas menores ressentem a riqueza dos grandes senhores.</li>
+<li>Camponeses e servos pagam o custo de um ideal cavaleiresco que fala pouco deles.</li>
+<li>A provincia pode se tornar fiel sustentaculo do Imperio ou berco de uma reacao aristocratica.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Poitain e governada por condes, baroes e casas cavaleirescas que reconhecem Aquilonia, mas preservam forte autonomia de costume. O poder local se organiza em torno de castelos, juramentos de vassalagem, ordens de cavalaria, capelas rurais e familias que tratam honra como moeda politica.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Conde Armand de Pellia:</strong> senhor poitaniano de grande prestigio, anfitriao de torneios e defensor publico da velha nobreza aquiloniana.</li>
+<li><strong>Dama Ysoria de Montclair:</strong> patrona de musica, casamentos e alian&#231;as; sua cortesia costuma anteceder movimentos politicos precisos.</li>
+<li><strong>Sir Dacien Valemont:</strong> campeao de torneio e comandante de cavalaria; admirado por jovens nobres e temido por rivais que conhecem seu orgulho.</li>
+<li><strong>Lucan Floril:</strong> mestre vinicultor e comerciante de luxo; suas adegas recebem mais confidencias que muitos confessionarios.</li>
+<li><strong>Prior Aurel de Mitra:</strong> sacerdote rural influente, defensor da honra cavaleiresca como dever religioso.</li>
+</ul>
+</article>
+        <article class="place" id="gunderland">
+<h2>Gunderland</h2>
+<h3>Resumo</h3>
+<p>Gunderland e a provincia setentrional de Aquilonia: uma terra de colinas, bosques ralos, vilas duras, homens altos, lan&#231;as compridas e orgulho seco. Os Gundermen sao famosos como infantaria pesada, guardas e mercenarios. Eles se consideram Aquilonios por pacto e conveniencia historica, mas nao necessariamente por submissao espiritual.</p>
+<p>Para Tarantia, Gunderland e uma muralha humana. Para Gunderland, Tarantia e uma cidade rica que costuma esquecer quem segura o norte quando os barbaros descem.</p>
+<h3>Identidade</h3>
+<p>Gunderland preserva uma identidade hiboriana arcaica e conservadora. Fontes publicas costumam descreve-la como menos cosmopolita que Aquilonia central, mais rude, mais antiga em costumes e menos afeita ao refinamento cortesao. Em Conan Legacy, isso se traduz em uma provincia que participa do Imperio sem dissolver sua propria memoria.</p>
+<p>Ha algo quase contratual na lealdade gundermen: eles cumprem juramentos, mas cobram respeito. Se Tarantia tenta tratar Gunderland como uma mera reserva de soldados, abre espaco para ressentimento, motins de baixa intensidade e lideres locais que falam em recuperar prerrogativas antigas.</p>
+<h3>Geografia</h3>
+<p>Gunderland e uma regiao de colinas, vales frios, matas esparsas, pedreiras, aldeias fortificadas e estradas que ficam piores no inverno. Sua posicao ao norte a transforma em amortecedor contra pressoes vindas de Cimmeria, Border Kingdom e zonas montanhosas.</p>
+<p>A paisagem favorece infantaria disciplinada, emboscadas em passos estreitos e fortalezas pequenas, pouco glamourosas, mas extremamente dificeis de tomar sem custo alto.</p>
+<h3>Sociedade</h3>
+<p>A sociedade gundermen e austera, comunitaria e hierarquica de forma diferente da aristocracia tarantina. Linhagem importa, mas utilidade militar e reputacao pessoal importam quase tanto. Um homem incapaz de ficar na linha de escudos dificilmente conserva respeito apenas por brasao.</p>
+<p>Elementos sociais:</p>
+<ul>
+<li><strong>aldeias fortificadas</strong>, muitas vezes organizadas em torno de saloes comunais;</li>
+<li><strong>cl&#227;s e casas antigas</strong>, menos ornamentais que os nobres do sul;</li>
+<li><strong>capelas de Mitra</strong>, as vezes sobrepostas a costumes religiosos anteriores;</li>
+<li><strong>forjas e pedreiras</strong>, base economica e simbolica;</li>
+<li><strong>companhias de lanceiros</strong>, que funcionam como instituicao de honra local.</li>
+</ul>
+<h3>Religiao e Memoria</h3>
+<p>Tradicoes externas indicam que Gunderland teria preservado cultos ou referencias anteriores a Mitra antes da integracao aquiloniana. Para Conan Legacy, isso permite uma tensao interessante: oficialmente Mitra ordena a provincia; informalmente, familias e vilas ainda mantem juramentos, nomes e rituais antigos que a capital tolera enquanto os impostos e soldados chegam.</p>
+<h3>Economia</h3>
+<p>Gunderland exporta ferro, pedra, madeira, pele, soldados e disciplina. A provincia nao e pobre, mas sua riqueza aparece pouco em luxo. Ela se manifesta em armas boas, muralhas bem mantidas, celeiros, cavalos resistentes e familias capazes de suportar campanhas longas.</p>
+<h3>Forcas Militares</h3>
+<p>Os Gundermen sao uma das melhores infantarias do Ocidente hiboriano: lanceiros, piqueiros, guardas de elite, homens de linha capazes de sustentar o choque enquanto cavaleiros ou arqueiros trabalham nos flancos.</p>
+<p>Em SWADE, Gunderland sugere Extras e Wild Cards com Vigor alto, Fighting disciplinado, formacoes defensivas, Edges de Soldado/Comando e desvantagens ligadas a teimosia, conservadorismo e orgulho provincial.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>Gunderland nao aceita facilmente ordens de oficiais que nunca defenderam uma passagem no inverno.</li>
+<li>A provincia pode se alinhar a Thal-Remmon por respeito militar, mas desconfiar de seu projeto centralizador.</li>
+<li>Velhas praticas religiosas podem virar pretexto para intervencao mitraica.</li>
+<li>Jovens gundermen voltam de guerras imperiais com ideias perigosas.</li>
+<li>Casas tarantinas tentam comprar regimentos; lideres locais chamam isso de corrupcao estrangeira.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Gunderland reconhece a autoridade aquiloniana, mas seu poder local passa por chefes de casa, mestres de lan&#231;a, conselhos de aldeia, capelas austeras e companhias de infantaria. O governador formal precisa negociar com lideres que valorizam juramento antigo mais do que elegancia cortes&#227;.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Hadrik Tor:</strong> Mestre das Lan&#231;as de Gunderland; comandante respeitado por sua disciplina e por jamais pedir de um soldado algo que nao faria.</li>
+<li><strong>Brenna Halvorn:</strong> senhora de uma casa antiga; fala pouco, paga em dia e lembra a Tarantia que pacto nao e servidao.</li>
+<li><strong>Odo Gremmel:</strong> capitao de uma companhia gundermen contratada como guarda; profissional, direto e dificil de subornar.</li>
+<li><strong>Madre Elswyth:</strong> sacerdotisa de Mitra que conhece velhos costumes locais e prefere acomodar tradicoes a criar martires.</li>
+<li><strong>Frida Pedra-Fria:</strong> mestra ferreira e proprietaria de forja; suas lan&#231;as equipam homens que nunca pisaram em um salao nobre.</li>
+</ul>
+</article>
+        <article class="place" id="bossonian-marches">
+<h2>Bossonian Marches</h2>
+<h3>Resumo</h3>
+<p>As Bossonian Marches sao a grande fronteira ocidental de Aquilonia, entre os rios Black e Thunder e a Pictish Wilderness. Sao terras de aldeias muradas, campos trabalhados sob ameaca, arqueiros famosos, patrulhas tensas e memoria de sangue. Para a capital, elas sao o escudo do reino. Para quem vive ali, sao casa, tumulo e disputa permanente.</p>
+<p>No cenario atual, as Marches tambem sao uma ferida politica: os Lordes Bossonianos, linhagem local misturada com Aquilonios e Cim&#233;rios, tentam consolidar dominio e integrar plenamente a regiao ao Imperio. Contra eles, tribos e comunidades que se chamam Povos da Terra reivindicam ancestralidade picta e direito anterior ao solo.</p>
+<h3>Identidade</h3>
+<p>A tradicao hiboriana apresenta os bossonianos como povo de fronteira, agricultores e arqueiros, moldados pela pressao constante de Pictos e Cimmerianos. Em Conan Legacy, isso se torna uma sociedade de vigilancia permanente. Cada crianca aprende onde correr em caso de ataque; cada colheita depende de escolta; cada casamento entre familias pode ter valor militar.</p>
+<p>As Marches nao sao apenas uma linha no mapa. Sao uma cultura inteira feita para nao recuar.</p>
+<h3>Geografia</h3>
+<p>A regiao fica entre a Aquilonia propriamente dita e a selva/terra selvagem picta. Rios, matas fechadas, clareiras, campos, pali&#231;adas, torres de vigia e trilhas de caca formam um territorio instavel. O mapa oficial pode mostrar fronteiras; a realidade local depende de quem patrulhou a area na ultima lua.</p>
+<p>Elementos recorrentes:</p>
+<ul>
+<li>rios como linhas de defesa e contrabando;</li>
+<li>aldeias muradas com campos externos vulneraveis;</li>
+<li>torres de sinal em colinas e margens;</li>
+<li>clareiras antigas reivindicadas por Povos da Terra;</li>
+<li>fortalezas bossonianas erguidas sobre rotas de guerra;</li>
+<li>trilhas que soldados imperiais nao conhecem, mas ca&#231;adores locais conhecem bem.</li>
+</ul>
+<h3>Povos e Poder</h3>
+<h4>Lordes Bossonianos</h4>
+<p>Os Lordes Bossonianos sao uma elite regional nascida da guerra de fronteira. Sua legitimidade vem menos de pergaminhos e mais da espada, do arco, do casamento estrategico e da promessa de protecao. Ao se aproximarem de Aquilonia, ganharam titulos, armas, apoio juridico e acesso ao Imperio.</p>
+<h4>Povos da Terra</h4>
+<p>Os Povos da Terra se veem como descendentes de comunidades anteriores ao avanco bossoniano e aquiloniano. Para eles, a integracao imperial e uma ocupacao. Podem ser descritos pela propaganda como rebeldes ou selvagens, mas em campanha devem ter cultura, memoria, liderancas, ritos, mapas orais e razoes politicas concretas.</p>
+<h4>Colonos e Aldeoes</h4>
+<p>Entre lordes e tribos, vivem agricultores, lenhadores, pastores, batedores, ferreiros, parteiras, curandeiros e milicianos. Eles frequentemente pagam por decisoes tomadas longe: por Tarantia, por chefes pictos, por lords ambiciosos, por generais que querem gloria.</p>
+<h3>Economia</h3>
+<p>Madeira, peles, ferro simples, agricultura de subsistencia, ped&#225;gios, escoltas e soldo sustentam as Marches. A regiao nao e rica como Poitain, mas e estrategicamente indispensavel. Quem controla madeira, pontes e torres de sinal controla a sobrevivencia local.</p>
+<h3>Forcas Militares</h3>
+<p>Os Bossonianos sao conhecidos como arqueiros formidaveis, excelentes na defesa de aldeias, muralhas, clareiras e passos estreitos. Sua forca nao esta apenas no tiro individual, mas na cultura defensiva: vigia, disciplina, terreno conhecido e resposta rapida.</p>
+<p>Em SWADE, eles funcionam bem como atiradores de elite, sentinelas, rangers de fronteira, milicia endurecida e unidades com vantagens de terreno.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>A capital chama a fronteira de civilizacao; os Povos da Terra chamam de roubo.</li>
+<li>Lordes Bossonianos querem titulos imperiais plenos, mas nem todos aceitam obediencia a Tarantia.</li>
+<li>A guerra contra Pictos pode justificar abusos contra comunidades locais.</li>
+<li>Velitrium e Karavazyan dependem dessa instabilidade para existir como pontos de controle, comercio e violencia.</li>
+<li>O passado de Conan nas guerras de fronteira e lembrado de modos conflitantes.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>As Bossonian Marches nao sao governadas por uma unica cidade. O poder se divide entre Lordes Bossonianos, aldeias muradas, capit&#227;es de arqueiros, chefes dos Povos da Terra, guias, familias de colonos e emissarios imperiais. A lei formal vem de Aquilonia; a obediencia real depende de quem protege a pali&#231;ada quando a mata se move.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Lorde Branoc Vell:</strong> senhor bossoniano de linhagem misturada; quer reconhecimento pleno no Senado e terras legalizadas sob titulo imperial.</li>
+<li><strong>Maira do Rio Negro:</strong> mediadora dos Povos da Terra; ca&#231;adora, negociadora e voz publica contra a expansao dos lordes locais.</li>
+<li><strong>Alaric Setafirme:</strong> capitao de arqueiros de fronteira; respeitado por colonos e temido por quem atravessa clareiras sem permissao.</li>
+<li><strong>Ewan das Pali&#231;adas:</strong> lider de aldeia murada, homem simples com autoridade pratica maior que a de muitos nobres ausentes.</li>
+<li><strong>Sira Folha-de-Ferro:</strong> herbalista, guia e contrabandista; caminha entre aldeias bossonianas e trilhas dos Povos da Terra.</li>
+</ul>
+</article>
+        <article class="place" id="venarium">
+<h2>Venarium</h2>
+<h3>Resumo</h3>
+<p>Venarium e uma fortaleza de fronteira no imaginario aquiloniano, erguida como afirmacao de dominio sobre terras duras demais para aceitar facilmente qualquer bandeira. Para muitos Aquilonios, ela e simbolo de coragem colonizadora. Para muitos Cim&#233;rios, e memoria de invasao. Para Conan Legacy, Venarium e uma ferida que nunca cicatrizou direito.</p>
+<p>No periodo atual, a tomada e reorganizacao de Venarium por Thal-Remmon transformou a fortaleza em prova viva de sua eficacia militar. Ele nao apenas conquistou pedra; conquistou narrativa.</p>
+<h3>Identidade</h3>
+<p>Venarium nao e uma cidade confortavel. Sua funcao historica e politica supera sua escala urbana. Ela existe como marco de fronteira, provocacao, trauma e vitrine militar. Todo mapa que a inclui esta fazendo uma afirmacao: Aquilonia chegou ate aqui.</p>
+<p>A tradicao sobre Conan associa Venarium a juventude do cimerio e as guerras de fronteira contra avancos aquilonianos. Em Conan Legacy, um seculo depois, o lugar carrega essa sombra: soldados falam de Conan como mito, inimigos falam dele como vinganca, oficiais falam dele como problema de propaganda.</p>
+<h3>Geografia</h3>
+<p>Venarium fica voltada para a fronteira norte, em area onde estradas imperiais perdem confianca e montanhas, florestas frias e trilhas de guerra passam a ditar a realidade. A fortaleza deve ser descrita como pedra, lama, vento e vigia.</p>
+<p>Elementos de cena:</p>
+<ul>
+<li>muralhas reparadas varias vezes;</li>
+<li>fossos ou declives naturais;</li>
+<li>pali&#231;adas externas para trabalhadores e refugiados;</li>
+<li>torres com sinais de incendio antigo;</li>
+<li>cemiterios militares;</li>
+<li>capela austera de Mitra;</li>
+<li>ruinas ou fundacoes de estruturas queimadas na primeira queda.</li>
+</ul>
+<h3>Governo e Ocupacao</h3>
+<p>Sob influencia de Thal-Remmon, Venarium funciona como posto avan&#231;ado, laboratorio de disciplina e demonstracao de governo militar. A ordem ali e eficiente, mas pesada. Registros, patrulhas, turnos, punicoes, mapas e estoque sao tratados como questoes de sobrevivencia e legitimidade.</p>
+<p>Forcas locais:</p>
+<ul>
+<li><strong>comando da fortaleza</strong>, leal a Thal-Remmon;</li>
+<li><strong>veteranos da retomada</strong>, com status especial;</li>
+<li><strong>trabalhadores reassentados</strong>, alguns voluntarios, outros empurrados por dividas ou decretos;</li>
+<li><strong>batedores cimerios assimilados ou contratados</strong>, nunca plenamente confiaveis aos olhos dos oficiais;</li>
+<li><strong>agentes senatoriais</strong>, enviados para medir se a fortaleza serve ao Imperio ou ao homem que a tomou.</li>
+</ul>
+<h3>Cultura</h3>
+<p>Venarium vive em regime de lembranca armada. Ha festas oficiais comemorando a retomada, mas tambem silencio entre familias que perderam gente. Os moradores aprendem a falar com cuidado: uma palavra errada pode soar como simpatia por Cimmeria, insulto a Aquilonia ou critica a Thal-Remmon.</p>
+<p>A cultura local mistura colonos, soldados, fronteiricos, sobreviventes, comerciantes oportunistas e gente sem lugar em outras provincias. E um bom lugar para personagens que tentam recome&#231;ar e pessimo para quem quer esquecer.</p>
+<h3>Tensoes de Campanha</h3>
+<ul>
+<li>Thal-Remmon usa Venarium como medalha politica.</li>
+<li>Tarantia teme que a fortaleza responda mais ao general que ao Senado.</li>
+<li>Cim&#233;rios veem o local como cicatriz e provocacao.</li>
+<li>Colonos comuns so querem viver, mas sua presenca e politica.</li>
+<li>A memoria de Conan pode incendiar tanto rebeldes quanto lealistas.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Venarium e uma fortaleza ocupada por narrativa militar. O comando de fato gravita em torno de Thal-Remmon e de seus oficiais, enquanto magistrados civis, sacerdotes e colonos tentam transformar posto de guerra em cidade viavel. A autoridade ali nasce de conquista, abastecimento e medo de novo colapso.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Thal-Remmon:</strong> senhor de fato de Venarium e comandante associado aos Shadow Lions; figura de ordem, ambicao e eficiencia militar.</li>
+<li><strong>Ser Kaul Morvan:</strong> castelao da fortaleza; supervisiona muralhas, disciplina interna e relatorios enviados a Tarantia.</li>
+<li><strong>Mira Kord:</strong> lider de colonos reassentados; defende mercados, moradias e a sobrevivencia de quem nao veste armadura.</li>
+<li><strong>Bragan Cinza:</strong> batedor cimerio contratado; tolerado por utilidade, observado por todos e raramente convidado a sentar-se perto do fogo.</li>
+<li><strong>Padre Osric de Mitra:</strong> sacerdote austero da capela da fortaleza; tenta dar forma moral a uma ocupacao que muitos preferem nao discutir.</li>
+</ul>
+</article>
+        <article class="place" id="velitrium">
+<h2>Velitrium</h2>
+<h3>Resumo</h3>
+<p>Velitrium e uma cidade-fortaleza na borda ocidental do mundo aquiloniano, voltada para a Pictish Wilderness e para as tensoes das Bossonian Marches. E menos brilhante que Tarantia, menos nobre que Poitain e menos antiga em orgulho que Gunderland, mas talvez seja mais honesta que todas elas: Velitrium existe porque a fronteira mata quem dorme.</p>
+<p>No periodo atual, a cidade e um dos centros de poder de Thal-Remmon e de seus aliados. Suas muralhas, patrulhas, armazens e conselhos militares transformam o medo da fronteira em politica imperial.</p>
+<h3>Identidade</h3>
+<p>Velitrium e pratica, cinzenta e armada. A cidade nao tem paciencia para discursos longos sobre civilizacao se o orador nao sabe diferenciar neblina de fuma&#231;a de ataque. Sua cultura mistura disciplina militar, comercio de fronteira, paranoia justificada, oportunismo e lealdades pessoais.</p>
+<p>A narrativa oficial a chama de bastiao. Os moradores sabem que bastioes tambem sao sacrificaveis.</p>
+<h3>Geografia</h3>
+<p>Velitrium fica no sistema ocidental de defesa aquiloniana, conectada a rios, estradas militares, aldeias bossonianas, postos de patrulha e rotas para regioes disputadas. O terreno em torno combina mata, clareiras, zonas pantanosas, linhas de torre e caminhos que mudam conforme estacao, guerra e incendio.</p>
+<p>A cidade deve ser imaginada como um no logistico:</p>
+<ul>
+<li>muralhas e portoes com trafego controlado;</li>
+<li>estalagens cheias de patrulheiros, ca&#231;adores e mercadores nervosos;</li>
+<li>armazens de flechas, sal, grao, corda e madeira;</li>
+<li>patios de treinamento;</li>
+<li>enfermarias militares;</li>
+<li>templos pragm&#225;ticos, onde oracoes soam como relatorios de baixa.</li>
+</ul>
+<h3>Governo Local</h3>
+<p>No material local, Velitrium ja aparece associada a uma estrutura de comando e a personagens como Edran, Caelan e Maeryn, alem da sombra politica de Thal-Remmon. A cidade deve funcionar como centro de decisao militar regional, nao apenas como povoado de fronteira.</p>
+<p>Instituicoes sugeridas:</p>
+<ul>
+<li><strong>Conselho de Defesa:</strong> oficiais, nobres locais, representantes de armazens e sacerdotes.</li>
+<li><strong>Guarda das Muralhas:</strong> soldados permanentes, treinados para cerco e patrulha.</li>
+<li><strong>Companhias de Batedores:</strong> fronteiricos, bossonianos, cimerios assimilados e guias contratados.</li>
+<li><strong>Casa de Registro:</strong> controla entrada, saida, mortes, recompensas e requisicoes.</li>
+<li><strong>Enviados de Thal-Remmon:</strong> observam, aconselham e, quando necessario, substituem autoridades.</li>
+</ul>
+<h3>Economia</h3>
+<p>Velitrium vive de guerra, abastecimento e risco. Ela compra grao, madeira, ferro, cavalos, mapas, informantes, couro, ervas, curandeiros e silencio. Tambem vende protecao, passagem, licencas, recompensas e oportunidades.</p>
+<p>Em paz, a cidade empobrece. Em guerra, enriquece e sangra. Essa dependencia cria personagens moralmente amb&#237;guos: comerciantes que lucram com conflito, soldados que temem a paz, oficiais que exageram ameacas para manter recursos.</p>
+<h3>Relacoes Regionais</h3>
+<ul>
+<li><strong>Bossonian Marches:</strong> fonte de arqueiros, aldeias vulneraveis e disputas politicas.</li>
+<li><strong>Povos da Terra:</strong> inimigos, vizinhos, negociadores e vitimas, dependendo da historia contada.</li>
+<li><strong>Karavazyan:</strong> ponto movel de comercio, informacao e contrabando, util demais para ser ignorado.</li>
+<li><strong>Tarantia:</strong> financia, cobra e compreende pouco.</li>
+<li><strong>Thal-Remmon:</strong> ve Velitrium como prova de que ordem militar e mais eficaz que retorica senatorial.</li>
+</ul>
+<h3>Estrutura de Poder e Personalidades</h3>
+<p>Velitrium funciona como cidade-fortaleza. Seu poder formal passa por autoridades de Marca e por representantes imperiais, mas a autoridade cotidiana pertence a quem controla muralhas, patrulhas, armazens e informacao de fronteira. A cidade tem magistrados, mas seu pulso real e militar.</p>
+<h4>Personalidades Publicas</h4>
+<ul>
+<li><strong>Edran Verden:</strong> Warbaron de Velitrium; tradicionalista, duro e respeitado por tratar a defesa da fronteira como dever sagrado.</li>
+<li><strong>Caelan Verden:</strong> herdeiro designado de Edran; honrado, rigido e visto como continuidade militar da casa.</li>
+<li><strong>Maeryn Verden:</strong> estrategista da familia, brilhante e subestimada por tradicoes sucessorias; muitos oficiais buscam sua opiniao antes de agir.</li>
+<li><strong>Capitao Sorren Veyr:</strong> comandante das patrulhas externas; conhece a fronteira pelo cheiro da lama e pela direcao do silencio.</li>
+<li><strong>Nessa Barro:</strong> intendente dos armazens; controla comida, flechas, botas, pagamento e ressentimento de tropa.</li>
+</ul>
+</article>
+        <article class="place" id="karavazyan">
+<h2>Karavazyan</h2>
+<h3>Resumo</h3>
+<p>Karavazyan e a cidade sobre rodas: mercado, caravana, fortaleza movel e ponto de encontro entre rotas aquilonianas, fronteiras bossonianas e interesses que preferem nao deixar residencia fixa. A cidade existe porque a autoridade imperial chega tarde demais a certos lugares, e porque comercio, informacao e sobrevivencia precisam continuar se movendo.</p>
+<p>Karavazyan nao pertence inteiramente a Tarantia, Velitrium, Venarium ou aos Povos da Terra. Ela negocia com todos, deve favores a muitos e sobrevive porque ninguem consegue dispensa-la sem perder algo.</p>
+<h3>Essencia</h3>
+<p>Karavazyan e menos uma cidade tradicional e mais um organismo de rodas, tendas, carrocoes, oficinas, tavernas, guardas e pactos. O visitante encontra cheiro de couro, graxa, especiarias, fuma&#231;a, animais, comida quente e medo cuidadosamente disfar&#231;ado de oportunidade.</p>
+<p>Ela atrai mercadores, desertores, ca&#231;adores, estudiosos, artistas, informantes, curandeiros, agiotas, refugiados e gente que precisa desaparecer sem abandonar o mundo.</p>
+<h3>Regiao e Funcao</h3>
+<p>Karavazyan opera nas rotas entre Venarium, Tanasul, Velitrium e as Marchas. Por isso, funciona como ponte entre a ordem imperial e os lugares onde essa ordem vira negociacao. Quem passa por Karavazyan pode comprar mapas, contratar escolta, ouvir rumores, trocar moeda, vender carga, procurar cura ou desaparecer por algumas noites.</p>
+<h3>Estrutura de Poder</h3>
+<p>Karavazyan nao possui prefeito fixo no sentido aquiloniano. A cidade e governada por circulos de autoridade: donos de caravanas, mestres de roda, casas mercantes, guardas contratados, mediadores, sacerdotes discretos e faccoes que fingem ser apenas negocios. O poder pertence a quem consegue manter movimento, alimento, protecao e segredo circulando.</p>
+<h3>Personalidades Publicas</h3>
+<ul>
+<li><strong>Sommarel:</strong> proprietario da Casa da Areia e da Sombra; taverneiro, patrono, informante e eixo social para viajantes que precisam negociar sem chamar a guarda.</li>
+<li><strong>Narzim ibn Haroud:</strong> mercador de longa distancia; conhecido por trazer mercadorias raras, noticias incompletas e favores que sempre vencem no pior momento.</li>
+<li><strong>Ali al&#39;Farrad:</strong> negociador e homem de rua; fala com guardas, carregadores, artistas, devedores e gente que nunca entra em saloes formais.</li>
+<li><strong>Kethryll:</strong> figura associada a sonhos, pressagios e protocolos oniricos; tem reputacao ambigua entre supersticao, cura e perigo.</li>
+<li><strong>Dama Veyra das Rodas Altas:</strong> administradora de contratos de deslocamento; controla agendas, reparos, animais, rodas e a logistica que impede a cidade de morrer parada.</li>
+</ul>
+<h3>Cultura Publica</h3>
+<p>Em Karavazyan, hospitalidade e contrato se confundem. Quem paga, negocia ou traz novidade encontra lugar. Quem quebra palavra pode acordar sem mercadoria, sem escolta ou sem nome. A cidade valoriza adaptacao: sotaques se misturam, religioes se toleram enquanto nao atrapalham negocios, e a reputacao viaja mais rapido que qualquer carro&#231;a.</p>
+</article>
+      </main>
+    </div>
+    <p class="footer-note">Material de fa para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</p>
+  </div>
+</body>
+</html>
+
+
+
+

@@ -20,6 +20,12 @@ Rumores dizem que Khar-Volun, o feiticeiro da torre antiga, desapareceu. Nao hou
 
 Os Voidwatchers sao conhecidos por observar sonhos, pressagios e sinais de mudanca. Eles raramente tomam partido de modo aberto.
 
+
+## Locais do Imperio
+
+A pagina de [Locais](Locais.md) reune os primeiros verbetes publicos sobre Aquilonia, suas cidades, provincias e fronteiras.
+
 ## O que os jogadores sabem
 
 Homens e mulheres de poder estao se movendo. Alguns veem oportunidade politica. Outros buscam riqueza. Alguns poucos acreditam que a Torre guarda algo que nunca deveria ser despertado.
+
