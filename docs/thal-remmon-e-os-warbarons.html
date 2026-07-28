@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thal-Remmon e os Warbarons - Conan Legacy</title>
+  <meta name="description" content="As Marcas Imperiais, a ascensão de Thal-Remmon e o impasse de legitimidade na fronteira do Império Aquilônio.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --line: rgba(243, 237, 226, 0.18);
+      --paper: rgba(20, 17, 13, 0.86);
+      --gold: #c99a4a;
+      --blood: #8e2f2a;
+      --moss: #5d6f55;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; color: var(--ink); background: var(--coal); line-height: 1.6; }
+    a { color: inherit; }
+    .hero {
+      min-height: 64vh;
+      display: grid;
+      align-items: start;
+      background:
+        linear-gradient(180deg, rgba(20,17,13,0.32), rgba(20,17,13,0.55) 55%, rgba(20,17,13,1)),
+        url("assets/bg-mundo-depois-de-conan.jpg") center / cover no-repeat,
+        var(--coal);
+    }
+    .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    .hero-inner { padding: 54px 0 40px; }
+    .kicker { margin: 0 0 14px; color: var(--gold); font: 700 0.82rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 16ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 7.4vw, 6rem); line-height: 0.94; text-transform: uppercase; text-wrap: balance; text-shadow: 0 2px 18px rgba(0,0,0,0.75); }
+    .navbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 26px; }
+    .navbar .spacer { flex: 1 1 24px; }
+    .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 10px 16px; border: 1px solid var(--line); background: rgba(20,17,13,0.78); text-decoration: none; font-weight: 700; font-size: 0.94rem; line-height: 1.1; }
+    .btn.imperio { border-color: rgba(201,154,74,0.7); background: #3a2a16; color: #f0d9a8; }
+    .btn.warbarons { border-color: rgba(142,47,42,0.85); background: #4a1f1c; color: #f0c9c0; }
+    .btn.torre { border-color: rgba(93,111,85,0.85); background: #2b3427; color: #d7e0cd; }
+    .btn.forge { border-color: #ffffff; background: #cc993c; color: #663300; }
+    .btn.wiki { border-color: rgba(201,154,74,0.75); background: var(--blood); color: var(--ink); }
+    main { padding-bottom: 60px; }
+    .panel { border: 1px solid var(--line); background: var(--paper); padding: clamp(18px, 2.6vw, 34px); }
+    .panel h2 { margin: 0; color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 5vw, 3.4rem); line-height: 1.04; text-transform: uppercase; }
+    .panel h3 { margin: 34px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.12; }
+    .panel p { margin: 12px 0 0; color: var(--muted); }
+    .panel p.first { margin-top: 18px; }
+    .voice { margin: 24px 0 0; padding: 16px 20px; border-left: 3px solid var(--gold); background: rgba(201,154,74,0.06); }
+    .voice p { margin: 0 0 10px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; font-style: italic; }
+    .voice p:last-child { margin-bottom: 0; }
+    .voice cite { display: block; margin-top: 12px; color: var(--muted); font-size: 0.86rem; font-style: normal; }
+    .rumores { margin: 24px 0 0; padding: 16px 20px; border: 1px dashed rgba(201,154,74,0.45); background: rgba(0,0,0,0.28); }
+    .rumores strong { display: block; margin-bottom: 10px; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .rumores p { margin: 8px 0 0; color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+    .seguir { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 34px; }
+    .card { display: block; padding: 16px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); text-decoration: none; }
+    .card strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; color: var(--ink); }
+    .card span { color: var(--muted); font-size: 0.9rem; }
+    footer { border-top: 1px solid var(--line); padding: 24px 16px; color: var(--muted); text-align: center; font-size: 0.9rem; }
+    @media (max-width: 720px) { .hero { min-height: 48vh; } .navbar .spacer { flex-basis: 100%; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">Conan Legacy - O Mundo depois de Conan</p>
+      <h1>Thal-Remmon e os Warbarons</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="navbar" aria-label="Seções do cenário">
+      <a class="btn" href="mundo-depois-de-conan.html">&larr; O Mundo depois de Conan</a>
+      <a class="btn imperio" href="imperio-aquilonia.html">O Império Aquilônio</a>
+      <a class="btn torre" href="a-torre-de-khar-volun.html">A Torre de Khar-Volun</a>
+      <span class="spacer"></span>
+      <a class="btn forge" href="gerador-personagem.html">Heroe Forge</a>
+      <a class="btn wiki" href="index.html">Portal</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <article class="panel">
+      <h2>Thal-Remmon e os Warbarons</h2>
+
+      <h3>O que é uma Marca Imperial</h3>
+      <p class="first">No vocabulário político do Império, uma <strong>Marca Imperial</strong> é um território de fronteira submetido a administração militar ampliada: regiões instáveis, expostas a incursões ou a tensões internas, onde a autoridade civil comum se mostrou insuficiente. O <strong>Domínio de Marcha</strong> é a jurisdição que o Warbaron exerce dentro dela.</p>
+      <p>A diferença em relação aos feudos do núcleo imperial é de grau, mas o grau é enorme. As Marcas arrecadam tributos próprios, mantêm legiões próprias, erguem fortificações e administram justiça em nome da Coroa. Conn as criou há cerca de quarenta anos, e elas cumpriram exatamente o que ele prometeu: transformaram senhores de guerra em administradores, e fronteiras instáveis em domínios reconhecidos.</p>
+
+      <h3>A solução que virou problema</h3>
+      <p class="first">O título de Warbaron é hereditário, mas não automático. O sucessor precisa ser designado e confirmado. Enquanto houve um imperador para confirmar, o mecanismo funcionou e ninguém reparou nele.</p>
+      <p>Com Conn morto, resta a pergunta que ninguém em Tarantia quer ser o primeiro a fazer em voz alta: quem confirma o próximo Warbaron? O Senado alega prerrogativa. O Conselho dos Anciões alega precedente. E os próprios Warbarons observam a discussão sabendo de uma coisa simples e desconfortável para todos: a maior parte da força militar do Império já está nas mãos deles.</p>
+
+      <h3>Venarium, a fortaleza esquecida</h3>
+      <p class="first">Venarium foi erguida por ordem de Conan como afirmação, não como cidade: um punho de pedra cravado em território disputado. Torres grossas, sem ornamento, portões reforçados com ferro negro, muralhas que não abraçam o terreno — dominam-no.</p>
+      <p>Nos anos finais de Conn, deixou de ser prioridade. A fronteira norte parecia estabilizada, as legiões foram requisitadas noutros lugares, e a guarnição minguou até virar destino de veteranos gastos e oficiais punidos. Dizia-se que ser enviado para Venarium era aprender a envelhecer olhando para o nada.</p>
+      <p>Foi então que Balthar Quebra-Escudos reuniu tribos cimérias dispersas sob promessa de saque e desceu sobre a fortaleza. Não foi guerra declarada; foi investida calculada. Em poucos dias, o estandarte cimério tremulava sobre muralhas aquilonianas, e as Marcas Bossonianas passaram a receber incursões vindas da própria pedra que deveria protegê-las.</p>
+
+      <h3>A ascensão de um bastardo</h3>
+      <p class="first">Thal-Remmon é filho bastardo de um Warbaron respeitado. Não herdou o título; herdou a disciplina e o olho estratégico. Reuniu veteranos desiludidos, jovens sem perspectiva e soldados que ainda achavam que o Império valia a lâmina, e formou a companhia que passou a ser chamada de <strong>Shadow Lions</strong>.</p>
+      <p>Marchou contra Venarium sem apoio formal das legiões imperiais. A campanha foi dura — escaramuças, cercos improvisados, ataques noturnos nas trilhas da floresta. Quando expulsou Balthar de volta à Ciméria, não retomou apenas uma fortaleza: devolveu credibilidade à fronteira inteira.</p>
+      <p>Conn, já enfraquecido, não o proclamou Warbaron. Tampouco o declarou ilegítimo. Esse silêncio foi tratado por todos como reconhecimento suficiente — e é exatamente aí que o problema mora.</p>
+
+      <h3>Senhor de fato</h3>
+      <p class="first">Hoje Thal-Remmon governa Venarium sem título formal e com autoridade incontestada. Não ocupa cadeira no Senado, não recebeu investidura, e ainda assim arrecada tributos, administra justiça local, mantém legiões próprias e responde pela segurança de toda a região. As muralhas foram reforçadas, as patrulhas voltaram, os mercadores voltaram atrás das patrulhas, e famílias voltaram a se fixar ali.</p>
+      <p>O Senado evita decidir o caso. Se reconhecê-lo, admite que a espada ainda pode gerar legitimidade e abre precedente para toda fronteira que se sinta abandonada. Se o rejeitar, arrisca transformá-lo em bandeira de todos os que acreditam que a periferia vale mais do que o centro. Enquanto os senadores adiam, Venarium se tornou o símbolo de uma coisa nova: a capacidade da periferia de agir quando o centro hesita.</p>
+
+      <div class="voice">
+        <p>Recordo-me do jovem Thal-Remmon como quem recorda um presságio ignorado. Não possuía a eloquência dos cortesãos nem o sangue legitimado pelos registros da corte. Possuía algo mais simples e mais perigoso: uma mente tão afiada quanto a lâmina de sua espada, e homens que o seguiam como quem ama um irmão mais velho.</p>
+        <p>Quando Balthar ergueu seu estandarte sobre Venarium, muitos julgaram aquela fortaleza perdida para sempre. Conn já não marchava. O Senado discutia. A fronteira ardia. Thal-Remmon não aguardou decreto. Marchou.</p>
+        <cite>Fragmento atribuído a Athos de Yaralet.</cite>
+      </div>
+
+      <h3>O sussurro do Leão</h3>
+      <p class="first">Há uma profecia velha, atribuída a Skelos por quem gosta de nomes grandes e contestada por quase todos os estudiosos sérios. Ela fala de um Leão que se ergueria na Aquilônia, salvador e carrasco, que cairia duas vezes, se levantaria três, e que na terceira queda levaria o mundo consigo.</p>
+      <p>Durante o auge do reinado de Conn, os eruditos da corte deram a ela uma leitura tranquilizadora: o Leão não seria um homem, mas uma sucessão — fundador, Conan, Conn, três encarnações da mesma força. Com a morte de Conn, essa interpretação deixou de ser tranquilizadora.</p>
+      <p>Nas feiras, nas tavernas e nas muralhas de Venarium, um nome começou a ser sussurrado junto da palavra Leão. Thal-Remmon jamais se apressou em desmenti-lo.</p>
+
+      <div class="rumores">
+        <strong>O que se diz por aí</strong>
+        <p>&ldquo;O anel que ele usa não é dele. Era de Conn. E antes de Conn, era de outro.&rdquo; — ouvido em Venarium, no mercado junto à muralha interna.</p>
+        <p>&ldquo;Os Leões não juram ao estandarte. Juram ao capitão. Pergunte a qualquer um deles e veja quanto tempo leva para ele corrigir você.&rdquo;</p>
+        <p>&ldquo;Se o Senado disser não, metade das Marcas descobre no mesmo dia que também nunca foi confirmada.&rdquo; — atribuído a um escriba de Tarantia que pediu para não ser citado.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</body>
+</html>

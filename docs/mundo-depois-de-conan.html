@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O Mundo depois de Conan - Conan Legacy</title>
+  <meta name="description" content="Contexto narrativo da campanha Conan Legacy: o Ano da Coroa Quebrada, o Império sem centro, os Warbarons e a Torre que silenciou.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --line: rgba(243, 237, 226, 0.18);
+      --paper: rgba(20, 17, 13, 0.86);
+      --gold: #c99a4a;
+      --blood: #8e2f2a;
+      --moss: #5d6f55;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; color: var(--ink); background: var(--coal); line-height: 1.6; }
+    a { color: inherit; }
+    .hero {
+      min-height: 64vh;
+      display: grid;
+      align-items: start;
+      background:
+        linear-gradient(180deg, rgba(20,17,13,0.32), rgba(20,17,13,0.55) 55%, rgba(20,17,13,1)),
+        url("assets/bg-mundo-depois-de-conan.jpg") center / cover no-repeat,
+        var(--coal);
+    }
+    .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    .hero-inner { padding: 54px 0 40px; }
+    .kicker { margin: 0 0 14px; color: var(--gold); font: 700 0.82rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 16ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 7.4vw, 6rem); line-height: 0.94; text-transform: uppercase; text-wrap: balance; text-shadow: 0 2px 18px rgba(0,0,0,0.75); }
+    .navbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 26px; }
+    .navbar .spacer { flex: 1 1 24px; }
+    .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 10px 16px; border: 1px solid var(--line); background: rgba(20,17,13,0.78); text-decoration: none; font-weight: 700; font-size: 0.94rem; line-height: 1.1; }
+    .btn.imperio { border-color: rgba(201,154,74,0.7); background: #3a2a16; color: #f0d9a8; }
+    .btn.warbarons { border-color: rgba(142,47,42,0.85); background: #4a1f1c; color: #f0c9c0; }
+    .btn.torre { border-color: rgba(93,111,85,0.85); background: #2b3427; color: #d7e0cd; }
+    .btn.forge { border-color: #ffffff; background: #cc993c; color: #663300; }
+    .btn.wiki { border-color: rgba(201,154,74,0.75); background: var(--blood); color: var(--ink); }
+    main { padding-bottom: 60px; }
+    .panel { border: 1px solid var(--line); background: var(--paper); padding: clamp(18px, 2.6vw, 34px); }
+    .panel h2 { margin: 0; color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 5vw, 3.4rem); line-height: 1.04; text-transform: uppercase; }
+    .panel h3 { margin: 34px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.12; }
+    .panel p { margin: 12px 0 0; color: var(--muted); }
+    .panel p.first { margin-top: 18px; }
+    .voice { margin: 24px 0 0; padding: 16px 20px; border-left: 3px solid var(--gold); background: rgba(201,154,74,0.06); }
+    .voice p { margin: 0 0 10px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; font-style: italic; }
+    .voice p:last-child { margin-bottom: 0; }
+    .voice cite { display: block; margin-top: 12px; color: var(--muted); font-size: 0.86rem; font-style: normal; }
+    .rumores { margin: 24px 0 0; padding: 16px 20px; border: 1px dashed rgba(201,154,74,0.45); background: rgba(0,0,0,0.28); }
+    .rumores strong { display: block; margin-bottom: 10px; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .rumores p { margin: 8px 0 0; color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+    .seguir { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 34px; }
+    .card { display: block; padding: 16px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); text-decoration: none; }
+    .card strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; color: var(--ink); }
+    .card span { color: var(--muted); font-size: 0.9rem; }
+    footer { border-top: 1px solid var(--line); padding: 24px 16px; color: var(--muted); text-align: center; font-size: 0.9rem; }
+    @media (max-width: 720px) { .hero { min-height: 48vh; } .navbar .spacer { flex-basis: 100%; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">Conan Legacy - Contexto do Cenário</p>
+      <h1>O Mundo depois de Conan&hellip;</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="navbar" aria-label="Seções do cenário">
+      <a class="btn imperio" href="imperio-aquilonia.html">O Império Aquilônio</a>
+      <a class="btn warbarons" href="thal-remmon-e-os-warbarons.html">Thal-Remmon e os Warbarons</a>
+      <a class="btn torre" href="a-torre-de-khar-volun.html">A Torre de Khar-Volun</a>
+      <span class="spacer"></span>
+      <a class="btn forge" href="gerador-personagem.html">Heroe Forge</a>
+      <a class="btn wiki" href="index.html">Portal</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <article class="panel">
+      <h2>O Ano da Coroa Quebrada&hellip;</h2>
+
+      <div class="voice">
+        <p>Sabei, vós que ainda acreditais que os reinos são eternos&hellip;</p>
+        <p>Houve um tempo em que a Aquilônia se erguia como muralha dourada contra a noite do mundo. Sob Conan, o Cimério, a espada fez-se lei; sob Conn, seu filho, o nome sustentou aquilo que o aço já não precisava provar. Assim correram anos de ordem, temor e glória.</p>
+        <p>Mas nenhum trono repousa para sempre sobre a mesma fronte.</p>
+        <cite>Fragmento dos manuscritos tardios atribuídos a Athos de Yaralet, último cronista da corte de Conn.</cite>
+      </div>
+
+      <h3>Quando os sinos dobraram</h3>
+      <p class="first">Conn não caiu em batalha. Definhou. Nos últimos anos de seu reinado, a doença o afastou das campanhas, depois das audiências, por fim das decisões que só ele podia tomar. O Império continuou funcionando por hábito, como um corpo que ainda anda enquanto a vontade já hesita. Quando os sinos de Tarantia finalmente dobraram, não havia herdeiro proclamado.</p>
+      <p>A notícia não chegou a todos os lugares ao mesmo tempo, e essa diferença importa mais do que parece. Tarantia soube primeiro e passou semanas escolhendo as palavras do anúncio. As províncias souberam depois. A fronteira soube por último, e por boca de mercadores. Entre saber e poder agir abriu-se um intervalo — e é dentro desse intervalo que esta campanha acontece.</p>
+
+      <h3>O reino sem centro</h3>
+      <p class="first">O que Conn deixou não foi um vazio, foi um excesso de instituições sem árbitro. O Senado existe e delibera. O Conselho dos Anciões existe e aconselha. As legiões existem e obedecem — mas apenas cinco respondem diretamente à Coroa, e a Coroa, no momento, não é ninguém. O resto da força imperial está nas Marcas, sob os Warbarons.</p>
+      <p>Essa arquitetura foi desenhada para funcionar com um imperador forte acima dela. Sem esse centro, cada peça interpreta a própria função do modo que lhe convém. O Senado adia porque teme entregar o Império a um rival; a nobreza antiga cobra precedência; as casas menores vendem apoio; e nas fronteiras cresce a convicção, cada vez menos sussurrada, de que quem defende a terra tem mais direito sobre ela do que quem debate a milhares de léguas de distância.</p>
+      <p>O Império não está em ruína. É isso que o torna perigoso. Ele ainda tem colheita, ouro, estradas, escribas, templos e soldados. O que falta é um centro incontestável — e todos os que poderiam ocupá-lo estão calculando o preço de tentar.</p>
+
+      <h3>A fronteira que não dorme</h3>
+      <p class="first">Enquanto Tarantia mede palavras, o oeste mede distâncias. Nas Marcas Bossonianas, cada aldeia murada mantém a mesma rotina de sempre: vigia na paliçada, colheita sob escolta, crianças que aprendem cedo para que lado correr. Velitrium continua sendo o que sempre foi — uma cidade que existe porque a fronteira mata quem dorme.</p>
+      <p>No norte, Venarium mudou de mãos duas vezes em uma geração e voltou a ser vitrine militar, agora sob um homem que ninguém nomeou para o cargo que ocupa. Entre uma coisa e outra, Karavazyan continua rodando pelas estradas em que a autoridade imperial chega tarde, comprando, vendendo e ouvindo.</p>
+      <p>A fronteira não espera decisão do Senado. Ela se organiza em torno de quem aparece.</p>
+
+      <h3>O que se move enquanto os homens disputam</h3>
+      <p class="first">E então espalhou-se a segunda notícia, que a princípio pareceu menor. Khar-Volun, o recluso da torre além da estrada consumida pela mata, deixou de responder às próprias sentinelas. Nenhum exército o derrubou. Nenhum corpo foi exibido. Apenas silêncio.</p>
+      <p>Homens ambiciosos ouviram isso e imaginaram conquistas: uma torre sem guardião é uma torre sem dono. Poucos consideraram a outra possibilidade — a de que certas portas tenham sido fechadas não para proteger o que está fora, mas para conter o que repousa dentro.</p>
+      <p>É nesses anos incertos, quando a coroa jaz sem sucessor e os sonhos se tornam mais vívidos do que o repouso, que começa a história de que vocês fazem parte.</p>
+
+      <div class="rumores">
+        <strong>O que se diz por aí</strong>
+        <p>&ldquo;Conn morreu de doença. Perguntem a quem preparou a comida dele.&rdquo; — ouvido em Tanasul, duas vezes, por bocas diferentes.</p>
+        <p>&ldquo;Conan não morreu. Conan espera.&rdquo; — dito em toda taverna do Império, sempre por alguém que jura ter uma fonte melhor.</p>
+        <p>&ldquo;A Torre silenciou, mas alguns ainda sonham com a sombra dela.&rdquo; — de uma carta que não chegou ao destinatário.</p>
+      </div>
+
+      <div class="seguir">
+        <a class="card" href="imperio-aquilonia.html"><strong>O Império Aquilônio</strong><span>O bloco imperial, suas cinco nações, o mapa e o tabuleiro político.</span></a>
+        <a class="card" href="thal-remmon-e-os-warbarons.html"><strong>Thal-Remmon e os Warbarons</strong><span>As Marcas Imperiais, a solução de Conn que virou problema, e o senhor que ninguém nomeou.</span></a>
+        <a class="card" href="a-torre-de-khar-volun.html"><strong>A Torre de Khar-Volun</strong><span>O silêncio além da fronteira e os que o registram sem explicá-lo.</span></a>
+        <a class="card" href="locais.html"><strong>Locais do Império</strong><span>Verbetes geográficos: cidades, províncias e fronteiras.</span></a>
+      </div>
+    </article>
+  </main>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</body>
+</html>

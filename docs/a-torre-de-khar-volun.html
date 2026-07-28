@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Torre de Khar-Volun - Conan Legacy</title>
+  <meta name="description" content="O silêncio da torre além da fronteira norte, o recluso que a habitava e os Vigilantes do Vazio.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --line: rgba(243, 237, 226, 0.18);
+      --paper: rgba(20, 17, 13, 0.86);
+      --gold: #c99a4a;
+      --blood: #8e2f2a;
+      --moss: #5d6f55;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; color: var(--ink); background: var(--coal); line-height: 1.6; }
+    a { color: inherit; }
+    .hero {
+      min-height: 64vh;
+      display: grid;
+      align-items: start;
+      background:
+        linear-gradient(180deg, rgba(20,17,13,0.32), rgba(20,17,13,0.55) 55%, rgba(20,17,13,1)),
+        url("assets/bg-mundo-depois-de-conan.jpg") center / cover no-repeat,
+        var(--coal);
+    }
+    .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    .hero-inner { padding: 54px 0 40px; }
+    .kicker { margin: 0 0 14px; color: var(--gold); font: 700 0.82rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 16ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 7.4vw, 6rem); line-height: 0.94; text-transform: uppercase; text-wrap: balance; text-shadow: 0 2px 18px rgba(0,0,0,0.75); }
+    .navbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 26px; }
+    .navbar .spacer { flex: 1 1 24px; }
+    .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 10px 16px; border: 1px solid var(--line); background: rgba(20,17,13,0.78); text-decoration: none; font-weight: 700; font-size: 0.94rem; line-height: 1.1; }
+    .btn.imperio { border-color: rgba(201,154,74,0.7); background: #3a2a16; color: #f0d9a8; }
+    .btn.warbarons { border-color: rgba(142,47,42,0.85); background: #4a1f1c; color: #f0c9c0; }
+    .btn.torre { border-color: rgba(93,111,85,0.85); background: #2b3427; color: #d7e0cd; }
+    .btn.forge { border-color: #ffffff; background: #cc993c; color: #663300; }
+    .btn.wiki { border-color: rgba(201,154,74,0.75); background: var(--blood); color: var(--ink); }
+    main { padding-bottom: 60px; }
+    .panel { border: 1px solid var(--line); background: var(--paper); padding: clamp(18px, 2.6vw, 34px); }
+    .panel h2 { margin: 0; color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 5vw, 3.4rem); line-height: 1.04; text-transform: uppercase; }
+    .panel h3 { margin: 34px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.12; }
+    .panel p { margin: 12px 0 0; color: var(--muted); }
+    .panel p.first { margin-top: 18px; }
+    .voice { margin: 24px 0 0; padding: 16px 20px; border-left: 3px solid var(--gold); background: rgba(201,154,74,0.06); }
+    .voice p { margin: 0 0 10px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; font-style: italic; }
+    .voice p:last-child { margin-bottom: 0; }
+    .voice cite { display: block; margin-top: 12px; color: var(--muted); font-size: 0.86rem; font-style: normal; }
+    .rumores { margin: 24px 0 0; padding: 16px 20px; border: 1px dashed rgba(201,154,74,0.45); background: rgba(0,0,0,0.28); }
+    .rumores strong { display: block; margin-bottom: 10px; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .rumores p { margin: 8px 0 0; color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+    .seguir { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 34px; }
+    .card { display: block; padding: 16px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); text-decoration: none; }
+    .card strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; color: var(--ink); }
+    .card span { color: var(--muted); font-size: 0.9rem; }
+    footer { border-top: 1px solid var(--line); padding: 24px 16px; color: var(--muted); text-align: center; font-size: 0.9rem; }
+    @media (max-width: 720px) { .hero { min-height: 48vh; } .navbar .spacer { flex-basis: 100%; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">Conan Legacy - O Mundo depois de Conan</p>
+      <h1>A Torre de Khar-Volun</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="navbar" aria-label="Seções do cenário">
+      <a class="btn" href="mundo-depois-de-conan.html">&larr; O Mundo depois de Conan</a>
+      <a class="btn imperio" href="imperio-aquilonia.html">O Império Aquilônio</a>
+      <a class="btn warbarons" href="thal-remmon-e-os-warbarons.html">Thal-Remmon e os Warbarons</a>
+      <span class="spacer"></span>
+      <a class="btn forge" href="gerador-personagem.html">Heroe Forge</a>
+      <a class="btn wiki" href="index.html">Portal</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <article class="panel">
+      <h2>A Torre de Khar-Volun</h2>
+
+      <h3>Onde fica</h3>
+      <p class="first">Além da fronteira norte, passado o último posto que ainda se dá ao trabalho de manter fogo aceso, há uma estrada que a mata consumiu. Ela não aparece nos mapas recentes porque nenhum cartógrafo imperial teve motivo para refazê-la. No fim dessa estrada há uma torre.</p>
+      <p>Quem serve em Venarium conhece a direção sem precisar de mapa. Aponta-se com o queixo e muda-se de assunto.</p>
+
+      <h3>O recluso</h3>
+      <p class="first">Khar-Volun vivia ali. O que se sabe publicamente sobre ele caberia em poucas linhas, e é assim há muito tempo: um homem de estudos que escolheu a distância, servido por um punhado de sentinelas, abastecido em intervalos regulares por gente que nunca passava do portão. Não recebia visitas. Não dava explicações. Não cobrava nada de ninguém, e por isso ninguém cobrava nada dele.</p>
+      <p>Em uma fronteira onde todo poder precisa se anunciar para existir, ele era a exceção incômoda: alguém que estava ali havia tempo demais para ser recente e silêncio demais para ser inofensivo.</p>
+
+      <h3>O silêncio</h3>
+      <p class="first">Há algum tempo, a torre deixou de responder às próprias sentinelas.</p>
+      <p>Nenhum exército a cercou. Nenhum incêndio foi visto do vale. Nenhum corpo foi exibido, e nenhuma reivindicação foi feita — e é isso que desconcerta, porque na fronteira quem toma alguma coisa faz questão de dizer que tomou. Os abastecimentos que subiram depois disso voltaram intactos. Caçadores que passaram perto falam de ecos que não correspondem ao terreno. Entre os soldados de Venarium, comenta-se que o sono anda diferente.</p>
+      <p>Nada disso é prova de coisa alguma. Uma torre pode silenciar porque um homem velho morreu sozinho. É a explicação mais simples, e várias pessoas sensatas a repetem com uma insistência que já chama atenção.</p>
+
+      <h3>Os que anotam</h3>
+      <p class="first">Desde então, apareceram na região figuras que não disputam terra nem cargo. Caminham entre cidades e fortalezas como escribas do presságio: observam sonhos inquietos, colhem rumores, registram sinais. Chamam-nos de <strong>Vigilantes do Vazio</strong>.</p>
+      <p>Não declaram guerra. Não oferecem conselho. Não pedem permissão. Apenas anotam — e o fato de anotarem incomoda mais do que se fizessem qualquer outra coisa.</p>
+
+      <h3>Por que isso importa agora</h3>
+      <p class="first">Um reino perdeu o rei. Uma torre perdeu o guardião. As duas notícias chegaram quase juntas, e a coincidência não passou despercebida a ninguém que tenha o hábito de procurar sentido nas coisas.</p>
+      <p>Homens ambiciosos ouviram falar de uma torre sem dono e imaginaram o que costuma haver em torres: ouro, livros, segredos vendáveis. Poucos consideraram a outra possibilidade — a de que certas portas tenham sido fechadas não para proteger o que está fora, mas para conter o que repousa dentro.</p>
+
+      <div class="rumores">
+        <strong>O que se diz por aí</strong>
+        <p>&ldquo;A Torre silenciou, mas alguns ainda sonham com a sombra dela.&rdquo;</p>
+        <p>&ldquo;Ele não guardava tesouro. Guardava porta.&rdquo; — dito por um batedor bossoniano que depois negou ter dito.</p>
+        <p>&ldquo;Os Vigilantes registram nomes antes de seus donos saberem que vão morrer.&rdquo; — repetido em Karavazyan, sempre por quem ouviu de outro.</p>
+        <p>&ldquo;Três expedições subiram a estrada desde o silêncio. Ninguém em Venarium sabe dizer quantas desceram.&rdquo;</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</body>
+</html>
