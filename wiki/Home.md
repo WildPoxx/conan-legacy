@@ -19,6 +19,13 @@ Esta wiki é a porta de entrada dos jogadores. Ela contém apenas material segur
 - [Facções Conhecidas](Faccoes-Conhecidas.md)
 - [Materiais de Criação](Materiais-de-Criacao.md)
 
+## Registros da Aquilônia
+
+A crônica da campanha, registro a registro.
+
+- [Todos os Registros](Registros.md)
+- [Registro Primeiro — A Sombra de um Sonho de Criança](Registro-01-A-Sombra-de-um-Sonho-de-Crianca.md)
+
 ## Premissa pública
 
-Conn está morto. Não há sucessor aceito por todos. Venarium prospera sob Thal-Remmon. Karavazyan, a cidade sobre rodas, cruza as rotas das Marchas como mercado, fortaleza e segredo ambulante. E a Torre de Khar-Volun, antiga demais para ser ignorada, parece ter ficado sem guardião.
+Conn está morto. Não há sucessor aceito por todos. Venarium prospera sob Thal-Remmon. Karavazyan, a cidade sobre rodas, cruza as rotas das Marchas como mercado, fortaleza e segredo ambulante. E a Torre de Khar'Volun, antiga demais para ser ignorada, parece ter ficado sem guardião.
