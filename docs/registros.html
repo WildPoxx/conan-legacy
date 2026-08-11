@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registros da Aquilônia - Conan Legacy</title>
+  <meta name="description" content="Crônica das aventuras de Conan Legacy, registro a registro, como páginas arrancadas dos antigos Registros da Aquilônia.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --line: rgba(243, 237, 226, 0.18);
+      --paper: rgba(20, 17, 13, 0.86);
+      --gold: #c99a4a;
+      --blood: #8e2f2a;
+      --moss: #5d6f55;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; color: var(--ink); background: var(--coal); line-height: 1.6; }
+    a { color: inherit; }
+    .hero {
+      min-height: 64vh;
+      display: grid;
+      align-items: start;
+      background:
+        linear-gradient(180deg, rgba(20,17,13,0.32), rgba(20,17,13,0.55) 55%, rgba(20,17,13,1)),
+        url("assets/registro-01-a-sombra.png") center 32% / cover no-repeat,
+        var(--coal);
+    }
+    .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    .hero-inner { padding: 54px 0 40px; }
+    .kicker { margin: 0 0 14px; color: var(--gold); font: 700 0.82rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 16ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 7.4vw, 6rem); line-height: 0.94; text-transform: uppercase; text-wrap: balance; text-shadow: 0 2px 18px rgba(0,0,0,0.75); }
+    .navbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 26px; }
+    .navbar .spacer { flex: 1 1 24px; }
+    .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 10px 16px; border: 1px solid var(--line); background: rgba(20,17,13,0.78); text-decoration: none; font-weight: 700; font-size: 0.94rem; line-height: 1.1; }
+    .btn.imperio { border-color: rgba(201,154,74,0.7); background: #3a2a16; color: #f0d9a8; }
+    .btn.warbarons { border-color: rgba(142,47,42,0.85); background: #4a1f1c; color: #f0c9c0; }
+    .btn.torre { border-color: rgba(93,111,85,0.85); background: #2b3427; color: #d7e0cd; }
+    .btn.forge { border-color: #ffffff; background: #cc993c; color: #663300; }
+    .btn.wiki { border-color: rgba(201,154,74,0.75); background: var(--blood); color: var(--ink); }
+    main { padding-bottom: 60px; }
+    .panel { border: 1px solid var(--line); background: var(--paper); padding: clamp(18px, 2.6vw, 34px); }
+    .panel h2 { margin: 0; color: var(--gold); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 5vw, 3.4rem); line-height: 1.04; text-transform: uppercase; }
+    .panel h3 { margin: 34px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.12; }
+    .panel p { margin: 12px 0 0; color: var(--muted); }
+    .panel p.first { margin-top: 18px; }
+    .voice { margin: 24px 0 0; padding: 16px 20px; border-left: 3px solid var(--gold); background: rgba(201,154,74,0.06); }
+    .voice p { margin: 0 0 10px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; font-style: italic; }
+    .voice p:last-child { margin-bottom: 0; }
+    .voice cite { display: block; margin-top: 12px; color: var(--muted); font-size: 0.86rem; font-style: normal; }
+    .rumores { margin: 24px 0 0; padding: 16px 20px; border: 1px dashed rgba(201,154,74,0.45); background: rgba(0,0,0,0.28); }
+    .rumores strong { display: block; margin-bottom: 10px; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .rumores p { margin: 8px 0 0; color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+    .seguir { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 34px; }
+    .card { display: block; padding: 16px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); text-decoration: none; }
+    .card strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; color: var(--ink); }
+    .card span { color: var(--muted); font-size: 0.9rem; }
+    footer { border-top: 1px solid var(--line); padding: 24px 16px; color: var(--muted); text-align: center; font-size: 0.9rem; }
+    @media (max-width: 720px) { .hero { min-height: 48vh; } .navbar .spacer { flex-basis: 100%; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">Conan Legacy - Crônica da Campanha</p>
+      <h1>Registros da Aquil&ocirc;nia</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="navbar" aria-label="Navegação">
+      <a class="btn torre" href="mundo-depois-de-conan.html">O Mundo depois de Conan</a>
+      <a class="btn imperio" href="locais.html">Locais do Império</a>
+      <span class="spacer"></span>
+      <a class="btn forge" href="gerador-personagem.html">Heroe Forge</a>
+      <a class="btn wiki" href="index.html">Portal</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <article class="panel">
+      <h2>O que ficou escrito</h2>
+
+      <div class="voice">
+        <p>Saiba, ó príncipe, que dos anos que se seguiram à morte de Conn pouco se guardou por escrito, e que o pouco guardado foi copiado por mãos cansadas, em cidades que não paravam quietas.</p>
+        <p>O que segue é o que sobrou.</p>
+      </div>
+
+      <p class="first">Aqui se recolhem os feitos daqueles que atravessaram a Era Hiboriana no ano em que a coroa se quebrou. Cada registro cobre um punhado de dias e nada mais. Nenhum deles sabe como a história termina.</p>
+
+      <div class="seguir">
+        <a class="card" href="registro-01-a-sombra-de-um-sonho-de-crianca.html"><strong>Registro Primeiro &mdash; A Sombra de um Sonho de Criança</strong><span>Chuva em Karavazyan. Dois forasteiros aceitam procurar um menino vendido, e saem da noite com metade de um mapa.</span></a>
+      </div>
+    </article>
+  </main>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</body>
+</html>
