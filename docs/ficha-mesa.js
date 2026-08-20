@@ -106,16 +106,21 @@ function rolarDano(oque, formula, comAumento){
       if (!isNaN(n)){ total += n; mods.push({ rotulo: "Arma", valor: n }); }
     }
   }
-  /* acerto com AUMENTO soma 1d6, que tambem explode (SWADE, Damage) */
+  /* BONUS DAMAGE (SWADE Core, p. 94): acerto com aumento no ATAQUE soma
+     +1d6 ao total, UMA VEZ SO', "regardless of how many raises". O dado de
+     bonus tambem explode. So' muda de tamanho com Vantagem (Weapon Master
+     d8, Master of Arms d10) ou habilidade de criatura — dai' o campo
+     P.dadoAumento, que fica em 6 se ninguem definir. */
   if (comAumento){
-    const r = rolarDado(6);
+    const lados = P.dadoAumento || 6;
+    const r = rolarDado(lados);
     total += r.total;
-    dados.push({ tipo: "aumento", lados: 6, seq: r.seq, total: r.total, rotulo: "aumento" });
-    mods.push({ rotulo: "Acerto com aumento", valor: "+1d6" });
+    dados.push({ tipo: "aumento", lados, seq: r.seq, total: r.total, rotulo: "aumento" });
+    mods.push({ rotulo: "Acerto com aumento", valor: "+1d" + lados });
   }
   return {
     quem: P.nome, retrato: P.retrato,
-    oque, como: "Dano · " + expandida + (comAumento ? " + 1d6 de aumento" : "") + " · sem Dado Selvagem",
+    oque, como: "Dano · " + expandida + (comAumento ? " + 1d" + (P.dadoAumento || 6) + " de aumento" : "") + " · sem Dado Selvagem",
     mods, modTotal: 0, total,
     veredito: comAumento ? "DANO COM AUMENTO" : "DANO",
     classe: "dano", alvo: false, dados
@@ -299,7 +304,7 @@ function montarFicha(p){
     const bDanoAum = el("button", "tr");
     bDanoAum.type = "button";
     bDanoAum.appendChild(el("span", null, "Dano com aumento"));
-    bDanoAum.appendChild(el("b", null, String(w.dano).replace(/@str/gi, "d" + p.forca) + " +d6"));
+    bDanoAum.appendChild(el("b", null, String(w.dano).replace(/@str/gi, "d" + p.forca) + " +d" + (p.dadoAumento || 6)));
     bDanoAum.addEventListener("click", () => mostrar(rolarDano(w.nome, w.dano, true), gArm));
 
     par.appendChild(bAtk); par.appendChild(bDano); par.appendChild(bDanoAum);
