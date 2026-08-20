@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro Segundo: O Preço do Papel - Conan Legacy</title>
+  <meta name="description" content="Registros da Aquilônia, segundo registro: Xanthes procura os forasteiros por causa de um morto, e uma briga na fileira das oficinas cobra o preço de meio mapa.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f3ede2;
+      --muted: #c9bca8;
+      --coal: #14110d;
+      --line: rgba(243, 237, 226, 0.18);
+      --paper: rgba(20, 17, 13, 0.86);
+      --gold: #c99a4a;
+      --blood: #8e2f2a;
+      --moss: #5d6f55;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; color: var(--ink); background: var(--coal); line-height: 1.6; }
+    a { color: inherit; }
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      align-items: start;
+      background:
+        linear-gradient(180deg, rgba(20,17,13,0.32), rgba(20,17,13,0.55) 55%, rgba(20,17,13,1)),
+        url("assets/registro-02-o-preco-do-papel.png") center 32% / cover no-repeat,
+        var(--coal);
+    }
+    .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    .hero-inner { padding: 54px 0 40px; }
+    .kicker { margin: 0 0 14px; color: var(--gold); font: 700 0.82rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 16ch; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.6rem, 7.4vw, 6rem); line-height: 0.94; text-transform: uppercase; text-wrap: balance; text-shadow: 0 2px 18px rgba(0,0,0,0.75); }
+    .navbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 0 0 26px; }
+    .navbar .spacer { flex: 1 1 24px; }
+    .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 10px 16px; border: 1px solid var(--line); background: rgba(20,17,13,0.78); text-decoration: none; font-weight: 700; font-size: 0.94rem; line-height: 1.1; }
+    .btn.imperio { border-color: rgba(201,154,74,0.7); background: #3a2a16; color: #f0d9a8; }
+    .btn.torre { border-color: rgba(93,111,85,0.85); background: #2b3427; color: #d7e0cd; }
+    .btn.forge { border-color: #ffffff; background: #cc993c; color: #663300; }
+    .btn.wiki { border-color: rgba(201,154,74,0.75); background: var(--blood); color: var(--ink); }
+    main { padding-bottom: 60px; }
+    .panel { border: 1px solid var(--line); background: var(--paper); padding: clamp(18px, 2.6vw, 34px); }
+    .panel h3 { margin: 34px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.12; }
+    .panel p { margin: 12px 0 0; color: var(--muted); }
+    .panel p.first { margin-top: 18px; }
+    .voice { margin: 24px 0 0; padding: 16px 20px; border-left: 3px solid var(--gold); background: rgba(201,154,74,0.06); }
+    .voice p { margin: 0 0 10px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; font-style: italic; }
+    .voice p:last-child { margin-bottom: 0; }
+    .card { display: block; padding: 16px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); text-decoration: none; }
+    .card strong { display: block; margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; color: var(--ink); }
+    .card span { color: var(--muted); font-size: 0.9rem; }
+    .seguir { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 34px; }
+    footer { border-top: 1px solid var(--line); padding: 24px 16px; color: var(--muted); text-align: center; font-size: 0.9rem; }
+    .fala { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+    .colofao { margin: 34px 0 0; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 0.95rem; }
+    @media (max-width: 720px) { .hero { min-height: 48vh; } .navbar .spacer { flex-basis: 100%; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">Registros da Aquilônia - Registro Segundo</p>
+      <h1>O Preço do Papel</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="navbar" aria-label="Navegação">
+      <a class="btn imperio" href="registros.html">Todos os Registros</a>
+      <a class="btn torre" href="registro-01-a-sombra-de-um-sonho-de-crianca.html">Registro Primeiro</a>
+      <span class="spacer"></span>
+      <a class="btn forge" href="gerador-personagem.html">Heroe Forge</a>
+      <a class="btn wiki" href="index.html">Portal</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <article class="panel">
+      <div class="voice">
+        <p>Saiba, ó príncipe, que há papéis que valem mais que a terra que descrevem, e que um homem que carrega um desses raramente sabe o que carrega. Foi assim com o mapa de Maltram, que passou de mão em mão por Karavazyan durante uma semana e deixou um morto atrás de si, e depois outro homem no chão, e depois outro ainda &mdash; e nenhum dos que o seguraram chegou a entender por quê.</p>
+        <p>A cidade continuou parada à sombra do Golamra. Os condutores continuaram falando de pasto e de eixo quebrado. E a metade rasgada de um mapa, que na noite anterior estava na bolsa de um ladrão zamorano, estava agora nas mãos de dois forasteiros que ainda não sabiam o que faltava.</p>
+      </div>
+
+      <h3>O homem que voltou sóbrio</h3>
+      <p class="first">Não fazia dois dias do roubo na Casa da Areia e da Sombra quando Xanthes os procurou.</p>
+      <p>Veio sem esconder que vinha, o que já era um jeito de dizer alguma coisa. Sentou-se sem pedir licença, olhou um por um com a calma de quem confere um trabalho bem-feito, e disse que a metade do mapa podia ficar com eles. Não viera por isso.</p>
+      <p>Viera por um morto.</p>
+      <p>O nome do morto era Maltram, e a rua o chamava de Treze Dedos por causa de uma história que ele contava de graça e contava diferente toda vez. Fora ele quem recolhera Xanthes das ruas de Karavazyan quando o zamorano era criança, e fora ele quem lhe ensinara o ofício. Nos últimos tempos o velho andava estranho &mdash; Xanthes usou essa palavra e depois usou outra, mais dura, e disse que achava que o mestre estava ficando louco. Falava de um mapa que levava à torre do feiticeiro do Golamra. Dizia que aquilo valia mais que a casa. Dizia que queria dar a Xanthes.</p>
+      <p>Quatro ou cinco dias antes, encontraram Maltram na própria casa, aberto do peito ao umbigo e com a garganta rasgada. As gavetas viradas, a janela quebrada, e dois dedos da mão esquerda faltando. A guarda escreveu <em>roubo</em> no papel e foi embora almoçar. Xanthes o enterrou dois dias depois, e não acreditou no papel da guarda um único momento.</p>
+      <p class="fala">&ldquo;Eu sei o que é uma casa roubada. Já roubei muitas. E aquela não foi.&rdquo;</p>
+      <p>O mapa que os dois haviam tirado dele viera de uma mulher do Sommarel chamada Lian'Mei, esposa de Mirena das Sete Facas, que o entregara de presente e sem cobrar nada &mdash; o que Xanthes achara bom na hora e passara a achar estranho depois. Ela lhe dissera, de passagem, que a metade viera do irmão dela, e que o irmão a ganhara num jogo de dados contra alguém muito perigoso.</p>
+      <p>E foi aí que o zamorano disse a coisa que os fez levantar:</p>
+      <p class="fala">&ldquo;Quem tem esse mapa provavelmente matou meu mestre.&rdquo;</p>
+      <p>Pediu ajuda para descobrir quem, e ofereceu o que tinha em troca: ele mesmo. Um ladrão do Sommarel com nome e trânsito, disposto a ir aonde eles fossem. Sugeriu que começassem conversando com a mulher, para ter certeza de como aquele papel chegara às mãos dela.</p>
+      <p>Não foi o que fizeram.</p>
+
+      <h3>O que se sabia dos Chacais</h3>
+      <p class="first">Júnior conhecia o nome. Os Chacais de Golamra eram um bando de mercenários que fazia serviço para quem pagasse, e que fazia serviço fixo para Narzim ibn Haroud &mdash; capturavam gente para o escravagista vender. Seis ou sete homens, um deles chamado Soren, que liderava. Bebiam, apostavam e brigavam na fileira das oficinas, onde a cidade guardava os eixos e as forjas.</p>
+      <p>O irmão da mulher do Sommarel, disseram, era um rapaz calado e tímido que gostava de jogos e tinha o vício dos dados. Fora dele que ganhara a metade. E fora de Soren que a ganhara.</p>
+      <p>Garran ouviu tudo isso e chegou à conclusão mais curta possível: se o mapa estivera com os Chacais, então os Chacais tinham estado com o morto. Foram para a fileira das oficinas naquela mesma tarde.</p>
+
+      <h3>O louco da praça</h3>
+      <p class="first">No caminho passaram pela banca de Narzim. Xanthes a apontou de longe, e ninguém encostou. O escravagista vendia como vendia todo dia, cercado da gente que o cercava sempre.</p>
+      <p>Foi antes de chegar à taverna que Júnior viu o homem gritando no meio da rua e decidiu chegar perto, só para que ele parasse de gritar.</p>
+      <p>O homem parou. Segurou-o pelo braço. Tinha um olho só, e o encarou com ele.</p>
+      <p class="fala">&ldquo;Você precisa matá-lo. Você precisa matar a criança, ou será o fim de todos nós.&rdquo;</p>
+      <p>Júnior perguntou que criança. Perguntou três vezes, pediu um nome, pediu qualquer coisa. O homem se voltou, apontou para o céu e falou de outra coisa:</p>
+      <p class="fala">&ldquo;O medalhão. O medalhão. O medalhão é a resposta para a nossa destruição.&rdquo;</p>
+      <p>E saiu andando pelo meio das pessoas, que se afastavam do jeito que se afasta de quem já se acostumou, dizendo mais uma coisa que ninguém pediu:</p>
+      <p class="fala">&ldquo;A máscara de ferro. O pecado tomou a todos nós. Eles que vêm do outro lado nos tomam.&rdquo;</p>
+      <p>Ninguém no mercado se virou. Já estavam acostumados.</p>
+
+      <h3>Quatro homens numa mesa</h3>
+      <p class="first">Estavam os quatro sentados quando o grupo chegou. Soren, que não ria quando os outros riam. Meia-Face, que trazia meia máscara de ferro no rosto e um vidro de líquido cinzento que ninguém soube nomear. Harku, que fora gladiador e ainda se sentava como quem espera a plateia. E Brogar, albino, largo como uma porta, que os olhou chegar sem mudar de posição.</p>
+      <p>Garran perguntou pelo mapa. Perguntou de um jeito que não deixava saída, e Soren respondeu do jeito de quem não gosta de perguntas: com um desafio. Se queriam alguma coisa dele, que resolvessem como se resolve na fileira das oficinas.</p>
+      <p>As ofensas subiram rápido, dos dois lados. Soren apontou Brogar e disse que aquele era o campeão dele.</p>
+      <p>Garran atacou primeiro.</p>
+
+      <h3>O banho de sangue</h3>
+      <p class="first">O que veio depois durou pouco e custou caro.</p>
+      <p>Brogar era o que não caía. Garran o acertou, e o acertou de novo, e o homem continuou em pé como se tivesse sido tocado por vento. Quando revidou, revidou com machado, e o ferreiro do Vau soube pela primeira vez em muitos anos o que era ser atingido por alguém melhor. Levou dois ferimentos antes de conseguir se firmar.</p>
+      <p>Soren escolheu Júnior assim que percebeu quem estava dando as ordens.</p>
+      <p>Meia-Face jogou fogo. Frascos que arrebentavam no chão e abriam poças de chama entre as mesas, e a partir dali todo mundo brigou pior, dos dois lados.</p>
+      <p>Sabotei atirava do lado de fora do círculo e foi atingida no meio disso, e ficou de pé, e voltou a atirar. Foi ela quem derrubou Harku. O gladiador caiu de lado sobre a mesa que havia derrubado, e não se levantou mais naquela noite.</p>
+      <p>E foi Júnior quem viu, no meio da confusão, a costura nova no forro do cinto de Soren.</p>
+      <p>Não disse nada. Esperou. Quando o chefe dos Chacais ficou zonzo o bastante para não sentir uma mão, o Filho da Areia enfiou os dedos por baixo do couro e tirou de lá a outra metade do mapa, e nem o dono percebeu que a perdera.</p>
+      <p>Aí era hora de ir embora.</p>
+
+      <h3>O que ficou para trás</h3>
+      <p class="first">Xanthes cobria a retirada quando Brogar o alcançou.</p>
+      <p>Foi um golpe só. O machado desceu e o zamorano desceu junto, e o que estava de pé um instante antes estava no chão sem se mexer. Pediu ajuda antes de cair &mdash; chamou o nome de Garran, e Garran estava a dez passos e com dois ferimentos e um homem albino entre os dois.</p>
+      <p>Ninguém foi.</p>
+      <p>Júnior sumiu na fumaça primeiro. Garran foi atrás. Sabotei atirou uma última vez, errou, e sumiu também. Os três saíram da fileira das oficinas por caminhos diferentes e se encontraram depois, longe, e nenhum dos três estava inteiro.</p>
+      <p>Os Chacais ficaram com o campo, com os próprios feridos e com o ladrão zamorano.</p>
+
+      <h3>As duas metades</h3>
+      <p class="first">Foi só quando pararam que Júnior abriu o couro dobrado e o encaixou no outro.</p>
+      <p>As bordas rasgadas coincidiam. A trilha que morria numa dobra continuava do outro lado, subia pela serra e terminava numa torre desenhada no canto esquerdo, pequena, com um traço grosso por cima que podia ser sombra e podia ser outra coisa. Havia anotações apertadas na margem, escritas por alguém que conhecia o caminho e não queria esquecê-lo. Havia, no pé, uma assinatura.</p>
+      <p>E havia três formas de chegar lá, o que era uma a mais do que qualquer um deles esperava.</p>
+      <p>Garran sangrava. Sabotei sangrava. Tinham o que foram buscar, tinham um caminho até a torre, e tinham uma dívida na fileira das oficinas que não ia ficar por isso mesmo.</p>
+      <p>Ninguém falou do homem que ficou.</p>
+
+      <p class="colofao">Registro Segundo dos feitos de Garran do Vau e de Júnior, Filho da Areia, ocorridos em Karavazyan à sombra do Golamra, no ano em que a coroa se quebrou.</p>
+
+      <div class="seguir">
+        <a class="card" href="registro-01-a-sombra-de-um-sonho-de-crianca.html"><strong>Registro Primeiro &mdash; A Sombra de um Sonho de Criança</strong><span>Como os dois forasteiros chegaram à metade do mapa, e o que Al'Farrad queria em troca.</span></a>
+        <a class="card" href="registros.html"><strong>Todos os Registros</strong><span>A crônica da campanha, sessão a sessão.</span></a>
+      </div>
+    </article>
+  </main>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</body>
+</html>
