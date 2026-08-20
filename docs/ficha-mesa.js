@@ -12,6 +12,9 @@
      Ferimento e fadiga penalizam TRACO. Dano nao sofre essa penalidade.
      Dano soma os dados, explode, e nao usa Dado Selvagem.
 
+   O desenho do resultado mora em cartao-resultado.js — este arquivo so'
+   produz os numeros e a lista de modificadores com a origem escrita.
+
    Esta pagina nao fala com o Foundry. Mexer no contador de ferimentos aqui
    nao muda nada no jogo — e' so' para a conta sair certa no celular.
    ────────────────────────────────────────────────────────────────────────── */
@@ -45,17 +48,25 @@ function selar(txt){
   return (h >>> 0).toString(36).slice(-4).padStart(4, "0");
 }
 
-/* penalidade que o corpo carrega, sem o modificador de situacao */
 const penalidadeCorpo = () => -Math.min(3, E.fer) - Math.min(2, E.fad);
 
-/* ── rolagem de traco: dado + Dado Selvagem, maior total, modificador depois ── */
-function rolarTraco(rotulo, lados, modFixo){
-  const mod = (modFixo || 0) + penalidadeCorpo() + E.sit;
+/* ── rolagem de traco ── */
+function rolarTraco(oque, como, lados, modFixo){
+  const mods = [];
+  if (modFixo) mods.push({ rotulo: "Perícia", valor: modFixo });
+  const fer = -Math.min(3, E.fer);
+  const fad = -Math.min(2, E.fad);
+  if (fer) mods.push({ rotulo: "Ferimentos", valor: fer });
+  if (fad) mods.push({ rotulo: "Fadiga", valor: fad });
+  if (E.sit) mods.push({ rotulo: "Situação", valor: E.sit });
+  const modTotal = (modFixo || 0) + fer + fad + E.sit;
+
   const t = rolarDado(lados);
   const w = rolarDado(6);
   const critico = t.primeiro === 1 && w.primeiro === 1;
-  const bruto = Math.max(t.total, w.total);
-  const total = bruto + mod;
+  /* o vencedor sai da comparacao dos TOTAIS, com o As ja' somado */
+  const venceuTraco = t.total >= w.total;
+  const total = Math.max(t.total, w.total) + modTotal;
 
   let veredito, classe;
   if (critico){ veredito = "FALHA CRÍTICA"; classe = "crit"; }
@@ -63,22 +74,22 @@ function rolarTraco(rotulo, lados, modFixo){
   else if (total >= 4){ veredito = "SUCESSO"; classe = "ok"; }
   else { veredito = "FALHA"; classe = "bad"; }
 
-  const detalhe =
-    `d${lados}: [${t.seq.join(" + ")}] = ${t.total}\n` +
-    `d6:  [${w.seq.join(" + ")}] = ${w.total}\n` +
-    `maior = ${bruto}${mod ? `   mod ${sinal(mod)}` : ""}   →   ${total}` +
-    (mod ? `\n(${modFixo ? `perícia ${sinal(modFixo)} · ` : ""}` +
-           `ferimento ${sinal(-Math.min(3, E.fer))} · fadiga ${sinal(-Math.min(2, E.fad))} · situação ${sinal(E.sit)})` : "");
-
-  return { rotulo, total, veredito, classe, detalhe, alvo: true, mod };
+  return {
+    quem: P.nome, retrato: P.retrato, oque, como, mods, modTotal, total, veredito, classe, alvo: true,
+    dados: [
+      { tipo: "traco", lados, seq: t.seq, total: t.total, venceu: venceuTraco, perdeu: !venceuTraco },
+      { tipo: "wild", lados: 6, seq: w.seq, total: w.total, venceu: !venceuTraco, perdeu: venceuTraco }
+    ]
+  };
 }
 
-/* ── rolagem de dano: soma os dados, com Ases, sem Dado Selvagem ── */
-function rolarDano(rotulo, formula){
+/* ── rolagem de dano ── */
+function rolarDano(oque, formula){
   const expandida = String(formula).replace(/@str/gi, "d" + P.forca);
   const partes = expandida.match(/\d*d\d+|[+-]\s*\d+/gi) || [];
   let total = 0;
-  const linhas = [];
+  const dados = [];
+  const mods = [];
   for (const bruta of partes){
     const p = bruta.replace(/\s+/g, "");
     const md = p.match(/^(\d*)d(\d+)$/i);
@@ -88,41 +99,35 @@ function rolarDano(rotulo, formula){
       for (let i = 0; i < qtd; i++){
         const r = rolarDado(lados);
         total += r.total;
-        linhas.push(`d${lados}: [${r.seq.join(" + ")}] = ${r.total}`);
+        dados.push({ tipo: "traco", lados, seq: r.seq, total: r.total, rotulo: "dano" });
       }
     } else {
       const n = parseInt(p, 10);
-      if (!isNaN(n)){ total += n; linhas.push(`fixo ${sinal(n)}`); }
+      if (!isNaN(n)){ total += n; mods.push({ rotulo: "Arma", valor: n }); }
     }
   }
   return {
-    rotulo, total,
-    veredito: "DANO",
-    classe: "dano",
-    detalhe: `${expandida}\n${linhas.join("\n")}\n→ ${total}\n(dano não sofre penalidade de ferimento)`,
-    alvo: false, mod: 0
+    quem: P.nome, retrato: P.retrato,
+    oque, como: "Dano · " + expandida + " · sem Dado Selvagem",
+    mods, modTotal: 0, total, veredito: "DANO", classe: "dano", alvo: false, dados
   };
 }
 
-/* ── janela de resultado: aparece logo abaixo do bloco que foi tocado ── */
+/* ── mostrar: cartao logo abaixo do bloco tocado, botoes FORA dele ── */
 function mostrar(res, ondeColocar){
   E.contador++;
-  const textoBase =
-    `🎲 ${P.nome} · ${res.rotulo}\n` +
-    `${res.alvo ? "TOTAL" : "DANO"} ${res.total}${res.alvo ? " — " + res.veredito : ""}`;
-  const selo = selar(textoBase);
-  const paraMandar = `${textoBase}\n#${E.contador} · ${selo}`;
+  res.n = E.contador;
+  res.quando = CR.agora();
+  res.selo = selar(`${res.quem}|${res.oque}|${res.total}`);
 
-  const cx = el("div", "saida");
-  cx.appendChild(el("div", "oque", res.rotulo));
-  cx.appendChild(el("div", "total", String(res.total)));
-  cx.appendChild(el("div", "verdito " + res.classe, res.veredito));
-  cx.appendChild(el("div", "detalhe", res.detalhe));
-  if (res.alvo) cx.appendChild(el("div", "detalhe", "alvo 4 · aumento 8"));
+  const paraMandar = CR.texto(res);
 
-  const linha = el("div", "botoes");
+  const caixa = el("div", "resultado-caixa");
+  caixa.appendChild(CR.montar(res));
+
+  const linha = el("div", "pos-cartao");
   if (navigator.share){
-    const bs = el("button", "secund", "Enviar");
+    const bs = el("button", "secund", "Enviar texto");
     bs.type = "button";
     bs.addEventListener("click", async () => { try { await navigator.share({ text: paraMandar }); } catch(e){} });
     linha.appendChild(bs);
@@ -131,16 +136,17 @@ function mostrar(res, ondeColocar){
   bc.type = "button";
   bc.addEventListener("click", (ev) => copiar(paraMandar, ev.target, "Copiar"));
   linha.appendChild(bc);
-  linha.appendChild(el("span", "selo", `#${E.contador} · ${selo}`));
-  cx.appendChild(linha);
+  const bi = el("button", "secund", "Só o resultado");
+  bi.type = "button";
+  bi.addEventListener("click", () => CR.isolar(res));
+  linha.appendChild(bi);
+  caixa.appendChild(linha);
 
-  const antiga = ondeColocar.querySelector(".saida");
-  if (antiga) antiga.remove();
-  document.querySelectorAll(".saida").forEach((s) => s.remove());
-  ondeColocar.appendChild(cx);
-  cx.scrollIntoView({ behavior: "smooth", block: "center" });
+  document.querySelectorAll(".resultado-caixa").forEach((s) => s.remove());
+  ondeColocar.appendChild(caixa);
+  caixa.scrollIntoView({ behavior: "smooth", block: "center" });
 
-  E.hist.push(`#${E.contador} ${selo}  ${res.rotulo}  =${res.total}  ${res.veredito}`);
+  E.hist.push(`#${E.contador} ${res.selo}  ${res.quando}  ${res.oque}  =${res.total}  ${res.veredito}`);
   const h = document.getElementById("hist");
   if (h) h.textContent = E.hist.join("\n");
 }
@@ -160,12 +166,12 @@ async function copiar(texto, botao, rotuloOriginal){
 }
 
 /* ── montagem ── */
-function botaoTraco(rotulo, lados, modFixo, fraco, grupo){
+function botaoTraco(rotulo, como, lados, modFixo, fraco, grupo){
   const b = el("button", "tr" + (fraco ? " fraco" : ""));
   b.type = "button";
   b.appendChild(el("span", null, rotulo));
   b.appendChild(el("b", null, "d" + lados + (modFixo ? " " + sinal(modFixo) : "")));
-  b.addEventListener("click", () => mostrar(rolarTraco(rotulo, lados, modFixo), grupo));
+  b.addEventListener("click", () => mostrar(rolarTraco(rotulo, como, lados, modFixo), grupo));
   return b;
 }
 
@@ -208,14 +214,12 @@ function montarFicha(p){
 
   document.title = p.nome + " — Conan Legacy";
 
-  /* cabeca */
   document.getElementById("retrato").src = p.retrato;
   document.getElementById("retrato").alt = "Retrato de " + p.nome;
   document.getElementById("nome").textContent = p.nome;
   document.getElementById("sub").textContent =
     [p.especie, p.rank ? p.rank + " · " + p.avancos + " avanços" : null].filter(Boolean).join(" · ");
 
-  /* derivados */
   const d = document.getElementById("derivados");
   const der = (nome, valor, obs) => {
     const c = el("div", "der");
@@ -224,17 +228,15 @@ function montarFicha(p){
     if (obs) c.appendChild(el("small", null, obs));
     d.appendChild(c);
   };
-  der("Aparar", p.derivados.aparar, p.derivados.aparetNota || "");
+  der("Aparar", p.derivados.aparar, "");
   der("Resistência", p.derivados.resistencia, p.derivados.armadura ? `(${p.derivados.armadura} de armadura)` : "");
   der("Passo", p.derivados.passo, "correr " + p.derivados.correr);
 
-  /* estado */
   const es = document.getElementById("estados");
   es.appendChild(caixaEstado("boxFer", "Ferimentos", "valFer", () => E.fer, (v) => (E.fer = v), p.estado.ferimentosMax));
   es.appendChild(caixaEstado("boxFad", "Fadiga", "valFad", () => E.fad, (v) => (E.fad = v), p.estado.fadigaMax));
   es.appendChild(caixaEstado("boxBenn", "Bennies", "valBenn", () => E.benn, (v) => (E.benn = v), p.estado.benniesMax));
 
-  /* modificador de situacao */
   const om = document.getElementById("optSit");
   [-4, -3, -2, -1, 0, 1, 2, 3, 4].forEach((v) => {
     const b = el("button", "opt" + (v === 0 ? " sel" : ""), v > 0 ? "+" + v : String(v));
@@ -247,20 +249,17 @@ function montarFicha(p){
     om.appendChild(b);
   });
 
-  /* atributos */
   const gAtr = document.getElementById("gAtributos");
   const cxAtr = el("div", "tracos");
-  p.atributos.forEach((a) => cxAtr.appendChild(botaoTraco(a.nome, a.s, a.m, false, gAtr)));
+  p.atributos.forEach((a) => cxAtr.appendChild(botaoTraco(a.nome, "Atributo", a.s, a.m, false, gAtr)));
   gAtr.appendChild(cxAtr);
 
-  /* pericias */
   const gPer = document.getElementById("gPericias");
   const cxPer = el("div", "tracos");
-  p.pericias.forEach((s) => cxPer.appendChild(botaoTraco(s.nome, s.s, s.m, false, gPer)));
-  cxPer.appendChild(botaoTraco("sem perícia", 4, -2, true, gPer));
+  p.pericias.forEach((s) => cxPer.appendChild(botaoTraco(s.nome, "Perícia", s.s, s.m, false, gPer)));
+  cxPer.appendChild(botaoTraco("Sem perícia", "Não treinado", 4, -2, true, gPer));
   gPer.appendChild(cxPer);
 
-  /* armas */
   const gArm = document.getElementById("gArmas");
   const cxArm = el("div");
   p.armas.forEach((w) => {
@@ -274,27 +273,29 @@ function montarFicha(p){
     if (w.notas) det.push(w.notas);
     box.appendChild(el("div", "det", det.join(" · ")));
     const par = el("div", "par");
+
     const bAtk = el("button", "tr");
     bAtk.type = "button";
     bAtk.appendChild(el("span", null, "Atacar · " + w.pericia));
     bAtk.appendChild(el("b", null, "d" + w.periciaDado + (w.ataqueMod ? " " + sinal(w.ataqueMod) : "")));
-    bAtk.addEventListener("click", () => mostrar(rolarTraco(w.nome + " · ataque", w.periciaDado, w.ataqueMod || 0), gArm));
+    bAtk.addEventListener("click", () =>
+      mostrar(rolarTraco(w.nome, "Ataque · " + w.pericia, w.periciaDado, w.ataqueMod || 0), gArm));
+
     const bDano = el("button", "tr");
     bDano.type = "button";
     bDano.appendChild(el("span", null, "Dano"));
     bDano.appendChild(el("b", null, String(w.dano).replace(/@str/gi, "d" + p.forca)));
-    bDano.addEventListener("click", () => mostrar(rolarDano(w.nome + " · dano", w.dano), gArm));
+    bDano.addEventListener("click", () => mostrar(rolarDano(w.nome, w.dano), gArm));
+
     par.appendChild(bAtk); par.appendChild(bDano);
     box.appendChild(par);
     cxArm.appendChild(box);
   });
   gArm.appendChild(cxArm);
 
-  /* como os derivados foram calculados */
   const cc = document.getElementById("comoCalculado");
   if (cc && p.comoCalculado) cc.textContent = p.comoCalculado;
 
-  /* historico */
   const bh = document.getElementById("bHist");
   if (bh) bh.addEventListener("click", (ev) => {
     if (!E.hist.length){

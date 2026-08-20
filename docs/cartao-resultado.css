@@ -1,0 +1,99 @@
+/* ──────────────────────────────────────────────────────────────
+   CARTAO DE RESULTADO — Conan Legacy
+   Organizado como o chat do Foundry: quem · o que · como ·
+   modificadores · dados · total. Vestido com a paleta do portal.
+
+   Este cartao vira PRINT. Por isso:
+     · cabe numa tela de celular sem rolagem
+     · e' autocontido: quem receber so' o print entende tudo
+     · contraste alto, porque o WhatsApp comprime em JPEG
+     · nenhum botao dentro dele — botao num print e' ruido
+   ────────────────────────────────────────────────────────────── */
+
+.cartao-res{
+  margin-top:14px; border:1px solid var(--gold);
+  background:linear-gradient(180deg, #1b1813, #14110d);
+  overflow:hidden;
+}
+
+/* 1. QUEM */
+.cartao-res .quem{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 14px; border-bottom:1px solid var(--line);
+  background:rgba(201,154,74,.10);
+}
+.cartao-res .quem img{width:38px; height:38px; object-fit:cover; border:1px solid var(--line); flex:0 0 auto}
+.cartao-res .quem .nome{
+  flex:1 1 auto; min-width:0; font:1.06rem/1.15 Georgia,serif;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.cartao-res .quem time{color:var(--muted); font:.74rem/1.2 Arial,sans-serif; flex:0 0 auto}
+
+/* 2. O QUE · 3. COMO · 4. POR QUE muda */
+.cartao-res .miolo{padding:12px 14px}
+.cartao-res .oque{margin:0; font:700 1.12rem/1.2 Arial,sans-serif; color:var(--ink)}
+.cartao-res .como{margin:2px 0 0; color:var(--muted); font:.86rem/1.3 Arial,sans-serif}
+.cartao-res .mods{margin:8px 0 0; padding:0; list-style:none;
+  display:flex; gap:6px; flex-wrap:wrap}
+.cartao-res .mods li{
+  border:1px solid var(--line); padding:3px 8px; color:var(--muted);
+  font:.74rem/1.35 Arial,sans-serif; background:rgba(243,237,226,.04);
+}
+.cartao-res .mods li b{color:var(--ink); font-variant-numeric:tabular-nums}
+
+/* 5. OS DADOS */
+.cartao-res .dados{
+  display:flex; align-items:flex-start; gap:8px; flex-wrap:wrap;
+  padding:12px 14px; border-top:1px solid var(--line);
+}
+.chip{
+  min-width:52px; padding:6px 10px 5px; text-align:center;
+  border:1px solid var(--line); background:#1c1a16; color:var(--ink);
+  font:1.45rem/1.1 Georgia,serif; font-variant-numeric:tabular-nums;
+}
+.chip sup{font-size:.62em; vertical-align:super; line-height:0}
+.chip small{display:block; margin-top:2px; color:var(--muted);
+  font:.62rem/1.2 ui-monospace,Menlo,monospace}
+.chip .qual{display:block; margin-top:1px; color:var(--muted);
+  font:700 .56rem/1.2 Arial,sans-serif; text-transform:uppercase}
+
+.chip.wild{background:#242e20; border-color:var(--moss); color:#d6e3cd}
+.chip.venceu{background:var(--gold); border-color:#e6bd77; color:#2a1c08; font-weight:700}
+.chip.venceu small, .chip.venceu .qual{color:#5a4212}
+.chip.wild.venceu{background:#7d9a70; border-color:#a3c095; color:#0e120c}
+.chip.wild.venceu small, .chip.wild.venceu .qual{color:#243020}
+.chip.perdeu{opacity:.58}
+
+.cartao-res .sinal{
+  align-self:center; padding:0 2px; color:var(--ink);
+  font:1.3rem/1 Georgia,serif; font-variant-numeric:tabular-nums;
+}
+
+/* 6. O TOTAL */
+.cartao-res .barra{
+  border-top:1px solid var(--line); background:rgba(243,237,226,.05);
+  padding:10px 14px 12px; text-align:center;
+}
+.cartao-res .barra .num{font:3.1rem/1 Georgia,serif; font-variant-numeric:tabular-nums}
+.cartao-res .barra .vd{margin-top:2px; font:700 .96rem/1.2 Arial,sans-serif; letter-spacing:.03em}
+.cartao-res .barra.ok .vd{color:#a6c898}
+.cartao-res .barra.bad .vd{color:#e0a49b}
+.cartao-res .barra.crit{background:rgba(142,47,42,.30)}
+.cartao-res .barra.crit .vd{color:#ff8b7d}
+.cartao-res .barra.dano .vd{color:var(--gold)}
+.cartao-res .rodape{margin:6px 0 0; color:var(--muted);
+  font:.7rem/1.35 ui-monospace,Menlo,monospace}
+
+/* fora do cartao, para o print sair limpo */
+.pos-cartao{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px}
+
+/* ── modo "só o resultado": o cartao sozinho na tela ── */
+body.foco > *{display:none !important}
+body.foco > .palco{display:block !important}
+.palco{display:none; position:fixed; inset:0; z-index:99;
+  background:var(--coal); padding:16px; overflow:auto}
+.palco .dentro{width:min(520px,100%); margin:0 auto}
+.palco .cartao-res{margin-top:0}
+.palco .sair{margin-top:14px; width:100%; min-height:48px;
+  background:transparent; color:var(--gold); border:1px solid var(--line);
+  font:.9rem/1 Arial,sans-serif; cursor:pointer}

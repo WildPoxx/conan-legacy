@@ -87,6 +87,7 @@
     color:var(--muted); text-align:center; font:.82rem/1.5 Arial,sans-serif;
   }
 </style>
+<link rel="stylesheet" href="cartao-resultado.css">
 </head>
 <body>
 <div class="wrap">
@@ -144,6 +145,7 @@
   <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
 </div>
 
+<script src="cartao-resultado.js"></script>
 <script>
 "use strict";
 
@@ -222,38 +224,58 @@ document.getElementById("bRolar").addEventListener("click", () => {
   else if (total >= 4){ veredito = "SUCESSO"; classe = "ok"; }
   else { veredito = "FALHA"; classe = "bad"; }
 
-  const nome = (document.getElementById("rotulo").value || "").trim();
-  const texto =
-    `🎲 ${nome || "rolagem"}\n` +
-    `d${B.traco}=${t.total}${w ? ` · d${B.wild}=${w.total}` : ""} → maior ${bruto}` +
-    `${B.mod ? `  mod ${sinal(B.mod)}` : ""}\n` +
-    `TOTAL ${total} — ${veredito}`;
+  /* o campo "Quem · o quê" alimenta as duas primeiras linhas do cartão */
+  const bruto_rotulo = (document.getElementById("rotulo").value || "").trim();
+  let quem = bruto_rotulo, oque = "Rolagem de traço";
+  const corte = bruto_rotulo.indexOf("·");
+  if (corte > 0){
+    quem = bruto_rotulo.slice(0, corte).trim();
+    oque = bruto_rotulo.slice(corte + 1).trim() || oque;
+  }
+  if (!quem) quem = "Rolagem";
 
-  const selo = selar(texto);
-  const final = texto + `\n#${contador} · ${selo}`;
-  historico.push(`#${contador} ${selo}  ${nome || "rolagem"}  d${B.traco}${w ? "+d" + B.wild : ""}${B.mod ? sinal(B.mod) : ""} = ${total}  ${veredito}`);
+  /* o vencedor sai da comparação dos TOTAIS, com o Ás já somado */
+  const venceuTraco = w ? (t.total >= w.total) : true;
+  const dados = [{ tipo:"traco", lados:B.traco, seq:t.seq, total:t.total,
+                   venceu: !!w && venceuTraco, perdeu: !!w && !venceuTraco }];
+  if (w) dados.push({ tipo:"wild", lados:B.wild, seq:w.seq, total:w.total,
+                      venceu: !venceuTraco, perdeu: venceuTraco });
+
+  const res = {
+    quem, retrato: null, oque,
+    como: w ? `d${B.traco} com Dado Selvagem d${B.wild}` : `d${B.traco}, sem Dado Selvagem`,
+    mods: B.mod ? [{ rotulo:"Modificador", valor:B.mod }] : [],
+    modTotal: B.mod, total, veredito, classe, alvo: true, dados,
+    n: contador, quando: CR.agora()
+  };
+  res.selo = selar(`${quem}|${oque}|${total}`);
+
+  const paraMandar = CR.texto(res);
+  historico.push(`#${contador} ${res.selo}  ${res.quando}  ${quem} · ${oque}  =${total}  ${veredito}`);
   document.getElementById("hist").textContent = historico.join("\n");
 
   const out = document.getElementById("saida");
   out.className = "saida on";
-  out.innerHTML =
-    `<div class="total">${total}</div>` +
-    `<div class="verdito ${classe}">${veredito}</div>` +
-    `<div class="detalhe">d${B.traco}: [${t.seq.join(" + ")}] = ${t.total}` +
-      (w ? `\nd${B.wild}:  [${w.seq.join(" + ")}] = ${w.total}` : `\n(sem Dado Selvagem)`) +
-      `\nmaior = ${bruto}${B.mod ? `   mod ${sinal(B.mod)}` : ""}   →   ${total}</div>` +
-    `<div class="tn">alvo 4 · aumento 8</div>` +
-    `<div class="botoes">` +
-      (navigator.share ? `<button class="secund" id="bEnviar">Enviar</button>` : ``) +
-      `<button class="secund" id="bCopiar">Copiar</button>` +
-      `<span class="selo">#${contador} · ${selo}</span>` +
-    `</div>`;
+  out.innerHTML = "";
+  out.appendChild(CR.montar(res));
 
-  const bEnviar = document.getElementById("bEnviar");
-  if (bEnviar) bEnviar.addEventListener("click", async () => {
-    try { await navigator.share({ text: final }); } catch(e){}
-  });
-  document.getElementById("bCopiar").addEventListener("click", ev => copiar(final, ev.target, "Copiar"));
+  const linha = document.createElement("div");
+  linha.className = "pos-cartao";
+  if (navigator.share){
+    const bs = document.createElement("button");
+    bs.type = "button"; bs.className = "secund"; bs.textContent = "Enviar texto";
+    bs.addEventListener("click", async () => { try { await navigator.share({ text: paraMandar }); } catch(e){} });
+    linha.appendChild(bs);
+  }
+  const bc = document.createElement("button");
+  bc.type = "button"; bc.className = "secund"; bc.textContent = "Copiar";
+  bc.addEventListener("click", ev => copiar(paraMandar, ev.target, "Copiar"));
+  linha.appendChild(bc);
+  const bi = document.createElement("button");
+  bi.type = "button"; bi.className = "secund"; bi.textContent = "Só o resultado";
+  bi.addEventListener("click", () => CR.isolar(res));
+  linha.appendChild(bi);
+  out.appendChild(linha);
 });
 
 /* ── copiar ── */

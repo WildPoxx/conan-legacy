@@ -90,21 +90,9 @@ h1{margin:0; font-size:clamp(1.7rem,6.4vw,2.7rem); line-height:1; text-transform
 .arma .par{display:flex; gap:8px; flex-wrap:wrap}
 .arma .tr{flex:1 1 150px}
 
-/* ── janela de resultado ── */
-.saida{
-  margin-top:12px; border:1px solid var(--gold); background:rgba(201,154,74,.08);
-  padding:14px;
-}
-.saida .oque{color:var(--muted); font:700 .72rem/1.2 Arial,sans-serif; text-transform:uppercase}
-.total{margin-top:2px; font-size:3rem; line-height:1; font-variant-numeric:tabular-nums}
-.verdito{margin-top:2px; font:700 1.02rem/1.2 Arial,sans-serif}
-.ok{color:#8db07f} .bad{color:#d08b80} .crit{color:#e0574a} .dano{color:var(--gold)}
-.detalhe{margin-top:10px; color:var(--muted); white-space:pre-wrap;
-  font:.78rem/1.5 ui-monospace,Menlo,Consolas,monospace}
-.botoes{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; align-items:center}
+/* ── botoes que ficam FORA do cartao (o cartao vira print) ── */
 .secund{min-height:44px; padding:0 14px; background:transparent; color:var(--gold);
   border:1px solid var(--line); font:.86rem/1 Arial,sans-serif; cursor:pointer}
-.selo{color:var(--muted); font:.72rem/1 ui-monospace,monospace}
 
 .hist{margin-top:6px; color:var(--muted); font:.78rem/1.6 ui-monospace,Menlo,monospace; white-space:pre-wrap}
 
