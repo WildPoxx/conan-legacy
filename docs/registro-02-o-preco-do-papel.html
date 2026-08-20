@@ -26,8 +26,9 @@
       display: grid;
       align-items: start;
       background:
-        linear-gradient(180deg, rgba(20,17,13,0.32), rgba(20,17,13,0.55) 55%, rgba(20,17,13,1)),
-        url("assets/registro-02-o-preco-do-papel.png") center 32% / cover no-repeat,
+        linear-gradient(90deg, rgba(20,17,13,0.92), rgba(20,17,13,0.42) 46%, rgba(20,17,13,0.30)),
+        linear-gradient(180deg, rgba(20,17,13,0.30), rgba(20,17,13,0.50) 55%, rgba(20,17,13,1)),
+        url("assets/registro-02-o-preco-do-papel.jpg") center 35% / cover no-repeat,
         var(--coal);
     }
     .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
@@ -55,6 +56,13 @@
     .seguir { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 34px; }
     footer { border-top: 1px solid var(--line); padding: 24px 16px; color: var(--muted); text-align: center; font-size: 0.9rem; }
     .fala { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+    /* Bloco de imagem dentro do texto, entre uma seção e outra. */
+    .figura { margin: 38px 0 6px; }
+    .figura img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--coal); }
+    .figura figcaption { margin: 12px 0 0; padding-left: 14px; border-left: 3px solid var(--gold); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 0.92rem; line-height: 1.5; }
+    /* Variante para a arte em moldura de pergaminho, que pede respiro em volta. */
+    .figura.pergaminho img { border: 0; }
+    @media (max-width: 720px) { .figura { margin-top: 28px; } }
     .colofao { margin: 34px 0 0; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 0.95rem; }
     @media (max-width: 720px) { .hero { min-height: 48vh; } .navbar .spacer { flex-basis: 100%; } }
   </style>
@@ -102,6 +110,12 @@
       <p>O irmão da mulher do Sommarel, disseram, era um rapaz calado e tímido que gostava de jogos e tinha o vício dos dados. Fora dele que ganhara a metade. E fora de Soren que a ganhara.</p>
       <p>Garran ouviu tudo isso e chegou à conclusão mais curta possível: se o mapa estivera com os Chacais, então os Chacais tinham estado com o morto. Foram para a fileira das oficinas naquela mesma tarde.</p>
 
+      <figure class="figura pergaminho">
+        <img src="assets/registro-02-ashiq-no-mercado.jpg" width="1400" height="841" loading="lazy" decoding="async"
+             alt="Um homem esfarrapado e acorrentado prega de pé sobre uma roda de carroção deitada no chão, no meio do mercado de Karavazyan; à volta, gente de véu e turbante o observa sem se aproximar, entre tendas e mercadorias.">
+        <figcaption>Ele pregava todo dia sobre a mesma roda, e todo dia a cidade passava ao largo. Ninguém em Karavazyan lembrava desde quando.</figcaption>
+      </figure>
+
       <h3>O louco da praça</h3>
       <p class="first">No caminho passaram pela banca de Narzim. Xanthes a apontou de longe, e ninguém encostou. O escravagista vendia como vendia todo dia, cercado da gente que o cercava sempre.</p>
       <p>Foi antes de chegar à taverna que Júnior viu o homem gritando no meio da rua e decidiu chegar perto, só para que ele parasse de gritar.</p>
@@ -111,6 +125,8 @@
       <p class="fala">&ldquo;O medalhão. O medalhão. O medalhão é a resposta para a nossa destruição.&rdquo;</p>
       <p>E saiu andando pelo meio das pessoas, que se afastavam do jeito que se afasta de quem já se acostumou, dizendo mais uma coisa que ninguém pediu:</p>
       <p class="fala">&ldquo;A máscara de ferro. O pecado tomou a todos nós. Eles que vêm do outro lado nos tomam.&rdquo;</p>
+      <p>Já estava longe quando falou a última vez, e a última foi para ninguém.</p>
+      <p class="fala">&ldquo;As estrelas não estão certas. As estrelas não estão certas. O vazio. O verme. Ele vem. Ele vem como tempestade serena na noite escura.&rdquo;</p>
       <p>Ninguém no mercado se virou. Já estavam acostumados.</p>
 
       <h3>Quatro homens numa mesa</h3>
@@ -118,6 +134,15 @@
       <p>Garran perguntou pelo mapa. Perguntou de um jeito que não deixava saída, e Soren respondeu do jeito de quem não gosta de perguntas: com um desafio. Se queriam alguma coisa dele, que resolvessem como se resolve na fileira das oficinas.</p>
       <p>As ofensas subiram rápido, dos dois lados. Soren apontou Brogar e disse que aquele era o campeão dele.</p>
       <p>Garran atacou primeiro.</p>
+
+      <!-- LUGAR RESERVADO PARA A ARTE DO COMBATE.
+           Quando o arquivo existir, basta descomentar e trocar o nome:
+      <figure class="figura">
+        <img src="assets/registro-02-a-briga-nas-oficinas.jpg" width="1619" height="971" loading="lazy" decoding="async"
+             alt="Briga na fileira das oficinas de Karavazyan: mesas viradas, poças de fogo no chão de terra, um homem albino de machado sobre um ferreiro ruivo, e uma arqueira atirando de fora do círculo.">
+        <figcaption>A fileira das oficinas, onde a cidade guardava os eixos e as forjas, e onde se resolvia o que não se resolvia falando.</figcaption>
+      </figure>
+      -->
 
       <h3>O banho de sangue</h3>
       <p class="first">O que veio depois durou pouco e custou caro.</p>
