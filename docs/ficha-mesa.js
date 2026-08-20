@@ -84,7 +84,7 @@ function rolarTraco(oque, como, lados, modFixo){
 }
 
 /* ── rolagem de dano ── */
-function rolarDano(oque, formula){
+function rolarDano(oque, formula, comAumento){
   const expandida = String(formula).replace(/@str/gi, "d" + P.forca);
   const partes = expandida.match(/\d*d\d+|[+-]\s*\d+/gi) || [];
   let total = 0;
@@ -106,10 +106,19 @@ function rolarDano(oque, formula){
       if (!isNaN(n)){ total += n; mods.push({ rotulo: "Arma", valor: n }); }
     }
   }
+  /* acerto com AUMENTO soma 1d6, que tambem explode (SWADE, Damage) */
+  if (comAumento){
+    const r = rolarDado(6);
+    total += r.total;
+    dados.push({ tipo: "aumento", lados: 6, seq: r.seq, total: r.total, rotulo: "aumento" });
+    mods.push({ rotulo: "Acerto com aumento", valor: "+1d6" });
+  }
   return {
     quem: P.nome, retrato: P.retrato,
-    oque, como: "Dano · " + expandida + " · sem Dado Selvagem",
-    mods, modTotal: 0, total, veredito: "DANO", classe: "dano", alvo: false, dados
+    oque, como: "Dano · " + expandida + (comAumento ? " + 1d6 de aumento" : "") + " · sem Dado Selvagem",
+    mods, modTotal: 0, total,
+    veredito: comAumento ? "DANO COM AUMENTO" : "DANO",
+    classe: "dano", alvo: false, dados
   };
 }
 
@@ -287,7 +296,13 @@ function montarFicha(p){
     bDano.appendChild(el("b", null, String(w.dano).replace(/@str/gi, "d" + p.forca)));
     bDano.addEventListener("click", () => mostrar(rolarDano(w.nome, w.dano), gArm));
 
-    par.appendChild(bAtk); par.appendChild(bDano);
+    const bDanoAum = el("button", "tr");
+    bDanoAum.type = "button";
+    bDanoAum.appendChild(el("span", null, "Dano com aumento"));
+    bDanoAum.appendChild(el("b", null, String(w.dano).replace(/@str/gi, "d" + p.forca) + " +d6"));
+    bDanoAum.addEventListener("click", () => mostrar(rolarDano(w.nome, w.dano, true), gArm));
+
+    par.appendChild(bAtk); par.appendChild(bDano); par.appendChild(bDanoAum);
     box.appendChild(par);
     cxArm.appendChild(box);
   });

@@ -63,7 +63,7 @@ const CR = {
       r.mods.forEach((m) => {
         const li = this.novo("li");
         li.appendChild(document.createTextNode(m.rotulo + ": "));
-        li.appendChild(this.novo("b", null, this.sinal(m.valor)));
+        li.appendChild(this.novo("b", null, typeof m.valor === "number" ? this.sinal(m.valor) : m.valor));
         ul.appendChild(li);
       });
       miolo.appendChild(ul);
@@ -74,7 +74,7 @@ const CR = {
     const cxd = this.novo("div", "dados");
     r.dados.forEach((d) => {
       const chip = this.novo("span",
-        "chip" + (d.tipo === "wild" ? " wild" : "") +
+        "chip" + (d.tipo === "wild" ? " wild" : d.tipo === "aumento" ? " bonus" : "") +
         (d.venceu ? " venceu" : "") + (d.perdeu ? " perdeu" : ""));
       chip.appendChild(document.createTextNode(String(d.total)));
       if (d.seq.length > 1){
@@ -134,7 +134,7 @@ const CR = {
     if (r.como) linhas.push(r.como);
     const dados = r.dados.map((d) => `d${d.lados}=${d.total}${d.seq.length > 1 ? "°" : ""}${d.venceu && r.dados.length > 1 ? " ←" : ""}`).join("  ");
     linhas.push(dados + (r.modTotal ? `   mod ${this.sinal(r.modTotal)}` : ""));
-    if (r.mods && r.mods.length) linhas.push("(" + r.mods.map((m) => `${m.rotulo} ${this.sinal(m.valor)}`).join(" · ") + ")");
+    if (r.mods && r.mods.length) linhas.push("(" + r.mods.map((m) => `${m.rotulo} ${typeof m.valor === "number" ? this.sinal(m.valor) : m.valor}`).join(" · ") + ")");
     linhas.push(`${r.alvo ? "TOTAL" : "DANO"} ${r.total} — ${r.veredito}`);
     linhas.push(`${r.quando || this.agora()} · #${r.n} · ${r.selo}`);
     return linhas.join("\n");

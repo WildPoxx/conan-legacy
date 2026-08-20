@@ -62,6 +62,8 @@
 .chip.venceu small, .chip.venceu .qual{color:#5a4212}
 .chip.wild.venceu{background:#7d9a70; border-color:#a3c095; color:#0e120c}
 .chip.wild.venceu small, .chip.wild.venceu .qual{color:#243020}
+.chip.bonus{background:#3a2e19; border-color:var(--gold); color:#f2dfb8}
+.chip.bonus small, .chip.bonus .qual{color:#cbae76}
 .chip.perdeu{opacity:.58}
 
 .cartao-res .sinal{
