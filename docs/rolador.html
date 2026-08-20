@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14110d">
+<title>Bandeja de Dados — Conan Legacy</title>
+<meta name="description" content="Rolador SWADE da mesa de Conan Legacy: Ases, Dado Selvagem e modificadores pela regra do livro, com resultado pronto para mandar no grupo.">
+<style>
+  :root{
+    color-scheme: dark;
+    --ink:#f3ede2; --muted:#c9bca8; --coal:#14110d; --iron:#25221d;
+    --blood:#8e2f2a; --gold:#c99a4a; --moss:#5d6f55;
+    --line:rgba(243,237,226,.18);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--coal); color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif; line-height:1.55;
+    padding:0 0 max(48px, env(safe-area-inset-bottom));
+  }
+  .wrap{width:min(760px, calc(100% - 24px)); margin:0 auto}
+
+  header.topo{border-bottom:1px solid var(--line); padding:22px 0 18px; margin-bottom:20px}
+  .kicker{margin:0 0 8px; color:var(--gold); font:700 .74rem/1.2 Arial,sans-serif; text-transform:uppercase}
+  h1{margin:0; font-size:clamp(1.8rem,7vw,2.9rem); line-height:.98; text-transform:uppercase}
+  .lead{margin:12px 0 0; color:var(--muted); font-size:.95rem}
+  .voltar{
+    display:inline-flex; align-items:center; min-height:44px; margin-top:14px;
+    color:var(--muted); font:.85rem/1 Arial,sans-serif; text-decoration:none;
+  }
+
+  .card{border:1px solid var(--line); background:rgba(255,255,255,.035); padding:16px; margin-bottom:14px}
+  .card h2{margin:0 0 2px; font-size:1.25rem; line-height:1.1}
+  .card .sob{margin:0; color:var(--muted); font:.8rem/1.35 Arial,sans-serif}
+
+  .linha{margin:14px 0}
+  .rot{display:block; margin:0 0 7px; color:var(--muted); font:700 .72rem/1 Arial,sans-serif; text-transform:uppercase}
+  .opts{display:flex; gap:7px; flex-wrap:wrap}
+  .opt{
+    min-height:44px; min-width:52px; flex:0 0 auto;
+    border:1px solid var(--line); background:rgba(20,17,13,.72); color:var(--muted);
+    font:1rem/1 Arial,sans-serif; font-variant-numeric:tabular-nums;
+    padding:0 12px; cursor:pointer; -webkit-tap-highlight-color:transparent;
+  }
+  .opt.sel{background:var(--gold); border-color:var(--gold); color:#2a1c08; font-weight:700}
+  input[type=text]{
+    width:100%; min-height:44px; background:rgba(20,17,13,.72); color:var(--ink);
+    border:1px solid var(--line); padding:10px 12px; font:1rem/1.2 Arial,sans-serif;
+  }
+
+  button.acao{
+    width:100%; min-height:54px; margin-top:6px;
+    background:var(--blood); color:var(--ink); border:1px solid rgba(201,154,74,.75);
+    font:700 1.05rem/1 Arial,sans-serif; letter-spacing:.04em; cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  button.acao:active{filter:brightness(1.15)}
+  button.secund{
+    min-height:44px; padding:0 14px; background:transparent; color:var(--gold);
+    border:1px solid var(--line); font:.86rem/1 Arial,sans-serif; cursor:pointer;
+  }
+
+  .saida{display:none; margin-top:16px; border-top:1px solid var(--line); padding-top:14px}
+  .saida.on{display:block}
+  .total{font-size:3rem; line-height:1; font-variant-numeric:tabular-nums}
+  .verdito{margin-top:4px; font:700 1rem/1.2 Arial,sans-serif}
+  .ok{color:#8db07f} .bad{color:#d08b80} .crit{color:#e0574a}
+  .detalhe{
+    margin-top:10px; color:var(--muted); white-space:pre-wrap;
+    font:.78rem/1.5 ui-monospace,Menlo,Consolas,monospace;
+  }
+  .tn{margin-top:6px; color:var(--muted); font:.76rem/1 Arial,sans-serif}
+  .botoes{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; align-items:center}
+  .selo{color:var(--muted); font:.72rem/1 ui-monospace,monospace}
+
+  .pcs{display:grid; grid-template-columns:1fr; gap:10px}
+  @media(min-width:560px){ .pcs{grid-template-columns:1fr 1fr} }
+  .pc{
+    min-height:44px; text-align:left; padding:12px 14px;
+    border:1px solid var(--line); background:rgba(20,17,13,.72); color:var(--ink);
+    font:1rem/1.25 Arial,sans-serif; cursor:pointer;
+  }
+  .pc.sel{border-color:var(--gold); background:rgba(201,154,74,.14)}
+  .pc small{display:block; margin-top:4px; color:var(--muted); font-size:.78rem}
+
+  .hist{margin-top:6px; color:var(--muted); font:.78rem/1.6 ui-monospace,Menlo,monospace; white-space:pre-wrap}
+  .nota{
+    margin:26px 0 0; padding-left:14px; border-left:4px solid var(--moss);
+    color:var(--muted); font:.88rem/1.6 Arial,sans-serif;
+  }
+  .nota p{margin:0 0 10px}
+  .nota b{color:var(--ink)}
+  footer{
+    margin-top:34px; border-top:1px solid var(--line); padding:22px 0;
+    color:var(--muted); text-align:center; font:.82rem/1.5 Arial,sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topo">
+    <p class="kicker">Conan Legacy · SWADE · mesa</p>
+    <h1>Bandeja de Dados</h1>
+    <p class="lead">Ases, Dado Selvagem e modificadores pela regra do livro. Role, e mande o resultado no grupo.</p>
+    <a class="voltar" href="index.html">&larr; Portal dos Jogadores</a>
+  </header>
+
+  <!-- ═══════════ BANDEJA ═══════════ -->
+  <section class="card">
+    <h2>Monte a sua jogada</h2>
+    <p class="sob">Serve para qualquer perícia ou atributo.</p>
+
+    <div class="linha">
+      <span class="rot">Dado de traço</span>
+      <div class="opts" id="optTraco"></div>
+    </div>
+    <div class="linha">
+      <span class="rot">Dado Selvagem</span>
+      <div class="opts" id="optWild"></div>
+    </div>
+    <div class="linha">
+      <span class="rot">Modificador</span>
+      <div class="opts" id="optMod"></div>
+    </div>
+    <div class="linha">
+      <span class="rot">Quem · o quê</span>
+      <input id="rotulo" type="text" placeholder="ex.: Júnior · Furtividade" autocomplete="off" enterkeyhint="go">
+    </div>
+
+    <button class="acao" id="bRolar">ROLAR</button>
+    <div class="saida" id="saida"></div>
+  </section>
+
+  <!-- ═══════════ ATALHOS DE PERSONAGEM ═══════════ -->
+  <section class="card">
+    <h2>Atalhos da mesa</h2>
+    <p class="sob">Toque num personagem para preencher a bandeja com o Vigor dele e a penalidade de ferimento que ele carrega hoje. Depois é só rolar.</p>
+    <div class="pcs" id="pcs"></div>
+  </section>
+
+  <!-- ═══════════ HISTORICO ═══════════ -->
+  <section class="card">
+    <h2>Histórico desta sessão</h2>
+    <p class="sob">Fica só nesta aba, enquanto ela estiver aberta. Serve para o Mestre reconstruir a noite se precisar.</p>
+    <div class="hist" id="hist">nenhuma rolagem ainda.</div>
+    <div class="botoes">
+      <button class="secund" id="bHist">Copiar histórico</button>
+    </div>
+  </section>
+
+  <div class="nota">
+    <p><b>Como mandar no grupo.</b> Depois de rolar, use <i>Enviar</i> — no celular o próprio aparelho abre a lista de aplicativos e você escolhe o WhatsApp e a conversa da mesa. Se o botão não aparecer, use <i>Copiar</i> e cole.</p>
+    <p><b>Cada resultado sai numerado</b> (#1, #2…) e com um selo de quatro letras. Isso não é desconfiança — o jogo <i>é</i> confiança. É só para o Mestre conseguir remontar a ordem das jogadas depois, sem depender de memória.</p>
+    <p><b>Recarregar a página zera o contador.</b> Se você recarregou, avise, e pronto.</p>
+  </div>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</div>
+
+<script>
+"use strict";
+
+/* ──────────────────────────────────────────────────────────────
+   A REGRA DO DADO — SWADE, pp. 90 e 95
+   Ases:            todo dado explode enquanto sair o valor maximo
+   Dado Selvagem:   Wild Card rola tambem 1d6 e vale o MAIOR TOTAL
+   Modificadores:   entram DEPOIS de somar a explosao
+   Falha Critica:   1 natural no dado de traco E no Dado Selvagem
+   Alvo 4; aumento 8
+   ────────────────────────────────────────────────────────────── */
+
+function d(lados){
+  const primeiro = 1 + Math.floor(Math.random() * lados);
+  let total = primeiro, ultimo = primeiro, seq = [primeiro], guarda = 0;
+  while (ultimo === lados && guarda++ < 100){
+    ultimo = 1 + Math.floor(Math.random() * lados);
+    total += ultimo; seq.push(ultimo);
+  }
+  return { primeiro, total, seq };
+}
+
+/* estado da bandeja */
+const B = { traco: 8, wild: 6, mod: 0 };
+
+/* Atalhos: estado pos-Sessao 02. A penalidade de ferimento ja vem aplicada.
+   Estao aqui SO' os personagens dos jogadores. Fichas de NPC nao entram numa
+   pagina publica sem decisao do Mestre — acrescentar e' uma linha cada. */
+const MESA = [
+  { nome:"Garran do Vau", vigor:8, fer:2 },
+  { nome:"Júnior",        vigor:6, fer:0 }
+];
+
+let contador = 0;
+let cadeia = Math.random().toString(36).slice(2, 8);
+const historico = [];
+
+function selar(txt){
+  cadeia += "|" + txt;
+  let h = 0x811c9dc5;
+  for (let i = 0; i < cadeia.length; i++){ h ^= cadeia.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return (h >>> 0).toString(36).slice(-4).padStart(4, "0");
+}
+const sinal = n => n >= 0 ? "+" + n : "" + n;
+
+/* ── botoes de opcao ── */
+function grupo(caixaId, valores, chave, rotulo){
+  const cx = document.getElementById(caixaId);
+  valores.forEach(v => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "opt" + (B[chave] === v ? " sel" : "");
+    b.textContent = rotulo(v);
+    b.dataset.v = v;
+    b.addEventListener("click", () => {
+      B[chave] = v;
+      [...cx.children].forEach(c => c.classList.remove("sel"));
+      b.classList.add("sel");
+    });
+    cx.appendChild(b);
+  });
+}
+grupo("optTraco", [4,6,8,10,12],           "traco", v => "d" + v);
+grupo("optWild",  [0,6,8],                 "wild",  v => v === 0 ? "sem" : "d" + v);
+grupo("optMod",   [-4,-3,-2,-1,0,1,2,3,4], "mod",   v => v > 0 ? "+" + v : "" + v);
+
+function marcar(caixaId, valor){
+  const cx = document.getElementById(caixaId);
+  [...cx.children].forEach(c => c.classList.toggle("sel", Number(c.dataset.v) === valor));
+}
+
+/* ── atalhos de personagem ── */
+const cxPcs = document.getElementById("pcs");
+MESA.forEach(p => {
+  const pen = -Math.min(3, p.fer);
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "pc";
+  b.innerHTML = `<strong>${p.nome}</strong><small>Vigor d${p.vigor} · ${p.fer} ferimento${p.fer === 1 ? "" : "s"} (${pen})</small>`;
+  b.addEventListener("click", () => {
+    B.traco = p.vigor; B.wild = 6; B.mod = pen;
+    marcar("optTraco", p.vigor); marcar("optWild", 6); marcar("optMod", pen);
+    document.getElementById("rotulo").value = `${p.nome} · Vigor`;
+    [...cxPcs.children].forEach(c => c.classList.remove("sel"));
+    b.classList.add("sel");
+    document.getElementById("bRolar").scrollIntoView({ behavior:"smooth", block:"center" });
+  });
+  cxPcs.appendChild(b);
+});
+
+/* ── rolar ── */
+document.getElementById("bRolar").addEventListener("click", () => {
+  const t = d(B.traco);
+  const w = B.wild ? d(B.wild) : null;
+  const critico = w ? (t.primeiro === 1 && w.primeiro === 1) : (t.primeiro === 1);
+  const bruto = w ? Math.max(t.total, w.total) : t.total;
+  const total = bruto + B.mod;
+  contador++;
+
+  let veredito, classe;
+  if (critico){ veredito = "FALHA CRÍTICA"; classe = "crit"; }
+  else if (total >= 8){ veredito = "SUCESSO COM AUMENTO"; classe = "ok"; }
+  else if (total >= 4){ veredito = "SUCESSO"; classe = "ok"; }
+  else { veredito = "FALHA"; classe = "bad"; }
+
+  const nome = (document.getElementById("rotulo").value || "").trim();
+  const texto =
+    `🎲 ${nome || "rolagem"}\n` +
+    `d${B.traco}=${t.total}${w ? ` · d${B.wild}=${w.total}` : ""} → maior ${bruto}` +
+    `${B.mod ? `  mod ${sinal(B.mod)}` : ""}\n` +
+    `TOTAL ${total} — ${veredito}`;
+
+  const selo = selar(texto);
+  const final = texto + `\n#${contador} · ${selo}`;
+  historico.push(`#${contador} ${selo}  ${nome || "rolagem"}  d${B.traco}${w ? "+d" + B.wild : ""}${B.mod ? sinal(B.mod) : ""} = ${total}  ${veredito}`);
+  document.getElementById("hist").textContent = historico.join("\n");
+
+  const out = document.getElementById("saida");
+  out.className = "saida on";
+  out.innerHTML =
+    `<div class="total">${total}</div>` +
+    `<div class="verdito ${classe}">${veredito}</div>` +
+    `<div class="detalhe">d${B.traco}: [${t.seq.join(" + ")}] = ${t.total}` +
+      (w ? `\nd${B.wild}:  [${w.seq.join(" + ")}] = ${w.total}` : `\n(sem Dado Selvagem)`) +
+      `\nmaior = ${bruto}${B.mod ? `   mod ${sinal(B.mod)}` : ""}   →   ${total}</div>` +
+    `<div class="tn">alvo 4 · aumento 8</div>` +
+    `<div class="botoes">` +
+      (navigator.share ? `<button class="secund" id="bEnviar">Enviar</button>` : ``) +
+      `<button class="secund" id="bCopiar">Copiar</button>` +
+      `<span class="selo">#${contador} · ${selo}</span>` +
+    `</div>`;
+
+  const bEnviar = document.getElementById("bEnviar");
+  if (bEnviar) bEnviar.addEventListener("click", async () => {
+    try { await navigator.share({ text: final }); } catch(e){}
+  });
+  document.getElementById("bCopiar").addEventListener("click", ev => copiar(final, ev.target, "Copiar"));
+});
+
+/* ── copiar ── */
+async function copiar(texto, botao, rotuloOriginal){
+  let ok = false;
+  try { await navigator.clipboard.writeText(texto); ok = true; }
+  catch(e){
+    const ta = document.createElement("textarea");
+    ta.value = texto; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { ok = document.execCommand("copy"); } catch(e2){}
+    document.body.removeChild(ta);
+  }
+  botao.textContent = ok ? "copiado ✓" : "não deu";
+  setTimeout(() => { botao.textContent = rotuloOriginal; }, 1600);
+}
+
+document.getElementById("bHist").addEventListener("click", ev => {
+  if (!historico.length){ ev.target.textContent = "nada ainda"; setTimeout(()=>{ev.target.textContent="Copiar histórico";},1400); return; }
+  copiar("ROLAGENS\n" + historico.join("\n"), ev.target, "Copiar histórico");
+});
+
+document.getElementById("rotulo").addEventListener("keydown", e => {
+  if (e.key === "Enter"){ e.preventDefault(); e.target.blur(); document.getElementById("bRolar").click(); }
+});
+</script>
+</body>
+</html>
