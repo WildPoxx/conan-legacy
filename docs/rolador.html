@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14110d">
 <title>Bandeja de Dados — Conan Legacy</title>
-<meta name="description" content="Rolador SWADE da mesa de Conan Legacy: Ases, Dado Selvagem e modificadores pela regra do livro, com resultado pronto para mandar no grupo.">
+<meta name="description" content="Bandeja de dados SWADE: Ases, Dado Selvagem e modificadores pela regra do livro, com o resultado pronto para mandar no grupo. Serve para qualquer mesa.">
 <style>
   :root{
     color-scheme: dark;
@@ -75,28 +75,6 @@
   .botoes{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; align-items:center}
   .selo{color:var(--muted); font:.72rem/1 ui-monospace,monospace}
 
-  .pcs{display:grid; grid-template-columns:1fr; gap:10px}
-  @media(min-width:560px){ .pcs{grid-template-columns:1fr 1fr} }
-  .pc{
-    min-height:44px; text-align:left; padding:12px 14px;
-    border:1px solid var(--line); background:rgba(20,17,13,.72); color:var(--ink);
-    font:1rem/1.25 Arial,sans-serif; cursor:pointer;
-  }
-  .pc.sel{border-color:var(--gold); background:rgba(201,154,74,.14)}
-  .pc small{display:block; margin-top:4px; color:var(--muted); font-size:.78rem}
-
-  .ficha{display:none; margin-top:14px; border-top:1px solid var(--line); padding-top:12px}
-  .ficha.on{display:block}
-  .grupo{margin-bottom:12px}
-  .trs{display:flex; gap:7px; flex-wrap:wrap}
-  .tr{
-    min-height:44px; flex:0 0 auto; text-align:left; padding:8px 12px;
-    border:1px solid var(--line); background:rgba(20,17,13,.72); color:var(--ink);
-    font:.92rem/1.2 Arial,sans-serif; cursor:pointer; -webkit-tap-highlight-color:transparent;
-  }
-  .tr b{color:var(--gold); font-variant-numeric:tabular-nums; font-weight:700}
-  .tr.magro{color:var(--muted)}
-
   .hist{margin-top:6px; color:var(--muted); font:.78rem/1.6 ui-monospace,Menlo,monospace; white-space:pre-wrap}
   .nota{
     margin:26px 0 0; padding-left:14px; border-left:4px solid var(--moss);
@@ -114,10 +92,11 @@
 <div class="wrap">
 
   <header class="topo">
-    <p class="kicker">Conan Legacy · SWADE · mesa</p>
+    <p class="kicker">SWADE · Savage Worlds Adventure Edition</p>
     <h1>Bandeja de Dados</h1>
-    <p class="lead">Ases, Dado Selvagem e modificadores pela regra do livro. Role, e mande o resultado no grupo.</p>
+    <p class="lead">Ases, Dado Selvagem e modificadores pela regra do livro. Monte a jogada, role, e mande o resultado no grupo. Serve para qualquer mesa SWADE.</p>
     <a class="voltar" href="index.html">&larr; Portal dos Jogadores</a>
+    <p class="lead" style="font-size:.88rem">Joga em Conan Legacy? A sua ficha, com as perícias já prontas para rolar, fica em <a href="fichas.html" style="color:var(--gold)">Fichas da mesa</a>.</p>
   </header>
 
   <!-- ═══════════ BANDEJA ═══════════ -->
@@ -144,14 +123,6 @@
 
     <button class="acao" id="bRolar">ROLAR</button>
     <div class="saida" id="saida"></div>
-  </section>
-
-  <!-- ═══════════ ATALHOS DE PERSONAGEM ═══════════ -->
-  <section class="card">
-    <h2>Atalhos da mesa</h2>
-    <p class="sob">Toque no seu personagem: aparecem os atributos e as perícias dele, com o dado certo. Toque no que você vai usar e a bandeja se monta sozinha, já com a penalidade de ferimento.</p>
-    <div class="pcs" id="pcs"></div>
-    <div id="ficha"></div>
   </section>
 
   <!-- ═══════════ HISTORICO ═══════════ -->
@@ -198,29 +169,6 @@ function d(lados){
 /* estado da bandeja */
 const B = { traco: 8, wild: 6, mod: 0 };
 
-/* Atalhos da mesa.
-   Atributos, pericias e ferimentos LIDOS DO MUNDO conan-legacy em 20/08/2026.
-   Os nomes das pericias estao como aparecem na ficha do Foundry, de proposito:
-   o jogador procura na pagina a mesma palavra que ve no jogo.
-   Fichas de NPC nao entram numa pagina publica.
-   Ficha em branco no mundo (tudo d4) nao entra aqui: atalho errado e' pior que
-   nenhum atalho. Quando a ficha for preenchida no Foundry, acrescentar aqui. */
-const MESA = [
-  {
-    nome:"Garran do Vau", fer:2,
-    atr:{ "Agilidade":6, "Astúcia":4, "Espírito":6, "Força":10, "Vigor":8 },
-    per:{ "Athletics":4, "Common Knowledge":4, "Fighting":10, "Intimidation":6,
-          "Notice":4, "Persuasion":8, "Shooting":6, "Stealth":4, "Survival":4 }
-  },
-  {
-    nome:"Junior, Filho da Areia", fer:0,
-    atr:{ "Agilidade":8, "Astúcia":6, "Espírito":10, "Força":4, "Vigor":6 },
-    per:{ "Athletics":6, "Common Knowledge":4, "Fighting":6, "Intimidation":4,
-          "Notice":6, "Performance":8, "Persuasion":10, "Shooting":6,
-          "Stealth":8, "Thievery":8 }
-  }
-];
-
 let contador = 0;
 let cadeia = Math.random().toString(36).slice(2, 8);
 const historico = [];
@@ -258,75 +206,6 @@ function marcar(caixaId, valor){
   const cx = document.getElementById(caixaId);
   [...cx.children].forEach(c => c.classList.toggle("sel", Number(c.dataset.v) === valor));
 }
-
-/* ── atalhos de personagem ── */
-const cxPcs  = document.getElementById("pcs");
-const cxFich = document.getElementById("ficha");
-
-/* monta a bandeja com um traco escolhido na ficha */
-function armar(p, rotulo, lados, extra){
-  const pen = -Math.min(3, p.fer) + (extra || 0);
-  const mod = Math.max(-6, Math.min(4, pen));
-  B.traco = lados; B.wild = 6; B.mod = mod;
-  marcar("optTraco", lados); marcar("optWild", 6); marcar("optMod", mod);
-  document.getElementById("rotulo").value = `${p.nome} · ${rotulo}`;
-  document.getElementById("bRolar").scrollIntoView({ behavior:"smooth", block:"center" });
-}
-
-function botaoTraco(p, rotulo, lados, extra, magro){
-  const b = document.createElement("button");
-  b.type = "button";
-  b.className = "tr" + (magro ? " magro" : "");
-  const sufixo = extra ? (extra > 0 ? ` ${extra >= 0 ? "+" : ""}${extra}` : ` ${extra}`) : "";
-  b.innerHTML = `${rotulo} <b>d${lados}${sufixo}</b>`;
-  b.addEventListener("click", () => armar(p, rotulo, lados, extra));
-  return b;
-}
-
-function abrirFicha(p){
-  cxFich.className = "ficha on";
-  cxFich.innerHTML = "";
-  const pen = -Math.min(3, p.fer);
-
-  const cabeca = document.createElement("p");
-  cabeca.className = "sob";
-  cabeca.textContent = p.fer
-    ? `${p.fer} ferimento${p.fer === 1 ? "" : "s"}: ${pen} entra sozinho em toda rolagem abaixo.`
-    : "Sem ferimentos. Nenhuma penalidade entra sozinha.";
-  cxFich.appendChild(cabeca);
-
-  const bloco = (titulo, pares, magro, extra) => {
-    const g = document.createElement("div");
-    g.className = "grupo";
-    const r = document.createElement("span");
-    r.className = "rot";
-    r.textContent = titulo;
-    g.appendChild(r);
-    const linha = document.createElement("div");
-    linha.className = "trs";
-    pares.forEach(([nome, lados]) => linha.appendChild(botaoTraco(p, nome, lados, extra, magro)));
-    g.appendChild(linha);
-    cxFich.appendChild(g);
-  };
-
-  bloco("Atributos", Object.entries(p.atr), false, 0);
-  bloco("Perícias",  Object.entries(p.per), false, 0);
-  bloco("Não treinado", [["sem perícia", 4]], true, -2);
-}
-
-MESA.forEach(p => {
-  const pen = -Math.min(3, p.fer);
-  const b = document.createElement("button");
-  b.type = "button";
-  b.className = "pc";
-  b.innerHTML = `<strong>${p.nome}</strong><small>${Object.keys(p.per).length} perícias · ${p.fer} ferimento${p.fer === 1 ? "" : "s"}${p.fer ? ` (${pen})` : ""}</small>`;
-  b.addEventListener("click", () => {
-    [...cxPcs.children].forEach(c => c.classList.remove("sel"));
-    b.classList.add("sel");
-    abrirFicha(p);
-  });
-  cxPcs.appendChild(b);
-});
 
 /* ── rolar ── */
 document.getElementById("bRolar").addEventListener("click", () => {

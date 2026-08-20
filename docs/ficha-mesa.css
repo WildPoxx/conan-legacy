@@ -1,0 +1,124 @@
+/* Ficha de mesa — Conan Legacy
+   Mesma paleta do portal. Mobile primeiro. */
+
+:root{
+  color-scheme: dark;
+  --ink:#f3ede2; --muted:#c9bca8; --coal:#14110d; --iron:#25221d;
+  --blood:#8e2f2a; --gold:#c99a4a; --moss:#5d6f55;
+  --line:rgba(243,237,226,.18);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--coal); color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif; line-height:1.55;
+  padding:0 0 max(56px, env(safe-area-inset-bottom));
+}
+.wrap{width:min(860px, calc(100% - 24px)); margin:0 auto}
+a{color:inherit}
+
+/* ── topo ── */
+.migalha{
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+  padding:14px 0 0; font:.84rem/1 Arial,sans-serif; color:var(--muted);
+}
+.migalha a{display:inline-flex; align-items:center; min-height:44px; text-decoration:none}
+
+.cabeca{display:grid; grid-template-columns:1fr; gap:16px; align-items:end;
+  border-bottom:1px solid var(--line); padding:8px 0 18px; margin-bottom:18px}
+@media(min-width:620px){ .cabeca{grid-template-columns:168px 1fr} }
+.retrato{
+  width:min(168px, 46vw); aspect-ratio:1/1; object-fit:cover;
+  border:1px solid var(--line); background:var(--iron);
+}
+.kicker{margin:0 0 6px; color:var(--gold); font:700 .74rem/1.2 Arial,sans-serif; text-transform:uppercase}
+h1{margin:0; font-size:clamp(1.7rem,6.4vw,2.7rem); line-height:1; text-transform:uppercase}
+.sub{margin:8px 0 0; color:var(--muted); font:.9rem/1.4 Arial,sans-serif}
+
+/* ── cartoes ── */
+.card{border:1px solid var(--line); background:rgba(255,255,255,.035); padding:16px; margin-bottom:14px}
+.card h2{margin:0 0 2px; font-size:1.2rem; line-height:1.1}
+.card .sob{margin:0 0 4px; color:var(--muted); font:.8rem/1.35 Arial,sans-serif}
+.rot{display:block; margin:14px 0 7px; color:var(--muted); font:700 .72rem/1 Arial,sans-serif; text-transform:uppercase}
+
+/* ── faixa de derivados ── */
+.derivados{display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:8px}
+.der{border:1px solid var(--line); background:rgba(20,17,13,.72); padding:10px 12px; text-align:center}
+.der span{display:block; color:var(--muted); font:700 .66rem/1.2 Arial,sans-serif; text-transform:uppercase}
+.der b{display:block; margin-top:3px; font-size:1.5rem; line-height:1.1; font-variant-numeric:tabular-nums}
+.der small{display:block; color:var(--muted); font:.68rem/1.2 Arial,sans-serif}
+
+/* ── estado (ferimentos, fadiga) ── */
+.estados{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:10px; margin-top:12px}
+.estado{border:1px solid var(--line); background:rgba(20,17,13,.72); padding:10px 12px;
+  display:flex; align-items:center; justify-content:space-between; gap:10px}
+.estado .nome{color:var(--muted); font:700 .7rem/1.2 Arial,sans-serif; text-transform:uppercase}
+.estado .ctrl{display:flex; align-items:center; gap:6px}
+.pill{min-width:44px; min-height:44px; border:1px solid var(--line); background:rgba(243,237,226,.06);
+  color:var(--ink); font:1.2rem/1 Arial,sans-serif; cursor:pointer}
+.estado .val{min-width:44px; text-align:center; font-size:1.35rem; font-variant-numeric:tabular-nums}
+.estado.ferido{border-color:rgba(142,47,42,.85); background:rgba(142,47,42,.16)}
+
+.aviso{margin-top:10px; padding-left:12px; border-left:4px solid var(--blood);
+  color:var(--muted); font:.84rem/1.5 Arial,sans-serif}
+.aviso b{color:var(--ink)}
+
+/* ── opcoes e botoes de rolagem ── */
+.opts{display:flex; gap:7px; flex-wrap:wrap}
+.opt{
+  min-height:44px; min-width:50px; border:1px solid var(--line);
+  background:rgba(20,17,13,.72); color:var(--muted);
+  font:1rem/1 Arial,sans-serif; font-variant-numeric:tabular-nums;
+  padding:0 12px; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.opt.sel{background:var(--gold); border-color:var(--gold); color:#2a1c08; font-weight:700}
+
+.tracos{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:8px}
+.tr{
+  min-height:52px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  text-align:left; padding:8px 12px; border:1px solid var(--line);
+  background:rgba(20,17,13,.72); color:var(--ink);
+  font:.94rem/1.15 Arial,sans-serif; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.tr:active{border-color:var(--gold)}
+.tr b{color:var(--gold); font-variant-numeric:tabular-nums; white-space:nowrap}
+.tr.fraco b{color:var(--muted)}
+
+.arma{border:1px solid var(--line); background:rgba(20,17,13,.5); padding:10px 12px; margin-bottom:8px}
+.arma .nome{font:700 1rem/1.2 Arial,sans-serif}
+.arma .det{margin:4px 0 8px; color:var(--muted); font:.78rem/1.45 Arial,sans-serif}
+.arma .par{display:flex; gap:8px; flex-wrap:wrap}
+.arma .tr{flex:1 1 150px}
+
+/* ── janela de resultado ── */
+.saida{
+  margin-top:12px; border:1px solid var(--gold); background:rgba(201,154,74,.08);
+  padding:14px;
+}
+.saida .oque{color:var(--muted); font:700 .72rem/1.2 Arial,sans-serif; text-transform:uppercase}
+.total{margin-top:2px; font-size:3rem; line-height:1; font-variant-numeric:tabular-nums}
+.verdito{margin-top:2px; font:700 1.02rem/1.2 Arial,sans-serif}
+.ok{color:#8db07f} .bad{color:#d08b80} .crit{color:#e0574a} .dano{color:var(--gold)}
+.detalhe{margin-top:10px; color:var(--muted); white-space:pre-wrap;
+  font:.78rem/1.5 ui-monospace,Menlo,Consolas,monospace}
+.botoes{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; align-items:center}
+.secund{min-height:44px; padding:0 14px; background:transparent; color:var(--gold);
+  border:1px solid var(--line); font:.86rem/1 Arial,sans-serif; cursor:pointer}
+.selo{color:var(--muted); font:.72rem/1 ui-monospace,monospace}
+
+.hist{margin-top:6px; color:var(--muted); font:.78rem/1.6 ui-monospace,Menlo,monospace; white-space:pre-wrap}
+
+.nota{margin:24px 0 0; padding-left:14px; border-left:4px solid var(--moss);
+  color:var(--muted); font:.86rem/1.6 Arial,sans-serif}
+.nota p{margin:0 0 10px}
+.nota b{color:var(--ink)}
+footer{margin-top:32px; border-top:1px solid var(--line); padding:22px 0;
+  color:var(--muted); text-align:center; font:.82rem/1.5 Arial,sans-serif}
+
+/* ── indice de fichas ── */
+.grade{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
+.cartao{display:block; text-decoration:none; border:1px solid var(--line);
+  background:rgba(255,255,255,.035); padding:14px}
+.cartao img{width:100%; aspect-ratio:1/1; object-fit:cover; border:1px solid var(--line)}
+.cartao strong{display:block; margin-top:10px; font:700 1.05rem/1.2 Arial,sans-serif}
+.cartao span{display:block; margin-top:4px; color:var(--muted); font:.82rem/1.4 Arial,sans-serif}

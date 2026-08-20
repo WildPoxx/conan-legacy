@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14110d">
+<title>Garran do Vau — Conan Legacy</title>
+<meta name="description" content="Ficha de mesa de Garran do Vau: atributos, perícias e armas, cada um rolável pelo celular, com Ases e Dado Selvagem pela regra do livro.">
+<link rel="stylesheet" href="ficha-mesa.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="migalha">
+    <a href="index.html">← Portal dos Jogadores</a>
+    <a href="fichas.html">Fichas da mesa</a>
+    <a href="rolador.html">Bandeja de dados</a>
+  </nav>
+
+  <header class="cabeca">
+    <img id="retrato" class="retrato" src="" alt="">
+    <div>
+      <p class="kicker">Conan Legacy · SWADE · ficha de mesa</p>
+      <h1 id="nome"></h1>
+      <p class="sub" id="sub"></p>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Estado</h2>
+    <p class="sob">Como você está agora. Mexer aqui não muda nada no Foundry — serve para a conta sair certa no celular.</p>
+    <div class="derivados" id="derivados"></div>
+    <div class="estados" id="estados"></div>
+    <p class="aviso" id="avisoPen"></p>
+    <span class="rot">Modificador da situação</span>
+    <div class="opts" id="optSit"></div>
+    <p class="sob" style="margin-top:8px">Cobertura, escuridão, alvo em movimento — o que o Mestre disser. Fica como você deixar: zere quando a situação passar.</p>
+  </section>
+
+  <section class="card" id="gAtributos">
+    <h2>Atributos</h2>
+    <p class="sob">Toque para rolar. Dado Selvagem d6 sempre junto.</p>
+  </section>
+
+  <section class="card" id="gPericias">
+    <h2>Perícias</h2>
+    <p class="sob">Os nomes estão como aparecem na sua ficha no Foundry.</p>
+  </section>
+
+  <section class="card" id="gArmas">
+    <h2>Armas</h2>
+    <p class="sob">Atacar rola a perícia. Dano soma os dados, explode e não usa Dado Selvagem.</p>
+  </section>
+
+  <section class="card">
+    <h2>Histórico desta sessão</h2>
+    <p class="sob">Fica só nesta aba, enquanto ela estiver aberta.</p>
+    <div class="hist" id="hist">nenhuma rolagem ainda.</div>
+    <div class="botoes"><button class="secund" id="bHist" type="button">Copiar histórico</button></div>
+  </section>
+
+  <div class="nota">
+    <p><b>Como mandar no grupo.</b> Depois de rolar, use <i>Enviar</i> — o celular abre a lista de aplicativos e você escolhe a conversa da mesa. Se não aparecer, use <i>Copiar</i> e cole.</p>
+    <p><b>Aparar e Resistência são calculados aqui, não lidos do Foundry.</b> <span id="comoCalculado"></span> Se a sua ficha mostrar outro número, o Foundry é que vale — avise o Mestre.</p>
+    <p><b>Esta página é sua, mas não é secreta.</b> Quem tiver o endereço abre. Ela não guarda nada: recarregar zera o contador e o histórico.</p>
+  </div>
+
+  <footer>Material de fã para mesa privada. Conan, Era Hiboriana, Savage Worlds e SWADE pertencem aos seus titulares.</footer>
+</div>
+
+<script src="ficha-mesa.js"></script>
+<script>
+/* Dados lidos do mundo conan-legacy em 20/08/2026. */
+montarFicha({
+  nome: "Garran do Vau",
+  retrato: "assets/pcs/garran-do-vau.webp",
+  especie: "",
+  rank: "Novice",
+  avancos: 2,
+  forca: 10,
+  derivados: { aparar: 7, resistencia: 8, armadura: 1, passo: 6, correr: "d6" },
+  comoCalculado: "Aparar 7 = 2 + metade de Fighting d10. Resistência 8 = 2 + metade de Vigor d8, mais 1 de Couro reforçado no torso, mais 1 de Brawler.",
+  estado: { ferimentos: 2, ferimentosMax: 3, fadiga: 0, fadigaMax: 2, bennies: 1, benniesMax: 3 },
+  atributos: [
+    { nome: "Agilidade", s: 6,  m: 0 },
+    { nome: "Astúcia",   s: 4,  m: 0 },
+    { nome: "Espírito",  s: 6,  m: 0 },
+    { nome: "Força",     s: 10, m: 0 },
+    { nome: "Vigor",     s: 8,  m: 0 }
+  ],
+  pericias: [
+    { nome: "Athletics",        s: 4,  m: 0 },
+    { nome: "Common Knowledge", s: 4,  m: 0 },
+    { nome: "Fighting",         s: 10, m: 0 },
+    { nome: "Intimidation",     s: 6,  m: 0 },
+    { nome: "Notice",           s: 4,  m: 0 },
+    { nome: "Persuasion",       s: 8,  m: 0 },
+    { nome: "Shooting",         s: 6,  m: 0 },
+    { nome: "Stealth",          s: 4,  m: 0 },
+    { nome: "Survival",         s: 4,  m: 0 }
+  ],
+  armas: [
+    { nome: "Clava / tacape",     dano: "@str+d6", pericia: "Fighting", periciaDado: 10, minStr: "d4", notas: "Arma comum e rústica." },
+    { nome: "Adaga / faca longa", dano: "@str+d4", pericia: "Fighting", periciaDado: 10, minStr: "", notas: "Arma curta, fácil de ocultar." },
+    { nome: "Arco curto",         dano: "2d6",     pericia: "Shooting", periciaDado: 6,  minStr: "d6", alcance: "12/24/48", notas: "Arco comum de caça e fronteira." }
+  ]
+});
+</script>
+</body>
+</html>
